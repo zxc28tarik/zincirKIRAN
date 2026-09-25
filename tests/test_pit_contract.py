@@ -1,11 +1,8 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import pytest
 
 from zincir_kiran.pit import available_by, latest_available_revision
-
-
-UTC = timezone.utc
 
 
 def ts(day: int) -> datetime:
@@ -70,5 +67,6 @@ def test_missing_available_at_is_rejected_not_neutralized() -> None:
 
 
 def test_naive_prediction_timestamp_is_rejected() -> None:
+    naive = datetime(2025, 1, 10, 12, 0, tzinfo=UTC).replace(tzinfo=None)
     with pytest.raises(ValueError, match="timezone-aware"):
-        available_by({"available_at": ts(5)}, datetime(2025, 1, 10, 12, 0))
+        available_by({"available_at": ts(5)}, naive)
