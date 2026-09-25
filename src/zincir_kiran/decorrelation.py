@@ -170,3 +170,97 @@ def redundancy_edge_decision(
         correlation=result.correlation,
         overlap_count=result.overlap_count,
     )
+
+@dataclass(frozen=True)
+class FactorRedundancyEdge:
+    left_factor_id: str
+    right_factor_id: str
+    decision: RedundancyEdgeDecision
+
+    def __post_init__(self) -> None:
+        if not self.left_factor_id.strip() or not self.right_factor_id.strip():
+            raise ValueError("factor ids are required")
+        if self.left_factor_id == self.right_factor_id:
+            raise ValueError("redundancy edge cannot be a self-edge")
+
+    @property
+    def normalized_pair(self) -> tuple[str, str]:
+        return tuple(sorted((self.left_factor_id, self.right_factor_id)))  # type: ignore[return-value]
+
+
+@dataclass(frozen=True)
+class RedundancyGraph:
+    factor_ids: tuple[str, ...]
+    candidate_edges: tuple[tuple[str, str], ...]
+    components: tuple[tuple[str, ...], ...]
+
+
+def build_redundancy_graph(
+    factor_ids: list[str],
+    edges: list[FactorRedundancyEdge],
+) -> RedundancyGraph:
+    """Build deterministic undirected redundancy components.
+
+    Only REDUNDANCY_CANDIDATE edges connect factors. BELOW_THRESHOLD and
+    UNKNOWN remain auditable evidence but do not create graph connectivity.
+    No winner, deletion, or weight change is selected here.
+    """
+    cleaned = [factor_id.strip() for factor_id in factor_ids]
+    if any(not factor_id for factor_id in cleaned):
+        raise ValueError("factor_id cannot be blank")
+    if len(set(cleaned)) != len(cleaned):
+        raise ValueError("duplicate factor_id in graph universe")
+
+    universe = set(cleaned)
+    states_by_pair: dict[tuple[str, str], RedundancyEdgeState] = {}
+    for edge in edges:
+        left, right = edge.normalized_pair
+        if left not in universe or right not in universe:
+            raise ValueError("edge references factor outside graph universe")
+
+        existing = states_by_pair.get((left, right))
+        if existing is not None and existing is not edge.decision.state:
+            raise ValueError("conflicting duplicate redundancy edge")
+        states_by_pair[(left, right)] = edge.decision.state
+
+    candidate_edges = tuple(
+        sorted(
+            pair
+            for pair, state in states_by_pair.items()
+            if state is RedundancyEdgeState.REDUNDANCY_CANDIDATE
+        )
+    )
+
+    adjacency: dict[str, set[str]] = {factor_id: set() for factor_id in cleaned}
+    for left, right in candidate_edges:
+        adjacency[left].add(right)
+        adjacency[right].add(left)
+
+    components: list[tuple[str, ...]] = []
+    visited: set[str] = set()
+    for start in sorted(cleaned):
+        if start in visited:
+            continue
+
+        stack = [start]
+        members: list[str] = []
+        while stack:
+            current = stack.pop()
+            if current in visited:
+                continue
+            visited.add(current)
+            members.append(current)
+            stack.extend(
+                neighbor
+                for neighbor in sorted(adjacency[current], reverse=True)
+                if neighbor not in visited
+            )
+
+        components.append(tuple(sorted(members)))
+
+    components.sort(key=lambda component: component)
+    return RedundancyGraph(
+        factor_ids=tuple(sorted(cleaned)),
+        candidate_edges=candidate_edges,
+        components=tuple(components),
+    )
