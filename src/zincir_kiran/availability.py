@@ -9,7 +9,6 @@ from zoneinfo import ZoneInfo
 
 from .pit import require_aware_timestamp
 
-
 ISTANBUL = ZoneInfo("Europe/Istanbul")
 
 
