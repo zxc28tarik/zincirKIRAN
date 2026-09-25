@@ -52,8 +52,14 @@ jobs:
       - name: Apply PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/pit_core.sql
 
+      - name: Apply Accounting & Sector PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/accounting_sector.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
+
+      - name: Verify Accounting & Sector PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/accounting_sector_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -76,4 +82,18 @@ jobs:
             exit 1
           else
             echo "Duplicate raw record correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_applicability.sql; then
+            echo "Invalid applicability state was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid applicability state correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_restatement.sql; then
+            echo "Invalid restatement state was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid restatement state correctly rejected"
           fi
