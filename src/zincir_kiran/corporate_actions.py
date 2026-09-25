@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from datetime import date, datetime
 from enum import StrEnum
 
-from zincir_kiran.pit import require_aware_timestamp
+from .pit import require_aware_timestamp
 
 
 class CorporateActionType(StrEnum):
@@ -45,12 +45,18 @@ class CorporateAction:
             raise ValueError("ratio cannot be negative")
         if self.cash_amount is not None and self.cash_amount < 0:
             raise ValueError("cash_amount cannot be negative")
-        if self.record_date is not None and self.ex_date is not None:
-            if self.record_date < self.ex_date:
-                raise ValueError("record_date cannot precede ex_date")
-        if self.payment_date is not None and self.ex_date is not None:
-            if self.payment_date < self.ex_date:
-                raise ValueError("payment_date cannot precede ex_date")
+        if (
+            self.record_date is not None
+            and self.ex_date is not None
+            and self.record_date < self.ex_date
+        ):
+            raise ValueError("record_date cannot precede ex_date")
+        if (
+            self.payment_date is not None
+            and self.ex_date is not None
+            and self.payment_date < self.ex_date
+        ):
+            raise ValueError("payment_date cannot precede ex_date")
 
 
 def visible_actions(
