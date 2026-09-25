@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import date
+from itertools import pairwise
 
 
 @dataclass(frozen=True)
@@ -19,9 +20,7 @@ class ListingInterval:
     def contains(self, trade_date: date) -> bool:
         if trade_date < self.first_trade_date:
             return False
-        if self.last_trade_date is not None and trade_date > self.last_trade_date:
-            return False
-        return True
+        return self.last_trade_date is None or trade_date <= self.last_trade_date
 
 
 def listed_security_ids(
@@ -42,7 +41,7 @@ def validate_non_overlapping_intervals(intervals: list[ListingInterval]) -> None
 
     for security_id, rows in grouped.items():
         rows.sort(key=lambda item: item.first_trade_date)
-        for previous, current in zip(rows, rows[1:], strict=False):
+        for previous, current in pairwise(rows):
             if previous.last_trade_date is None:
                 raise ValueError(f"open-ended interval overlaps for {security_id}")
             if current.first_trade_date <= previous.last_trade_date:
