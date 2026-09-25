@@ -21,6 +21,55 @@ create table if not exists zk.source_registry (
     created_at timestamptz not null default now()
 );
 
+create table if not exists zk.ingestion_batches (
+    batch_id uuid primary key default gen_random_uuid(),
+    source_id uuid not null references zk.source_registry(source_id),
+    extractor_version text not null,
+    started_at timestamptz not null default now(),
+    completed_at timestamptz,
+    status text not null default 'STARTED',
+    notes text,
+    constraint ingestion_batches_time_chk
+        check (completed_at is null or completed_at >= started_at),
+    unique (batch_id, source_id)
+);
+
+create index if not exists ingestion_batches_source_started_idx
+    on zk.ingestion_batches(source_id, started_at desc);
+
+create table if not exists zk.raw_records (
+    raw_record_id bigint generated always as identity primary key,
+    source_id uuid not null references zk.source_registry(source_id),
+    batch_id uuid,
+    source_record_key text,
+    source_url text,
+    content_type text,
+    storage_uri text,
+    payload jsonb,
+    content_sha256 text not null,
+    source_published_at timestamptz,
+    retrieved_at timestamptz not null,
+    created_at timestamptz not null default now(),
+    constraint raw_records_payload_or_storage_chk
+        check (payload is not null or storage_uri is not null),
+    constraint raw_records_sha256_chk
+        check (length(content_sha256) = 64),
+    constraint raw_records_batch_source_fk
+        foreign key (batch_id, source_id)
+        references zk.ingestion_batches(batch_id, source_id),
+    unique (raw_record_id, source_id)
+);
+
+create unique index if not exists raw_records_identity_uidx
+    on zk.raw_records(
+        source_id,
+        coalesce(source_record_key, ''),
+        content_sha256
+    );
+
+create index if not exists raw_records_source_retrieved_idx
+    on zk.raw_records(source_id, retrieved_at desc);
+
 create table if not exists zk.companies (
     company_id uuid primary key default gen_random_uuid(),
     legal_name text not null,
@@ -60,7 +109,11 @@ create table if not exists zk.security_identifiers (
     valid_from date not null,
     valid_to date,
     source_id uuid references zk.source_registry(source_id),
+    raw_record_id bigint,
     created_at timestamptz not null default now(),
+    constraint security_identifiers_raw_source_fk
+        foreign key (raw_record_id, source_id)
+        references zk.raw_records(raw_record_id, source_id),
     constraint security_identifiers_validity_chk
         check (valid_to is null or valid_to >= valid_from),
     unique (security_id, ticker, valid_from)
@@ -81,11 +134,15 @@ create table if not exists zk.prices (
     turnover_value numeric(30,4),
     currency text not null default 'TRY',
     source_id uuid not null references zk.source_registry(source_id),
+    raw_record_id bigint,
     revision_id text not null default 'original',
     reported_at timestamptz,
     available_at timestamptz not null,
     ingested_at timestamptz not null default now(),
     quality_flag text not null default 'VERIFIED',
+    constraint prices_raw_source_fk
+        foreign key (raw_record_id, source_id)
+        references zk.raw_records(raw_record_id, source_id),
     unique (security_id, trade_date, source_id, revision_id)
 );
 
@@ -110,6 +167,7 @@ create table if not exists zk.financial_facts (
     available_at timestamptz not null,
     revision_id text not null,
     source_id uuid not null references zk.source_registry(source_id),
+    raw_record_id bigint,
     reporting_standard text,
     inflation_adjusted boolean,
     restatement_status text,
@@ -117,7 +175,10 @@ create table if not exists zk.financial_facts (
     publication_date date,
     revision_date date,
     quality_flag text not null default 'VERIFIED',
-    ingested_at timestamptz not null default now()
+    ingested_at timestamptz not null default now(),
+    constraint financial_facts_raw_source_fk
+        foreign key (raw_record_id, source_id)
+        references zk.raw_records(raw_record_id, source_id)
 );
 
 create unique index if not exists financial_facts_identity_uidx
@@ -169,9 +230,13 @@ create table if not exists zk.corporate_actions (
     cash_amount numeric(30,8),
     currency text,
     source_id uuid not null references zk.source_registry(source_id),
+    raw_record_id bigint,
     available_at timestamptz not null,
     quality_flag text not null default 'VERIFIED',
-    ingested_at timestamptz not null default now()
+    ingested_at timestamptz not null default now(),
+    constraint corporate_actions_raw_source_fk
+        foreign key (raw_record_id, source_id)
+        references zk.raw_records(raw_record_id, source_id)
 );
 
 create index if not exists corporate_actions_security_date_idx
@@ -189,6 +254,7 @@ create table if not exists zk.shares_history (
     free_float_shares numeric(30,4),
     free_float_ratio numeric(12,8),
     source_id uuid not null references zk.source_registry(source_id),
+    raw_record_id bigint,
     reported_at timestamptz,
     available_at timestamptz not null,
     quality_flag text not null default 'VERIFIED',
@@ -196,7 +262,10 @@ create table if not exists zk.shares_history (
     constraint shares_history_validity_chk
         check (effective_to is null or effective_to >= effective_from),
     constraint shares_history_free_float_ratio_chk
-        check (free_float_ratio is null or (free_float_ratio >= 0 and free_float_ratio <= 1))
+        check (free_float_ratio is null or (free_float_ratio >= 0 and free_float_ratio <= 1)),
+    constraint shares_history_raw_source_fk
+        foreign key (raw_record_id, source_id)
+        references zk.raw_records(raw_record_id, source_id)
 );
 
 create index if not exists shares_history_company_date_idx
