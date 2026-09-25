@@ -5,10 +5,10 @@ The first-trading-date record layout follows Borsa Istanbul reporting formats.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date
 from decimal import Decimal, InvalidOperation
-from typing import Sequence
 
 
 @dataclass(frozen=True)
@@ -22,7 +22,11 @@ class BistFirstTradingRecord:
 
 
 def _parse_ddmmyyyy(value: str) -> date:
-    return datetime.strptime(value.strip(), "%d.%m.%Y").date()
+    parts = value.strip().split(".")
+    if len(parts) != 3:
+        raise ValueError("invalid DD.MM.YYYY date")
+    day, month, year = (int(part) for part in parts)
+    return date(year, month, day)
 
 
 def parse_first_trading_fields(fields: Sequence[str]) -> BistFirstTradingRecord:
