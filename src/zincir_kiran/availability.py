@@ -6,7 +6,6 @@ from collections.abc import Iterable
 from datetime import date, datetime, time
 from zoneinfo import ZoneInfo
 
-
 ISTANBUL = ZoneInfo("Europe/Istanbul")
 
 
