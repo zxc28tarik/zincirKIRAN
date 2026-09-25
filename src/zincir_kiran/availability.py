@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, time
 from zoneinfo import ZoneInfo
 
-from zincir_kiran.pit import require_aware_timestamp
+from .pit import require_aware_timestamp
 
 
 ISTANBUL = ZoneInfo("Europe/Istanbul")
