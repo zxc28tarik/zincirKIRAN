@@ -12,7 +12,7 @@ def fact(*, inflation_adjusted: bool | None) -> FinancialFact:
         company_id="COMPANY",
         metric_id="revenue",
         period_end=date(2025, 12, 31),
-        value=Decimal("100"),
+        value=Decimal(100),
         available_at=datetime(2026, 3, 1, tzinfo=UTC),
         accounting=AccountingContext(
             reporting_standard="TFRS",
