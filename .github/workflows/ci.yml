@@ -55,11 +55,17 @@ jobs:
       - name: Apply Accounting & Sector PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/accounting_sector.sql
 
+      - name: Apply Baselines PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/baselines.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
       - name: Verify Accounting & Sector PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/accounting_sector_smoke.sql
+
+      - name: Verify Baselines PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/baselines_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -96,4 +102,25 @@ jobs:
             exit 1
           else
             echo "Invalid restatement state correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_baseline_mutation.sql; then
+            echo "Baseline definition mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Baseline definition mutation correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_baseline_horizon.sql; then
+            echo "Invalid baseline horizon was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid baseline horizon correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_missing_baseline_metadata.sql; then
+            echo "Missing baseline run metadata was incorrectly accepted"
+            exit 1
+          else
+            echo "Missing baseline run metadata correctly rejected"
           fi
