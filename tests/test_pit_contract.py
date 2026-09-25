@@ -1,1 +1,74 @@
-from datetime import datetime, timezone\n\nimport pytest\n\nfrom zincir_kiran.pit import available_by, latest_available_revision\n\n\nUTC = timezone.utc\n\n\ndef ts(day: int) -> datetime:\n    return datetime(2025, 1, day, 12, 0, tzinfo=UTC)\n\n\ndef test_future_information_is_not_available() -> None:\n    record = {"available_at": ts(10)}\n    assert available_by(record, ts(9)) is False\n    assert available_by(record, ts(10)) is True\n\n\ndef test_later_revision_does_not_leak_into_earlier_snapshot() -> None:\n    records = [\n        {\n            "company_id": "A",\n            "metric_id": "revenue",\n            "period_end": "2024-12-31",\n            "revision_id": "r1",\n            "value": 100,\n            "available_at": ts(5),\n        },\n        {\n            "company_id": "A",\n            "metric_id": "revenue",\n            "period_end": "2024-12-31",\n            "revision_id": "r2",\n            "value": 120,\n            "available_at": ts(20),\n        },\n    ]\n\n    identity = ("company_id", "metric_id", "period_end")\n\n    early = latest_available_revision(records, ts(10), identity_fields=identity)\n    late = latest_available_revision(records, ts(25), identity_fields=identity)\n\n    assert early[0]["revision_id"] == "r1"\n    assert early[0]["value"] == 100\n    assert late[0]["revision_id"] == "r2"\n    assert late[0]["value"] == 120\n\n\ndef test_missing_available_at_is_rejected_not_neutralized() -> None:\n    records = [\n        {\n            "company_id": "A",\n            "metric_id": "profit",\n            "period_end": "2024-12-31",\n            "revision_id": "r1",\n            "value": None,\n        }\n    ]\n\n    result = latest_available_revision(\n        records,\n        ts(25),\n        identity_fields=("company_id", "metric_id", "period_end"),\n    )\n\n    assert result == []\n\n\ndef test_naive_prediction_timestamp_is_rejected() -> None:\n    with pytest.raises(ValueError, match="timezone-aware"):\n        available_by({"available_at": ts(5)}, datetime(2025, 1, 10, 12, 0))\n
+from datetime import datetime, timezone
+
+import pytest
+
+from zincir_kiran.pit import available_by, latest_available_revision
+
+
+UTC = timezone.utc
+
+
+def ts(day: int) -> datetime:
+    return datetime(2025, 1, day, 12, 0, tzinfo=UTC)
+
+
+def test_future_information_is_not_available() -> None:
+    record = {"available_at": ts(10)}
+    assert available_by(record, ts(9)) is False
+    assert available_by(record, ts(10)) is True
+
+
+def test_later_revision_does_not_leak_into_earlier_snapshot() -> None:
+    records = [
+        {
+            "company_id": "A",
+            "metric_id": "revenue",
+            "period_end": "2024-12-31",
+            "revision_id": "r1",
+            "value": 100,
+            "available_at": ts(5),
+        },
+        {
+            "company_id": "A",
+            "metric_id": "revenue",
+            "period_end": "2024-12-31",
+            "revision_id": "r2",
+            "value": 120,
+            "available_at": ts(20),
+        },
+    ]
+
+    identity = ("company_id", "metric_id", "period_end")
+
+    early = latest_available_revision(records, ts(10), identity_fields=identity)
+    late = latest_available_revision(records, ts(25), identity_fields=identity)
+
+    assert early[0]["revision_id"] == "r1"
+    assert early[0]["value"] == 100
+    assert late[0]["revision_id"] == "r2"
+    assert late[0]["value"] == 120
+
+
+def test_missing_available_at_is_rejected_not_neutralized() -> None:
+    records = [
+        {
+            "company_id": "A",
+            "metric_id": "profit",
+            "period_end": "2024-12-31",
+            "revision_id": "r1",
+            "value": None,
+        }
+    ]
+
+    result = latest_available_revision(
+        records,
+        ts(25),
+        identity_fields=("company_id", "metric_id", "period_end"),
+    )
+
+    assert result == []
+
+
+def test_naive_prediction_timestamp_is_rejected() -> None:
+    with pytest.raises(ValueError, match="timezone-aware"):
+        available_by({"available_at": ts(5)}, datetime(2025, 1, 10, 12, 0))
