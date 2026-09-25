@@ -215,3 +215,118 @@ def test_invalid_absolute_threshold_is_rejected(threshold: float) -> None:
 
     with pytest.raises(ValueError, match="absolute_threshold"):
         redundancy_edge_decision(result, absolute_threshold=threshold)
+
+def _edge(
+    left: str,
+    right: str,
+    state_name: str,
+) -> object:
+    from zincir_kiran.decorrelation import (
+        FactorRedundancyEdge,
+        RedundancyEdgeDecision,
+        RedundancyEdgeState,
+    )
+
+    state = RedundancyEdgeState(state_name)
+    correlation = 0.95 if state is RedundancyEdgeState.REDUNDANCY_CANDIDATE else 0.20
+    if state is RedundancyEdgeState.UNKNOWN:
+        correlation = None
+    return FactorRedundancyEdge(
+        left_factor_id=left,
+        right_factor_id=right,
+        decision=RedundancyEdgeDecision(
+            state=state,
+            absolute_threshold=0.80,
+            correlation=correlation,
+            overlap_count=100,
+        ),
+    )
+
+
+def test_redundancy_components_are_deterministic_and_transitive() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph
+
+    graph = build_redundancy_graph(
+        ["factor_c", "factor_a", "factor_d", "factor_b"],
+        [
+            _edge("factor_b", "factor_c", "REDUNDANCY_CANDIDATE"),
+            _edge("factor_a", "factor_b", "REDUNDANCY_CANDIDATE"),
+        ],  # type: ignore[list-item]
+    )
+
+    assert graph.factor_ids == ("factor_a", "factor_b", "factor_c", "factor_d")
+    assert graph.candidate_edges == (
+        ("factor_a", "factor_b"),
+        ("factor_b", "factor_c"),
+    )
+    assert graph.components == (
+        ("factor_a", "factor_b", "factor_c"),
+        ("factor_d",),
+    )
+
+
+def test_below_threshold_and_unknown_edges_do_not_connect_components() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph
+
+    graph = build_redundancy_graph(
+        ["a", "b", "c"],
+        [
+            _edge("a", "b", "BELOW_THRESHOLD"),
+            _edge("b", "c", "UNKNOWN"),
+        ],  # type: ignore[list-item]
+    )
+
+    assert graph.candidate_edges == ()
+    assert graph.components == (("a",), ("b",), ("c",))
+
+
+def test_redundancy_graph_does_not_choose_a_winner() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph
+
+    graph = build_redundancy_graph(
+        ["a", "b"],
+        [_edge("a", "b", "REDUNDANCY_CANDIDATE")],  # type: ignore[list-item]
+    )
+
+    assert graph.components == (("a", "b"),)
+    assert not hasattr(graph, "winner")
+    assert not hasattr(graph, "selected_factor")
+
+
+def test_graph_rejects_edge_outside_declared_factor_universe() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph
+
+    with pytest.raises(ValueError, match="outside graph universe"):
+        build_redundancy_graph(
+            ["a", "b"],
+            [_edge("a", "c", "REDUNDANCY_CANDIDATE")],  # type: ignore[list-item]
+        )
+
+
+def test_graph_rejects_conflicting_duplicate_pair_states() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph
+
+    with pytest.raises(ValueError, match="conflicting duplicate"):
+        build_redundancy_graph(
+            ["a", "b"],
+            [
+                _edge("a", "b", "REDUNDANCY_CANDIDATE"),
+                _edge("b", "a", "BELOW_THRESHOLD"),
+            ],  # type: ignore[list-item]
+        )
+
+
+def test_redundancy_edge_rejects_self_edge() -> None:
+    from zincir_kiran.decorrelation import FactorRedundancyEdge, RedundancyEdgeDecision, RedundancyEdgeState
+
+    with pytest.raises(ValueError, match="self-edge"):
+        FactorRedundancyEdge(
+            left_factor_id="a",
+            right_factor_id="a",
+            decision=RedundancyEdgeDecision(
+                state=RedundancyEdgeState.REDUNDANCY_CANDIDATE,
+                absolute_threshold=0.80,
+                correlation=0.95,
+                overlap_count=100,
+            ),
+        )
