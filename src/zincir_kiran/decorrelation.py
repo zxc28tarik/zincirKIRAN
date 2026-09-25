@@ -122,3 +122,51 @@ def pairwise_factor_correlation(
         right_count=len(right),
         minimum_overlap=minimum_overlap,
     )
+
+class RedundancyEdgeState(StrEnum):
+    REDUNDANCY_CANDIDATE = "REDUNDANCY_CANDIDATE"
+    BELOW_THRESHOLD = "BELOW_THRESHOLD"
+    UNKNOWN = "UNKNOWN"
+
+
+@dataclass(frozen=True)
+class RedundancyEdgeDecision:
+    state: RedundancyEdgeState
+    absolute_threshold: float
+    correlation: float | None
+    overlap_count: int
+
+    @property
+    def has_edge(self) -> bool | None:
+        """Return True/False only when statistical evidence is available."""
+        if self.state is RedundancyEdgeState.UNKNOWN:
+            return None
+        return self.state is RedundancyEdgeState.REDUNDANCY_CANDIDATE
+
+
+def redundancy_edge_decision(
+    result: PairwiseCorrelationResult,
+    *,
+    absolute_threshold: float,
+) -> RedundancyEdgeDecision:
+    """Classify one pair using an explicit caller-supplied absolute threshold.
+
+    This is a redundancy-candidate edge, not a causal claim and not a factor
+    deletion/promotion decision. Unknown correlation remains UNKNOWN.
+    """
+    if not 0 < absolute_threshold <= 1:
+        raise ValueError("absolute_threshold must be in (0, 1]")
+
+    if result.correlation is None:
+        state = RedundancyEdgeState.UNKNOWN
+    elif abs(result.correlation) >= absolute_threshold:
+        state = RedundancyEdgeState.REDUNDANCY_CANDIDATE
+    else:
+        state = RedundancyEdgeState.BELOW_THRESHOLD
+
+    return RedundancyEdgeDecision(
+        state=state,
+        absolute_threshold=absolute_threshold,
+        correlation=result.correlation,
+        overlap_count=result.overlap_count,
+    )
