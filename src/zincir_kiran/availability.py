@@ -1,11 +1,16 @@
-"""Availability timestamp policy for point-in-time research."""
+"""Availability-time rules for point-in-time research."""
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date, datetime, time
+from zoneinfo import ZoneInfo
 
 from zincir_kiran.pit import require_aware_timestamp
+
+
+ISTANBUL = ZoneInfo("Europe/Istanbul")
 
 
 @dataclass(frozen=True)
@@ -13,6 +18,23 @@ class AvailabilityDecision:
     available_at: datetime
     quality_flag: str
     rule: str
+
+
+def next_trading_day_available_at(
+    publication_date: date,
+    trading_dates: Iterable[date],
+) -> datetime:
+    """Legacy conservative fallback for a date-only publication.
+
+    This helper keeps the existing PIT contract: the value becomes usable on
+    the first known trading date strictly after the publication date. New
+    ingestion code should prefer ``from_date_only_publication`` when an
+    explicit trading-session timestamp is available.
+    """
+    candidates = sorted(day for day in set(trading_dates) if day > publication_date)
+    if not candidates:
+        raise ValueError("no later trading date available")
+    return datetime.combine(candidates[0], time.min, tzinfo=ISTANBUL)
 
 
 def from_exact_publication_timestamp(published_at: datetime) -> AvailabilityDecision:
