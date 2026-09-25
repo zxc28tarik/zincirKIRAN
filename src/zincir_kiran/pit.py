@@ -1,1 +1,66 @@
-"""Point-in-time selection primitives.\n\nThese functions are deliberately small and dependency-free so PIT semantics can be\nunit-tested before any database or factor logic is trusted.\n"""\n\nfrom __future__ import annotations\n\nfrom collections.abc import Iterable, Mapping\nfrom datetime import datetime\nfrom typing import Any\n\n\ndef require_aware_timestamp(value: datetime) -> None:\n    """Reject naive timestamps because PIT comparisons must be timezone-aware."""\n    if value.tzinfo is None or value.utcoffset() is None:\n        raise ValueError("PIT timestamps must be timezone-aware")\n\n\ndef available_by(\n    record: Mapping[str, Any],\n    prediction_timestamp: datetime,\n    *,\n    field: str = "available_at",\n) -> bool:\n    """Return True only when a record was safely available by prediction time."""\n    require_aware_timestamp(prediction_timestamp)\n    available_at = record.get(field)\n    if not isinstance(available_at, datetime):\n        return False\n    require_aware_timestamp(available_at)\n    return available_at <= prediction_timestamp\n\n\ndef latest_available_revision(\n    records: Iterable[Mapping[str, Any]],\n    prediction_timestamp: datetime,\n    *,\n    identity_fields: tuple[str, ...],\n) -> list[Mapping[str, Any]]:\n    """Select the latest available revision for each logical fact identity."""\n    require_aware_timestamp(prediction_timestamp)\n\n    latest: dict[tuple[Any, ...], Mapping[str, Any]] = {}\n    for record in records:\n        if not available_by(record, prediction_timestamp):\n            continue\n\n        key = tuple(record.get(field) for field in identity_fields)\n        existing = latest.get(key)\n\n        if existing is None:\n            latest[key] = record\n            continue\n\n        candidate_ts = record["available_at"]\n        existing_ts = existing["available_at"]\n        if candidate_ts > existing_ts:\n            latest[key] = record\n        elif candidate_ts == existing_ts:\n            candidate_rev = str(record.get("revision_id", ""))\n            existing_rev = str(existing.get("revision_id", ""))\n            if candidate_rev > existing_rev:\n                latest[key] = record\n\n    return list(latest.values())\n
+"""Point-in-time selection primitives.
+
+These functions are deliberately small and dependency-free so PIT semantics can be
+unit-tested before any database or factor logic is trusted.
+"""
+
+from __future__ import annotations
+
+from collections.abc import Iterable, Mapping
+from datetime import datetime
+from typing import Any
+
+
+def require_aware_timestamp(value: datetime) -> None:
+    """Reject naive timestamps because PIT comparisons must be timezone-aware."""
+    if value.tzinfo is None or value.utcoffset() is None:
+        raise ValueError("PIT timestamps must be timezone-aware")
+
+
+def available_by(
+    record: Mapping[str, Any],
+    prediction_timestamp: datetime,
+    *,
+    field: str = "available_at",
+) -> bool:
+    """Return True only when a record was safely available by prediction time."""
+    require_aware_timestamp(prediction_timestamp)
+    available_at = record.get(field)
+    if not isinstance(available_at, datetime):
+        return False
+    require_aware_timestamp(available_at)
+    return available_at <= prediction_timestamp
+
+
+def latest_available_revision(
+    records: Iterable[Mapping[str, Any]],
+    prediction_timestamp: datetime,
+    *,
+    identity_fields: tuple[str, ...],
+) -> list[Mapping[str, Any]]:
+    """Select the latest available revision for each logical fact identity."""
+    require_aware_timestamp(prediction_timestamp)
+
+    latest: dict[tuple[Any, ...], Mapping[str, Any]] = {}
+    for record in records:
+        if not available_by(record, prediction_timestamp):
+            continue
+
+        key = tuple(record.get(field) for field in identity_fields)
+        existing = latest.get(key)
+
+        if existing is None:
+            latest[key] = record
+            continue
+
+        candidate_ts = record["available_at"]
+        existing_ts = existing["available_at"]
+        if candidate_ts > existing_ts:
+            latest[key] = record
+        elif candidate_ts == existing_ts:
+            candidate_rev = str(record.get("revision_id", ""))
+            existing_rev = str(existing.get("revision_id", ""))
+            if candidate_rev > existing_rev:
+                latest[key] = record
+
+    return list(latest.values())
