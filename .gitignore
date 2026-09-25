@@ -40,3 +40,7 @@ Thumbs.db
 build/
 dist/
 *.egg-info/
+
+# Supabase local state
+supabase/.temp/
+supabase/.branches/

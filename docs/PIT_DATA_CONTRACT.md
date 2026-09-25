@@ -4,6 +4,41 @@ Bu belge Implementation 1 için minimum veri sözleşmesini tanımlar.
 
 ## Core entities
 
+### ingestion_batches
+
+Her veri çekimi yeniden üretilebilir bir batch kimliği taşır.
+
+```text
+batch_id
+source_id
+extractor_version
+started_at
+completed_at
+status
+notes
+```
+
+### raw_records
+
+Ham kayıtlar overwrite edilmez; aynı source kaydı değişirse yeni içerik hash'i ile yeni raw kayıt olarak saklanır.
+
+```text
+raw_record_id
+source_id
+batch_id
+source_record_key
+source_url
+content_type
+storage_uri
+payload
+content_sha256
+source_published_at
+retrieved_at
+created_at
+```
+
+En az `payload` veya `storage_uri` bulunmalıdır. `content_sha256` kaynak snapshot'ının bütünlük kimliğidir.
+
 ### companies
 
 Amaç: kalıcı şirket kimliği ile ticker tarihçesini ayırmak.
@@ -50,6 +85,7 @@ close
 volume
 turnover_value
 source
+raw_record_id
 available_at
 ingested_at
 quality_flag
@@ -73,6 +109,7 @@ reported_at
 available_at
 revision_id
 source
+raw_record_id
 reporting_standard
 inflation_adjusted
 restatement_status
@@ -109,6 +146,7 @@ ratio
 cash_amount
 currency
 source
+raw_record_id
 available_at
 quality_flag
 ```
@@ -123,6 +161,7 @@ shares_outstanding
 free_float_shares
 free_float_ratio
 source
+raw_record_id
 available_at
 quality_flag
 ```
@@ -172,7 +211,7 @@ olmadan veri feature hesaplamasına giremez.
 
 ## Revision policy
 
-1. RAW veri immutable tutulur.
+1. RAW veri immutable tutulur; aynı `source_record_key + content_sha256` tekrar eklenemez.
 2. Yeni veri eski değerin üstüne sessizce yazılmaz.
 3. Revision lineage mümkün olduğunca korunur.
 4. Backtest, prediction timestamp'te hangi revision mevcutsa onu kullanır.
@@ -218,7 +257,9 @@ model_score
 -> factor_value
 -> feature_value
 -> PIT fact
--> raw source / revision
+-> raw_record_id
+-> ingestion_batch
+-> source_registry
 ```
 
 Kaynağı izlenemeyen veri production scoring'e giremez.

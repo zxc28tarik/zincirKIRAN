@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: zincir_kiran
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d zincir_kiran"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - zincir_kiran_pgdata:/var/lib/postgresql/data
+
+volumes:
+  zincir_kiran_pgdata:
