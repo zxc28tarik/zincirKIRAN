@@ -4,8 +4,19 @@
 create schema if not exists zk;
 
 revoke all on schema zk from public;
-revoke all on schema zk from anon;
-revoke all on schema zk from authenticated;
+
+-- Supabase roles exist only on Supabase-hosted Postgres. Keep the schema
+-- portable so it can be validated for free in plain PostgreSQL CI.
+do $
+begin
+    if exists (select 1 from pg_roles where rolname = 'anon') then
+        execute 'revoke all on schema zk from anon';
+    end if;
+    if exists (select 1 from pg_roles where rolname = 'authenticated') then
+        execute 'revoke all on schema zk from authenticated';
+    end if;
+end
+$;
 
 create table if not exists zk.source_registry (
     source_id uuid primary key default gen_random_uuid(),
