@@ -54,3 +54,19 @@ jobs:
 
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
+
+      - name: Verify database rejection guards
+        run: |
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_duplicate_financial_fact.sql; then
+            echo "Duplicate financial fact was incorrectly accepted"
+            exit 1
+          else
+            echo "Duplicate financial fact correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_free_float.sql; then
+            echo "Invalid free-float ratio was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid free-float ratio correctly rejected"
+          fi
