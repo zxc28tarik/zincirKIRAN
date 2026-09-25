@@ -1,0 +1,4 @@
+source_id,name,source_type,base_url,timestamp_quality,priority,active
+kap,KAP,official_disclosure,https://kap.org.tr,HIGH,10,true
+borsa_istanbul,Borsa Istanbul,official_exchange,https://www.borsaistanbul.com,MEDIUM,20,true
+investingpro,InvestingPro+,enrichment,https://www.investing.com/pro,UNVERIFIED,50,true
