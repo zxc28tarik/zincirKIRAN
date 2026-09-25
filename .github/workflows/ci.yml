@@ -58,6 +58,9 @@ jobs:
       - name: Apply Baselines PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/baselines.sql
 
+      - name: Apply Factor Library PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/factor_library.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -66,6 +69,9 @@ jobs:
 
       - name: Verify Baselines PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/baselines_smoke.sql
+
+      - name: Verify Factor Library PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/factor_library_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -123,4 +129,25 @@ jobs:
             exit 1
           else
             echo "Missing baseline run metadata correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_factor_premature_stage.sql; then
+            echo "Premature factor promotion was incorrectly accepted"
+            exit 1
+          else
+            echo "Premature factor promotion correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_factor_mutation.sql; then
+            echo "Factor definition mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Factor definition mutation correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_factor_empty_fields.sql; then
+            echo "Factor with empty required fields was incorrectly accepted"
+            exit 1
+          else
+            echo "Factor with empty required fields correctly rejected"
           fi
