@@ -63,4 +63,9 @@ def latest_available_revision(
             if candidate_rev > existing_rev:
                 latest[key] = record
 
-    return list(latest.values())
+    def stable_key(
+        item: tuple[tuple[Any, ...], Mapping[str, Any]],
+    ) -> tuple[str, ...]:
+        return tuple("" if part is None else str(part) for part in item[0])
+
+    return [record for _, record in sorted(latest.items(), key=stable_key)]
