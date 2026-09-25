@@ -317,7 +317,11 @@ def test_graph_rejects_conflicting_duplicate_pair_states() -> None:
 
 
 def test_redundancy_edge_rejects_self_edge() -> None:
-    from zincir_kiran.decorrelation import FactorRedundancyEdge, RedundancyEdgeDecision, RedundancyEdgeState
+    from zincir_kiran.decorrelation import (
+        FactorRedundancyEdge,
+        RedundancyEdgeDecision,
+        RedundancyEdgeState,
+    )
 
     with pytest.raises(ValueError, match="self-edge"):
         FactorRedundancyEdge(
