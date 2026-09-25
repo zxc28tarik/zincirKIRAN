@@ -61,6 +61,9 @@ jobs:
       - name: Apply Factor Library PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/factor_library.sql
 
+      - name: Apply Factor Lab PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/factor_lab.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -72,6 +75,9 @@ jobs:
 
       - name: Verify Factor Library PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/factor_library_smoke.sql
+
+      - name: Verify Factor Lab PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/factor_lab_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -150,4 +156,25 @@ jobs:
             exit 1
           else
             echo "Factor with empty required fields correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_factor_experiment_mutation.sql; then
+            echo "Experiment protocol mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Experiment protocol mutation correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_unregistered_factor_result.sql; then
+            echo "Unregistered experiment result was incorrectly accepted"
+            exit 1
+          else
+            echo "Unregistered experiment result correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_factor_result.sql; then
+            echo "Invalid factor result was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid factor result correctly rejected"
           fi
