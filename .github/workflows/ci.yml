@@ -70,3 +70,10 @@ jobs:
           else
             echo "Invalid free-float ratio correctly rejected"
           fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_duplicate_raw_record.sql; then
+            echo "Duplicate raw record was incorrectly accepted"
+            exit 1
+          else
+            echo "Duplicate raw record correctly rejected"
+          fi
