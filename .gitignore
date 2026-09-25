@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Data / secrets
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+data/raw/*
+data/clean/*
+data/pit/*
+!data/raw/.gitkeep
+!data/clean/.gitkeep
+!data/pit/.gitkeep
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+*.egg-info/
