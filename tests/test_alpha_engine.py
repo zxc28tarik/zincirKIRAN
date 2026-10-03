@@ -99,6 +99,8 @@ def test_full_coverage_produces_auditable_weighted_abs_mean() -> None:
 
     assert result.status is AlphaExecutionStatus.SCORED
     assert result.coverage == pytest.approx(1.0)
+    assert result.planned_factor_count == 2
+    assert result.available_factor_count == 2
     assert result.alpha_value == pytest.approx(0.0)
     assert tuple(item.factor_id for item in result.contributions) == ("momentum", "value")
     by_factor = {item.factor_id: item for item in result.contributions}
@@ -126,6 +128,8 @@ def test_insufficient_weight_coverage_abstains_without_neutral_fill() -> None:
     assert result.status is AlphaExecutionStatus.ABSTAIN_INSUFFICIENT_COVERAGE
     assert result.alpha_value is None
     assert result.coverage == pytest.approx(0.25)
+    assert result.planned_factor_count == 2
+    assert result.available_factor_count == 1
     assert tuple(item.availability for item in result.unavailable_inputs) == (
         SignalAvailability.MISSING,
     )
