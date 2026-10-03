@@ -179,6 +179,8 @@ create table zk.alpha_runs (
     status text not null,
     alpha_value numeric,
     coverage numeric not null,
+    planned_factor_count integer not null,
+    available_factor_count integer not null,
     planned_absolute_weight numeric not null,
     available_absolute_weight numeric not null,
     created_at timestamptz not null default now(),
@@ -188,12 +190,21 @@ create table zk.alpha_runs (
     constraint alpha_runs_status_chk
         check (status in ('SCORED', 'ABSTAIN_INSUFFICIENT_COVERAGE')),
     constraint alpha_runs_coverage_chk check (coverage >= 0 and coverage <= 1),
+    constraint alpha_runs_counts_chk check (
+        planned_factor_count > 0
+        and available_factor_count >= 0
+        and available_factor_count <= planned_factor_count
+    ),
     constraint alpha_runs_weights_chk check (
         planned_absolute_weight > 0
         and available_absolute_weight >= 0
         and available_absolute_weight <= planned_absolute_weight
         and planned_absolute_weight not in ('NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric)
         and available_absolute_weight not in ('NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric)
+    ),
+    constraint alpha_runs_alpha_finite_chk check (
+        alpha_value is null
+        or alpha_value not in ('NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric)
     ),
     constraint alpha_runs_score_state_chk check (
         (status = 'SCORED' and alpha_value is not null)
@@ -204,15 +215,22 @@ create table zk.alpha_runs (
 create function zk.validate_alpha_run_contract()
 returns trigger
 language plpgsql
-as $$
+as $
 declare
     spec_horizon integer;
+    spec_coverage_rule text;
+    spec_parameters jsonb;
     expected_field text;
+    minimum_coverage numeric;
+    expected_planned_weight numeric;
+    expected_planned_count integer;
+    expected_coverage numeric;
 begin
-    select horizon_days into spec_horizon
-    from zk.alpha_aggregation_specs
-    where specification_id = new.specification_id
-      and definition_version = new.definition_version;
+    select horizon_days, coverage_rule_id, parameters
+      into spec_horizon, spec_coverage_rule, spec_parameters
+      from zk.alpha_aggregation_specs
+     where specification_id = new.specification_id
+       and definition_version = new.definition_version;
 
     expected_field := case spec_horizon
         when 20 then 'Alpha20'
@@ -223,9 +241,52 @@ begin
     if new.alpha_field <> expected_field then
         raise exception 'alpha_field does not match specification horizon';
     end if;
+
+    if not (spec_parameters ? 'minimum_coverage') then
+        raise exception 'aggregation specification requires minimum_coverage';
+    end if;
+    minimum_coverage := (spec_parameters ->> 'minimum_coverage')::numeric;
+    if minimum_coverage < 0 or minimum_coverage > 1 then
+        raise exception 'minimum_coverage must be in [0, 1]';
+    end if;
+
+    select coalesce(sum(abs(weight)), 0), count(*)
+      into expected_planned_weight, expected_planned_count
+      from zk.alpha_factor_weights
+     where specification_id = new.specification_id
+       and definition_version = new.definition_version;
+
+    if expected_planned_count = 0 then
+        raise exception 'alpha run requires a non-empty weight plan';
+    end if;
+    if new.planned_factor_count <> expected_planned_count then
+        raise exception 'planned_factor_count does not match specification weight plan';
+    end if;
+    if new.planned_absolute_weight <> expected_planned_weight then
+        raise exception 'planned_absolute_weight does not match specification weight plan';
+    end if;
+
+    if spec_coverage_rule = 'ABS_WEIGHT_COVERAGE' then
+        expected_coverage := new.available_absolute_weight / new.planned_absolute_weight;
+    elsif spec_coverage_rule = 'FACTOR_COUNT_COVERAGE' then
+        expected_coverage := new.available_factor_count::numeric / new.planned_factor_count;
+    else
+        raise exception 'unsupported coverage_rule_id for executable alpha run';
+    end if;
+
+    if new.coverage <> expected_coverage then
+        raise exception 'alpha run coverage is inconsistent with coverage rule';
+    end if;
+    if new.status = 'SCORED' and new.coverage < minimum_coverage then
+        raise exception 'SCORED alpha run is below minimum coverage';
+    end if;
+    if new.status = 'ABSTAIN_INSUFFICIENT_COVERAGE'
+       and new.coverage >= minimum_coverage then
+        raise exception 'ABSTAIN alpha run meets minimum coverage';
+    end if;
     return new;
 end;
-$$;
+$;
 
 create trigger alpha_runs_contract_trg
 before insert on zk.alpha_runs
@@ -355,6 +416,83 @@ for each row execute function zk.validate_alpha_unavailable_input();
 create trigger alpha_run_unavailable_inputs_immutable_trg
 before update or delete on zk.alpha_run_unavailable_inputs
 for each row execute function zk.reject_alpha_aggregation_mutation();
+
+create function zk.audit_alpha_run_complete()
+returns trigger
+language plpgsql
+as $
+declare
+    run_record zk.alpha_runs%rowtype;
+    aggregation_rule text;
+    contribution_count integer;
+    unavailable_count integer;
+    contribution_abs_weight numeric;
+    contribution_sum numeric;
+    expected_alpha numeric;
+begin
+    select * into run_record
+      from zk.alpha_runs
+     where alpha_run_id = new.alpha_run_id;
+
+    select aggregation_rule_id into aggregation_rule
+      from zk.alpha_aggregation_specs
+     where specification_id = run_record.specification_id
+       and definition_version = run_record.definition_version;
+
+    select count(*), coalesce(sum(abs(weight)), 0), coalesce(sum(weighted_contribution), 0)
+      into contribution_count, contribution_abs_weight, contribution_sum
+      from zk.alpha_run_contributions
+     where alpha_run_id = new.alpha_run_id;
+
+    select count(*) into unavailable_count
+      from zk.alpha_run_unavailable_inputs
+     where alpha_run_id = new.alpha_run_id;
+
+    if exists (
+        select 1
+        from zk.alpha_run_contributions c
+        join zk.alpha_run_unavailable_inputs u
+          on u.alpha_run_id = c.alpha_run_id
+         and u.admission_id = c.admission_id
+        where c.alpha_run_id = new.alpha_run_id
+    ) then
+        raise exception 'alpha admission cannot be both available and unavailable';
+    end if;
+
+    if contribution_count <> run_record.available_factor_count then
+        raise exception 'available_factor_count does not match contribution rows';
+    end if;
+    if contribution_count + unavailable_count <> run_record.planned_factor_count then
+        raise exception 'alpha run does not account for every planned factor';
+    end if;
+    if contribution_abs_weight <> run_record.available_absolute_weight then
+        raise exception 'available_absolute_weight does not match contribution rows';
+    end if;
+
+    if run_record.status = 'SCORED' then
+        if aggregation_rule = 'WEIGHTED_SUM' then
+            expected_alpha := contribution_sum;
+        elsif aggregation_rule = 'WEIGHTED_ABS_MEAN' then
+            if run_record.available_absolute_weight = 0 then
+                raise exception 'scored weighted mean cannot have zero available weight';
+            end if;
+            expected_alpha := contribution_sum / run_record.available_absolute_weight;
+        else
+            raise exception 'unsupported aggregation_rule_id for executable alpha run';
+        end if;
+        if run_record.alpha_value <> expected_alpha then
+            raise exception 'alpha_value does not match contribution arithmetic';
+        end if;
+    end if;
+
+    return new;
+end;
+$;
+
+create constraint trigger alpha_runs_complete_audit_trg
+after insert on zk.alpha_runs
+deferrable initially deferred
+for each row execute function zk.audit_alpha_run_complete();
 
 create index alpha_runs_security_time_idx
     on zk.alpha_runs(security_id, evaluated_at desc);
