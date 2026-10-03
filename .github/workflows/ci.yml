@@ -67,6 +67,9 @@ jobs:
       - name: Apply De-correlation PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/decorrelation.sql
 
+      - name: Apply Interpretable Alpha PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/interpretable_alpha.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -84,6 +87,9 @@ jobs:
 
       - name: Verify De-correlation PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/decorrelation_smoke.sql
+
+      - name: Verify Interpretable Alpha PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/interpretable_alpha_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -211,4 +217,69 @@ jobs:
             exit 1
           else
             echo "Invalid residualization result correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_alpha_aggregation_mutation.sql; then
+            echo "Alpha aggregation mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Alpha aggregation mutation correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_aggregation.sql; then
+            echo "Invalid alpha aggregation metadata was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha aggregation metadata correctly rejected"
+          fi
+
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_alpha_admission_provenance.sql; then
+            echo "Invalid alpha admission provenance was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha admission provenance correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_duplicate_alpha_component_weight.sql; then
+            echo "Duplicate de-correlation component vote was incorrectly accepted"
+            exit 1
+          else
+            echo "Duplicate de-correlation component vote correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_run.sql; then
+            echo "Inconsistent alpha run was incorrectly accepted"
+            exit 1
+          else
+            echo "Inconsistent alpha run correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_contribution.sql; then
+            echo "Invalid alpha contribution was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha contribution correctly rejected"
+          fi
+
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_eligibility.sql; then
+            echo "Invalid alpha eligibility was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha eligibility correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_incomplete_alpha_run.sql; then
+            echo "Incomplete alpha run was incorrectly accepted"
+            exit 1
+          else
+            echo "Incomplete alpha run correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_alpha_weight_mutation.sql; then
+            echo "Alpha weight mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Alpha weight mutation correctly rejected"
           fi
