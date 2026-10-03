@@ -47,9 +47,9 @@ values
     ('dynamic-snap-value', 'icir', 0.75),
     ('dynamic-snap-value', 'long_leg', 0.075),
     ('dynamic-snap-value', 'turnover', 0.25),
-    ('dynamic-snap-mom', 'icir', 0.50),
-    ('dynamic-snap-mom', 'long_leg', 0.05),
-    ('dynamic-snap-mom', 'turnover', 0.50);
+    ('dynamic-snap-mom', 'icir', 0.00),
+    ('dynamic-snap-mom', 'long_leg', 0.00),
+    ('dynamic-snap-mom', 'turnover', 1.00);
 
 begin;
 insert into zk.dynamic_weight_runs (
@@ -59,7 +59,7 @@ insert into zk.dynamic_weight_runs (
 ) values (
     'dynamic-run-resolved', 'dynamic-smoke', 'v1',
     timestamptz '2026-10-04 00:00:00+00',
-    'RESOLVED', 3.0, 3.5, 3.0, (6::numeric / 7)
+    'RESOLVED', 3.0, 3.0, 3.0, 1.0
 );
 
 insert into zk.dynamic_weight_factor_results (
@@ -69,11 +69,11 @@ insert into zk.dynamic_weight_factor_results (
 ) values
     (
         'dynamic-run-resolved', 'alpha-smoke-adm-value', 'dynamic-snap-value',
-        2.0, 1.0, 0.75, 1.25, 2.5, (15::numeric / 7)
+        2.0, 1.0, 0.75, 1.25, 2.5, 2.5
     ),
     (
         'dynamic-run-resolved', 'alpha-smoke-adm-mom', 'dynamic-snap-mom',
-        1.0, 1.0, 0.50, 1.00, 1.0, (6::numeric / 7)
+        1.0, 1.0, 0.00, 0.50, 0.5, 0.5
     );
 
 insert into zk.dynamic_weight_metric_contributions (
@@ -83,9 +83,9 @@ insert into zk.dynamic_weight_metric_contributions (
     ('dynamic-run-resolved', 'alpha-smoke-adm-value', 'icir', 'ICIR_FIXED_V1', 0.75, 0.75, 2.0, 1.50),
     ('dynamic-run-resolved', 'alpha-smoke-adm-value', 'long_leg', 'LONG_LEG_FIXED_V1', 0.075, 0.75, 1.0, 0.75),
     ('dynamic-run-resolved', 'alpha-smoke-adm-value', 'turnover', 'TURNOVER_FIXED_V1', 0.25, 0.75, 1.0, 0.75),
-    ('dynamic-run-resolved', 'alpha-smoke-adm-mom', 'icir', 'ICIR_FIXED_V1', 0.50, 0.50, 2.0, 1.00),
-    ('dynamic-run-resolved', 'alpha-smoke-adm-mom', 'long_leg', 'LONG_LEG_FIXED_V1', 0.05, 0.50, 1.0, 0.50),
-    ('dynamic-run-resolved', 'alpha-smoke-adm-mom', 'turnover', 'TURNOVER_FIXED_V1', 0.50, 0.50, 1.0, 0.50);
+    ('dynamic-run-resolved', 'alpha-smoke-adm-mom', 'icir', 'ICIR_FIXED_V1', 0.00, 0.00, 2.0, 0.00),
+    ('dynamic-run-resolved', 'alpha-smoke-adm-mom', 'long_leg', 'LONG_LEG_FIXED_V1', 0.00, 0.00, 1.0, 0.00),
+    ('dynamic-run-resolved', 'alpha-smoke-adm-mom', 'turnover', 'TURNOVER_FIXED_V1', 1.00, 0.00, 1.0, 0.00);
 commit;
 
 begin;
