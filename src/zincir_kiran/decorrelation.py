@@ -192,12 +192,44 @@ class FactorRedundancyEdge:
 class RedundancyGraph:
     factor_ids: tuple[str, ...]
     candidate_edges: tuple[tuple[str, str], ...]
+    concept_edges: tuple[tuple[str, str], ...]
     components: tuple[tuple[str, ...], ...]
+
+
+def same_concept_edges(
+    factor_concepts: dict[str, str],
+) -> tuple[tuple[str, str], ...]:
+    """Return deterministic pairs that share one explicit economic concept.
+
+    Concept linkage is independent of empirical correlation. It never fabricates
+    a correlation value; it only records that two factor IDs are alternative
+    expressions of the same declared economic idea.
+    """
+    groups: dict[str, list[str]] = {}
+    for factor_id, concept_key in factor_concepts.items():
+        cleaned_factor = factor_id.strip()
+        cleaned_concept = concept_key.strip()
+        if not cleaned_factor:
+            raise ValueError("factor_id cannot be blank")
+        if not cleaned_concept:
+            raise ValueError("economic_concept_key cannot be blank")
+        groups.setdefault(cleaned_concept, []).append(cleaned_factor)
+
+    pairs: set[tuple[str, str]] = set()
+    for members in groups.values():
+        ordered = sorted(set(members))
+        for left_index, left in enumerate(ordered):
+            for right in ordered[left_index + 1 :]:
+                pairs.add((left, right))
+
+    return tuple(sorted(pairs))
 
 
 def build_redundancy_graph(
     factor_ids: list[str],
     edges: list[FactorRedundancyEdge],
+    *,
+    concept_edges: tuple[tuple[str, str], ...] = (),
 ) -> RedundancyGraph:
     """Build deterministic undirected redundancy components.
 
@@ -231,8 +263,23 @@ def build_redundancy_graph(
         )
     )
 
+    normalized_concept_edges: set[tuple[str, str]] = set()
+    for left_raw, right_raw in concept_edges:
+        left = left_raw.strip()
+        right = right_raw.strip()
+        if not left or not right:
+            raise ValueError("concept edge factor ids are required")
+        if left == right:
+            raise ValueError("concept edge cannot be a self-edge")
+        pair = tuple(sorted((left, right)))
+        if pair[0] not in universe or pair[1] not in universe:
+            raise ValueError("concept edge references factor outside graph universe")
+        normalized_concept_edges.add(pair)  # type: ignore[arg-type]
+
+    concept_edge_pairs = tuple(sorted(normalized_concept_edges))
+
     adjacency: dict[str, set[str]] = {factor_id: set() for factor_id in cleaned}
-    for left, right in candidate_edges:
+    for left, right in candidate_edges + concept_edge_pairs:
         adjacency[left].add(right)
         adjacency[right].add(left)
 
@@ -262,5 +309,6 @@ def build_redundancy_graph(
     return RedundancyGraph(
         factor_ids=tuple(sorted(cleaned)),
         candidate_edges=candidate_edges,
+        concept_edges=concept_edge_pairs,
         components=tuple(components),
     )
