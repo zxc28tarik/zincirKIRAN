@@ -19,5 +19,5 @@ begin;
 insert into zk.alpha_runs (alpha_run_id,specification_id,definition_version,security_id,evaluated_at,alpha_field,status,alpha_value,coverage,planned_factor_count,available_factor_count,planned_absolute_weight,available_absolute_weight)
 values ('alpha-bad-contrib-run','alpha-bad-contrib-spec','v1','72000000-0000-0000-0000-000000000002'::uuid,now(),'Alpha20','SCORED',0.5,1.0,1,1,2.0,2.0);
 insert into zk.alpha_run_contributions (alpha_run_id,admission_id,raw_signal_value,normalization_rule_id,normalized_value,weight,weighted_contribution)
-values ('alpha-bad-contrib-run','alpha-bad-contrib-adm',0.2,'WRONG_NORM',0.25,2.0,0.5);
+values ('alpha-bad-contrib-run','alpha-bad-contrib-adm',0.2,'WRONG_NORM','APPLIES','COMPARABLE',0.25,2.0,0.5);
 commit;
