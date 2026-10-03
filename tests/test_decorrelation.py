@@ -416,3 +416,142 @@ def test_concept_edge_outside_graph_universe_is_rejected() -> None:
             [],
             concept_edges=(("a", "c"),),
         )
+
+def test_residualization_with_intercept_recovers_known_linear_relation() -> None:
+    from zincir_kiran.decorrelation import ResidualizationState, residualize_factor
+
+    target = [
+        FactorPoint("A", 5.0),
+        FactorPoint("B", 8.0),
+        FactorPoint("C", 11.0),
+    ]
+    explanatory = [
+        FactorPoint("A", 1.0),
+        FactorPoint("B", 2.0),
+        FactorPoint("C", 3.0),
+    ]
+
+    result = residualize_factor(
+        target,
+        explanatory,
+        minimum_overlap=3,
+        include_intercept=True,
+    )
+
+    assert result.state is ResidualizationState.ESTIMATED
+    assert result.intercept == pytest.approx(2.0)
+    assert result.beta == pytest.approx(3.0)
+    assert result.overlap_count == 3
+    assert tuple(point.observation_key for point in result.residuals) == ("A", "B", "C")
+    assert tuple(point.residual for point in result.residuals) == pytest.approx((0.0, 0.0, 0.0))
+
+
+def test_residualization_without_intercept_is_a_distinct_explicit_specification() -> None:
+    from zincir_kiran.decorrelation import ResidualizationState, residualize_factor
+
+    target = [
+        FactorPoint("A", 5.0),
+        FactorPoint("B", 8.0),
+        FactorPoint("C", 11.0),
+    ]
+    explanatory = [
+        FactorPoint("A", 1.0),
+        FactorPoint("B", 2.0),
+        FactorPoint("C", 3.0),
+    ]
+
+    result = residualize_factor(
+        target,
+        explanatory,
+        minimum_overlap=3,
+        include_intercept=False,
+    )
+
+    assert result.state is ResidualizationState.ESTIMATED
+    assert result.intercept == 0.0
+    assert result.beta != pytest.approx(3.0)
+    assert any(abs(point.residual) > 1e-12 for point in result.residuals)
+
+
+def test_residualization_requires_explicit_intercept_choice() -> None:
+    from zincir_kiran.decorrelation import residualize_factor
+
+    with pytest.raises(TypeError):
+        residualize_factor(
+            [FactorPoint("A", 1.0), FactorPoint("B", 2.0)],
+            [FactorPoint("A", 1.0), FactorPoint("B", 2.0)],
+            minimum_overlap=2,
+        )  # type: ignore[call-arg]
+
+
+def test_residualization_excludes_missing_and_non_finite_rows() -> None:
+    from zincir_kiran.decorrelation import ResidualizationState, residualize_factor
+
+    target = [
+        FactorPoint("A", 3.0),
+        FactorPoint("B", None),
+        FactorPoint("C", 7.0),
+        FactorPoint("D", math.inf),
+    ]
+    explanatory = [
+        FactorPoint("A", 1.0),
+        FactorPoint("B", 2.0),
+        FactorPoint("C", 3.0),
+        FactorPoint("D", 4.0),
+    ]
+
+    result = residualize_factor(
+        target,
+        explanatory,
+        minimum_overlap=2,
+        include_intercept=True,
+    )
+
+    assert result.state is ResidualizationState.ESTIMATED
+    assert result.overlap_count == 2
+    assert tuple(point.observation_key for point in result.residuals) == ("A", "C")
+
+
+def test_residualization_insufficient_overlap_returns_unknown_coefficients() -> None:
+    from zincir_kiran.decorrelation import ResidualizationState, residualize_factor
+
+    result = residualize_factor(
+        [FactorPoint("A", 1.0), FactorPoint("B", None)],
+        [FactorPoint("A", 2.0), FactorPoint("B", 3.0)],
+        minimum_overlap=2,
+        include_intercept=True,
+    )
+
+    assert result.state is ResidualizationState.INSUFFICIENT_OVERLAP
+    assert result.overlap_count == 1
+    assert result.intercept is None
+    assert result.beta is None
+    assert result.residuals == ()
+
+
+def test_residualization_degenerate_explanatory_is_not_silently_zeroed() -> None:
+    from zincir_kiran.decorrelation import ResidualizationState, residualize_factor
+
+    result = residualize_factor(
+        [FactorPoint("A", 1.0), FactorPoint("B", 2.0), FactorPoint("C", 3.0)],
+        [FactorPoint("A", 5.0), FactorPoint("B", 5.0), FactorPoint("C", 5.0)],
+        minimum_overlap=3,
+        include_intercept=True,
+    )
+
+    assert result.state is ResidualizationState.DEGENERATE_EXPLANATORY
+    assert result.intercept is None
+    assert result.beta is None
+    assert result.residuals == ()
+
+
+def test_residualization_rejects_non_boolean_intercept_flag() -> None:
+    from zincir_kiran.decorrelation import residualize_factor
+
+    with pytest.raises(TypeError, match="include_intercept"):
+        residualize_factor(
+            [FactorPoint("A", 1.0), FactorPoint("B", 2.0)],
+            [FactorPoint("A", 1.0), FactorPoint("B", 2.0)],
+            minimum_overlap=2,
+            include_intercept=1,  # type: ignore[arg-type]
+        )
