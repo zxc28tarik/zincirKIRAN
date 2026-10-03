@@ -262,6 +262,14 @@ jobs:
             echo "Invalid alpha contribution correctly rejected"
           fi
 
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_eligibility.sql; then
+            echo "Invalid alpha eligibility was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha eligibility correctly rejected"
+          fi
+
           if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_incomplete_alpha_run.sql; then
             echo "Incomplete alpha run was incorrectly accepted"
             exit 1
