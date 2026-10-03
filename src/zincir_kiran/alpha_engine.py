@@ -11,7 +11,9 @@ from dataclasses import dataclass
 from enum import StrEnum
 from math import fsum
 
+from .accounting import ComparabilityDecision
 from .alpha_aggregation import AlphaAggregationSpec
+from .applicability import Applicability
 from .baselines import Horizon
 from .interpretable_alpha import AdmissionDecision, FactorAdmission, alpha_field_name
 
@@ -21,6 +23,7 @@ class SignalAvailability(StrEnum):
     MISSING = "MISSING"
     NOT_APPLICABLE = "NOT_APPLICABLE"
     UNDECIDED = "UNDECIDED"
+    ACCOUNTING_INCOMPATIBLE = "ACCOUNTING_INCOMPATIBLE"
 
 
 class AlphaExecutionStatus(StrEnum):
@@ -48,6 +51,8 @@ class AlphaFactorWeight:
 class AlphaSignalObservation:
     admission: FactorAdmission
     availability: SignalAvailability
+    applicability: Applicability
+    accounting_comparability: ComparabilityDecision
     raw_signal_value: float | None = None
     normalization_rule_id: str | None = None
     normalized_value: float | None = None
@@ -56,6 +61,10 @@ class AlphaSignalObservation:
         if self.admission.decision is not AdmissionDecision.ADMITTED:
             raise ValueError("signal observation requires an ADMITTED factor")
         if self.availability is SignalAvailability.AVAILABLE:
+            if self.applicability is not Applicability.APPLIES:
+                raise ValueError("AVAILABLE signal requires applicability APPLIES")
+            if self.accounting_comparability is not ComparabilityDecision.COMPARABLE:
+                raise ValueError("AVAILABLE signal requires accounting COMPARABLE")
             if self.raw_signal_value is None or not math.isfinite(self.raw_signal_value):
                 raise ValueError("AVAILABLE signal requires finite raw_signal_value")
             if self.normalized_value is None or not math.isfinite(self.normalized_value):
@@ -63,6 +72,20 @@ class AlphaSignalObservation:
             if self.normalization_rule_id is None or not self.normalization_rule_id.strip():
                 raise ValueError("AVAILABLE signal requires normalization_rule_id")
         else:
+            if self.availability is SignalAvailability.NOT_APPLICABLE:
+                if self.applicability is not Applicability.DOES_NOT_APPLY:
+                    raise ValueError("NOT_APPLICABLE signal requires DOES_NOT_APPLY")
+            elif self.availability is SignalAvailability.UNDECIDED:
+                if (
+                    self.applicability is not Applicability.UNDECIDED
+                    and self.accounting_comparability is not ComparabilityDecision.UNDECIDED
+                ):
+                    raise ValueError("UNDECIDED signal requires an undecided eligibility gate")
+            elif self.availability is SignalAvailability.ACCOUNTING_INCOMPATIBLE:
+                if self.accounting_comparability is not ComparabilityDecision.INCOMPATIBLE:
+                    raise ValueError(
+                        "ACCOUNTING_INCOMPATIBLE signal requires INCOMPATIBLE accounting"
+                    )
             if (
                 self.raw_signal_value is not None
                 or self.normalized_value is not None
@@ -80,6 +103,8 @@ class AlphaContribution:
     decorrelation_component_no: int
     raw_signal_value: float
     normalization_rule_id: str
+    applicability: Applicability
+    accounting_comparability: ComparabilityDecision
     normalized_value: float
     weight: float
     weighted_contribution: float
@@ -91,6 +116,8 @@ class AlphaUnavailableInput:
     factor_id: str
     factor_definition_version: str
     availability: SignalAvailability
+    applicability: Applicability
+    accounting_comparability: ComparabilityDecision
     absolute_weight: float
 
 
@@ -240,6 +267,8 @@ def execute_interpretable_alpha(
                     factor_id=admission.factor_id,
                     factor_definition_version=admission.factor_definition_version,
                     availability=observation.availability,
+                    applicability=observation.applicability,
+                    accounting_comparability=observation.accounting_comparability,
                     absolute_weight=abs(planned.weight),
                 )
             )
@@ -261,6 +290,8 @@ def execute_interpretable_alpha(
                 decorrelation_component_no=admission.decorrelation_component_no,
                 raw_signal_value=observation.raw_signal_value,
                 normalization_rule_id=observation.normalization_rule_id,
+                applicability=observation.applicability,
+                accounting_comparability=observation.accounting_comparability,
                 normalized_value=observation.normalized_value,
                 weight=planned.weight,
                 weighted_contribution=weighted_contribution,
