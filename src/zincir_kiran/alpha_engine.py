@@ -81,11 +81,13 @@ class AlphaSignalObservation:
                     and self.accounting_comparability is not ComparabilityDecision.UNDECIDED
                 ):
                     raise ValueError("UNDECIDED signal requires an undecided eligibility gate")
-            elif self.availability is SignalAvailability.ACCOUNTING_INCOMPATIBLE:
-                if self.accounting_comparability is not ComparabilityDecision.INCOMPATIBLE:
-                    raise ValueError(
-                        "ACCOUNTING_INCOMPATIBLE signal requires INCOMPATIBLE accounting"
-                    )
+            elif (
+                self.availability is SignalAvailability.ACCOUNTING_INCOMPATIBLE
+                and self.accounting_comparability is not ComparabilityDecision.INCOMPATIBLE
+            ):
+                raise ValueError(
+                    "ACCOUNTING_INCOMPATIBLE signal requires INCOMPATIBLE accounting"
+                )
             if (
                 self.raw_signal_value is not None
                 or self.normalized_value is not None
