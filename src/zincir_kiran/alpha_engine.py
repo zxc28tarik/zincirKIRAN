@@ -104,6 +104,8 @@ class InterpretableAlphaResult:
     status: AlphaExecutionStatus
     alpha_value: float | None
     coverage: float
+    planned_factor_count: int
+    available_factor_count: int
     planned_absolute_weight: float
     available_absolute_weight: float
     contributions: tuple[AlphaContribution, ...]
@@ -277,6 +279,8 @@ def execute_interpretable_alpha(
             status=AlphaExecutionStatus.ABSTAIN_INSUFFICIENT_COVERAGE,
             alpha_value=None,
             coverage=coverage,
+            planned_factor_count=len(plan),
+            available_factor_count=len(available_items),
             planned_absolute_weight=planned_absolute_weight,
             available_absolute_weight=available_absolute_weight,
             contributions=contributions_tuple,
@@ -300,6 +304,8 @@ def execute_interpretable_alpha(
         status=AlphaExecutionStatus.SCORED,
         alpha_value=alpha_value,
         coverage=coverage,
+        planned_factor_count=len(plan),
+        available_factor_count=len(available_items),
         planned_absolute_weight=planned_absolute_weight,
         available_absolute_weight=available_absolute_weight,
         contributions=contributions_tuple,
