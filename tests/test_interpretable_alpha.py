@@ -22,7 +22,7 @@ def admission(**overrides: object) -> FactorAdmission:
         "decision": AdmissionDecision.ADMITTED,
         "factor_lab_experiment_id": "exp-book-h20-v1",
         "decorrelation_run_id": "decor-h20-v1",
-        "decorrelation_component_id": "component-1",
+        "decorrelation_component_no": 1,
         "rationale": "Explicit research admission after Factor Lab and de-correlation.",
     }
     values.update(overrides)
@@ -40,7 +40,7 @@ def test_admission_requires_factor_lab_and_decorrelation_provenance() -> None:
     item = admission()
     assert item.factor_lab_experiment_id == "exp-book-h20-v1"
     assert item.decorrelation_run_id == "decor-h20-v1"
-    assert item.decorrelation_component_id == "component-1"
+    assert item.decorrelation_component_no == 1
 
 
 def test_only_explicitly_admitted_factor_can_enter_alpha_input() -> None:
@@ -95,7 +95,7 @@ def test_admitted_input_order_is_deterministic() -> None:
             admission_id="adm-mom-h20-v1",
             factor_id="momentum_12_1",
             factor_lab_experiment_id="exp-mom-h20-v1",
-            decorrelation_component_id="component-2",
+            decorrelation_component_no=2,
         ),
         signal_value=0.80,
     )
@@ -123,7 +123,7 @@ def test_same_decorrelation_component_cannot_vote_twice() -> None:
             factor_id="momentum_12_1",
             factor_lab_experiment_id="exp-mom-12-1",
             decorrelation_run_id="decor-h20-v1",
-            decorrelation_component_id="component-momentum",
+            decorrelation_component_no=2,
         ),
         signal_value=0.70,
     )
@@ -133,7 +133,7 @@ def test_same_decorrelation_component_cannot_vote_twice() -> None:
             factor_id="momentum_6_1",
             factor_lab_experiment_id="exp-mom-6-1",
             decorrelation_run_id="decor-h20-v1",
-            decorrelation_component_id="component-momentum",
+            decorrelation_component_no=2,
         ),
         signal_value=0.60,
     )
@@ -149,7 +149,7 @@ def test_different_components_can_each_contribute_one_vote() -> None:
             factor_id="book_to_price",
             factor_lab_experiment_id="exp-value",
             decorrelation_run_id="decor-h20-v1",
-            decorrelation_component_id="component-value",
+            decorrelation_component_no=1,
         ),
         signal_value=0.40,
     )
@@ -159,7 +159,7 @@ def test_different_components_can_each_contribute_one_vote() -> None:
             factor_id="momentum_12_1",
             factor_lab_experiment_id="exp-momentum",
             decorrelation_run_id="decor-h20-v1",
-            decorrelation_component_id="component-momentum",
+            decorrelation_component_no=2,
         ),
         signal_value=0.80,
     )
@@ -179,7 +179,7 @@ def test_same_component_label_in_different_runs_does_not_false_collide() -> None
             factor_id="factor_a",
             factor_lab_experiment_id="exp-a",
             decorrelation_run_id="decor-run-a",
-            decorrelation_component_id="component-1",
+            decorrelation_component_no=1,
         ),
         signal_value=0.10,
     )
@@ -189,7 +189,7 @@ def test_same_component_label_in_different_runs_does_not_false_collide() -> None
             factor_id="factor_b",
             factor_lab_experiment_id="exp-b",
             decorrelation_run_id="decor-run-b",
-            decorrelation_component_id="component-1",
+            decorrelation_component_no=1,
         ),
         signal_value=0.20,
     )
