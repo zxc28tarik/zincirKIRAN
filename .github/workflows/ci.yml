@@ -70,6 +70,9 @@ jobs:
       - name: Apply Interpretable Alpha PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/interpretable_alpha.sql
 
+      - name: Apply Dynamic Evidence PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/dynamic_evidence.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -90,6 +93,9 @@ jobs:
 
       - name: Verify Interpretable Alpha PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/interpretable_alpha_smoke.sql
+
+      - name: Verify Dynamic Evidence PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/dynamic_evidence_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -282,4 +288,47 @@ jobs:
             exit 1
           else
             echo "Alpha weight mutation correctly rejected"
+          fi
+
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_dynamic_weighting_mutation.sql; then
+            echo "Dynamic weighting mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Dynamic weighting mutation correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_dynamic_weighting_promotion.sql; then
+            echo "Dynamic weighting production promotion was incorrectly accepted"
+            exit 1
+          else
+            echo "Dynamic weighting production promotion correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_future_dynamic_evidence.sql; then
+            echo "Future dynamic evidence was incorrectly accepted"
+            exit 1
+          else
+            echo "Future dynamic evidence correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_dynamic_metric.sql; then
+            echo "Invalid dynamic metric provenance was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid dynamic metric provenance correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_dynamic_arithmetic.sql; then
+            echo "Invalid dynamic evidence arithmetic was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid dynamic evidence arithmetic correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_incomplete_dynamic_plan.sql; then
+            echo "Incomplete resolved dynamic plan was incorrectly accepted"
+            exit 1
+          else
+            echo "Incomplete resolved dynamic plan correctly rejected"
           fi
