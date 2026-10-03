@@ -7,6 +7,11 @@ create table zk.dynamic_weighting_specs (
     horizon_days integer not null,
     base_alpha_specification_id text not null,
     base_alpha_definition_version text not null,
+    evidence_protocol_id text not null,
+    universe_rule_version text not null,
+    hypothesis text not null,
+    success_criteria text not null,
+    preregistered_at timestamptz not null,
     minimum_metric_coverage numeric not null,
     max_evidence_age_days integer not null,
     multiplier_floor numeric not null,
@@ -39,6 +44,10 @@ create table zk.dynamic_weighting_specs (
         check (
             length(trim(specification_id)) > 0
             and length(trim(definition_version)) > 0
+            and length(trim(evidence_protocol_id)) > 0
+            and length(trim(universe_rule_version)) > 0
+            and length(trim(hypothesis)) > 0
+            and length(trim(success_criteria)) > 0
         )
 );
 
@@ -190,6 +199,29 @@ create table zk.dynamic_weight_runs (
         )
 );
 
+create function zk.validate_dynamic_weight_run()
+returns trigger
+language plpgsql
+as $fn$
+declare
+    preregistered_time timestamptz;
+begin
+    select preregistered_at into preregistered_time
+      from zk.dynamic_weighting_specs
+     where specification_id = new.specification_id
+       and definition_version = new.definition_version;
+
+    if preregistered_time > new.prediction_timestamp then
+        raise exception 'dynamic weighting protocol was not preregistered by prediction time';
+    end if;
+    return new;
+end;
+$fn$;
+
+create trigger dynamic_weight_runs_validate_trg
+before insert on zk.dynamic_weight_runs
+for each row execute function zk.validate_dynamic_weight_run();
+
 create trigger dynamic_weight_runs_immutable_trg
 before update or delete on zk.dynamic_weight_runs
 for each row execute function zk.reject_dynamic_weighting_mutation();
@@ -236,15 +268,18 @@ declare
     spec_base_id text;
     spec_base_version text;
     max_age integer;
+    expected_protocol text;
     expected_base_weight numeric;
     snapshot_admission text;
+    snapshot_protocol text;
     snapshot_window_end timestamptz;
     snapshot_available_at timestamptz;
 begin
     select r.status, r.prediction_timestamp,
            s.base_alpha_specification_id, s.base_alpha_definition_version,
-           s.max_evidence_age_days
-      into run_status, prediction_time, spec_base_id, spec_base_version, max_age
+           s.max_evidence_age_days, s.evidence_protocol_id
+      into run_status, prediction_time, spec_base_id, spec_base_version, max_age,
+           expected_protocol
       from zk.dynamic_weight_runs r
       join zk.dynamic_weighting_specs s
         on s.specification_id = r.specification_id
@@ -261,13 +296,16 @@ begin
         raise exception 'dynamic factor result base_weight does not match base alpha plan';
     end if;
 
-    select admission_id, window_end, available_at
-      into snapshot_admission, snapshot_window_end, snapshot_available_at
+    select admission_id, evidence_protocol_id, window_end, available_at
+      into snapshot_admission, snapshot_protocol, snapshot_window_end, snapshot_available_at
       from zk.dynamic_evidence_snapshots
      where snapshot_id = new.snapshot_id;
 
     if snapshot_admission <> new.admission_id then
         raise exception 'dynamic evidence snapshot admission mismatch';
+    end if;
+    if snapshot_protocol <> expected_protocol then
+        raise exception 'dynamic evidence snapshot protocol mismatch';
     end if;
     if snapshot_window_end > prediction_time or snapshot_available_at > prediction_time then
         raise exception 'future evidence cannot enter dynamic weighting';
@@ -425,7 +463,9 @@ declare
     base_spec_version text;
     max_age integer;
     min_coverage numeric;
+    expected_protocol text;
     snapshot_admission text;
+    snapshot_protocol text;
     snapshot_window_end timestamptz;
     snapshot_available_at timestamptz;
     total_coefficient numeric;
@@ -434,9 +474,11 @@ declare
 begin
     select r.status, r.prediction_timestamp, r.specification_id, r.definition_version,
            s.base_alpha_specification_id, s.base_alpha_definition_version,
-           s.max_evidence_age_days, s.minimum_metric_coverage
+           s.max_evidence_age_days, s.minimum_metric_coverage,
+           s.evidence_protocol_id
       into run_status, prediction_time, spec_id, spec_version,
-           base_spec_id, base_spec_version, max_age, min_coverage
+           base_spec_id, base_spec_version, max_age, min_coverage,
+           expected_protocol
       from zk.dynamic_weight_runs r
       join zk.dynamic_weighting_specs s
         on s.specification_id = r.specification_id
@@ -467,13 +509,16 @@ begin
         raise exception 'stale/coverage insufficiency requires snapshot_id';
     end if;
 
-    select admission_id, window_end, available_at
-      into snapshot_admission, snapshot_window_end, snapshot_available_at
+    select admission_id, evidence_protocol_id, window_end, available_at
+      into snapshot_admission, snapshot_protocol, snapshot_window_end, snapshot_available_at
       from zk.dynamic_evidence_snapshots
      where snapshot_id = new.snapshot_id;
 
     if snapshot_admission <> new.admission_id then
         raise exception 'insufficient evidence snapshot admission mismatch';
+    end if;
+    if snapshot_protocol <> expected_protocol then
+        raise exception 'insufficient evidence snapshot protocol mismatch';
     end if;
     if snapshot_window_end > prediction_time or snapshot_available_at > prediction_time then
         raise exception 'future evidence cannot be recorded as insufficient historical evidence';
@@ -538,6 +583,7 @@ declare
     final_gross numeric;
     expected_scale numeric;
     invalid_factor_count integer;
+    term_count integer;
 begin
     select * into run_record
       from zk.dynamic_weight_runs
@@ -547,6 +593,15 @@ begin
       from zk.dynamic_weighting_specs
      where specification_id = run_record.specification_id
        and definition_version = run_record.definition_version;
+
+    select count(*) into term_count
+      from zk.dynamic_evidence_terms
+     where specification_id = run_record.specification_id
+       and definition_version = run_record.definition_version;
+
+    if term_count = 0 then
+        raise exception 'dynamic weighting specification requires evidence terms';
+    end if;
 
     select count(*), coalesce(sum(abs(weight)), 0)
       into base_count, base_gross
@@ -605,21 +660,13 @@ begin
           from zk.dynamic_weight_factor_results f
          where f.dynamic_run_id = new.dynamic_run_id
            and (
-               select coalesce(sum(t.coefficient), 0)
-                 from zk.dynamic_evidence_terms t
-                where t.specification_id = run_record.specification_id
-                  and t.definition_version = run_record.definition_version
-           ) = 0
-    ) then
-        raise exception 'dynamic weighting specification requires evidence terms';
-    end if;
-
-    if exists (
-        select 1
-          from zk.dynamic_weight_factor_results f
-         where f.dynamic_run_id = new.dynamic_run_id
-           and (
-               f.evidence_coverage <> (
+               not exists (
+                   select 1
+                     from zk.dynamic_weight_metric_contributions c0
+                    where c0.dynamic_run_id = f.dynamic_run_id
+                      and c0.admission_id = f.admission_id
+               )
+               or f.evidence_coverage <> (
                    select coalesce(sum(c.coefficient), 0) /
                           (select sum(t.coefficient)
                              from zk.dynamic_evidence_terms t
