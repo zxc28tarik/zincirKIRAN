@@ -6,9 +6,9 @@ from zincir_kiran.alpha_aggregation import AlphaAggregationSpec
 from zincir_kiran.alpha_engine import AlphaFactorWeight
 from zincir_kiran.baselines import Horizon
 from zincir_kiran.dynamic_evidence import (
-    DynamicWeightPlanStatus,
     DynamicWeightingRegistry,
     DynamicWeightingSpec,
+    DynamicWeightPlanStatus,
     EvidenceMetricObservation,
     EvidenceMetricRule,
     EvidenceTerm,
@@ -273,11 +273,11 @@ def test_duplicate_component_is_still_blocked_before_dynamic_weighting() -> None
 def test_fixed_inputs_are_deterministic_independent_of_input_order() -> None:
     value = admission("value", 1)
     momentum = admission("momentum", 2)
-    kwargs = dict(
-        specification=weighting_spec(),
-        base_alpha_specification=base_spec(),
-        prediction_timestamp=PREDICTION,
-    )
+    kwargs = {
+        "specification": weighting_spec(),
+        "base_alpha_specification": base_spec(),
+        "prediction_timestamp": PREDICTION,
+    }
     first = resolve_dynamic_evidence_weights(
         **kwargs,
         base_weights=[AlphaFactorWeight(value, 2.0), AlphaFactorWeight(momentum, 1.0)],
