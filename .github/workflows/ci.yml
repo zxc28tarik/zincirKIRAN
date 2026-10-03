@@ -64,6 +64,9 @@ jobs:
       - name: Apply Factor Lab PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/factor_lab.sql
 
+      - name: Apply De-correlation PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/decorrelation.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -78,6 +81,9 @@ jobs:
 
       - name: Verify Factor Lab PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/factor_lab_smoke.sql
+
+      - name: Verify De-correlation PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/decorrelation_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -177,4 +183,32 @@ jobs:
             exit 1
           else
             echo "Invalid factor result correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_decorrelation_run_mutation.sql; then
+            echo "De-correlation run mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "De-correlation run mutation correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_decorrelation_pair.sql; then
+            echo "Invalid de-correlation pair evidence was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid de-correlation pair evidence correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_unregistered_decorrelation_result.sql; then
+            echo "Unregistered de-correlation result was incorrectly accepted"
+            exit 1
+          else
+            echo "Unregistered de-correlation result correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_residualization_result.sql; then
+            echo "Invalid residualization result was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid residualization result correctly rejected"
           fi
