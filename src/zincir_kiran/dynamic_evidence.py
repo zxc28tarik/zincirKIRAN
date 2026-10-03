@@ -76,6 +76,11 @@ class DynamicWeightingSpec:
     horizon: Horizon
     base_alpha_specification_id: str
     base_alpha_definition_version: str
+    evidence_protocol_id: str
+    universe_rule_version: str
+    hypothesis: str
+    success_criteria: str
+    preregistered_at: datetime
     minimum_metric_coverage: float
     max_evidence_age_days: int
     multiplier_floor: float
@@ -90,9 +95,14 @@ class DynamicWeightingSpec:
             ("definition_version", self.definition_version),
             ("base_alpha_specification_id", self.base_alpha_specification_id),
             ("base_alpha_definition_version", self.base_alpha_definition_version),
+            ("evidence_protocol_id", self.evidence_protocol_id),
+            ("universe_rule_version", self.universe_rule_version),
+            ("hypothesis", self.hypothesis),
+            ("success_criteria", self.success_criteria),
         ):
             if not value.strip():
                 raise ValueError(f"{name} is required")
+        require_aware_timestamp(self.preregistered_at)
         if self.stage is not DynamicWeightingStage.CANDIDATE:
             raise ValueError("dynamic weighting implementation is candidate-only")
         if not 0 <= self.minimum_metric_coverage <= 1:
@@ -301,6 +311,8 @@ def resolve_dynamic_evidence_weights(
 ) -> DynamicWeightPlanResult:
     """Resolve candidate dynamic weights from PIT-safe evidence or abstain as a plan."""
     require_aware_timestamp(prediction_timestamp)
+    if specification.preregistered_at > prediction_timestamp:
+        raise ValueError("dynamic weighting specification was not preregistered by prediction time")
     if specification.horizon is not base_alpha_specification.horizon:
         raise ValueError("dynamic weighting horizon does not match base alpha specification")
     if (
@@ -323,6 +335,8 @@ def resolve_dynamic_evidence_weights(
             raise ValueError("evidence snapshot is not part of the base weight plan")
         if snapshot.admission != planned.admission:
             raise ValueError("evidence snapshot admission does not match base weight plan")
+        if snapshot.evidence_protocol_id != specification.evidence_protocol_id:
+            raise ValueError("evidence snapshot protocol does not match weighting specification")
         snapshots_by_admission[admission_id] = snapshot
 
     resolutions: list[DynamicFactorResolution] = []
