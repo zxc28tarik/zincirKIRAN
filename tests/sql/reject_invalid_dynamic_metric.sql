@@ -1,5 +1,6 @@
 \set ON_ERROR_STOP on
 
+begin;
 insert into zk.dynamic_weight_runs (
     dynamic_run_id, specification_id, definition_version, prediction_timestamp,
     status, base_gross_exposure, preliminary_gross_exposure,
