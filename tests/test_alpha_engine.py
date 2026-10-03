@@ -1,5 +1,6 @@
 import pytest
 
+from zincir_kiran.accounting import ComparabilityDecision
 from zincir_kiran.alpha_aggregation import AlphaAggregationSpec
 from zincir_kiran.alpha_engine import (
     AlphaExecutionStatus,
@@ -9,6 +10,7 @@ from zincir_kiran.alpha_engine import (
     execute_interpretable_alpha,
     validate_weight_plan,
 )
+from zincir_kiran.applicability import Applicability
 from zincir_kiran.baselines import Horizon
 from zincir_kiran.interpretable_alpha import AdmissionDecision, FactorAdmission
 
@@ -54,6 +56,8 @@ def available(adm: FactorAdmission, raw: float, normalized: float) -> AlphaSigna
     return AlphaSignalObservation(
         admission=adm,
         availability=SignalAvailability.AVAILABLE,
+        applicability=Applicability.APPLIES,
+        accounting_comparability=ComparabilityDecision.COMPARABLE,
         raw_signal_value=raw,
         normalization_rule_id="TEST_NORMALIZATION_V1",
         normalized_value=normalized,
@@ -61,7 +65,24 @@ def available(adm: FactorAdmission, raw: float, normalized: float) -> AlphaSigna
 
 
 def unavailable(adm: FactorAdmission, state: SignalAvailability) -> AlphaSignalObservation:
-    return AlphaSignalObservation(admission=adm, availability=state)
+    if state is SignalAvailability.NOT_APPLICABLE:
+        applicability = Applicability.DOES_NOT_APPLY
+        accounting = ComparabilityDecision.COMPARABLE
+    elif state is SignalAvailability.UNDECIDED:
+        applicability = Applicability.UNDECIDED
+        accounting = ComparabilityDecision.COMPARABLE
+    elif state is SignalAvailability.ACCOUNTING_INCOMPATIBLE:
+        applicability = Applicability.APPLIES
+        accounting = ComparabilityDecision.INCOMPATIBLE
+    else:
+        applicability = Applicability.APPLIES
+        accounting = ComparabilityDecision.COMPARABLE
+    return AlphaSignalObservation(
+        admission=adm,
+        availability=state,
+        applicability=applicability,
+        accounting_comparability=accounting,
+    )
 
 
 def test_weight_plan_rejects_duplicate_decorrelation_vote() -> None:
@@ -145,6 +166,14 @@ def test_unavailable_states_cannot_carry_hidden_numeric_values(state: SignalAvai
         AlphaSignalObservation(
             admission=adm,
             availability=state,
+            applicability=(
+                Applicability.DOES_NOT_APPLY
+                if state is SignalAvailability.NOT_APPLICABLE
+                else Applicability.UNDECIDED
+                if state is SignalAvailability.UNDECIDED
+                else Applicability.APPLIES
+            ),
+            accounting_comparability=ComparabilityDecision.COMPARABLE,
             raw_signal_value=0.0,
             normalized_value=0.0,
             normalization_rule_id="TEST_NORMALIZATION_V1",
@@ -156,6 +185,8 @@ def test_normalization_provenance_must_match_specification() -> None:
     observation = AlphaSignalObservation(
         admission=adm,
         availability=SignalAvailability.AVAILABLE,
+        applicability=Applicability.APPLIES,
+        accounting_comparability=ComparabilityDecision.COMPARABLE,
         raw_signal_value=0.2,
         normalization_rule_id="OTHER_NORMALIZATION",
         normalized_value=0.1,
@@ -249,3 +280,34 @@ def test_result_contract_contains_no_portfolio_or_confidence_fields() -> None:
     assert not hasattr(result, "portfolio_weight")
     assert not hasattr(result, "position_size")
     assert not hasattr(result, "confidence")
+
+def test_available_signal_requires_applicability_and_accounting_gates() -> None:
+    adm = admission("value", 1)
+    with pytest.raises(ValueError, match="applicability APPLIES"):
+        AlphaSignalObservation(
+            admission=adm,
+            availability=SignalAvailability.AVAILABLE,
+            applicability=Applicability.UNDECIDED,
+            accounting_comparability=ComparabilityDecision.COMPARABLE,
+            raw_signal_value=0.2,
+            normalization_rule_id="TEST_NORMALIZATION_V1",
+            normalized_value=0.1,
+        )
+
+    with pytest.raises(ValueError, match="accounting COMPARABLE"):
+        AlphaSignalObservation(
+            admission=adm,
+            availability=SignalAvailability.AVAILABLE,
+            applicability=Applicability.APPLIES,
+            accounting_comparability=ComparabilityDecision.INCOMPATIBLE,
+            raw_signal_value=0.2,
+            normalization_rule_id="TEST_NORMALIZATION_V1",
+            normalized_value=0.1,
+        )
+
+
+def test_accounting_incompatible_is_explicit_unavailable_state() -> None:
+    adm = admission("value", 1)
+    observation = unavailable(adm, SignalAvailability.ACCOUNTING_INCOMPATIBLE)
+    assert observation.accounting_comparability is ComparabilityDecision.INCOMPATIBLE
+    assert observation.normalized_value is None
