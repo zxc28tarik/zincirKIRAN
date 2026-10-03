@@ -334,3 +334,85 @@ def test_redundancy_edge_rejects_self_edge() -> None:
                 overlap_count=100,
             ),
         )
+
+def test_same_concept_edges_are_deterministic_and_pair_all_alternatives() -> None:
+    from zincir_kiran.decorrelation import same_concept_edges
+
+    edges = same_concept_edges({
+        "momentum_6_1": "medium_term_momentum",
+        "value": "book_value_yield",
+        "momentum_12_1": "medium_term_momentum",
+        "momentum_alt": "medium_term_momentum",
+    })
+
+    assert edges == (
+        ("momentum_12_1", "momentum_6_1"),
+        ("momentum_12_1", "momentum_alt"),
+        ("momentum_6_1", "momentum_alt"),
+    )
+
+
+def test_same_concept_link_connects_factors_when_correlation_is_unknown() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph, same_concept_edges
+
+    unknown_statistical_edge = _edge("momentum_12_1", "momentum_6_1", "UNKNOWN")
+    concept_edges = same_concept_edges({
+        "momentum_12_1": "medium_term_momentum",
+        "momentum_6_1": "medium_term_momentum",
+    })
+
+    graph = build_redundancy_graph(
+        ["momentum_12_1", "momentum_6_1"],
+        [unknown_statistical_edge],  # type: ignore[list-item]
+        concept_edges=concept_edges,
+    )
+
+    assert graph.candidate_edges == ()
+    assert graph.concept_edges == (("momentum_12_1", "momentum_6_1"),)
+    assert graph.components == (("momentum_12_1", "momentum_6_1"),)
+
+
+def test_same_concept_does_not_create_fake_correlation() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph, same_concept_edges
+
+    unknown_statistical_edge = _edge("eps_revision", "revenue_revision", "UNKNOWN")
+    graph = build_redundancy_graph(
+        ["eps_revision", "revenue_revision"],
+        [unknown_statistical_edge],  # type: ignore[list-item]
+        concept_edges=same_concept_edges({
+            "eps_revision": "estimate_revision",
+            "revenue_revision": "estimate_revision",
+        }),
+    )
+
+    assert graph.candidate_edges == ()
+    assert graph.concept_edges == (("eps_revision", "revenue_revision"),)
+
+
+@pytest.mark.parametrize(
+    ("factor_id", "concept_key", "message"),
+    [
+        ("", "concept", "factor_id"),
+        ("factor", "", "economic_concept_key"),
+    ],
+)
+def test_same_concept_edges_reject_blank_identity(
+    factor_id: str,
+    concept_key: str,
+    message: str,
+) -> None:
+    from zincir_kiran.decorrelation import same_concept_edges
+
+    with pytest.raises(ValueError, match=message):
+        same_concept_edges({factor_id: concept_key})
+
+
+def test_concept_edge_outside_graph_universe_is_rejected() -> None:
+    from zincir_kiran.decorrelation import build_redundancy_graph
+
+    with pytest.raises(ValueError, match="concept edge references factor outside"):
+        build_redundancy_graph(
+            ["a", "b"],
+            [],
+            concept_edges=(("a", "c"),),
+        )
