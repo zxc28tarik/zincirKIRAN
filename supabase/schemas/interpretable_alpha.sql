@@ -301,6 +301,8 @@ create table zk.alpha_run_contributions (
     admission_id text not null references zk.alpha_factor_admissions(admission_id),
     raw_signal_value numeric not null,
     normalization_rule_id text not null,
+    applicability_state text not null,
+    accounting_comparability_state text not null,
     normalized_value numeric not null,
     weight numeric not null,
     weighted_contribution numeric not null,
@@ -308,6 +310,10 @@ create table zk.alpha_run_contributions (
     primary key (alpha_run_id, admission_id),
     constraint alpha_run_contributions_text_chk
         check (length(trim(normalization_rule_id)) > 0),
+    constraint alpha_run_contributions_eligibility_chk check (
+        applicability_state = 'APPLIES'
+        and accounting_comparability_state = 'COMPARABLE'
+    ),
     constraint alpha_run_contributions_finite_chk check (
         raw_signal_value not in ('NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric)
         and normalized_value not in ('NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric)
@@ -368,11 +374,33 @@ create table zk.alpha_run_unavailable_inputs (
     alpha_run_id text not null references zk.alpha_runs(alpha_run_id),
     admission_id text not null references zk.alpha_factor_admissions(admission_id),
     availability_state text not null,
+    applicability_state text not null,
+    accounting_comparability_state text not null,
     absolute_weight numeric not null,
     created_at timestamptz not null default now(),
     primary key (alpha_run_id, admission_id),
     constraint alpha_run_unavailable_state_chk
-        check (availability_state in ('MISSING', 'NOT_APPLICABLE', 'UNDECIDED')),
+        check (availability_state in (
+            'MISSING', 'NOT_APPLICABLE', 'UNDECIDED', 'ACCOUNTING_INCOMPATIBLE'
+        )),
+    constraint alpha_run_unavailable_applicability_chk
+        check (applicability_state in ('APPLIES', 'DOES_NOT_APPLY', 'UNDECIDED')),
+    constraint alpha_run_unavailable_accounting_chk
+        check (accounting_comparability_state in ('COMPARABLE', 'INCOMPATIBLE', 'UNDECIDED')),
+    constraint alpha_run_unavailable_reason_chk check (
+        (availability_state = 'MISSING'
+            and applicability_state = 'APPLIES'
+            and accounting_comparability_state = 'COMPARABLE')
+        or (availability_state = 'NOT_APPLICABLE'
+            and applicability_state = 'DOES_NOT_APPLY')
+        or (availability_state = 'UNDECIDED'
+            and (
+                applicability_state = 'UNDECIDED'
+                or accounting_comparability_state = 'UNDECIDED'
+            ))
+        or (availability_state = 'ACCOUNTING_INCOMPATIBLE'
+            and accounting_comparability_state = 'INCOMPATIBLE')
+    ),
     constraint alpha_run_unavailable_weight_chk check (
         absolute_weight > 0
         and absolute_weight not in ('NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric)
