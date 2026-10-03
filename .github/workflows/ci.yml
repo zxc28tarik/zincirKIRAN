@@ -313,6 +313,14 @@ jobs:
           fi
 
 
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_stale_dynamic_result.sql; then
+            echo "Stale dynamic evidence incorrectly produced a factor result"
+            exit 1
+          else
+            echo "Stale dynamic evidence correctly rejected from resolved path"
+          fi
+
+
           if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_late_preregistered_dynamic_run.sql; then
             echo "Post-hoc dynamic weighting protocol was incorrectly accepted"
             exit 1
