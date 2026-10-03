@@ -40,7 +40,7 @@ class FactorAdmission:
     decision: AdmissionDecision
     factor_lab_experiment_id: str
     decorrelation_run_id: str
-    decorrelation_component_id: str
+    decorrelation_component_no: int
     rationale: str
 
     def __post_init__(self) -> None:
@@ -50,11 +50,12 @@ class FactorAdmission:
             ("factor_definition_version", self.factor_definition_version),
             ("factor_lab_experiment_id", self.factor_lab_experiment_id),
             ("decorrelation_run_id", self.decorrelation_run_id),
-            ("decorrelation_component_id", self.decorrelation_component_id),
-            ("rationale", self.rationale),
+                        ("rationale", self.rationale),
         ):
             if not value.strip():
                 raise ValueError(f"{name} is required")
+        if self.decorrelation_component_no < 1:
+            raise ValueError("decorrelation_component_no must be at least 1")
         alpha_field_name(self.horizon)
 
 
@@ -109,7 +110,7 @@ def require_admitted_factor_inputs(
 
         component_key = (
             admission.decorrelation_run_id,
-            admission.decorrelation_component_id,
+            admission.decorrelation_component_no,
         )
         if component_key in seen_components:
             raise ValueError(
