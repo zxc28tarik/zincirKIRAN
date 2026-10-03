@@ -16,6 +16,7 @@ values
     ('dynamic-wrong-protocol-snap', 'long_leg', 0.075),
     ('dynamic-wrong-protocol-snap', 'turnover', 0.25);
 
+begin;
 insert into zk.dynamic_weight_runs (
     dynamic_run_id, specification_id, definition_version, prediction_timestamp,
     status, base_gross_exposure, preliminary_gross_exposure,
