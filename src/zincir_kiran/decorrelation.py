@@ -312,3 +312,129 @@ def build_redundancy_graph(
         concept_edges=concept_edge_pairs,
         components=tuple(components),
     )
+
+class ResidualizationState(StrEnum):
+    ESTIMATED = "ESTIMATED"
+    INSUFFICIENT_OVERLAP = "INSUFFICIENT_OVERLAP"
+    DEGENERATE_EXPLANATORY = "DEGENERATE_EXPLANATORY"
+
+
+@dataclass(frozen=True)
+class ResidualPoint:
+    observation_key: str
+    residual: float
+
+
+@dataclass(frozen=True)
+class ResidualizationResult:
+    state: ResidualizationState
+    include_intercept: bool
+    minimum_overlap: int
+    overlap_count: int
+    intercept: float | None
+    beta: float | None
+    residuals: tuple[ResidualPoint, ...]
+
+
+def residualize_factor(
+    target: list[FactorPoint],
+    explanatory: list[FactorPoint],
+    *,
+    minimum_overlap: int,
+    include_intercept: bool,
+) -> ResidualizationResult:
+    """Residualize one factor on another with fully explicit OLS assumptions.
+
+    Both series are aligned by observation key. Missing/non-finite values are
+    excluded. No standardization is performed. ``include_intercept`` has no
+    default by design, so the caller must choose the regression specification.
+    """
+    if minimum_overlap < 2:
+        raise ValueError("minimum_overlap must be at least 2")
+    if not isinstance(include_intercept, bool):
+        raise TypeError("include_intercept must be a bool")
+
+    target_map = _as_unique_map(target, side="target")
+    explanatory_map = _as_unique_map(explanatory, side="explanatory")
+    common_keys = sorted(set(target_map) & set(explanatory_map))
+    aligned = [
+        (key, float(target_map[key]), float(explanatory_map[key]))
+        for key in common_keys
+        if _finite(target_map[key]) and _finite(explanatory_map[key])
+    ]
+
+    overlap_count = len(aligned)
+    if overlap_count < minimum_overlap:
+        return ResidualizationResult(
+            state=ResidualizationState.INSUFFICIENT_OVERLAP,
+            include_intercept=include_intercept,
+            minimum_overlap=minimum_overlap,
+            overlap_count=overlap_count,
+            intercept=None,
+            beta=None,
+            residuals=(),
+        )
+
+    target_values = tuple(item[1] for item in aligned)
+    explanatory_values = tuple(item[2] for item in aligned)
+
+    if include_intercept:
+        explanatory_mean = fmean(explanatory_values)
+        target_mean = fmean(target_values)
+        centered_explanatory = tuple(
+            value - explanatory_mean for value in explanatory_values
+        )
+        denominator = sum(value * value for value in centered_explanatory)
+        if denominator == 0:
+            return ResidualizationResult(
+                state=ResidualizationState.DEGENERATE_EXPLANATORY,
+                include_intercept=True,
+                minimum_overlap=minimum_overlap,
+                overlap_count=overlap_count,
+                intercept=None,
+                beta=None,
+                residuals=(),
+            )
+        beta = sum(
+            x_centered * (target_value - target_mean)
+            for x_centered, target_value in zip(
+                centered_explanatory, target_values, strict=True
+            )
+        ) / denominator
+        intercept = target_mean - beta * explanatory_mean
+    else:
+        denominator = sum(value * value for value in explanatory_values)
+        if denominator == 0:
+            return ResidualizationResult(
+                state=ResidualizationState.DEGENERATE_EXPLANATORY,
+                include_intercept=False,
+                minimum_overlap=minimum_overlap,
+                overlap_count=overlap_count,
+                intercept=None,
+                beta=None,
+                residuals=(),
+            )
+        beta = sum(
+            x_value * target_value
+            for x_value, target_value in zip(
+                explanatory_values, target_values, strict=True
+            )
+        ) / denominator
+        intercept = 0.0
+
+    residuals = tuple(
+        ResidualPoint(
+            observation_key=key,
+            residual=target_value - (intercept + beta * explanatory_value),
+        )
+        for key, target_value, explanatory_value in aligned
+    )
+    return ResidualizationResult(
+        state=ResidualizationState.ESTIMATED,
+        include_intercept=include_intercept,
+        minimum_overlap=minimum_overlap,
+        overlap_count=overlap_count,
+        intercept=intercept,
+        beta=beta,
+        residuals=residuals,
+    )
