@@ -312,6 +312,21 @@ jobs:
             echo "Future dynamic evidence correctly rejected"
           fi
 
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_late_preregistered_dynamic_run.sql; then
+            echo "Post-hoc dynamic weighting protocol was incorrectly accepted"
+            exit 1
+          else
+            echo "Post-hoc dynamic weighting protocol correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_dynamic_protocol_mismatch.sql; then
+            echo "Dynamic evidence protocol mismatch was incorrectly accepted"
+            exit 1
+          else
+            echo "Dynamic evidence protocol mismatch correctly rejected"
+          fi
+
           if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_dynamic_metric.sql; then
             echo "Invalid dynamic metric provenance was incorrectly accepted"
             exit 1
