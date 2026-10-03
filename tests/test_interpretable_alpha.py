@@ -115,3 +115,84 @@ def test_factor_admission_registry_rejects_conflicting_rewrite() -> None:
     registry.register(admission())
     with pytest.raises(ValueError, match="conflicting"):
         registry.register(admission(decision=AdmissionDecision.REJECTED))
+
+def test_same_decorrelation_component_cannot_vote_twice() -> None:
+    first = AdmittedFactorInput(
+        admission=admission(
+            admission_id="adm-mom-12-1",
+            factor_id="momentum_12_1",
+            factor_lab_experiment_id="exp-mom-12-1",
+            decorrelation_run_id="decor-h20-v1",
+            decorrelation_component_id="component-momentum",
+        ),
+        signal_value=0.70,
+    )
+    second = AdmittedFactorInput(
+        admission=admission(
+            admission_id="adm-mom-6-1",
+            factor_id="momentum_6_1",
+            factor_lab_experiment_id="exp-mom-6-1",
+            decorrelation_run_id="decor-h20-v1",
+            decorrelation_component_id="component-momentum",
+        ),
+        signal_value=0.60,
+    )
+
+    with pytest.raises(ValueError, match="same de-correlation component"):
+        require_admitted_factor_inputs([first, second], horizon=Horizon.H20)
+
+
+def test_different_components_can_each_contribute_one_vote() -> None:
+    value = AdmittedFactorInput(
+        admission=admission(
+            admission_id="adm-value",
+            factor_id="book_to_price",
+            factor_lab_experiment_id="exp-value",
+            decorrelation_run_id="decor-h20-v1",
+            decorrelation_component_id="component-value",
+        ),
+        signal_value=0.40,
+    )
+    momentum = AdmittedFactorInput(
+        admission=admission(
+            admission_id="adm-momentum",
+            factor_id="momentum_12_1",
+            factor_lab_experiment_id="exp-momentum",
+            decorrelation_run_id="decor-h20-v1",
+            decorrelation_component_id="component-momentum",
+        ),
+        signal_value=0.80,
+    )
+
+    result = require_admitted_factor_inputs([momentum, value], horizon=Horizon.H20)
+
+    assert tuple(item.admission.factor_id for item in result) == (
+        "book_to_price",
+        "momentum_12_1",
+    )
+
+
+def test_same_component_label_in_different_runs_does_not_false_collide() -> None:
+    first = AdmittedFactorInput(
+        admission=admission(
+            admission_id="adm-a",
+            factor_id="factor_a",
+            factor_lab_experiment_id="exp-a",
+            decorrelation_run_id="decor-run-a",
+            decorrelation_component_id="component-1",
+        ),
+        signal_value=0.10,
+    )
+    second = AdmittedFactorInput(
+        admission=admission(
+            admission_id="adm-b",
+            factor_id="factor_b",
+            factor_lab_experiment_id="exp-b",
+            decorrelation_run_id="decor-run-b",
+            decorrelation_component_id="component-1",
+        ),
+        signal_value=0.20,
+    )
+
+    result = require_admitted_factor_inputs([first, second], horizon=Horizon.H20)
+    assert len(result) == 2
