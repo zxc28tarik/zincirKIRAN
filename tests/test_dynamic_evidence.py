@@ -62,6 +62,11 @@ def weighting_spec(**overrides: object) -> DynamicWeightingSpec:
         "horizon": Horizon.H20,
         "base_alpha_specification_id": "alpha-h20-base",
         "base_alpha_definition_version": "v1",
+        "evidence_protocol_id": "rolling-oos-v1",
+        "universe_rule_version": "universe-v1",
+        "hypothesis": "Recent PIT evidence may improve static admitted-factor weights.",
+        "success_criteria": "Beat static-weight comparator OOS after costs without instability.",
+        "preregistered_at": PREDICTION - timedelta(days=30),
         "minimum_metric_coverage": 0.75,
         "max_evidence_age_days": 120,
         "multiplier_floor": 0.50,
@@ -284,3 +289,41 @@ def test_fixed_inputs_are_deterministic_independent_of_input_order() -> None:
         evidence_snapshots=[snapshot(momentum), snapshot(value)],
     )
     assert first == second
+
+def test_weighting_protocol_must_be_preregistered_before_prediction() -> None:
+    adm = admission("value", 1)
+    with pytest.raises(ValueError, match="preregistered"):
+        resolve_dynamic_evidence_weights(
+            specification=weighting_spec(
+                preregistered_at=PREDICTION + timedelta(seconds=1)
+            ),
+            base_alpha_specification=base_spec(),
+            base_weights=[AlphaFactorWeight(adm, 1.0)],
+            evidence_snapshots=[snapshot(adm)],
+            prediction_timestamp=PREDICTION,
+        )
+
+
+def test_snapshot_protocol_must_match_preregistered_protocol() -> None:
+    adm = admission("value", 1)
+    wrong = FactorEvidenceSnapshot(
+        snapshot_id="wrong-protocol",
+        admission=adm,
+        evidence_protocol_id="post-hoc-protocol",
+        window_start=PREDICTION - timedelta(days=90),
+        window_end=PREDICTION - timedelta(days=5),
+        available_at=PREDICTION - timedelta(days=4),
+        metrics=(
+            EvidenceMetricObservation("icir", 0.8),
+            EvidenceMetricObservation("long_leg", 0.08),
+            EvidenceMetricObservation("turnover", 0.2),
+        ),
+    )
+    with pytest.raises(ValueError, match="protocol"):
+        resolve_dynamic_evidence_weights(
+            specification=weighting_spec(),
+            base_alpha_specification=base_spec(),
+            base_weights=[AlphaFactorWeight(adm, 1.0)],
+            evidence_snapshots=[wrong],
+            prediction_timestamp=PREDICTION,
+        )
