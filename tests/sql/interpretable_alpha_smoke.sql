@@ -70,10 +70,11 @@ insert into zk.alpha_runs (
 
 insert into zk.alpha_run_contributions (
     alpha_run_id, admission_id, raw_signal_value, normalization_rule_id,
+    applicability_state, accounting_comparability_state,
     normalized_value, weight, weighted_contribution
 ) values
-    ('alpha-smoke-run-scored', 'alpha-smoke-adm-value', 0.20, 'SMOKE_NORM', -0.25, 2.0, -0.50),
-    ('alpha-smoke-run-scored', 'alpha-smoke-adm-mom', 0.80, 'SMOKE_NORM', 0.50, 1.0, 0.50);
+    ('alpha-smoke-run-scored', 'alpha-smoke-adm-value', 0.20, 'SMOKE_NORM', 'APPLIES', 'COMPARABLE', -0.25, 2.0, -0.50),
+    ('alpha-smoke-run-scored', 'alpha-smoke-adm-mom', 0.80, 'SMOKE_NORM', 'APPLIES', 'COMPARABLE', 0.50, 1.0, 0.50);
 commit;
 
 begin;
@@ -89,15 +90,17 @@ insert into zk.alpha_runs (
 
 insert into zk.alpha_run_contributions (
     alpha_run_id, admission_id, raw_signal_value, normalization_rule_id,
+    applicability_state, accounting_comparability_state,
     normalized_value, weight, weighted_contribution
 ) values (
-    'alpha-smoke-run-abstain', 'alpha-smoke-adm-mom', 0.80, 'SMOKE_NORM', 0.50, 1.0, 0.50
+    'alpha-smoke-run-abstain', 'alpha-smoke-adm-mom', 0.80, 'SMOKE_NORM', 'APPLIES', 'COMPARABLE', 0.50, 1.0, 0.50
 );
 
 insert into zk.alpha_run_unavailable_inputs (
-    alpha_run_id, admission_id, availability_state, absolute_weight
+    alpha_run_id, admission_id, availability_state,
+    applicability_state, accounting_comparability_state, absolute_weight
 ) values (
-    'alpha-smoke-run-abstain', 'alpha-smoke-adm-value', 'MISSING', 2.0
+    'alpha-smoke-run-abstain', 'alpha-smoke-adm-value', 'MISSING', 'APPLIES', 'COMPARABLE', 2.0
 );
 commit;
 
