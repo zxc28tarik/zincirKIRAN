@@ -19,7 +19,6 @@ from zincir_kiran.dynamic_evidence import (
 )
 from zincir_kiran.interpretable_alpha import AdmissionDecision, FactorAdmission
 
-
 PREDICTION = datetime(2026, 10, 4, 9, tzinfo=UTC)
 
 
