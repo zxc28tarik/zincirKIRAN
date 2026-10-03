@@ -90,7 +90,8 @@ def require_admitted_factor_inputs(
     """Gate Alpha v1 inputs without aggregation, neutral fill, or hidden promotion."""
     alpha_field_name(horizon)
     accepted: list[AdmittedFactorInput] = []
-    seen: set[tuple[str, str]] = set()
+    seen_factor_definitions: set[tuple[str, str]] = set()
+    seen_components: set[tuple[str, str]] = set()
 
     for item in inputs:
         admission = item.admission
@@ -101,10 +102,20 @@ def require_admitted_factor_inputs(
         if item.signal_value is None or not math.isfinite(item.signal_value):
             raise ValueError("admitted factor input must have a finite signal_value")
 
-        key = (admission.factor_id, admission.factor_definition_version)
-        if key in seen:
+        factor_key = (admission.factor_id, admission.factor_definition_version)
+        if factor_key in seen_factor_definitions:
             raise ValueError("duplicate admitted factor definition")
-        seen.add(key)
+        seen_factor_definitions.add(factor_key)
+
+        component_key = (
+            admission.decorrelation_run_id,
+            admission.decorrelation_component_id,
+        )
+        if component_key in seen_components:
+            raise ValueError(
+                "multiple admitted factors from the same de-correlation component"
+            )
+        seen_components.add(component_key)
         accepted.append(item)
 
     return tuple(
