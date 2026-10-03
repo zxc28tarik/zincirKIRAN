@@ -215,7 +215,7 @@ create table zk.alpha_runs (
 create function zk.validate_alpha_run_contract()
 returns trigger
 language plpgsql
-as $
+as $$
 declare
     spec_horizon integer;
     spec_coverage_rule text;
@@ -286,7 +286,7 @@ begin
     end if;
     return new;
 end;
-$;
+$$;
 
 create trigger alpha_runs_contract_trg
 before insert on zk.alpha_runs
@@ -420,7 +420,7 @@ for each row execute function zk.reject_alpha_aggregation_mutation();
 create function zk.audit_alpha_run_complete()
 returns trigger
 language plpgsql
-as $
+as $$
 declare
     run_record zk.alpha_runs%rowtype;
     aggregation_rule text;
@@ -487,7 +487,7 @@ begin
 
     return new;
 end;
-$;
+$$;
 
 create constraint trigger alpha_runs_complete_audit_trg
 after insert on zk.alpha_runs
