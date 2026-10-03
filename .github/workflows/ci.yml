@@ -232,3 +232,46 @@ jobs:
           else
             echo "Invalid alpha aggregation metadata correctly rejected"
           fi
+
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_alpha_admission_provenance.sql; then
+            echo "Invalid alpha admission provenance was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha admission provenance correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_duplicate_alpha_component_weight.sql; then
+            echo "Duplicate de-correlation component vote was incorrectly accepted"
+            exit 1
+          else
+            echo "Duplicate de-correlation component vote correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_run.sql; then
+            echo "Inconsistent alpha run was incorrectly accepted"
+            exit 1
+          else
+            echo "Inconsistent alpha run correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_invalid_alpha_contribution.sql; then
+            echo "Invalid alpha contribution was incorrectly accepted"
+            exit 1
+          else
+            echo "Invalid alpha contribution correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_incomplete_alpha_run.sql; then
+            echo "Incomplete alpha run was incorrectly accepted"
+            exit 1
+          else
+            echo "Incomplete alpha run correctly rejected"
+          fi
+
+          if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_alpha_weight_mutation.sql; then
+            echo "Alpha weight mutation was incorrectly accepted"
+            exit 1
+          else
+            echo "Alpha weight mutation correctly rejected"
+          fi
