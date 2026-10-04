@@ -60,6 +60,7 @@ class PortfolioSpec:
     preregistered_at: datetime
     selection_rule: SelectionRule
     sizing_rule: SizingRule
+    rebalance_rule_id: str
     target_position_count: int
     minimum_position_count: int
     minimum_alpha_value: float
@@ -83,6 +84,7 @@ class PortfolioSpec:
             ("universe_rule_version", self.universe_rule_version),
             ("hypothesis", self.hypothesis),
             ("success_criteria", self.success_criteria),
+            ("rebalance_rule_id", self.rebalance_rule_id),
         ):
             if not value.strip():
                 raise ValueError(f"{name} is required")
