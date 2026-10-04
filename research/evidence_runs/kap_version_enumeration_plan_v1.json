@@ -1,0 +1,28 @@
+{
+  "manifest_id": "kap-version-enumeration-plan-v1",
+  "source_evidence_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "source_evidence_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+  "source_w10_receipt": "data/audit/w10_p7_enumeration_v1/receipt.json",
+  "endpoint": "https://kap.org.tr/tr/api/disclosure/members/byCriteria",
+  "window_plan": {
+    "count": 60,
+    "start": "2021-08-01T00:00:00+00:00",
+    "end_exclusive": "2026-08-01T00:00:00+00:00"
+  },
+  "known_sample": {
+    "window": "2023-03",
+    "financial_report_disclosures": 423,
+    "correction_markers": 19,
+    "marked_superseded": 9,
+    "sampled_supersession_rate": 0.02127659574468085,
+    "response_sha256": "29bb3d7bd3bef0e07c4a1855416751b85ba61affc2d04e973873a16a59f69305"
+  },
+  "known_correction_chain": {
+    "older_disclosure_id": "1122417",
+    "newer_disclosure_id": "1126845",
+    "relation": "Düzeltilmiş Bildirim"
+  },
+  "completeness_guaranteed": false,
+  "authoritative_historical_pit_allowed": false,
+  "next_action": "Execute the official query across all 60 windows, hash every response, and build correction-chain catalog; retain completeness=false unless an official retention guarantee is obtained."
+}
