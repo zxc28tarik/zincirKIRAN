@@ -1,0 +1,22 @@
+{
+  "policy_id": "financial-version-authority-v1",
+  "source_project": "TOTAL-RASYO-HESAPLAYICI",
+  "source_issue": 36,
+  "source_blocker_issue": 24,
+  "source_receipt_sha256": "e265681904d80325fca4d23dcc56b4a15ac1f0b7d9a1771d8fe413ada71307b2",
+  "real_regression_case": {
+    "ticker": "KORTS",
+    "period_end": "2022-12-31",
+    "original_disclosure_id": "1122417",
+    "original_published_at": "2023-03-09T18:36:13+03:00",
+    "correction_disclosure_id": "1126845",
+    "correction_published_at": "2023-03-21T18:32:11+03:00",
+    "changed_numeric_cells": 4,
+    "total_numeric_cells": 437,
+    "bulk_archive_retains_only_later_version": true
+  },
+  "authoritative_rule": "LATEST_VERSION_WITH_PUBLISHED_AT_LTE_CUTOFF_FROM_COMPLETE_ENUMERATED_CHAIN",
+  "bulk_latest_only_authorized_for_historical_pit": false,
+  "experimental_version_risk_may_be_mixed_with_authoritative": false,
+  "exhaustive_5y_version_enumeration_complete": false
+}

@@ -115,6 +115,9 @@ jobs:
       - name: Apply Current Bootstrap PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/current_bootstrap.sql
 
+      - name: Apply Financial Versions PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/financial_versions.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -180,6 +183,9 @@ jobs:
 
       - name: Verify Current Bootstrap PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/current_bootstrap_smoke.sql
+
+      - name: Verify Financial Versions PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/financial_versions_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -481,3 +487,6 @@ jobs:
 
       - name: Verify Current Bootstrap rejection guards
         run: bash tests/sql/run_current_bootstrap_rejection_guards.sh
+
+      - name: Verify Financial Version rejection guards
+        run: bash tests/sql/run_financial_version_rejection_guards.sh
