@@ -9,6 +9,7 @@ from zincir_kiran.investingpro_acquisition import (
     InvestingProExportBatch,
     PROHIBITED_AS_TARGETS,
     RosterReconciliation,
+    reconcile_ticker_sets,
     require_historical_estimate_use,
 )
 
@@ -84,3 +85,16 @@ def test_ai_and_fair_value_products_are_not_targets() -> None:
     assert "FAIR_VALUE" in PROHIBITED_AS_TARGETS
     assert "PROPICKS_AI" in PROHIBITED_AS_TARGETS
     assert "HEALTH_SCORE" in PROHIBITED_AS_TARGETS
+
+
+def test_roster_reconciliation_counts_duplicates_and_source_gaps() -> None:
+    result = reconcile_ticker_sets(
+        kap_tickers={"AAA", "BBB", "CCC"},
+        investingpro_tickers=["AAA", "BBB", "BBB", "DDD"],
+    )
+    assert result.kap_roster_count == 3
+    assert result.investingpro_unique_primary_count == 3
+    assert result.matched_tickers == 2
+    assert result.kap_only == 1
+    assert result.investingpro_only == 1
+    assert result.duplicate_primary_items == 1
