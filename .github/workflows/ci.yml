@@ -361,3 +361,6 @@ jobs:
           else
             echo "Incomplete resolved dynamic plan correctly rejected"
           fi
+
+      - name: Verify context research rejection guards
+        run: bash tests/sql/run_context_rejection_guards.sh
