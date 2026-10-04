@@ -97,6 +97,9 @@ jobs:
       - name: Apply Evidence Phase PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/evidence_phase.sql
 
+      - name: Apply Official Acquisition PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/official_acquisition.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -144,6 +147,9 @@ jobs:
 
       - name: Verify Evidence Phase PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/evidence_phase_smoke.sql
+
+      - name: Verify Official Acquisition PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/official_acquisition_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -427,3 +433,6 @@ jobs:
 
       - name: Verify Evidence Phase rejection guards
         run: bash tests/sql/run_evidence_phase_rejection_guards.sh
+
+      - name: Verify Official Acquisition rejection guards
+        run: bash tests/sql/run_official_acquisition_rejection_guards.sh
