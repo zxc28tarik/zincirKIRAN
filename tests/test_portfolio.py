@@ -100,6 +100,7 @@ def spec(**overrides: object) -> PortfolioSpec:
         "preregistered_at": PREDICTION - timedelta(days=30),
         "selection_rule": SelectionRule.TOP_ALPHA,
         "sizing_rule": SizingRule.EQUAL_WEIGHT,
+        "rebalance_rule_id": "REBALANCE_TO_BE_SELECTED_BY_EVIDENCE",
         "target_position_count": 3,
         "minimum_position_count": 2,
         "minimum_alpha_value": 0.0,
