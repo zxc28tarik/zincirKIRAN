@@ -11,7 +11,6 @@ from zincir_kiran.ml_challenger import (
     predict_challenger,
 )
 
-
 PREREGISTERED = datetime(2026, 1, 1, tzinfo=UTC)
 FIT_AT = datetime(2026, 6, 1, tzinfo=UTC)
 
