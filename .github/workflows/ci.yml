@@ -118,6 +118,9 @@ jobs:
       - name: Apply Financial Versions PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/financial_versions.sql
 
+      - name: Apply InvestingPro Acquisition PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/investingpro_acquisition.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -186,6 +189,9 @@ jobs:
 
       - name: Verify Financial Versions PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/financial_versions_smoke.sql
+
+      - name: Verify InvestingPro Acquisition PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/investingpro_acquisition_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -490,3 +496,6 @@ jobs:
 
       - name: Verify Financial Version rejection guards
         run: bash tests/sql/run_financial_version_rejection_guards.sh
+
+      - name: Verify InvestingPro rejection guards
+        run: bash tests/sql/run_investingpro_rejection_guards.sh
