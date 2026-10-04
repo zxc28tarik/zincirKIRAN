@@ -3,9 +3,9 @@ from datetime import UTC, datetime
 import pytest
 
 from zincir_kiran.financial_versions import (
+    KORTS_P7_SOURCE_RECEIPT_SHA256,
     FinancialVersion,
     FinancialVersionChain,
-    KORTS_P7_SOURCE_RECEIPT_SHA256,
     VersionAuthority,
     korts_2022_revision_fixture,
     require_authoritative_factor_input,
