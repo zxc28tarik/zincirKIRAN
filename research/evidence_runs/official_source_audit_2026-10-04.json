@@ -1,0 +1,23 @@
+{
+  "audit_id": "official-source-audit-2026-10-04",
+  "audited_at": "2026-10-04T13:50:00+00:00",
+  "overall_status": "BLOCKED_WITH_GAPS",
+  "sources": [
+    {
+      "source_id": "borsa_istanbul",
+      "landing_url": "https://www.borsaistanbul.com/veriler/pay-piyasasi-verileri",
+      "status": "MANUAL_EXPORT_REQUIRED",
+      "blocker_code": "HISTORICAL_RANGE_NOT_ACQUIRED",
+      "blocker_detail": "Official public surface and DataFilePaths.zip link confirmed; broad historical data is routed to Borsa Istanbul DataStore. No historical raw package has yet been acquired."
+    },
+    {
+      "source_id": "kap",
+      "landing_url": "https://kap.org.tr/tr/bildirim-sorgu",
+      "status": "BLOCKED",
+      "blocker_code": "STABLE_EXPORT_PATH_NOT_LOCKED",
+      "blocker_detail": "Official disclosure and financial-statement query surfaces confirmed; stable automated export/acquisition path still needs to be locked and raw artifacts have not yet been acquired."
+    }
+  ],
+  "snapshot_outcome": "NOT_CREATED",
+  "reason": "Implementation 16 forbids claiming TOURNAMENT_READY without actual content-addressed raw artifacts and preregistered domain coverage."
+}
