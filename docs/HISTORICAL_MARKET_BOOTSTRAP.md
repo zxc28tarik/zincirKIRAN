@@ -58,13 +58,13 @@ These 12 source rows are official Borsa evidence; the rest of the daily Yahoo-de
 ## What this closes
 
 This substantially reduces the need for InvestingPro export for:
-- 2020-07..2026-08 historical BIST100-member daily prices
+- 2020-07..2026-08 historical BIST100-member daily OHLC / adjusted-close / volume data within the frozen member corpus
 - 2021-08..2026-07 monthly BIST100 signal-day execution prices
 
 ## What remains open
 
 - all-BIST, not only historical BIST100-member scope
-- historical daily volume corpus
+- all-BIST historical daily volume outside the historical BIST100-member corpus
 - official Borsa full daily stock-price package if we later require official-only production evidence
 - corporate-action-aware adjusted-return reconstruction for each use case
 
