@@ -91,6 +91,9 @@ jobs:
       - name: Apply Shadow PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/shadow.sql
 
+      - name: Apply Production Gate PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/production_gate.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -132,6 +135,9 @@ jobs:
 
       - name: Verify Shadow PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/shadow_smoke.sql
+
+      - name: Verify Production Gate PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/production_gate_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -409,3 +415,6 @@ jobs:
 
       - name: Verify Shadow rejection guards
         run: bash tests/sql/run_shadow_rejection_guards.sh
+
+      - name: Verify Production Gate rejection guards
+        run: bash tests/sql/run_production_gate_rejection_guards.sh
