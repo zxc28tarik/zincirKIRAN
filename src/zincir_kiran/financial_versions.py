@@ -109,7 +109,7 @@ def korts_2022_revision_fixture() -> FinancialVersionChain:
     keep this fixture focused on chronology. Real authoritative imports still require
     exact raw SHA-256 values through FinancialVersion.
     """
-    from datetime import timezone, timedelta
+    from datetime import timedelta, timezone
 
     tz = timezone(timedelta(hours=3))
     original = FinancialVersion(
