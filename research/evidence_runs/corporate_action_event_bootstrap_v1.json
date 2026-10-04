@@ -33,5 +33,34 @@
   "ticker_change_source": "OFFICIAL_BORSA_LINEAGE",
   "dividend_catalog_complete": false,
   "capital_ratio_materialized": false,
-  "absence_evidence_requires_complete_window": true
+  "absence_evidence_requires_complete_window": true,
+  "detail_subtype_evidence": {
+    "source_window": "2023-07-23_2023-07-29",
+    "response_sha256": "4cc0568d14b2d9150eff519be89f16813971eab6e618f7dcca27cbc86d7be3c5",
+    "examples": [
+      {
+        "disclosure_id": 1176724,
+        "ticker": "CIMSA",
+        "subtype": "BONUS_ISSUE_DISCLOSURE"
+      },
+      {
+        "disclosure_id": 1176183,
+        "ticker": "SUNTK",
+        "subtype": "BONUS_ISSUE_DISCLOSURE"
+      },
+      {
+        "disclosure_id": 1176343,
+        "ticker": "MEDTR",
+        "subtype": "RIGHTS_ISSUE_DISCLOSURE"
+      },
+      {
+        "disclosure_id": 1176748,
+        "ticker": "HUBVC",
+        "subtype": "DIVIDEND_PROCESS_DISCLOSURE"
+      }
+    ],
+    "ratio_or_cash_amount_materialized": false,
+    "ex_date_materialized": false,
+    "payment_date_materialized": false
+  }
 }
