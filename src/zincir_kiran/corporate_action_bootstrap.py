@@ -22,6 +22,9 @@ class BootstrapEventType(StrEnum):
     MERGER = "MERGER"
     DEMERGER = "DEMERGER"
     SHARE_CLASS_CHANGE = "SHARE_CLASS_CHANGE"
+    BONUS_ISSUE_DISCLOSURE = "BONUS_ISSUE_DISCLOSURE"
+    RIGHTS_ISSUE_DISCLOSURE = "RIGHTS_ISSUE_DISCLOSURE"
+    DIVIDEND_PROCESS_DISCLOSURE = "DIVIDEND_PROCESS_DISCLOSURE"
     TICKER_CHANGE = "TICKER_CHANGE"
     AMBIGUOUS_SHARE_COUNT_ACTION = "AMBIGUOUS_SHARE_COUNT_ACTION"
 
@@ -69,8 +72,19 @@ class CoveredInventoryWindow:
         int(self.source_manifest_sha256, 16)
 
 
-def classify_share_count_subject(subject: str) -> BootstrapEventType | None:
+def classify_share_count_subject(
+    subject: str,
+    summary: str | None = None,
+) -> BootstrapEventType | None:
     text = subject.casefold()
+    summary_text = (summary or "").casefold()
+
+    if "bedelsiz sermaye artır" in summary_text:
+        return BootstrapEventType.BONUS_ISSUE_DISCLOSURE
+    if "bedelli sermaye artır" in summary_text:
+        return BootstrapEventType.RIGHTS_ISSUE_DISCLOSURE
+    if "kar payı dağıtım" in text or "kâr payı dağıtım" in text:
+        return BootstrapEventType.DIVIDEND_PROCESS_DISCLOSURE
     matches: list[BootstrapEventType] = []
 
     if "sermaye artır" in text:
@@ -98,6 +112,8 @@ def production_action_type(
     mapping = {
         BootstrapEventType.MERGER: CorporateActionType.MERGER,
         BootstrapEventType.DEMERGER: CorporateActionType.DEMERGER,
+        BootstrapEventType.BONUS_ISSUE_DISCLOSURE: CorporateActionType.BONUS_ISSUE,
+        BootstrapEventType.RIGHTS_ISSUE_DISCLOSURE: CorporateActionType.RIGHTS_ISSUE,
         BootstrapEventType.TICKER_CHANGE: CorporateActionType.TICKER_CHANGE,
     }
     return mapping.get(event_type)
