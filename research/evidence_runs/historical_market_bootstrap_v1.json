@@ -1,0 +1,32 @@
+{
+  "manifest_id": "historical-market-bootstrap-v1",
+  "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "source_commit": "883e680a2564e38f4c08a21bc88aa95b8f164036",
+  "artifacts": [
+    {
+      "artifact_id": "v24-daily-member-prices",
+      "path": "data/backtest_sources/yahoo_resolved/historical_member_prices_resolved_2020-07_2026-08.csv.gz",
+      "sha256": "b3413840f7516b2dd51611efa9139b28ddee1eb2d11d14dd418097138dd33141",
+      "rows": 271267,
+      "direct_yahoo_rows": 270038,
+      "authority": "VALIDATED_DERIVED_MARKET_DATA",
+      "scope": "Historical member daily price corpus; official Borsa ticker lineage applied; no date shifting or forward fill."
+    },
+    {
+      "artifact_id": "v24-monthly-execution-panel",
+      "path": "data/backtest_sources/yahoo_resolved/monthly_member_signal_price_coverage.csv",
+      "sha256": "a3b14014aa4d3ff16a082bc0dac64346b906f4b7720aeae5a8c449a2add314f2",
+      "rows": 6000,
+      "yahoo_or_lineage_rows": 5988,
+      "official_borsa_thb_rows": 12,
+      "remaining_gaps": 0,
+      "authority": "VALIDATED_EXECUTION_PANEL",
+      "scope": "BIST100 60 monthly signal dates x 100 members, 2021-08 through 2026-07."
+    }
+  ],
+  "remaining_market_data_gaps": [
+    "ALL_BIST_NOT_ONLY_HISTORICAL_BIST100_SCOPE",
+    "HISTORICAL_VOLUME_NOT_YET_BOOTSTRAPPED",
+    "OFFICIAL_BORSA_DAILY_STOCK_SOURCE_NOT_FULLY_ACQUIRED"
+  ]
+}
