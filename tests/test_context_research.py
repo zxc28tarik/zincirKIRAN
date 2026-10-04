@@ -418,3 +418,13 @@ def test_fixed_inputs_are_deterministic_independent_of_input_order() -> None:
         prediction_timestamp=PREDICTION,
     )
     assert first == second
+
+def test_rule_regime_requirements_must_reference_declared_states() -> None:
+    bad_rule = InteractionRule(
+        rule_id="bad-regime-reference",
+        left_admission_id=VALUE.admission_id,
+        right_admission_id=MOMENTUM.admission_id,
+        required_regime_states=(("macro_axis", "state_that_does_not_exist"),),
+    )
+    with pytest.raises(ValueError, match="declared regime states"):
+        context_spec(interaction_rules=(bad_rule,))
