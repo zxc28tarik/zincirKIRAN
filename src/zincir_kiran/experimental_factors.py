@@ -379,3 +379,74 @@ def materialize_market_factors(
         ),
     )
     return tuple(sorted(values, key=lambda item: item.factor_id))
+
+
+
+def experimental_factor_definitions():
+    """Return versioned candidate definitions matching the first materializers."""
+    from .factor_library import EconomicFamily, ExpectedDirection, FactorDefinition
+
+    specs = (
+        ("gross_profitability", EconomicFamily.PROFITABILITY, "gross_profitability",
+         "TTM Gross Profit / average assets",
+         ("average_assets", "gross_profit_ttm"), ExpectedDirection.HIGHER_IS_BETTER),
+        ("roa", EconomicFamily.PROFITABILITY, "return_on_assets",
+         "TTM Net Income / average assets",
+         ("average_assets", "net_income_ttm"), ExpectedDirection.HIGHER_IS_BETTER),
+        ("operating_profitability", EconomicFamily.PROFITABILITY, "operating_profitability",
+         "TTM Operating Profit / average assets",
+         ("average_assets", "operating_profit_ttm"), ExpectedDirection.HIGHER_IS_BETTER),
+        ("cfo_to_assets", EconomicFamily.QUALITY, "cash_profitability",
+         "TTM CFO / average assets",
+         ("average_assets", "cfo_ttm"), ExpectedDirection.HIGHER_IS_BETTER),
+        ("accruals", EconomicFamily.QUALITY, "accrual_quality",
+         "(TTM Net Income - TTM CFO) / average assets",
+         ("average_assets", "cfo_ttm", "net_income_ttm"), ExpectedDirection.LOWER_IS_BETTER),
+        ("asset_growth", EconomicFamily.INVESTMENT_DISCIPLINE, "asset_growth",
+         "Assets_t / Assets_t-4q - 1",
+         ("assets_now", "assets_year_ago"), ExpectedDirection.LOWER_IS_BETTER),
+        ("gross_margin", EconomicFamily.PROFITABILITY, "gross_margin",
+         "TTM Gross Profit / TTM Revenue",
+         ("gross_profit_ttm", "revenue_ttm"), ExpectedDirection.HIGHER_IS_BETTER),
+        ("gross_margin_acceleration", EconomicFamily.FUNDAMENTAL_ACCELERATION, "gross_margin_acceleration",
+         "Gross Margin_t - Gross Margin_t-4q",
+         ("gross_profit_ttm", "gross_profit_ttm_year_ago", "revenue_ttm", "revenue_ttm_year_ago"),
+         ExpectedDirection.HIGHER_IS_BETTER),
+        ("operating_margin", EconomicFamily.PROFITABILITY, "operating_margin",
+         "TTM Operating Profit / TTM Revenue",
+         ("operating_profit_ttm", "revenue_ttm"), ExpectedDirection.HIGHER_IS_BETTER),
+        ("operating_margin_acceleration", EconomicFamily.FUNDAMENTAL_ACCELERATION, "operating_margin_acceleration",
+         "Operating Margin_t - Operating Margin_t-4q",
+         ("operating_profit_ttm", "operating_profit_ttm_year_ago", "revenue_ttm", "revenue_ttm_year_ago"),
+         ExpectedDirection.HIGHER_IS_BETTER),
+        ("capex_to_assets", EconomicFamily.INVESTMENT_DISCIPLINE, "capital_investment",
+         "TTM CapEx / average assets",
+         ("average_assets", "capex_ttm"), ExpectedDirection.LOWER_IS_BETTER),
+        ("momentum_12_1", EconomicFamily.PRICE_MOMENTUM, "medium_term_momentum",
+         "Close[t-21] / Close[t-252] - 1",
+         ("daily_close_history",), ExpectedDirection.HIGHER_IS_BETTER),
+        ("momentum_6_1", EconomicFamily.PRICE_MOMENTUM, "medium_term_momentum",
+         "Close[t-21] / Close[t-126] - 1",
+         ("daily_close_history",), ExpectedDirection.HIGHER_IS_BETTER),
+        ("high_52_proximity", EconomicFamily.PRICE_MOMENTUM, "52_week_high",
+         "Current Close / max Close over trailing 252 trading observations",
+         ("daily_close_history",), ExpectedDirection.HIGHER_IS_BETTER),
+        ("realized_volatility_63d", EconomicFamily.RISK, "realized_volatility",
+         "Sample standard deviation of trailing 63 daily returns",
+         ("daily_close_history",), ExpectedDirection.LOWER_IS_BETTER),
+        ("amihud_63d", EconomicFamily.LIQUIDITY, "amihud_illiquidity",
+         "Mean(abs(return) / (Close * Volume)) over trailing 63 returns",
+         ("daily_close_history", "daily_volume_history"), ExpectedDirection.LOWER_IS_BETTER),
+    )
+    return tuple(
+        FactorDefinition(
+            factor_id=factor_id,
+            definition_version="v1",
+            economic_family=family,
+            economic_concept_key=concept,
+            specification=specification,
+            required_fields=tuple(sorted(required_fields)),
+            expected_direction=direction,
+        )
+        for factor_id, family, concept, specification, required_fields, direction in specs
+    )
