@@ -14,7 +14,6 @@ from zincir_kiran.procurement import (
     default_procurement_specification,
 )
 
-
 PREREGISTERED = datetime(2026, 10, 4, 14, 5, tzinfo=UTC)
 
 
