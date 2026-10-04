@@ -62,7 +62,7 @@ class InvestingProExportBatch:
         row_count: int,
         content: bytes,
         authority: InvestingProAuthority,
-    ) -> "InvestingProExportBatch":
+    ) -> InvestingProExportBatch:
         return cls(
             batch_id=batch_id,
             exported_at=exported_at,
@@ -87,18 +87,6 @@ class EstimateObservation:
         if not self.ticker.strip() or not self.source_batch_id.strip():
             raise ValueError("ticker and source_batch_id are required")
         require_aware_timestamp(self.observed_at)
-        if self.authority is InvestingProAuthority.TIMESTAMPED_REVISION_HISTORY:
-            if self.metric not in {
-                EstimateMetric.EPS_ESTIMATE,
-                EstimateMetric.REVENUE_ESTIMATE,
-                EstimateMetric.EPS_REVISION,
-                EstimateMetric.REVENUE_REVISION,
-                EstimateMetric.ANALYST_COUNT,
-                EstimateMetric.ESTIMATE_DISPERSION,
-                EstimateMetric.FORWARD_EPS,
-                EstimateMetric.FORWARD_REVENUE,
-            }:
-                raise ValueError("unsupported historical estimate metric")
 
 
 def require_historical_estimate_use(observation: EstimateObservation) -> None:
