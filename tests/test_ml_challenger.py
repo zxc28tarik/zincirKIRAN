@@ -2,13 +2,13 @@ from datetime import UTC, datetime
 
 import pytest
 
-from zincir_kiran.baselines import Horizon
 from zincir_kiran.ml_challenger import (
     MLChallengerSpec,
     MLObservation,
     fit_ridge_challenger,
     predict_challenger,
 )
+from zincir_kiran.baselines import Horizon
 
 
 PREREGISTERED = datetime(2026, 1, 1, tzinfo=UTC)
