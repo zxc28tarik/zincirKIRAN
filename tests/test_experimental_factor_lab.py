@@ -13,7 +13,6 @@ from zincir_kiran.experimental_factor_lab import (
 from zincir_kiran.experimental_factors import FactorDirection
 from zincir_kiran.factor_lab import FactorObservation
 
-
 PREREG = datetime(2026, 10, 4, 21, 0, tzinfo=UTC)
 EXECUTED = datetime(2026, 10, 4, 21, 1, tzinfo=UTC)
 
