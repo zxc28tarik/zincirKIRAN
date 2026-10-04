@@ -118,6 +118,9 @@ jobs:
       - name: Apply KAP Version Enumeration PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/kap_version_enumeration.sql
 
+      - name: Apply Analyst Revisions PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/analyst_revisions.sql
+
       - name: Apply Financial Versions PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/financial_versions.sql
 
@@ -204,6 +207,9 @@ jobs:
 
       - name: Verify KAP Version Enumeration PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/kap_version_enumeration_smoke.sql
+
+      - name: Verify Analyst Revisions PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/analyst_revisions_smoke.sql
 
       - name: Verify Financial Versions PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/financial_versions_smoke.sql
@@ -526,6 +532,9 @@ jobs:
 
       - name: Verify KAP Version Enumeration rejection guards
         run: bash tests/sql/run_kap_version_enumeration_rejection_guards.sh
+
+      - name: Verify Analyst Revisions rejection guards
+        run: bash tests/sql/run_analyst_revisions_rejection_guards.sh
 
       - name: Verify Financial Version rejection guards
         run: bash tests/sql/run_financial_version_rejection_guards.sh
