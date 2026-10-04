@@ -99,8 +99,16 @@ def require_authoritative_factor_input(chain: FinancialVersionChain) -> None:
         raise ValueError("financial version enumeration is incomplete")
 
 
+KORTS_P7_SOURCE_RECEIPT_SHA256 = "e265681904d80325fca4d23dcc56b4a15ac1f0b7d9a1771d8fe413ada71307b2"
+
+
 def korts_2022_revision_fixture() -> FinancialVersionChain:
-    """Real KAP P7 regression case proving that bulk latest-only is insufficient."""
+    """Metadata regression case derived from the real KAP P7 KORTS version chain.
+
+    The per-notification raw byte hashes are not imported here; placeholder hashes
+    keep this fixture focused on chronology. Real authoritative imports still require
+    exact raw SHA-256 values through FinancialVersion.
+    """
     from datetime import timezone, timedelta
 
     tz = timezone(timedelta(hours=3))
