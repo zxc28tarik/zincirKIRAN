@@ -139,6 +139,9 @@ jobs:
       - name: Apply Experimental Factor Lab PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/experimental_factor_lab.sql
 
+      - name: Apply Corporate Action Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/corporate_action_bootstrap.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -228,6 +231,9 @@ jobs:
 
       - name: Verify Experimental Factor Lab PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/experimental_factor_lab_smoke.sql
+
+      - name: Verify Corporate Action Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/corporate_action_bootstrap_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -553,3 +559,6 @@ jobs:
 
       - name: Verify Experimental Factor Lab rejection guards
         run: bash tests/sql/run_experimental_factor_lab_rejection_guards.sh
+
+      - name: Verify Corporate Action Bootstrap rejection guards
+        run: bash tests/sql/run_corporate_action_bootstrap_rejection_guards.sh

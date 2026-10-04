@@ -1,0 +1,37 @@
+{
+  "contract": "CORPORATE_ACTION_EVENT_BOOTSTRAP_V1",
+  "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "source_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+  "inventory_contract": "KAP_ADAPTIVE_WINDOW_MARKET_WIDE_CA_INVENTORY_V1",
+  "inventory_manifest_sha256": "1935232295360b1026a036e725809e0e73a62253ce07145bbc1f13fd6abd1345",
+  "coverage": {
+    "start": "2016-05-01",
+    "end": "2026-07-31",
+    "windows_ok": 595,
+    "windows_failed": 0,
+    "windows_at_cap_unsplittable": 0,
+    "total_rows": 649244,
+    "disclosure_type_ca_rows": 132668,
+    "share_count_risk_events": 11680,
+    "distinct_action_tickers": 699
+  },
+  "subject_markers": [
+    "sermaye artır",
+    "sermaye azalt",
+    "birleşme",
+    "bölünme",
+    "pay grubu"
+  ],
+  "typed_scope": [
+    "CAPITAL_INCREASE",
+    "CAPITAL_DECREASE",
+    "MERGER",
+    "DEMERGER",
+    "SHARE_CLASS_CHANGE",
+    "AMBIGUOUS_SHARE_COUNT_ACTION"
+  ],
+  "ticker_change_source": "OFFICIAL_BORSA_LINEAGE",
+  "dividend_catalog_complete": false,
+  "capital_ratio_materialized": false,
+  "absence_evidence_requires_complete_window": true
+}
