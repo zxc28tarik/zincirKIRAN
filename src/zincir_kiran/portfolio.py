@@ -279,6 +279,10 @@ def _eligible_candidates(
             continue
         if confidence.decision is not ConfidenceDecision.SIGNAL_ELIGIBLE:
             continue
+        if confidence.confidence_score is None or not math.isfinite(
+            confidence.confidence_score
+        ):
+            raise ValueError("eligible portfolio candidate requires finite Confidence")
         if alpha.alpha_value is None or not math.isfinite(alpha.alpha_value):
             raise ValueError("eligible portfolio candidate requires finite Alpha")
         if alpha.alpha_value < specification.minimum_alpha_value:
