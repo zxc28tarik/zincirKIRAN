@@ -13,7 +13,6 @@ from zincir_kiran.investingpro_acquisition import (
     require_historical_estimate_use,
 )
 
-
 NOW = datetime(2026, 10, 4, 20, 45, tzinfo=UTC)
 
 
