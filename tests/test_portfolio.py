@@ -527,3 +527,23 @@ def test_signal_eligible_candidate_requires_finite_confidence_score() -> None:
             prediction_timestamp=PREDICTION,
             portfolio_notional=1_000_000,
         )
+
+def test_positive_alpha_proportional_nonpositive_selection_is_infeasible() -> None:
+    result = construct_portfolio(
+        specification=spec(
+            sizing_rule=SizingRule.POSITIVE_ALPHA_PROPORTIONAL,
+            target_position_count=2,
+            minimum_position_count=2,
+            minimum_alpha_value=-1.0,
+            max_sector_weight=1.0,
+        ),
+        candidates=[
+            candidate("A", "BANK", 0.9),
+            candidate("B", "INDUSTRY", 0.0),
+        ],
+        current_holdings=[],
+        execution_evidence=[],
+        prediction_timestamp=PREDICTION,
+        portfolio_notional=1_000_000,
+    )
+    assert result.status is PortfolioRunStatus.INFEASIBLE_CONSTRAINTS
