@@ -1,0 +1,16 @@
+{
+  "contract": "ANALYST_ESTIMATE_REVISION_INGEST_V1",
+  "primary_candidate_source": "InvestingPro+",
+  "historical_cross_project_source_available": false,
+  "authorities": ["HISTORICAL_PIT", "CURRENT_ONLY"],
+  "required_historical_keys": ["ticker", "fiscal_period_end", "estimate_at"],
+  "target_label_allowed": false,
+  "forbidden_vendor_outputs_as_targets": [
+    "InvestingPro Fair Value",
+    "ProTips",
+    "AI-picked stock score",
+    "analyst rating score"
+  ],
+  "revision_rule": "same ticker + same fiscal period + two historical timestamped snapshots",
+  "missing_fill_allowed": false
+}
