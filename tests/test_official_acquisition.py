@@ -3,13 +3,12 @@ from datetime import UTC, datetime
 import pytest
 
 from zincir_kiran.official_acquisition import (
+    AcquiredArtifactReceipt,
     AcquisitionAttempt,
     AcquisitionStatus,
-    AcquiredArtifactReceipt,
     official_source_ids,
     validate_acquisition_source,
 )
-
 
 NOW = datetime(2026, 10, 4, 13, 50, tzinfo=UTC)
 
