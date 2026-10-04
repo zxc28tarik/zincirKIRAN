@@ -135,3 +135,55 @@ def known_w10_correction_edge() -> CorrectionEdge:
         newer_published_at=datetime(2023, 3, 21, 15, 32, 11, tzinfo=UTC),
         relation_label="Düzeltilmiş Bildirim",
     )
+
+
+
+def build_monthly_windows(
+    *,
+    start_year: int,
+    start_month: int,
+    months: int,
+) -> tuple[EnumerationWindow, ...]:
+    """Build deterministic UTC half-open month windows."""
+    from datetime import UTC
+
+    if months <= 0:
+        raise ValueError("months must be positive")
+    if not 1 <= start_month <= 12:
+        raise ValueError("start_month must be in 1..12")
+
+    rows: list[EnumerationWindow] = []
+    year = start_year
+    month = start_month
+    for _ in range(months):
+        next_year = year + (1 if month == 12 else 0)
+        next_month = 1 if month == 12 else month + 1
+        rows.append(
+            EnumerationWindow(
+                window_id=f"{year:04d}-{month:02d}",
+                start_at=datetime(year, month, 1, tzinfo=UTC),
+                end_at=datetime(next_year, next_month, 1, tzinfo=UTC),
+            )
+        )
+        year, month = next_year, next_month
+    return tuple(rows)
+
+
+def zincir_kiran_60_month_enumeration_plan() -> tuple[EnumerationWindow, ...]:
+    """Publication-window plan aligned to the 2021-08..2026-07 research horizon."""
+    return build_monthly_windows(start_year=2021, start_month=8, months=60)
+
+
+def classify_enumeration_status(
+    *,
+    windows_requested: int,
+    windows_succeeded: int,
+    correction_edges: int,
+) -> EnumerationStatus:
+    if windows_requested <= 0:
+        return EnumerationStatus.ENUMERATION_NOT_RUN
+    if windows_succeeded < windows_requested:
+        return EnumerationStatus.ENUMERATED_PARTIAL
+    if correction_edges > 0:
+        return EnumerationStatus.ENUMERATED_WITH_CORRECTION_CHAINS
+    return EnumerationStatus.ENUMERATED_PARTIAL
