@@ -460,3 +460,19 @@ def test_confidence_output_contains_no_portfolio_or_alpha_mutation_fields() -> N
     assert not hasattr(result, "portfolio_weight")
     assert not hasattr(result, "position_size")
     assert not hasattr(result, "adjusted_alpha")
+
+def test_zero_minimum_coverage_is_rejected() -> None:
+    with pytest.raises(ValueError, match="minimum_weight_coverage"):
+        confidence_spec(minimum_weight_coverage=0.0)
+
+
+def test_malformed_source_alpha_state_is_rejected() -> None:
+    malformed = alpha_result(alpha_value=None)
+    with pytest.raises(ValueError, match="SCORED alpha result"):
+        evaluate_confidence(
+            specification=confidence_spec(),
+            base_alpha_specification=base_spec(),
+            alpha_result=malformed,
+            observations=strong_observations(),
+            prediction_timestamp=PREDICTION,
+        )
