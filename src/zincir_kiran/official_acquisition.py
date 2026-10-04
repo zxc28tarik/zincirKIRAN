@@ -134,7 +134,7 @@ class AcquiredArtifactReceipt:
         retrieved_at: datetime,
         content: bytes,
         media_type: str | None,
-    ) -> "AcquiredArtifactReceipt":
+    ) -> AcquiredArtifactReceipt:
         return cls(
             acquisition_id=acquisition_id,
             source_id=source_id,
