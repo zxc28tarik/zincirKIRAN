@@ -121,6 +121,9 @@ jobs:
       - name: Apply InvestingPro Acquisition PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/investingpro_acquisition.sql
 
+      - name: Apply Experimental Semantic Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/experimental_semantic_bootstrap.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -192,6 +195,9 @@ jobs:
 
       - name: Verify InvestingPro Acquisition PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/investingpro_acquisition_smoke.sql
+
+      - name: Verify Experimental Semantic Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/experimental_semantic_bootstrap_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -499,3 +505,6 @@ jobs:
 
       - name: Verify InvestingPro rejection guards
         run: bash tests/sql/run_investingpro_rejection_guards.sh
+
+      - name: Verify Experimental Semantic rejection guards
+        run: bash tests/sql/run_experimental_semantic_rejection_guards.sh

@@ -1,0 +1,43 @@
+{
+  "corpus_id": "total-rasyo-experimental-semantic-facts-v1",
+  "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "source_commit": "c8b481e79e270f2c095e8c180671a3f483f0775e",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "authoritative_claim_allowed": false,
+  "artifacts": [
+    {
+      "id": "semantic-primary",
+      "path": "data/backtest_sources/experimental_semantic_facts_v1/semantic_reports.jsonl.gz",
+      "sha256": "07863ddbd78924ad276e7d0aeba7fa6eec9733477b4ca3c02ece285bcf1d9e7a",
+      "reports": 4581,
+      "facts": 195782
+    },
+    {
+      "id": "semantic-alias-supplement",
+      "path": "data/backtest_sources/experimental_semantic_facts_v1/semantic_alias_reports.jsonl.gz",
+      "sha256": "adb49330f29b370306d69545db1a48d34a5fda6d763a4d4bdfd2eadc56df06a3",
+      "reports": 3,
+      "facts": 136
+    },
+    {
+      "id": "semantic-entity-supplement",
+      "path": "data/backtest_sources/experimental_semantic_facts_v1/semantic_entity_reports.jsonl.gz",
+      "sha256": "d70e8a1056fd16b03a9ba44c8d6d3c183cb9e2f3604f45692d90817e5b52d741",
+      "reports": 468,
+      "facts": 4051
+    }
+  ],
+  "total_reports": 5052,
+  "total_facts": 199969,
+  "historical_cells": 6000,
+  "cells_with_own_period_visible_financial_facts": 5633,
+  "risk_ids": [
+    "ORIGINAL_CATALOG_BYTES_UNAVAILABLE",
+    "SUPERSEDED_HISTORICAL_KAP_REPORT_VERSIONS_NOT_ENUMERATED"
+  ],
+  "prohibited_source_outputs": [
+    "TOTAL_RASYO_DECISION",
+    "TOTAL_RASYO_P4_SCORE",
+    "TOTAL_RASYO_RANKING"
+  ]
+}
