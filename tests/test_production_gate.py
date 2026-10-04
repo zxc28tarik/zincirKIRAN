@@ -9,7 +9,6 @@ from zincir_kiran.production_gate import (
     evaluate_production_gate,
 )
 
-
 PREREGISTERED = datetime(2026, 10, 4, 9, 0, tzinfo=UTC)
 EVALUATED = datetime(2026, 12, 31, 9, 0, tzinfo=UTC)
 
