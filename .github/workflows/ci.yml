@@ -127,6 +127,9 @@ jobs:
       - name: Apply Experimental Factor Dataset PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/experimental_dataset.sql
 
+      - name: Apply Experimental Factors PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/experimental_factors.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -204,6 +207,9 @@ jobs:
 
       - name: Verify Experimental Factor Dataset PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/experimental_dataset_smoke.sql
+
+      - name: Verify Experimental Factors PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/experimental_factors_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -517,3 +523,6 @@ jobs:
 
       - name: Verify Experimental Factor Dataset rejection guards
         run: bash tests/sql/run_experimental_dataset_rejection_guards.sh
+
+      - name: Verify Experimental Factor rejection guards
+        run: bash tests/sql/run_experimental_factor_rejection_guards.sh
