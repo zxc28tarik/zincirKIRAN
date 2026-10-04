@@ -179,7 +179,7 @@ def test_purge_and_embargo_are_explicitly_enforced() -> None:
         WalkForwardFold(
             "fold-2",
             date(2020, 1, 1),
-            date(2022, 12, 30),
+            date(2022, 12, 29),
             date(2022, 12, 31),
             date(2023, 12, 29),
         ),
@@ -248,8 +248,8 @@ def test_paired_difference_uses_only_folds_where_both_values_exist() -> None:
         for item in results
         if item.challenger_id == "dynamic" and item.metric_id == "max_drawdown"
     )
-    # LOWER_IS_BETTER: fold deltas are +0.01, +0.01, -0.03 after direction flip.
-    assert drawdown.mean_difference_vs_champion == pytest.approx(-1 / 300)
+    # LOWER_IS_BETTER flips challenger-minus-champion before averaging.
+    assert drawdown.mean_difference_vs_champion == pytest.approx(1 / 300)
 
 
 def test_benjamini_hochberg_qvalues_are_attached_to_preregistered_challengers() -> None:
@@ -311,3 +311,17 @@ def test_fixed_inputs_produce_deterministic_outcome() -> None:
         },
     )
     assert first == second
+
+def test_walk_forward_training_cutoff_must_advance() -> None:
+    non_advancing = (
+        folds()[0],
+        WalkForwardFold(
+            "fold-2",
+            date(2020, 1, 1),
+            date(2021, 12, 30),
+            date(2023, 1, 3),
+            date(2023, 12, 29),
+        ),
+    )
+    with pytest.raises(ValueError, match="train_end must advance"):
+        spec(folds=non_advancing)
