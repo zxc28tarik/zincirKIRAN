@@ -266,9 +266,12 @@ def validate_fold_metrics(
         metric = metric_specs.get(item.metric_id)
         if metric is None:
             raise ValueError("fold metric is not preregistered")
-        if metric.requires_cost_model and item.value is not None:
-            if item.cost_model_id is None or not item.cost_model_id.strip():
-                raise ValueError("net/cost-aware metric requires cost_model_id")
+        if (
+            metric.requires_cost_model
+            and item.value is not None
+            and (item.cost_model_id is None or not item.cost_model_id.strip())
+        ):
+            raise ValueError("net/cost-aware metric requires cost_model_id")
         validated.append(item)
 
     return tuple(sorted(validated, key=lambda item: (
