@@ -3,11 +3,11 @@ from datetime import UTC, datetime
 import pytest
 
 from zincir_kiran.investingpro_acquisition import (
+    PROHIBITED_AS_TARGETS,
     EstimateMetric,
     EstimateObservation,
     InvestingProAuthority,
     InvestingProExportBatch,
-    PROHIBITED_AS_TARGETS,
     RosterReconciliation,
     reconcile_ticker_sets,
     require_historical_estimate_use,
