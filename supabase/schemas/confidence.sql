@@ -440,11 +440,11 @@ before update or delete on zk.confidence_dimension_results
 for each row execute function zk.reject_confidence_mutation();
 
 create table zk.confidence_abstention_reasons (
+    confidence_reason_id bigint generated always as identity primary key,
     confidence_run_id text not null references zk.confidence_runs(confidence_run_id),
     reason_code text not null,
     dimension_id text,
     created_at timestamptz not null default now(),
-    primary key (confidence_run_id, reason_code, dimension_id),
     constraint confidence_reason_code_chk
         check (reason_code in (
             'ALPHA_UNAVAILABLE',
@@ -459,6 +459,13 @@ create table zk.confidence_abstention_reasons (
             or (reason_code not in ('REQUIRED_EVIDENCE', 'HARD_FLOOR') and dimension_id is null)
         )
 );
+
+create unique index confidence_abstention_reason_identity_uidx
+    on zk.confidence_abstention_reasons(
+        confidence_run_id,
+        reason_code,
+        coalesce(dimension_id, '')
+    );
 
 create trigger confidence_abstention_reasons_immutable_trg
 before update or delete on zk.confidence_abstention_reasons
