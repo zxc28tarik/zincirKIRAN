@@ -124,8 +124,16 @@ begin
           from zk.tournament_folds f
          where f.tournament_id = new.tournament_id
            and f.definition_version = new.definition_version
-           and f.validation_start < new.validation_start
-           and f.train_end >= new.train_end
+           and (
+               (
+                   f.validation_start < new.validation_start
+                   and f.train_end >= new.train_end
+               )
+               or (
+                   f.validation_start > new.validation_start
+                   and f.train_end <= new.train_end
+               )
+           )
     ) then
         raise exception 'walk-forward train_end must advance across folds';
     end if;
