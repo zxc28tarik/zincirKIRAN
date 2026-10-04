@@ -1,0 +1,31 @@
+{
+  "specification_id": "investingpro-estimates-revisions-v1",
+  "verified_capabilities": {
+    "metrics": "1200+",
+    "historical_data": "10 years",
+    "analyst_earnings_revisions": true,
+    "screener_csv_export": true,
+    "screener_max_rows_per_export_exclusive": 100
+  },
+  "existing_entitlement_only": true,
+  "new_purchase_authorized": false,
+  "priority_metrics": [
+    "EPS_ESTIMATE",
+    "REVENUE_ESTIMATE",
+    "EPS_REVISION",
+    "REVENUE_REVISION",
+    "ANALYST_COUNT",
+    "ESTIMATE_DISPERSION",
+    "FORWARD_EPS",
+    "FORWARD_REVENUE"
+  ],
+  "current_kap_roster_reference_count": 807,
+  "historical_rule": "ONLY_TIMESTAMPED_REVISION_HISTORY_MAY_BE_USED_AT_HISTORICAL_CUTOFFS",
+  "prohibited_as_targets": [
+    "FAIR_VALUE",
+    "HEALTH_SCORE",
+    "INVESTINGPRO_RATING",
+    "PROPICKS_AI",
+    "PROTIPS_SCORE"
+  ]
+}
