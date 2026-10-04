@@ -1,0 +1,26 @@
+{
+  "manifest_id": "kap-bulk-financial-bootstrap-v1",
+  "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "source_pr": 38,
+  "source_commit": "9a9d6e71677104c10a41e22b5a07547a1e5545d0",
+  "source_receipt": "data/backtest_sources/kap_bulk_financial_source_capture/public_byte_evidence/acquisition_receipt.run_33568804543.json",
+  "archive_count": 28,
+  "coverage_start": "2019-9A",
+  "coverage_end": "2026-6A",
+  "official_route_pattern": "https://kap.org.tr/tr/api/financialTable/download/{year}/{period_code}",
+  "authority": "RAW_EVIDENCE",
+  "authoritative_historical_pit_allowed": false,
+  "pit_materialization_authorized": false,
+  "reason": "Superseded historical version enumeration remains unresolved; current KAP bulk archives can drift as later reports arrive.",
+  "drifted_archives": [
+    {"year": 2025, "period": "Y", "status": "EXACT_MANIFEST_MISMATCH"},
+    {"year": 2026, "period": "6A", "status": "EXACT_MANIFEST_MISMATCH"}
+  ],
+  "semantic_evidence": {
+    "scanned_archive_count": 28,
+    "matched_insurance_finance_report_count": 994,
+    "source_entity_count": 71,
+    "fact_identity_count": 917,
+    "discovery_sha256": "ce0687bd9f418f20c2cffcf5e095cfc11882a0b3f065331416017d738340513a"
+  }
+}
