@@ -14,7 +14,8 @@ create table zk.corporate_action_evidence (
     constraint corporate_action_event_type_chk check (
         event_type in (
             'CAPITAL_INCREASE','CAPITAL_DECREASE','MERGER','DEMERGER',
-            'SHARE_CLASS_CHANGE','TICKER_CHANGE','AMBIGUOUS_SHARE_COUNT_ACTION'
+            'SHARE_CLASS_CHANGE','BONUS_ISSUE_DISCLOSURE','RIGHTS_ISSUE_DISCLOSURE',
+            'DIVIDEND_PROCESS_DISCLOSURE','TICKER_CHANGE','AMBIGUOUS_SHARE_COUNT_ACTION'
         )
     ),
     constraint corporate_action_authority_chk check (
