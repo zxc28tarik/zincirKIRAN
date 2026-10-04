@@ -1,0 +1,63 @@
+{
+  "manifest_id": "total-rasyo-bootstrap-v1",
+  "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "imports": [
+    {
+      "source_pr": 15,
+      "source_commit": "445e9a7cb788124a52fd4ac171f3e16e6c67137e",
+      "path": "data/backtest_sources/m3_source_package/index_closes.csv.gz",
+      "sha256": "32a740f7a7114e03c885d1ae75c8bacd081b5254b043521fd76ca5f8e34e786e",
+      "domain": "PRICES",
+      "authority": "CANONICAL_PIT",
+      "scope": "Benchmark/sector index closes only; 2020-07-27..2026-07-01; 7415 rows; XU100/XUSIN/XUHIZ/XUMAL/XUTEK."
+    },
+    {
+      "source_pr": 15,
+      "source_commit": "445e9a7cb788124a52fd4ac171f3e16e6c67137e",
+      "path": "data/backtest_sources/m3_source_package/sector_routes.csv.gz",
+      "sha256": "f0c28c7babd018eb8994afdf4911a9d338dad43b291a1084a7acc47a3919c478",
+      "domain": "UNIVERSE_HISTORY",
+      "authority": "CANONICAL_PIT",
+      "scope": "209 historical tickers / 210 half-open sector-route rows across 60 signal dates."
+    },
+    {
+      "source_pr": 38,
+      "source_commit": "9a9d6e71677104c10a41e22b5a07547a1e5545d0",
+      "path": "data/backtest_sources/kap_bulk_financial_source_capture/public_byte_evidence/acquisition_receipt.run_33568804543.json",
+      "domain": "FINANCIALS",
+      "authority": "RAW_EVIDENCE_ONLY",
+      "scope": "28 real KAP bulk financial archives with official URLs, byte sizes, member counts and archive SHA256; historical superseded-version completeness unresolved."
+    },
+    {
+      "source_pr": 38,
+      "source_commit": "9a9d6e71677104c10a41e22b5a07547a1e5545d0",
+      "path": "data/backtest_sources/kap_bulk_financial_source_capture/semantic_evidence/insurance_finance_full28_schema_receipt_run_33583866560.json",
+      "domain": "FINANCIALS",
+      "authority": "DISCOVERY_ONLY",
+      "scope": "28 archives / 994 reports / 71 source entities / 917 exact identities. Source project explicitly disallows authoritative PIT materialization."
+    },
+    {
+      "source_pr": 41,
+      "source_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+      "path": "data/audit/w6_ca_gate_reachability_v1/receipt.json",
+      "sha256": "1935232295360b1026a036e725809e0e73a62253ce07145bbc1f13fd6abd1345",
+      "domain": "CORPORATE_ACTIONS",
+      "authority": "POSITIVE_EVENT_ONLY",
+      "scope": "60/60 cutoffs reachable; 11680 positive action events; 699 action tickers. Does not independently prove absence."
+    },
+    {
+      "source_pr": 41,
+      "source_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+      "path": "data/audit/w7c_real_m2_score_v1/receipt.json",
+      "domain": "FINANCIALS",
+      "authority": "DISCOVERY_ONLY",
+      "scope": "Seven-ticker one-cutoff validation artifact; not a full dataset or label source."
+    }
+  ],
+  "prohibited_source_products": [
+    "CURRENT_ONLY_LATEST_FINANCIAL_VIEW_AS_HISTORICAL_PIT",
+    "DERIVED_TOTAL_RASYO_SCORE_AS_TARGET",
+    "M2_SCORE_AS_FORWARD_RETURN_LABEL",
+    "UNMERGED_EXPERIMENTAL_RESULT_UPGRADED_TO_CANONICAL"
+  ]
+}

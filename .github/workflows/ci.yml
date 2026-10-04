@@ -103,6 +103,9 @@ jobs:
       - name: Apply Procurement PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/procurement.sql
 
+      - name: Apply Cross-Project Bridge PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/cross_project_bridge.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -156,6 +159,9 @@ jobs:
 
       - name: Verify Procurement PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/procurement_smoke.sql
+
+      - name: Verify Cross-Project Bridge PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/cross_project_bridge_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -445,3 +451,6 @@ jobs:
 
       - name: Verify Procurement rejection guards
         run: bash tests/sql/run_procurement_rejection_guards.sh
+
+      - name: Verify Cross-Project Bridge rejection guards
+        run: bash tests/sql/run_cross_project_rejection_guards.sh
