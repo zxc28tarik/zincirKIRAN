@@ -5,6 +5,7 @@ import pytest
 from zincir_kiran.ml_challenger import (
     MLChallengerSpec,
     MLObservation,
+    as_tournament_contender,
     fit_ridge_challenger,
     predict_challenger,
 )
@@ -179,3 +180,13 @@ def test_spec_is_candidate_only_and_feature_order_is_locked() -> None:
             preregistered_at=PREREGISTERED,
             random_seed=1,
         )
+
+
+def test_ml_challenger_registers_only_as_tournament_challenger() -> None:
+    contender = as_tournament_contender(
+        spec(),
+        rationale="Independent nonlinear/linear challenger evidence.",
+    )
+    assert contender.contender_id == "ridge-h20-v1"
+    assert contender.role.value == "CHALLENGER"
+    assert contender.artifact_kind == "ML_CHALLENGER"
