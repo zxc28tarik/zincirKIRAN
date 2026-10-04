@@ -1148,6 +1148,36 @@ after insert on zk.portfolio_runs
 deferrable initially deferred
 for each row execute function zk.audit_portfolio_run_complete();
 
+create constraint trigger portfolio_candidates_complete_audit_trg
+after insert on zk.portfolio_run_candidates
+deferrable initially deferred
+for each row execute function zk.audit_portfolio_run_complete();
+
+create constraint trigger portfolio_current_holdings_complete_audit_trg
+after insert on zk.portfolio_current_holdings
+deferrable initially deferred
+for each row execute function zk.audit_portfolio_run_complete();
+
+create constraint trigger portfolio_execution_evidence_complete_audit_trg
+after insert on zk.portfolio_execution_evidence
+deferrable initially deferred
+for each row execute function zk.audit_portfolio_run_complete();
+
+create constraint trigger portfolio_target_positions_complete_audit_trg
+after insert on zk.portfolio_target_positions
+deferrable initially deferred
+for each row execute function zk.audit_portfolio_run_complete();
+
+create constraint trigger portfolio_orders_complete_audit_trg
+after insert on zk.portfolio_orders
+deferrable initially deferred
+for each row execute function zk.audit_portfolio_run_complete();
+
+create constraint trigger portfolio_reasons_complete_audit_trg
+after insert on zk.portfolio_infeasibility_reasons
+deferrable initially deferred
+for each row execute function zk.audit_portfolio_run_complete();
+
 create index portfolio_candidates_alpha_idx
     on zk.portfolio_run_candidates(portfolio_run_id, eligible, alpha_value desc);
 
