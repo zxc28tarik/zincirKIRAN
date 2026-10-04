@@ -79,6 +79,9 @@ jobs:
       - name: Apply Confidence PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/confidence.sql
 
+      - name: Apply Portfolio PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/portfolio.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -108,6 +111,9 @@ jobs:
 
       - name: Verify Confidence PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/confidence_smoke.sql
+
+      - name: Verify Portfolio PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/portfolio_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -373,3 +379,6 @@ jobs:
 
       - name: Verify confidence rejection guards
         run: bash tests/sql/run_confidence_rejection_guards.sh
+
+      - name: Verify portfolio rejection guards
+        run: bash tests/sql/run_portfolio_rejection_guards.sh
