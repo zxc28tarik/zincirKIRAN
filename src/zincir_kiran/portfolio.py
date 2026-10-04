@@ -324,50 +324,39 @@ def _allocate_with_caps(
     raw_weights: dict[str, float],
     specification: PortfolioSpec,
 ) -> dict[str, float] | None:
-    remaining = specification.target_invested_weight
-    unassigned = {item.security_id for item in selected}
-    assigned = {item.security_id: 0.0 for item in selected}
-    sector_used: dict[str, float] = {}
+    """Normalize the declared sizing primitive, then validate hard caps.
 
-    by_id = {item.security_id: item for item in selected}
-    tolerance = 1e-12
+    Caps never trigger hidden redistribution. A raw sizing plan that violates a
+    name or sector cap is explicitly infeasible.
+    """
+    raw_total = fsum(raw_weights.values())
+    if raw_total <= 0:
+        return None
 
-    while unassigned and remaining > tolerance:
-        raw_total = fsum(raw_weights[security_id] for security_id in unassigned)
-        if raw_total <= 0:
-            return None
+    assigned = {
+        security_id: (
+            specification.target_invested_weight
+            * raw_weight
+            / raw_total
+        )
+        for security_id, raw_weight in raw_weights.items()
+    }
+    if any(
+        weight > specification.max_single_name_weight + 1e-12
+        for weight in assigned.values()
+    ):
+        return None
 
-        progress = 0.0
-        provisional = {
-            security_id: remaining * raw_weights[security_id] / raw_total
-            for security_id in sorted(unassigned)
-        }
-        saturated: set[str] = set()
-
-        for security_id in sorted(unassigned):
-            candidate = by_id[security_id]
-            name_room = specification.max_single_name_weight - assigned[security_id]
-            sector_room = (
-                specification.max_sector_weight
-                - sector_used.get(candidate.sector_id, 0.0)
-            )
-            room = max(0.0, min(name_room, sector_room))
-            allocation = min(provisional[security_id], room)
-            if allocation > tolerance:
-                assigned[security_id] += allocation
-                sector_used[candidate.sector_id] = (
-                    sector_used.get(candidate.sector_id, 0.0) + allocation
-                )
-                remaining -= allocation
-                progress += allocation
-            if room <= provisional[security_id] + tolerance:
-                saturated.add(security_id)
-
-        unassigned -= saturated
-        if progress <= tolerance:
-            return None
-
-    if remaining > tolerance:
+    sector_weights: dict[str, float] = {}
+    for candidate in selected:
+        sector_weights[candidate.sector_id] = (
+            sector_weights.get(candidate.sector_id, 0.0)
+            + assigned[candidate.security_id]
+        )
+    if any(
+        weight > specification.max_sector_weight + 1e-12
+        for weight in sector_weights.values()
+    ):
         return None
     return assigned
 
