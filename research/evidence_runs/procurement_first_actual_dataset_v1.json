@@ -1,0 +1,54 @@
+{
+  "specification_id": "first-actual-dataset-v1",
+  "definition_version": "v1",
+  "preregistered_at": "2026-10-04T14:05:00+00:00",
+  "purchase_authorized": false,
+  "dataset_status": "BLOCKED_PENDING_PROCUREMENT",
+  "canonical_routes": {
+    "PRICES": {
+      "route_id": "prices-bist-datastore",
+      "source_id": "borsa_istanbul",
+      "access_class": "PAID_OFFICIAL",
+      "status": "BLOCKED_PENDING_ACCESS"
+    },
+    "VOLUME": {
+      "route_id": "volume-bist-datastore",
+      "source_id": "borsa_istanbul",
+      "access_class": "PAID_OFFICIAL",
+      "status": "BLOCKED_PENDING_ACCESS"
+    },
+    "FINANCIALS": {
+      "route_id": "financials-kap-original-reports",
+      "source_id": "kap",
+      "access_class": "FREE_PUBLIC",
+      "status": "BLOCKED_PENDING_EXPORT"
+    },
+    "PUBLICATION_TIMESTAMPS": {
+      "route_id": "publication-time-kap",
+      "source_id": "kap",
+      "access_class": "FREE_PUBLIC",
+      "status": "ROUTE_LOCKED"
+    },
+    "CORPORATE_ACTIONS": {
+      "route_id": "corporate-actions-kap-primary",
+      "source_id": "kap",
+      "access_class": "FREE_PUBLIC",
+      "status": "ROUTE_LOCKED"
+    },
+    "UNIVERSE_HISTORY": {
+      "route_id": "universe-bist-reference",
+      "source_id": "borsa_istanbul",
+      "access_class": "FREE_PUBLIC",
+      "status": "ROUTE_LOCKED"
+    }
+  },
+  "prohibited_shortcuts": [
+    "ADJUSTED_CLOSE_WITHOUT_CORPORATE_ACTION_PROVENANCE",
+    "FUTURE_RESTATED_FINANCIALS_BACKFILLED_INTO_PAST",
+    "KAP_LATEST_LINE_ITEM_VIEW_AS_CANONICAL_HISTORY",
+    "MISSING_DATA_NEUTRAL_FILL",
+    "SURVIVOR_ONLY_UNIVERSE",
+    "UNDOCUMENTED_VENDOR_EXPORT_WITHOUT_TIMESTAMP_PROVENANCE"
+  ],
+  "next_action": "Resolve official historical price/volume access and KAP original-report bulk acquisition before first actual PIT dataset build."
+}
