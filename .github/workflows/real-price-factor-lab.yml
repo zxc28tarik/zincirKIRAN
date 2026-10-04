@@ -1,0 +1,54 @@
+name: Real Price Factor Lab
+
+on:
+  push:
+    branches:
+      - implementation/25-first-real-price-factor-lab
+    paths:
+      - "scripts/run_real_price_factor_lab.py"
+      - "src/zincir_kiran/price_factor_diagnostic.py"
+      - ".github/workflows/real-price-factor-lab.yml"
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  real-price-factor-lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install diagnostic dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3"
+
+      - name: Run real BIST100 price factor diagnostic
+        run: |
+          python scripts/run_real_price_factor_lab.py             --output research/evidence_runs/first_real_price_factor_lab_v1.json
+
+      - name: Upload diagnostic artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: first-real-price-factor-lab-v1
+          path: research/evidence_runs/first_real_price_factor_lab_v1.json
+          if-no-files-found: error
+
+      - name: Persist diagnostic receipt
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research/evidence_runs/first_real_price_factor_lab_v1.json
+          if git diff --cached --quiet; then
+            echo "No diagnostic evidence change."
+          else
+            git commit -m "Evidence: persist first real price factor lab"
+            git push origin HEAD:implementation/25-first-real-price-factor-lab
+          fi
