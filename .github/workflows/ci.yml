@@ -94,6 +94,9 @@ jobs:
       - name: Apply Production Gate PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/production_gate.sql
 
+      - name: Apply Evidence Phase PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/evidence_phase.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -138,6 +141,9 @@ jobs:
 
       - name: Verify Production Gate PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/production_gate_smoke.sql
+
+      - name: Verify Evidence Phase PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/evidence_phase_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -418,3 +424,6 @@ jobs:
 
       - name: Verify Production Gate rejection guards
         run: bash tests/sql/run_production_gate_rejection_guards.sh
+
+      - name: Verify Evidence Phase rejection guards
+        run: bash tests/sql/run_evidence_phase_rejection_guards.sh
