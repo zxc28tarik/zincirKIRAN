@@ -68,9 +68,11 @@ class ConfidenceDimensionSpec:
             raise ValueError("confidence references must be finite")
         if self.bad_reference == self.good_reference:
             raise ValueError("bad_reference and good_reference must differ")
-        if self.hard_floor is not None:
-            if not math.isfinite(self.hard_floor) or not 0 <= self.hard_floor <= 1:
-                raise ValueError("hard_floor must be in [0, 1]")
+        if (
+            self.hard_floor is not None
+            and (not math.isfinite(self.hard_floor) or not 0 <= self.hard_floor <= 1)
+        ):
+            raise ValueError("hard_floor must be in [0, 1]")
 
     def normalize(self, raw_value: float) -> float:
         if not math.isfinite(raw_value):
