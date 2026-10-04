@@ -139,3 +139,24 @@ PROHIBITED_AS_TARGETS = (
     "PROTIPS_SCORE",
     "INVESTINGPRO_RATING",
 )
+
+
+
+def reconcile_ticker_sets(
+    *,
+    kap_tickers: set[str],
+    investingpro_tickers: list[str],
+) -> RosterReconciliation:
+    normalized_kap = {ticker.strip().upper() for ticker in kap_tickers if ticker.strip()}
+    normalized_ip = [ticker.strip().upper() for ticker in investingpro_tickers if ticker.strip()]
+    unique_ip = set(normalized_ip)
+    duplicate_primary_items = len(normalized_ip) - len(unique_ip)
+    matched = normalized_kap & unique_ip
+    return RosterReconciliation(
+        kap_roster_count=len(normalized_kap),
+        investingpro_unique_primary_count=len(unique_ip),
+        matched_tickers=len(matched),
+        kap_only=len(normalized_kap - unique_ip),
+        investingpro_only=len(unique_ip - normalized_kap),
+        duplicate_primary_items=duplicate_primary_items,
+    )
