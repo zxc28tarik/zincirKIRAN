@@ -88,6 +88,9 @@ jobs:
       - name: Apply ML Challenger PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/ml_challenger.sql
 
+      - name: Apply Shadow PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/shadow.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -126,6 +129,9 @@ jobs:
 
       - name: Verify ML Challenger PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/ml_challenger_smoke.sql
+
+      - name: Verify Shadow PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/shadow_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -400,3 +406,6 @@ jobs:
 
       - name: Verify ML Challenger rejection guards
         run: bash tests/sql/run_ml_challenger_rejection_guards.sh
+
+      - name: Verify Shadow rejection guards
+        run: bash tests/sql/run_shadow_rejection_guards.sh
