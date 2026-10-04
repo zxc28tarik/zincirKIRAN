@@ -10,7 +10,7 @@
       "rows": 271267,
       "direct_yahoo_rows": 270038,
       "authority": "VALIDATED_DERIVED_MARKET_DATA",
-      "scope": "Historical member daily price corpus; official Borsa ticker lineage applied; no date shifting or forward fill."
+      "scope": "Historical member daily OHLC/Adj Close/Volume corpus; official Borsa ticker lineage applied; no date shifting or forward fill."
     },
     {
       "artifact_id": "v24-monthly-execution-panel",
@@ -26,7 +26,7 @@
   ],
   "remaining_market_data_gaps": [
     "ALL_BIST_NOT_ONLY_HISTORICAL_BIST100_SCOPE",
-    "HISTORICAL_VOLUME_NOT_YET_BOOTSTRAPPED",
+    "ALL_BIST_HISTORICAL_VOLUME_OUTSIDE_MEMBER_CORPUS_NOT_YET_BOOTSTRAPPED",
     "OFFICIAL_BORSA_DAILY_STOCK_SOURCE_NOT_FULLY_ACQUIRED"
   ]
 }
