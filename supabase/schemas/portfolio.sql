@@ -751,7 +751,7 @@ begin
                        else
                            spec_record.target_invested_weight
                            * s.alpha_value
-                           / sum(s.alpha_value) over ()
+                           / nullif(sum(s.alpha_value) over (), 0)
                    end as expected_weight
               from selected s
         )
@@ -788,7 +788,7 @@ begin
                        else
                            spec_record.target_invested_weight
                            * s.alpha_value
-                           / sum(s.alpha_value) over ()
+                           / nullif(sum(s.alpha_value) over (), 0)
                    end as expected_weight
               from selected s
         ),
@@ -861,7 +861,7 @@ begin
                            else
                                spec_record.target_invested_weight
                                * s.alpha_value
-                               / sum(s.alpha_value) over ()
+                               / nullif(sum(s.alpha_value) over (), 0)
                        end as expected_weight
                   from selected s
             )
