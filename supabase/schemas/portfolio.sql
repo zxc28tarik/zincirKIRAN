@@ -867,9 +867,12 @@ begin
             )
             select 1
               from expected e
-              full join zk.portfolio_target_positions t
-                on t.portfolio_run_id = run_record.portfolio_run_id
-               and t.security_id = e.security_id
+              full join (
+                  select *
+                    from zk.portfolio_target_positions
+                   where portfolio_run_id = run_record.portfolio_run_id
+              ) t
+                on t.security_id = e.security_id
              where e.security_id is null
                 or t.security_id is null
                 or t.rank <> e.expected_rank
