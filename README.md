@@ -142,4 +142,4 @@ Zincir Kıran şu basit ve güçlü baseline'larla aynı veri ve evrende karşı
 
 ## Durum
 
-Implementation 0–13 tamamlandı ve main'e merge edildi. Implementation 14 — Live Shadow Mode geliştirme aşamasındadır. Full Walk-Forward Tournament altyapısı ML Challenger'dan önce tamamlandığı için roadmap numarası repository history ile uyumlu tutulmaktadır.
+Implementation 0–14 tamamlandı ve main'e merge edildi. Implementation 15 — Production Decision Gate geliştirme aşamasındadır. Full Walk-Forward Tournament altyapısı ML Challenger'dan önce tamamlandığı için roadmap numarası repository history ile uyumlu tutulmaktadır.
