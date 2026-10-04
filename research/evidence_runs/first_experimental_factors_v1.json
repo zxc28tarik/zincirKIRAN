@@ -1,0 +1,41 @@
+{
+  "implementation": "first-experimental-factor-materialization-v1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "financial_sector_scope": ["NONFIN", "HOLDING"],
+  "candidate_count": 16,
+  "financial_candidates": [
+    "accruals",
+    "asset_growth",
+    "capex_to_assets",
+    "cfo_to_assets",
+    "gross_margin",
+    "gross_margin_acceleration",
+    "gross_profitability",
+    "operating_margin",
+    "operating_margin_acceleration",
+    "operating_profitability",
+    "roa"
+  ],
+  "market_candidates": [
+    "amihud_63d",
+    "high_52_proximity",
+    "momentum_12_1",
+    "momentum_6_1",
+    "realized_volatility_63d"
+  ],
+  "accounting_policy": {
+    "ytd_is_quarter": false,
+    "quarter_derivation_requires_same_period_start": true,
+    "ttm_requires_explicit_quarters": 4,
+    "instant_values_summed": false,
+    "missing_input_neutral_fill": false
+  },
+  "market_policy": {
+    "momentum_12_1_offsets": [252, 21],
+    "momentum_6_1_offsets": [126, 21],
+    "high_52_trading_observations": 252,
+    "realized_volatility_returns": 63,
+    "amihud_returns": 63
+  },
+  "production_eligible": false
+}
