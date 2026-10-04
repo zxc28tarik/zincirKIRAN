@@ -82,9 +82,11 @@ class ShadowSecurityDecision:
                 raise ValueError("shadow numeric outputs must be finite when present")
         if self.portfolio_target_weight is not None and self.portfolio_target_weight < 0:
             raise ValueError("portfolio_target_weight cannot be negative")
-        if self.decision is not ShadowDecision.SIGNAL_ELIGIBLE:
-            if self.portfolio_target_weight not in (None, 0.0):
-                raise ValueError("NO_SIGNAL/ABSTAIN cannot carry positive portfolio intent")
+        if (
+            self.decision is not ShadowDecision.SIGNAL_ELIGIBLE
+            and self.portfolio_target_weight not in (None, 0.0)
+        ):
+            raise ValueError("NO_SIGNAL/ABSTAIN cannot carry positive portfolio intent")
         if self.reason_codes != tuple(sorted(set(self.reason_codes))):
             raise ValueError("reason_codes must be unique and sorted")
 
