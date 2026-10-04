@@ -135,11 +135,11 @@ Zincir Kıran şu basit ve güçlü baseline'larla aynı veri ve evrende karşı
 9. Regime & Contradiction / Interaction
 10. Confidence / Abstain
 11. Portfolio Engine
-12. ML Challenger
-13. Full Walk-Forward Tournament
+12. Full Walk-Forward Tournament / Champion–Challenger
+13. ML Challenger
 14. Live Shadow Mode
 15. Production Decision
 
 ## Durum
 
-Proje başlangıç aşamasındadır. İlk hedef, model yazmadan önce araştırma anayasasını ve point-in-time veri sözleşmesini kilitlemektir.
+Implementation 0–12 tamamlandı ve main'e merge edildi. Implementation 13 — ML Challenger geliştirme aşamasındadır. Full Walk-Forward Tournament altyapısı ML Challenger'dan önce tamamlandığı için roadmap numarası repository history ile uyumlu olacak şekilde güncellenmiştir.

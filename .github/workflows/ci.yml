@@ -85,6 +85,9 @@ jobs:
       - name: Apply Tournament PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/tournament.sql
 
+      - name: Apply ML Challenger PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/ml_challenger.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -120,6 +123,9 @@ jobs:
 
       - name: Verify Tournament PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/tournament_smoke.sql
+
+      - name: Verify ML Challenger PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/ml_challenger_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -391,3 +397,6 @@ jobs:
 
       - name: Verify tournament rejection guards
         run: bash tests/sql/run_tournament_rejection_guards.sh
+
+      - name: Verify ML Challenger rejection guards
+        run: bash tests/sql/run_ml_challenger_rejection_guards.sh
