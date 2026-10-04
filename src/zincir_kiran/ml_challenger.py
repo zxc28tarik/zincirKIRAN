@@ -14,6 +14,7 @@ from enum import StrEnum
 
 from .baselines import Horizon
 from .pit import require_aware_timestamp
+from .tournament import ContenderRole, TournamentContender
 
 
 class MLStage(StrEnum):
@@ -258,3 +259,21 @@ def predict_challenger(
             )
         )
     return tuple(sorted(predictions, key=lambda item: item.security_id))
+
+
+def as_tournament_contender(
+    specification: MLChallengerSpec,
+    *,
+    rationale: str,
+) -> TournamentContender:
+    """Represent an ML challenger as a tournament-only CHALLENGER artifact."""
+    if not rationale.strip():
+        raise ValueError("rationale is required")
+    return TournamentContender(
+        contender_id=specification.challenger_id,
+        role=ContenderRole.CHALLENGER,
+        artifact_kind="ML_CHALLENGER",
+        artifact_specification_id=specification.challenger_id,
+        artifact_definition_version=specification.definition_version,
+        rationale=rationale,
+    )
