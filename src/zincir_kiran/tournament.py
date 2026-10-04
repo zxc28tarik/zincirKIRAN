@@ -154,9 +154,12 @@ class TournamentSpec:
             raise ValueError("folds must be sorted by validation_start")
 
         previous_validation_end: date | None = None
+        previous_train_end: date | None = None
         for fold in self.folds:
             if fold.purge_gap_days < self.purge_days:
                 raise ValueError("walk-forward fold violates purge_days")
+            if previous_train_end is not None and fold.train_end <= previous_train_end:
+                raise ValueError("walk-forward train_end must advance across folds")
             if previous_validation_end is not None:
                 if fold.validation_start <= previous_validation_end:
                     raise ValueError("validation folds cannot overlap")
@@ -164,6 +167,7 @@ class TournamentSpec:
                 if embargo_gap < self.embargo_days:
                     raise ValueError("walk-forward folds violate embargo_days")
             previous_validation_end = fold.validation_end
+            previous_train_end = fold.train_end
 
         metric_ids = tuple(item.metric_id for item in self.metrics)
         if metric_ids != tuple(sorted(metric_ids)) or len(set(metric_ids)) != len(metric_ids):
