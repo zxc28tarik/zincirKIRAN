@@ -504,3 +504,25 @@ def test_fixed_inputs_are_deterministic_independent_of_input_order() -> None:
         portfolio_notional=1_000_000,
     )
     assert first == second
+
+def test_signal_eligible_candidate_requires_finite_confidence_score() -> None:
+    malformed = PortfolioCandidate(
+        security_id="A",
+        sector_id="BANK",
+        alpha_result=alpha("A", 0.9),
+        confidence_result=confidence(
+            "A",
+            0.9,
+            decision=ConfidenceDecision.SIGNAL_ELIGIBLE,
+            score=None,
+        ),
+    )
+    with pytest.raises(ValueError, match="finite Confidence"):
+        construct_portfolio(
+            specification=spec(target_position_count=1, minimum_position_count=1),
+            candidates=[malformed],
+            current_holdings=[],
+            execution_evidence=[evidence("A")],
+            prediction_timestamp=PREDICTION,
+            portfolio_notional=1_000_000,
+        )
