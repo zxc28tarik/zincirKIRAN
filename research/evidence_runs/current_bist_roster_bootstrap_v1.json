@@ -1,0 +1,32 @@
+{
+  "manifest_id": "current-bist-roster-bootstrap-v1",
+  "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+  "source_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+  "artifacts": [
+    {
+      "artifact_id": "current-kap-bist-roster",
+      "path": "data/live/current_total_rasyo_v1/universe.csv",
+      "sha256": "d9c860f918a538bc6426bd45e5e91ae4eb60fef188fda3630eef7fa78b83e4a1",
+      "row_count": 807,
+      "authority": "CURRENT_ROSTER_DISCOVERY_ONLY",
+      "source_url": "https://kap.org.tr/tr/bist-sirketler"
+    },
+    {
+      "artifact_id": "current-explicit-share-basis",
+      "path": "data/live/current_share_basis_v1/ticker_share_basis.jsonl.gz",
+      "sha256": "e4f3ec10d33d7213df4e22a495797d28d7283bec9e9d9edff66acd9b554ab890",
+      "usable_row_count": 528,
+      "authority": "CURRENT_SHARE_STATE_EVIDENCE"
+    },
+    {
+      "artifact_id": "current-raw-close",
+      "path": "data/live/current_raw_close_v1/raw_close.csv.gz",
+      "sha256": "ebd6a713728578d38ab15ad0888aaa0c7095243efb698691b3312e980d662765",
+      "row_count": 629,
+      "authority": "CURRENT_MARKET_SNAPSHOT",
+      "auto_adjust": false,
+      "adjusted_close_diagnostic_only": true
+    }
+  ],
+  "historical_backfill_authorized": false
+}
