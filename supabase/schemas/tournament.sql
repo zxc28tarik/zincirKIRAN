@@ -124,6 +124,17 @@ begin
           from zk.tournament_folds f
          where f.tournament_id = new.tournament_id
            and f.definition_version = new.definition_version
+           and f.validation_start < new.validation_start
+           and f.train_end >= new.train_end
+    ) then
+        raise exception 'walk-forward train_end must advance across folds';
+    end if;
+
+    if exists (
+        select 1
+          from zk.tournament_folds f
+         where f.tournament_id = new.tournament_id
+           and f.definition_version = new.definition_version
            and daterange(
                f.validation_start,
                f.validation_end + 1,
@@ -190,6 +201,24 @@ create trigger tournament_metric_specs_immutable_trg
 before update or delete on zk.tournament_metric_specs
 for each row execute function zk.reject_tournament_mutation();
 
+
+create function zk.reject_tournament_structure_after_run()
+returns trigger
+language plpgsql
+as $fn$
+begin
+    if exists (
+        select 1
+          from zk.tournament_runs r
+         where r.tournament_id = new.tournament_id
+           and r.definition_version = new.definition_version
+    ) then
+        raise exception 'tournament protocol structure is locked after first run';
+    end if;
+    return new;
+end;
+$fn$;
+
 create table zk.tournament_runs (
     tournament_run_id text primary key,
     tournament_id text not null,
@@ -206,6 +235,19 @@ create table zk.tournament_runs (
             and length(trim(data_snapshot_id)) > 0
         )
 );
+
+
+create trigger tournament_contenders_structure_lock_trg
+before insert on zk.tournament_contenders
+for each row execute function zk.reject_tournament_structure_after_run();
+
+create trigger tournament_folds_structure_lock_trg
+before insert on zk.tournament_folds
+for each row execute function zk.reject_tournament_structure_after_run();
+
+create trigger tournament_metric_specs_structure_lock_trg
+before insert on zk.tournament_metric_specs
+for each row execute function zk.reject_tournament_structure_after_run();
 
 create function zk.validate_tournament_run()
 returns trigger
