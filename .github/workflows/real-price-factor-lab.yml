@@ -8,6 +8,9 @@ on:
       - "scripts/run_real_price_factor_lab.py"
       - "src/zincir_kiran/price_factor_diagnostic.py"
       - ".github/workflows/real-price-factor-lab.yml"
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
