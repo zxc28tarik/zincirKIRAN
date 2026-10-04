@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-
 FACTORS = (
     "HIGH_52W_PROXIMITY",
     "LIQUIDITY_63D",
