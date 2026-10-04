@@ -76,6 +76,9 @@ jobs:
       - name: Apply Context Research PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/context_research.sql
 
+      - name: Apply Confidence PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/confidence.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -102,6 +105,9 @@ jobs:
 
       - name: Verify Context Research PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/context_research_smoke.sql
+
+      - name: Verify Confidence PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/confidence_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -364,3 +370,6 @@ jobs:
 
       - name: Verify context research rejection guards
         run: bash tests/sql/run_context_rejection_guards.sh
+
+      - name: Verify confidence rejection guards
+        run: bash tests/sql/run_confidence_rejection_guards.sh
