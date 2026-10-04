@@ -62,3 +62,39 @@ def test_ticker_change_requires_official_borsa_authority() -> None:
     )
     with pytest.raises(ValueError, match="official Borsa lineage"):
         require_official_ticker_change(event)
+
+
+def test_real_kap_bonus_issue_examples_are_classified() -> None:
+    assert classify_share_count_subject(
+        "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+        "İç Kaynaklardan Bedelsiz Sermaye Artırımı",
+    ) is BootstrapEventType.BONUS_ISSUE_DISCLOSURE
+    assert classify_share_count_subject(
+        "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+        "Bedelsiz Sermaye Artırımına İlişkin SPK Başvurusu",
+    ) is BootstrapEventType.BONUS_ISSUE_DISCLOSURE
+
+
+def test_real_kap_rights_issue_example_is_classified() -> None:
+    assert classify_share_count_subject(
+        "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+        "Bedelli Sermaye Arttırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor",
+    ) is BootstrapEventType.RIGHTS_ISSUE_DISCLOSURE
+
+
+def test_real_kap_dividend_process_example_is_not_cash_amount_claim() -> None:
+    event_type = classify_share_count_subject(
+        "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+        "2022 yılı Kar Payı Dağıtımına İlişkin Genel Kurul Kararı",
+    )
+    assert event_type is BootstrapEventType.DIVIDEND_PROCESS_DISCLOSURE
+    assert production_action_type(event_type) is None
+
+
+def test_bonus_and_rights_subtypes_map_only_to_category_not_ratio() -> None:
+    assert production_action_type(
+        BootstrapEventType.BONUS_ISSUE_DISCLOSURE
+    ) is CorporateActionType.BONUS_ISSUE
+    assert production_action_type(
+        BootstrapEventType.RIGHTS_ISSUE_DISCLOSURE
+    ) is CorporateActionType.RIGHTS_ISSUE
