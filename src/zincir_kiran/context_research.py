@@ -216,6 +216,22 @@ class ContextResearchSpec:
         if len(set(interaction_ids)) != len(interaction_ids):
             raise ValueError("interaction rule_ids must be unique")
 
+        declared_states = {
+            (dimension.dimension_id, state_rule.state_id)
+            for dimension in self.regime_dimensions
+            for state_rule in dimension.state_rules
+        }
+        for rule in (*self.contradiction_rules, *self.interaction_rules):
+            unknown_requirements = tuple(
+                requirement
+                for requirement in rule.required_regime_states
+                if requirement not in declared_states
+            )
+            if unknown_requirements:
+                raise ValueError(
+                    "rule required_regime_states must reference declared regime states"
+                )
+
 
 @dataclass
 class ContextResearchRegistry:
