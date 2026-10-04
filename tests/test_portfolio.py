@@ -105,8 +105,8 @@ def spec(**overrides: object) -> PortfolioSpec:
         "minimum_position_count": 2,
         "minimum_alpha_value": 0.0,
         "target_invested_weight": 0.90,
-        "max_single_name_weight": 0.40,
-        "max_sector_weight": 0.60,
+        "max_single_name_weight": 0.90,
+        "max_sector_weight": 1.00,
         "max_participation_rate": 0.10,
         "execution_days": 2,
         "max_liquidity_age_days": 5,
@@ -256,7 +256,10 @@ def test_single_name_and_sector_caps_are_enforced_without_relaxation() -> None:
 
 def test_equal_weight_allocation_respects_caps_and_cash_residual() -> None:
     result = construct_portfolio(
-        specification=spec(),
+        specification=spec(
+            max_single_name_weight=0.40,
+            max_sector_weight=0.60,
+        ),
         candidates=eligible_universe(),
         current_holdings=[],
         execution_evidence=all_evidence("A", "B", "C"),
