@@ -49,3 +49,29 @@ The source audit deliberately used a broad, fail-closed subject filter for share
 A later-captured historical KAP disclosure can prove that a positive event existed.
 
 A claim that **no** share-count event existed in an interval is allowed only when the entire interval is covered by the gap-free adaptive inventory. Incomplete windows never become absence evidence.
+
+
+## Detail subtype materialization
+
+A bounded real KAP sample proves that some subject/summary pairs support more specific subtype labels:
+
+- disclosure 1176724, CIMSA — summary: `İç Kaynaklardan Bedelsiz Sermaye Artırımı`
+  → BONUS_ISSUE_DISCLOSURE
+- disclosure 1176183, SUNTK — summary: `Bedelsiz Sermaye Artırımına İlişkin SPK Başvurusu`
+  → BONUS_ISSUE_DISCLOSURE
+- disclosure 1176343, MEDTR — summary: `Bedelli Sermaye Arttırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor`
+  → RIGHTS_ISSUE_DISCLOSURE
+- disclosure 1176748, HUBVC — subject: `Kar Payı Dağıtım İşlemlerine İlişkin Bildirim`
+  → DIVIDEND_PROCESS_DISCLOSURE
+
+The source window is 2023-07-23..2023-07-29 and its response SHA256 is
+`4cc0568d14b2d9150eff519be89f16813971eab6e618f7dcca27cbc86d7be3c5`.
+
+These labels classify the disclosure/process only. They do not create:
+- bonus/rights ratios
+- ex-date
+- payment date
+- record date
+- cash dividend amount
+
+A dividend-process disclosure therefore does not map directly to a CASH_DIVIDEND event until amount/date detail is acquired.
