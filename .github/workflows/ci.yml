@@ -82,6 +82,9 @@ jobs:
       - name: Apply Portfolio PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/portfolio.sql
 
+      - name: Apply Tournament PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/tournament.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -114,6 +117,9 @@ jobs:
 
       - name: Verify Portfolio PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/portfolio_smoke.sql
+
+      - name: Verify Tournament PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/tournament_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -382,3 +388,6 @@ jobs:
 
       - name: Verify portfolio rejection guards
         run: bash tests/sql/run_portfolio_rejection_guards.sh
+
+      - name: Verify tournament rejection guards
+        run: bash tests/sql/run_tournament_rejection_guards.sh
