@@ -1,0 +1,23 @@
+{
+  "dataset_id": "zk-experimental-factor-lab-v1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "production_eligible": false,
+  "historical_cells": 6000,
+  "cells_with_visible_financial_facts": 5633,
+  "inputs": {
+    "historical_member_market": "b3413840f7516b2dd51611efa9139b28ddee1eb2d11d14dd418097138dd33141",
+    "index_closes": "32a740f7a7114e03c885d1ae75c8bacd081b5254b043521fd76ca5f8e34e786e",
+    "historical_sector_routes": "f0c28c7babd018eb8994afdf4911a9d338dad43b291a1084a7acc47a3919c478",
+    "semantic_primary": "07863ddbd78924ad276e7d0aeba7fa6eec9733477b4ca3c02ece285bcf1d9e7a",
+    "semantic_alias": "adb49330f29b370306d69545db1a48d34a5fda6d763a4d4bdfd2eadc56df06a3",
+    "semantic_entity": "d70e8a1056fd16b03a9ba44c8d6d3c183cb9e2f3604f45692d90817e5b52d741"
+  },
+  "forward_label_horizons": [20, 60, 120, 252],
+  "forward_label_target": "future_market_relative_return",
+  "calendar_basis": "EXACT_TRADING_DAY_INDEX",
+  "missing_label_policy": "UNAVAILABLE_NOT_ZERO",
+  "risk_ids": [
+    "ORIGINAL_CATALOG_BYTES_UNAVAILABLE",
+    "SUPERSEDED_HISTORICAL_KAP_REPORT_VERSIONS_NOT_ENUMERATED"
+  ]
+}
