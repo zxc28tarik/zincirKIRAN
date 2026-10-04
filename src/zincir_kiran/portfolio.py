@@ -305,7 +305,7 @@ def _eligible_candidates(
 def _raw_sizing_weights(
     selected: tuple[PortfolioCandidate, ...],
     specification: PortfolioSpec,
-) -> dict[str, float]:
+) -> dict[str, float] | None:
     if specification.sizing_rule is SizingRule.EQUAL_WEIGHT:
         return {item.security_id: 1.0 for item in selected}
 
@@ -314,9 +314,7 @@ def _raw_sizing_weights(
         for item in selected
     }
     if any(value <= 0 for value in positive_alpha.values()):
-        raise ValueError(
-            "POSITIVE_ALPHA_PROPORTIONAL requires strictly positive selected Alpha values"
-        )
+        return None
     return positive_alpha
 
 
@@ -421,6 +419,22 @@ def construct_portfolio(
         raise AssertionError("selected portfolio unexpectedly below minimum_position_count")
 
     raw_weights = _raw_sizing_weights(selected, specification)
+    if raw_weights is None:
+        return PortfolioResult(
+            specification_id=specification.specification_id,
+            definition_version=specification.definition_version,
+            horizon=specification.horizon,
+            prediction_timestamp=prediction_timestamp,
+            portfolio_notional=portfolio_notional,
+            status=PortfolioRunStatus.INFEASIBLE_CONSTRAINTS,
+            target_positions=(),
+            cash_weight=1.0,
+            one_way_turnover=0.0,
+            gross_turnover=0.0,
+            total_estimated_cost=0.0,
+            orders=(),
+            infeasibility_reasons=("WEIGHT_OR_SECTOR_CAPS_INFEASIBLE",),
+        )
     allocated = _allocate_with_caps(
         selected=selected,
         raw_weights=raw_weights,
