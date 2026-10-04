@@ -112,6 +112,9 @@ jobs:
       - name: Apply KAP Bulk Bootstrap PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/kap_bulk_bootstrap.sql
 
+      - name: Apply Current Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/current_bootstrap.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -174,6 +177,9 @@ jobs:
 
       - name: Verify KAP Bulk Bootstrap PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/kap_bulk_bootstrap_smoke.sql
+
+      - name: Verify Current Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/current_bootstrap_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -472,3 +478,6 @@ jobs:
 
       - name: Verify KAP Bulk Bootstrap rejection guards
         run: bash tests/sql/run_kap_bulk_bootstrap_rejection_guards.sh
+
+      - name: Verify Current Bootstrap rejection guards
+        run: bash tests/sql/run_current_bootstrap_rejection_guards.sh
