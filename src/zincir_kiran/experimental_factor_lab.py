@@ -20,7 +20,6 @@ from .factor_lab import (
 )
 from .pit import require_aware_timestamp
 
-
 AUTHORITY = "EXPERIMENTAL_VERSION_RISK"
 
 
