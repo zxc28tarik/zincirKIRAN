@@ -12,7 +12,6 @@ from zincir_kiran.shadow import (
     verify_shadow_replay,
 )
 
-
 PREREGISTERED = datetime(2026, 10, 1, tzinfo=UTC)
 AS_OF = datetime(2026, 10, 4, 7, 0, tzinfo=UTC)
 EXECUTED = datetime(2026, 10, 4, 7, 1, tzinfo=UTC)
