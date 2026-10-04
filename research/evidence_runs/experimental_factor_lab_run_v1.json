@@ -1,0 +1,32 @@
+{
+  "contract": "EXPERIMENTAL_FACTOR_LAB_RUN_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "factor_count": 16,
+  "horizons": [20, 60, 120, 252],
+  "initial_experiment_count": 64,
+  "per_period_metrics": [
+    "coverage",
+    "spearman_ic",
+    "quantile_returns",
+    "monotonicity",
+    "top_vs_market",
+    "bottom_vs_market",
+    "top_minus_bottom"
+  ],
+  "aggregate_metrics": [
+    "valid_periods",
+    "total_periods",
+    "mean_ic",
+    "icir",
+    "mean_coverage",
+    "mean_top_vs_market",
+    "mean_top_minus_bottom"
+  ],
+  "liquidity_tier_robustness": true,
+  "direction_normalization": {
+    "HIGHER_IS_BETTER": 1,
+    "LOWER_IS_BETTER": -1,
+    "raw_values_mutated": false
+  },
+  "promotion_authorized": false
+}
