@@ -158,7 +158,11 @@ def fit_ridge_challenger(
 
     rows: list[tuple[float, ...]] = []
     targets: list[float] = []
-    for observation in observations:
+    ordered_observations = sorted(
+        observations,
+        key=lambda item: (item.observation_at, item.security_id),
+    )
+    for observation in ordered_observations:
         if observation.observation_at >= fit_at:
             raise ValueError("training observation must precede fit_at")
         if observation.target_value is None or observation.target_available_at is None:
