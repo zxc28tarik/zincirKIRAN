@@ -9,10 +9,10 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import datetime
 from enum import StrEnum
-from typing import Iterable
 
 from .pit import require_aware_timestamp
 
@@ -79,7 +79,7 @@ class SourceArtifact:
         content: bytes,
         logical_key: str,
         source_published_at: datetime | None = None,
-    ) -> "SourceArtifact":
+    ) -> SourceArtifact:
         return cls(
             artifact_id=artifact_id,
             source_id=source_id,
