@@ -82,6 +82,9 @@ jobs:
       - name: Apply Portfolio PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/portfolio.sql
 
+      - name: Apply Tournament PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/tournament.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
