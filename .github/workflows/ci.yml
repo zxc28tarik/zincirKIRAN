@@ -388,3 +388,6 @@ jobs:
 
       - name: Verify portfolio rejection guards
         run: bash tests/sql/run_portfolio_rejection_guards.sh
+
+      - name: Verify tournament rejection guards
+        run: bash tests/sql/run_tournament_rejection_guards.sh
