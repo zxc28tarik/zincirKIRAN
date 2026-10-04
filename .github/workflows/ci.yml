@@ -73,6 +73,9 @@ jobs:
       - name: Apply Dynamic Evidence PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/dynamic_evidence.sql
 
+      - name: Apply Context Research PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/context_research.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -96,6 +99,9 @@ jobs:
 
       - name: Verify Dynamic Evidence PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/dynamic_evidence_smoke.sql
+
+      - name: Verify Context Research PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/context_research_smoke.sql
 
       - name: Verify database rejection guards
         run: |
