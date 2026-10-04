@@ -109,6 +109,9 @@ jobs:
       - name: Apply Market Bootstrap PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/market_bootstrap.sql
 
+      - name: Apply KAP Bulk Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f supabase/schemas/kap_bulk_bootstrap.sql
+
       - name: Verify PIT PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/pit_schema_smoke.sql
 
@@ -168,6 +171,9 @@ jobs:
 
       - name: Verify Market Bootstrap PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/market_bootstrap_smoke.sql
+
+      - name: Verify KAP Bulk Bootstrap PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/kap_bulk_bootstrap_smoke.sql
 
       - name: Verify database rejection guards
         run: |
@@ -463,3 +469,6 @@ jobs:
 
       - name: Verify Market Bootstrap rejection guards
         run: bash tests/sql/run_market_bootstrap_rejection_guards.sh
+
+      - name: Verify KAP Bulk Bootstrap rejection guards
+        run: bash tests/sql/run_kap_bulk_bootstrap_rejection_guards.sh
