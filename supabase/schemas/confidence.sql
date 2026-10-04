@@ -213,7 +213,7 @@ declare
     alpha_spec_id text;
     alpha_spec_version text;
     alpha_status text;
-    alpha_value numeric;
+    source_alpha_db_value numeric;
 begin
     select preregistered_at, base_alpha_specification_id, base_alpha_definition_version
       into preregistered_time, base_spec_id, base_spec_version
@@ -225,21 +225,25 @@ begin
         raise exception 'confidence protocol was not preregistered by prediction time';
     end if;
 
-    select specification_id, definition_version, status, alpha_value
-      into alpha_spec_id, alpha_spec_version, alpha_status, alpha_value
-      from zk.alpha_runs
-     where alpha_run_id = new.alpha_run_id;
+    select a.specification_id, a.definition_version, a.status, a.alpha_value
+      into alpha_spec_id, alpha_spec_version, alpha_status, source_alpha_db_value
+      from zk.alpha_runs a
+     where a.alpha_run_id = new.alpha_run_id;
 
     if alpha_spec_id <> base_spec_id or alpha_spec_version <> base_spec_version then
         raise exception 'confidence run references a different base Alpha';
     end if;
 
     if alpha_status = 'SCORED' then
-        if alpha_value is null or new.source_alpha_value is null or new.source_alpha_value <> alpha_value then
+        if (
+            source_alpha_db_value is null
+            or new.source_alpha_value is null
+            or new.source_alpha_value <> source_alpha_db_value
+        ) then
             raise exception 'confidence source_alpha_value must equal scored Alpha';
         end if;
     else
-        if alpha_value is not null or new.source_alpha_value is not null then
+        if source_alpha_db_value is not null or new.source_alpha_value is not null then
             raise exception 'abstained Alpha cannot carry confidence source_alpha_value';
         end if;
     end if;
