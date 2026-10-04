@@ -79,15 +79,21 @@ def classify_share_count_subject(
     text = subject.casefold()
     summary_text = (summary or "").casefold()
 
-    if "bedelsiz sermaye artır" in summary_text:
+    if (
+        "bedelsiz sermaye artır" in summary_text
+        or "bedelsiz sermaye arttır" in summary_text
+    ):
         return BootstrapEventType.BONUS_ISSUE_DISCLOSURE
-    if "bedelli sermaye artır" in summary_text:
+    if (
+        "bedelli sermaye artır" in summary_text
+        or "bedelli sermaye arttır" in summary_text
+    ):
         return BootstrapEventType.RIGHTS_ISSUE_DISCLOSURE
     if "kar payı dağıtım" in text or "kâr payı dağıtım" in text:
         return BootstrapEventType.DIVIDEND_PROCESS_DISCLOSURE
     matches: list[BootstrapEventType] = []
 
-    if "sermaye artır" in text:
+    if "sermaye artır" in text or "sermaye arttır" in text:
         matches.append(BootstrapEventType.CAPITAL_INCREASE)
     if "sermaye azalt" in text:
         matches.append(BootstrapEventType.CAPITAL_DECREASE)
