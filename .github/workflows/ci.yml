@@ -118,6 +118,9 @@ jobs:
       - name: Verify Portfolio PostgreSQL schema
         run: psql -v ON_ERROR_STOP=1 -f tests/sql/portfolio_smoke.sql
 
+      - name: Verify Tournament PostgreSQL schema
+        run: psql -v ON_ERROR_STOP=1 -f tests/sql/tournament_smoke.sql
+
       - name: Verify database rejection guards
         run: |
           if psql -v ON_ERROR_STOP=1 -f tests/sql/reject_duplicate_financial_fact.sql; then
