@@ -8,6 +8,7 @@ from zincir_kiran.experimental_factors import (
     NonfinFactorInputs,
     YtdFlow,
     derive_quarter_flow,
+    experimental_factor_definitions,
     materialize_market_factors,
     materialize_nonfin_factors,
     trailing_four_quarter_sum,
@@ -142,3 +143,14 @@ def test_missing_prior_margin_inputs_are_unavailable_not_zero() -> None:
     }
     assert factors["gross_margin_acceleration"].value is None
     assert factors["gross_margin_acceleration"].unavailable_reason is not None
+
+
+def test_first_factor_definitions_are_registered_as_candidates() -> None:
+    definitions = experimental_factor_definitions()
+    assert len(definitions) == 16
+    by_id = {item.factor_id: item for item in definitions}
+    assert by_id["gross_profitability"].expected_direction.value == "HIGHER_IS_BETTER"
+    assert by_id["asset_growth"].expected_direction.value == "LOWER_IS_BETTER"
+    assert by_id["momentum_12_1"].economic_family.value == "PRICE_MOMENTUM"
+    assert by_id["amihud_63d"].economic_family.value == "LIQUIDITY"
+    assert all(item.stage.value == "CANDIDATE" for item in definitions)
