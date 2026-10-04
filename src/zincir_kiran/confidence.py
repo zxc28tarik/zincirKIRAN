@@ -114,8 +114,8 @@ class ConfidenceSpec:
         require_aware_timestamp(self.preregistered_at)
         if self.stage is not ConfidenceStage.CANDIDATE:
             raise ValueError("confidence implementation is candidate-only")
-        if not 0 <= self.minimum_weight_coverage <= 1:
-            raise ValueError("minimum_weight_coverage must be in [0, 1]")
+        if not 0 < self.minimum_weight_coverage <= 1:
+            raise ValueError("minimum_weight_coverage must be in (0, 1]")
         if not 0 <= self.signal_eligibility_threshold <= 1:
             raise ValueError("signal_eligibility_threshold must be in [0, 1]")
         if not self.dimensions:
@@ -309,6 +309,11 @@ def evaluate_confidence(
         != base_alpha_specification.definition_version
     ):
         raise ValueError("confidence specification references a different base Alpha")
+    if alpha_result.status is AlphaExecutionStatus.SCORED:
+        if alpha_result.alpha_value is None or not math.isfinite(alpha_result.alpha_value):
+            raise ValueError("SCORED alpha result requires finite alpha_value")
+    elif alpha_result.alpha_value is not None:
+        raise ValueError("abstained alpha result cannot carry alpha_value")
     if (
         alpha_result.specification_id != base_alpha_specification.specification_id
         or alpha_result.definition_version != base_alpha_specification.definition_version
