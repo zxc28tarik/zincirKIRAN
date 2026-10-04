@@ -2,7 +2,6 @@ import pytest
 
 from zincir_kiran.price_factor_diagnostic import (
     FACTORS,
-    HORIZONS,
     PriceFactorDiagnosticSpec,
 )
 
