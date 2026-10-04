@@ -11,7 +11,6 @@ from zincir_kiran.evidence_phase import (
     build_pit_snapshot_manifest,
 )
 
-
 PREREG = datetime(2026, 10, 4, 10, 0, tzinfo=UTC)
 AS_OF = datetime(2026, 10, 4, 12, 0, tzinfo=UTC)
 CREATED = datetime(2026, 10, 4, 12, 5, tzinfo=UTC)
