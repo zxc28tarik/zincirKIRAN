@@ -330,7 +330,7 @@ def test_hard_floor_failure_produces_no_signal_with_auditable_score() -> None:
 
 def test_low_weighted_confidence_produces_no_signal() -> None:
     observations = [
-        observation("data_coverage", 0.70),
+        observation("data_coverage", 0.80),
         observation("factor_evidence", 0.50),
         observation("freshness", 0.55),
         observation("liquidity", 0.50),
