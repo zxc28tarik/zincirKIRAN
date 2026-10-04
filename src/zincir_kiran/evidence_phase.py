@@ -280,7 +280,7 @@ def build_pit_snapshot_manifest(
 ) -> PitSnapshotManifest:
     require_aware_timestamp(created_at)
     require_aware_timestamp(as_of)
-    if created_at < readiness_spec.preregistered_at:
+    if created_at <= readiness_spec.preregistered_at:
         raise ValueError("snapshot creation must follow readiness preregistration")
     if created_at < as_of:
         raise ValueError("snapshot cannot be created before as_of")
