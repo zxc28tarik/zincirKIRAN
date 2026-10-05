@@ -1,0 +1,22 @@
+name: Real Financial Factor Lab
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  inspect-semantic-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Inspect verified semantic financial corpus
+        run: python scripts/inspect_real_semantic_schema.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-schema-inspection-v1
+          path: research/evidence_runs/semantic_schema_inspection_v1.json
+          if-no-files-found: error
