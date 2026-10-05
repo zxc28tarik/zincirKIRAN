@@ -20,3 +20,20 @@ jobs:
           name: semantic-schema-inspection-v1
           path: research/evidence_runs/semantic_schema_inspection_v1.json
           if-no-files-found: error
+
+  real-financial-factor-lab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install diagnostic dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3"
+      - name: Run real financial factor lab
+        run: python scripts/run_real_financial_factor_lab.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: first-real-financial-factor-lab-v1
+          path: research/evidence_runs/first_real_financial_factor_lab_v1.json
+          if-no-files-found: error
