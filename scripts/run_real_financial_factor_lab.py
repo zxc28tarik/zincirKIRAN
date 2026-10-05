@@ -430,6 +430,19 @@ def forward_targets(
 
 def metrics(panel: pd.DataFrame, factor: str, horizon: int) -> dict[str, object]:
     target = f"target_{horizon}"
+    if factor not in panel.columns or target not in panel.columns:
+        return {
+            "usable_cells": 0,
+            "usable_signal_dates": 0,
+            "evaluated_signal_dates": 0,
+            "mean_ic": None,
+            "ic_std": None,
+            "icir": None,
+            "mean_top_quintile_excess_return": None,
+            "mean_q5_minus_q1": None,
+            "mean_monotonicity": None,
+            "unavailable_reason": "FACTOR_OR_TARGET_NOT_MATERIALIZED",
+        }
     usable = panel[["signal_date", "ticker", factor, target]].dropna().copy()
     ics: list[float] = []
     tops: list[float] = []
@@ -542,7 +555,16 @@ def main() -> int:
         "historical_membership_cells": int(len(membership)),
         "materialized_financial_factor_cells": int(len(panel)),
         "materialized_signal_dates": int(panel["signal_date"].nunique()),
-        "diagnostics": diagnostics,
+        "diagnostics": {
+            **diagnostics,
+            "materialized_factor_columns": sorted(
+                factor for factor in FACTORS if factor in panel.columns
+            ),
+            "factor_nonnull_counts": {
+                factor: int(panel[factor].notna().sum()) if factor in panel.columns else 0
+                for factor in FACTORS
+            },
+        },
         "factors": FACTORS,
         "horizons": HORIZONS,
         "results": results,
