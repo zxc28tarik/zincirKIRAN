@@ -1,0 +1,55 @@
+{
+  "contract": "FIRST_REAL_FINANCIAL_FACTOR_LAB_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37246547214,
+  "artifact_id": 11319755791,
+  "artifact_digest": "sha256:67dcddc1f498671aeb3688c911915a82156d60b657a96c0c011d47c9a2856657",
+  "semantic_source_commit": "c8b481e79e270f2c095e8c180671a3f483f0775e",
+  "market_source_commit": "883e680a2564e38f4c08a21bc88aa95b8f164036",
+  "semantic_reports": 5052,
+  "semantic_facts": 199969,
+  "membership_cells": 6000,
+  "cells_with_any_semantic_rows": 5633,
+  "cells_with_materialized_financial_factors": 5087,
+  "materialized_signal_dates": 60,
+  "factor_nonnull_counts": {
+    "asset_growth": 5027,
+    "gross_margin": 4907,
+    "gross_margin_acceleration": 4877,
+    "gross_profitability": 4875,
+    "operating_margin": 4907,
+    "operating_margin_acceleration": 4877,
+    "operating_profitability": 4876,
+    "roa": 4876,
+    "accruals": 0,
+    "capex_to_assets": 0,
+    "cfo_to_assets": 0
+  },
+  "mean_ic": {
+    "asset_growth": {"20": -0.007518, "60": -0.006954, "120": 0.003359, "252": 0.099213},
+    "gross_margin": {"20": 0.011515, "60": -0.006419, "120": -0.013162, "252": -0.053219},
+    "gross_margin_acceleration": {"20": 0.037324, "60": 0.044353, "120": 0.049031, "252": 0.005141},
+    "gross_profitability": {"20": -0.006661, "60": -0.023179, "120": -0.025254, "252": -0.058844},
+    "operating_margin": {"20": 0.007892, "60": -0.013606, "120": -0.031498, "252": -0.076411},
+    "operating_margin_acceleration": {"20": 0.028396, "60": 0.031006, "120": 0.044122, "252": 0.040170},
+    "operating_profitability": {"20": -0.008634, "60": -0.030718, "120": -0.056392, "252": -0.108035},
+    "roa": {"20": -0.006040, "60": -0.036459, "120": -0.061239, "252": -0.145765}
+  },
+  "icir": {
+    "asset_growth": {"20": -0.046168, "60": -0.046905, "120": 0.021637, "252": 0.658583},
+    "gross_margin": {"20": 0.086153, "60": -0.046756, "120": -0.105318, "252": -0.398242},
+    "gross_margin_acceleration": {"20": 0.261698, "60": 0.297988, "120": 0.375090, "252": 0.039037},
+    "gross_profitability": {"20": -0.043533, "60": -0.132101, "120": -0.134560, "252": -0.399945},
+    "operating_margin": {"20": 0.054650, "60": -0.098645, "120": -0.250256, "252": -0.643543},
+    "operating_margin_acceleration": {"20": 0.201581, "60": 0.214243, "120": 0.325330, "252": 0.283374},
+    "operating_profitability": {"20": -0.058816, "60": -0.201793, "120": -0.356815, "252": -0.769911},
+    "roa": {"20": -0.036448, "60": -0.211759, "120": -0.348405, "252": -0.999904}
+  },
+  "unavailable_factors": {
+    "accruals": "CFO quarter/TTM reconstruction unavailable in this first semantic materialization",
+    "cfo_to_assets": "CFO quarter/TTM reconstruction unavailable in this first semantic materialization",
+    "capex_to_assets": "CAPEX quarter/TTM reconstruction unavailable in this first semantic materialization"
+  },
+  "production_ready": false,
+  "promotion_authorized": false
+}
