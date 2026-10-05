@@ -288,22 +288,23 @@ def materialize_financial_factors(by_field: dict[str, list[dict]], cutoff: date)
         return {}
 
     ttms = {field: ttm_series(by_field.get(field, [])) for field in FLOW_FIELDS}
-    latest: dict[str, tuple[tuple[int, int], float]] = {}
-    for field in FLOW_FIELDS:
-        item = latest_ttm_before(ttms[field], asset_end)
-        if item is not None:
-            latest[field] = item
     required = set(FLOW_FIELDS)
-    if not required.issubset(latest):
+    if any(not ttms[field] for field in required):
         return {}
 
-    common_key = min((item[0] for item in latest.values()))
-    values: dict[str, float] = {}
-    for field in FLOW_FIELDS:
-        value = ttms[field].get(common_key)
-        if value is None:
-            return {}
-        values[field] = value
+    common_keys = set.intersection(*(set(ttms[field]) for field in required))
+    common_keys = {
+        key for key in common_keys
+        if key <= quarter_key(asset_end)
+    }
+    if not common_keys:
+        return {}
+    common_key = max(common_keys)
+
+    values: dict[str, float] = {
+        field: ttms[field][common_key]
+        for field in FLOW_FIELDS
+    }
 
     revenue = values["REVENUE"]
     factors: dict[str, float] = {
@@ -454,16 +455,23 @@ def main() -> int:
 
     targets = forward_targets(prices, index, membership)
     panel_rows: list[dict[str, object]] = []
+    diagnostics = {
+        "membership_cells": int(len(membership)),
+        "cells_with_any_semantic_rows": 0,
+        "cells_with_materialized_financial_factors": 0,
+    }
     for item in membership.itertuples(index=False):
         signal = pd.Timestamp(item.signal_date).date()
         ticker = str(item.ticker).upper()
         fact_rows = rows_by_ticker.get(ticker)
         if not fact_rows:
             continue
+        diagnostics["cells_with_any_semantic_rows"] += 1
         by_field = latest_fact_map(fact_rows, signal, ticker)
         factors = materialize_financial_factors(by_field, signal)
         if not factors:
             continue
+        diagnostics["cells_with_materialized_financial_factors"] += 1
         row: dict[str, object] = {"signal_date": signal, "ticker": ticker}
         row.update(factors)
         for h, value in targets.get((signal, ticker), {}).items():
@@ -471,6 +479,11 @@ def main() -> int:
         panel_rows.append(row)
 
     panel = pd.DataFrame(panel_rows)
+    if panel.empty:
+        raise RuntimeError(
+            "financial factor panel is empty; diagnostics="
+            + json.dumps(diagnostics, sort_keys=True)
+        )
     results = {
         factor: {str(h): metrics(panel, factor, h) for h in HORIZONS}
         for factor in FACTORS
@@ -485,7 +498,8 @@ def main() -> int:
         "semantic_facts": 199969,
         "historical_membership_cells": int(len(membership)),
         "materialized_financial_factor_cells": int(len(panel)),
-        "materialized_signal_dates": int(panel["signal_date"].nunique()) if not panel.empty else 0,
+        "materialized_signal_dates": int(panel["signal_date"].nunique()),
+        "diagnostics": diagnostics,
         "factors": FACTORS,
         "horizons": HORIZONS,
         "results": results,
