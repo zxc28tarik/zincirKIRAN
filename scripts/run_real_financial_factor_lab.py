@@ -275,64 +275,107 @@ def prior_year_ttm(ttm: dict[tuple[int, int], float], key: tuple[int, int]) -> f
     return ttm.get((key[0] - 1, key[1]))
 
 
+def _latest_common_ttm(
+    ttms: dict[str, dict[tuple[int, int], float]],
+    fields: tuple[str, ...],
+    max_key: tuple[int, int],
+) -> tuple[tuple[int, int], dict[str, float]] | None:
+    common = None
+    for field in fields:
+        keys = {key for key in ttms.get(field, {}) if key <= max_key}
+        common = keys if common is None else common.intersection(keys)
+    if not common:
+        return None
+    key = max(common)
+    return key, {field: ttms[field][key] for field in fields}
+
+
 def materialize_financial_factors(by_field: dict[str, list[dict]], cutoff: date) -> dict[str, float]:
-    asset_now = latest_assets(by_field.get("TOTAL_ASSETS", []), cutoff)
-    if asset_now is None:
-        return {}
-    asset_end, assets_now = asset_now
-    assets_prior = assets_year_ago(by_field.get("TOTAL_ASSETS", []), asset_end)
-    if assets_prior is None:
-        return {}
-    avg_assets = (assets_now + assets_prior) / 2.0
-    if avg_assets <= 0:
-        return {}
-
     ttms = {field: ttm_series(by_field.get(field, [])) for field in FLOW_FIELDS}
-    required = set(FLOW_FIELDS)
-    if any(not ttms[field] for field in required):
-        return {}
+    factors: dict[str, float] = {}
 
-    common_keys = set.intersection(*(set(ttms[field]) for field in required))
-    common_keys = {
-        key for key in common_keys
-        if key <= quarter_key(asset_end)
+    asset_now = latest_assets(by_field.get("TOTAL_ASSETS", []), cutoff)
+    assets_now = None
+    assets_prior = None
+    avg_assets = None
+    asset_end = None
+    asset_key = None
+    if asset_now is not None:
+        asset_end, assets_now = asset_now
+        asset_key = quarter_key(asset_end)
+        assets_prior = assets_year_ago(by_field.get("TOTAL_ASSETS", []), asset_end)
+        if assets_prior is not None and assets_prior > 0:
+            avg_assets = (assets_now + assets_prior) / 2.0
+            if avg_assets > 0:
+                factors["asset_growth"] = assets_now / assets_prior - 1.0
+
+    if asset_key is not None and avg_assets is not None:
+        for factor_id, field in (
+            ("gross_profitability", "GROSS_PROFIT"),
+            ("roa", "NET_INCOME"),
+            ("operating_profitability", "OPERATING_PROFIT"),
+            ("cfo_to_assets", "CASH_FLOW_FROM_OPERATIONS"),
+            ("capex_to_assets", "CAPEX"),
+        ):
+            item = _latest_common_ttm(ttms, (field,), asset_key)
+            if item is not None:
+                _, values = item
+                factors[factor_id] = values[field] / avg_assets
+
+        accrual_item = _latest_common_ttm(
+            ttms,
+            ("NET_INCOME", "CASH_FLOW_FROM_OPERATIONS"),
+            asset_key,
+        )
+        if accrual_item is not None:
+            _, values = accrual_item
+            factors["accruals"] = (
+                values["NET_INCOME"] - values["CASH_FLOW_FROM_OPERATIONS"]
+            ) / avg_assets
+
+    max_key = asset_key or (cutoff.year, quarter_number(cutoff))
+
+    gross_margin_item = _latest_common_ttm(
+        ttms,
+        ("GROSS_PROFIT", "REVENUE"),
+        max_key,
+    )
+    if gross_margin_item is not None:
+        key, values = gross_margin_item
+        revenue = values["REVENUE"]
+        if revenue != 0:
+            factors["gross_margin"] = values["GROSS_PROFIT"] / revenue
+            prior_gross = prior_year_ttm(ttms["GROSS_PROFIT"], key)
+            prior_revenue = prior_year_ttm(ttms["REVENUE"], key)
+            if prior_gross is not None and prior_revenue not in (None, 0):
+                factors["gross_margin_acceleration"] = (
+                    values["GROSS_PROFIT"] / revenue
+                    - prior_gross / prior_revenue
+                )
+
+    operating_margin_item = _latest_common_ttm(
+        ttms,
+        ("OPERATING_PROFIT", "REVENUE"),
+        max_key,
+    )
+    if operating_margin_item is not None:
+        key, values = operating_margin_item
+        revenue = values["REVENUE"]
+        if revenue != 0:
+            factors["operating_margin"] = values["OPERATING_PROFIT"] / revenue
+            prior_operating = prior_year_ttm(ttms["OPERATING_PROFIT"], key)
+            prior_revenue = prior_year_ttm(ttms["REVENUE"], key)
+            if prior_operating is not None and prior_revenue not in (None, 0):
+                factors["operating_margin_acceleration"] = (
+                    values["OPERATING_PROFIT"] / revenue
+                    - prior_operating / prior_revenue
+                )
+
+    return {
+        key: float(value)
+        for key, value in factors.items()
+        if math.isfinite(value)
     }
-    if not common_keys:
-        return {}
-    common_key = max(common_keys)
-
-    values: dict[str, float] = {
-        field: ttms[field][common_key]
-        for field in FLOW_FIELDS
-    }
-
-    revenue = values["REVENUE"]
-    factors: dict[str, float] = {
-        "gross_profitability": values["GROSS_PROFIT"] / avg_assets,
-        "roa": values["NET_INCOME"] / avg_assets,
-        "operating_profitability": values["OPERATING_PROFIT"] / avg_assets,
-        "cfo_to_assets": values["CASH_FLOW_FROM_OPERATIONS"] / avg_assets,
-        "accruals": (values["NET_INCOME"] - values["CASH_FLOW_FROM_OPERATIONS"]) / avg_assets,
-        "asset_growth": assets_now / assets_prior - 1.0,
-        "capex_to_assets": values["CAPEX"] / avg_assets,
-    }
-    if revenue != 0:
-        factors["gross_margin"] = values["GROSS_PROFIT"] / revenue
-        factors["operating_margin"] = values["OPERATING_PROFIT"] / revenue
-
-    prior_gross = prior_year_ttm(ttms["GROSS_PROFIT"], common_key)
-    prior_operating = prior_year_ttm(ttms["OPERATING_PROFIT"], common_key)
-    prior_revenue = prior_year_ttm(ttms["REVENUE"], common_key)
-    if prior_revenue not in (None, 0) and revenue != 0:
-        if prior_gross is not None:
-            factors["gross_margin_acceleration"] = (
-                values["GROSS_PROFIT"] / revenue - prior_gross / prior_revenue
-            )
-        if prior_operating is not None:
-            factors["operating_margin_acceleration"] = (
-                values["OPERATING_PROFIT"] / revenue - prior_operating / prior_revenue
-            )
-    return {k: float(v) for k, v in factors.items() if math.isfinite(v)}
 
 
 def forward_targets(
