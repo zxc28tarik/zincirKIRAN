@@ -1,0 +1,36 @@
+{
+  "contract": "BIST100_MEMBERSHIP_BACKCAST_2019_2021_SUMMARY_V1",
+  "authority": "RECONSTRUCTED_FROM_AUDITABLE_INDEX_EVENTS",
+  "workflow_run_id": 37672793867,
+  "artifact_id": 11504889140,
+  "artifact_digest": "sha256:85982c2389abd21007360aac9af668e6680d5878b3e20bc13ec5012e6fe22a3c",
+  "anchor": {
+    "url": "https://raw.githubusercontent.com/zxc28tarik/TOTAL-RASYO-HESAPLAYICI/883e680a2564e38f4c08a21bc88aa95b8f164036/data/backtest_sources/yahoo_resolved/monthly_member_signal_price_coverage.csv",
+    "sha256": "a3b14014aa4d3ff16a082bc0dac64346b906f4b7720aeae5a8c449a2add314f2",
+    "signal_date": "2021-08-02",
+    "member_count": 100
+  },
+  "catalog_sha256": "322e21df4f229b9979f58a8ff4df76767b2713124ad05e0d62cc749711ee781e",
+  "event_count": 13,
+  "periodic_event_count": 10,
+  "intraperiod_event_count": 3,
+  "earliest_reconstructed_state": {
+    "before_event": "BIST100_2019Q2_PERIODIC",
+    "member_count": 100,
+    "member_set_sha256": "76f260abb7818f2fb2e04e505761f86ade3454a116d8ba93d6081fd37133de46"
+  },
+  "forward_replay": {
+    "event_count": 13,
+    "all_states_member_count_100": true,
+    "final_member_set_sha256": "b5173b92add41be91933a32410b32c7f8f078ab4a908be3a5c9e60793a43549e",
+    "anchor_member_set_sha256": "b5173b92add41be91933a32410b32c7f8f078ab4a908be3a5c9e60793a43549e",
+    "exact_anchor_match": true
+  },
+  "checkpoint_count": 14,
+  "result": {
+    "membership_chain_closed": true,
+    "parent_h252_power_issue_closed": false,
+    "reason_parent_remains_open": "Membership history alone does not extend 52W lookback or financial evidence; validated daily price history still begins 2020-07."
+  },
+  "production_ready": false
+}
