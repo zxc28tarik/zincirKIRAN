@@ -70,5 +70,31 @@
     "factor_ic_forbidden": true,
     "model_fit_forbidden": true
   },
-  "production_ready": false
+  "production_ready": false,
+  "protocol_amendments": [
+    {
+      "amendment_id": "A1_VENDOR_REPLAY_DRIFT_FREEZE_ONCE",
+      "timing": "AFTER_TWO_COVERAGE_ONLY_CAPTURES_BEFORE_ANY_ALPHA_PERFORMANCE_RERUN",
+      "reason": "Two live Yahoo captures minutes apart produced identical row counts and acceptance counts but different historical price bytes/derived numeric coverage bytes. Therefore live refetch cannot be treated as deterministic immutable evidence.",
+      "first_capture": {
+        "workflow_run_id": 37686065246,
+        "package_commit": "32d4d9f8e51124f1be992bb70eee75308e6a8a22",
+        "price_sha256": "57a16c08cee591acf18ba9955b45b5e1deba9cea784bb70c49a7c5e2f16cb2bd"
+      },
+      "canonical_capture": {
+        "workflow_run_id": 37686387496,
+        "package_commit": "9bec14cd18a6b9f521c0a77b4dedf8ed4d5b6438",
+        "price_sha256": "e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e"
+      },
+      "rule": "The second capture is frozen as the canonical V1 snapshot. CI must never refetch vendor history; it only verifies pinned package hashes. Any future vendor refresh requires a new dataset/version.",
+      "performance_information_used": false
+    }
+  ],
+  "canonical_frozen_snapshot": {
+    "package_commit": "9bec14cd18a6b9f521c0a77b4dedf8ed4d5b6438",
+    "price_sha256": "e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e",
+    "coverage_sha256": "97fa22b691c6a5c2c8d27b0cf83b9d6b1aaa034c6eb64aa9bc6f5bc72f044c7f",
+    "membership_sha256": "ce691744788fb74f8c904b2aa8b34528140d0785e6507989096362bb226c93ab",
+    "provenance_sha256": "93599a3119d749793329787e75f51598dce7e0c8c4ebded407a635bada228caf"
+  }
 }
