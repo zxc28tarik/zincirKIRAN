@@ -1,0 +1,27 @@
+{
+  "preregistration_id": "EW5_COMPOSITE_V1",
+  "registered_before_results": true,
+  "champion": "HIGH_52W_PROXIMITY",
+  "challenger": "EW5_COMPOSITE",
+  "factor_weights": {
+    "HIGH_52W_PROXIMITY": 0.20,
+    "LOW_VOL_63D": 0.20,
+    "MOM_6_1": 0.20,
+    "operating_margin_acceleration": 0.20,
+    "gross_margin_acceleration": 0.20
+  },
+  "score_basis": "SECTOR_NEUTRAL_PERCENTILE_CENTERED",
+  "missingness_policy": "REQUIRE_5_OF_5_NO_NEUTRAL_FILL",
+  "comparison_policy": "ALL_CONTENDERS_ON_EXACT_SAME_COMMON_SAMPLE",
+  "weight_optimization_allowed": false,
+  "horizon_specific_weights_allowed": false,
+  "automatic_champion_replacement_allowed": false,
+  "horizons": [20, 60, 120, 252],
+  "primary_metric": "WALK_FORWARD_MEAN_TEST_IC",
+  "secondary_metrics": [
+    "POSITIVE_TEST_FOLD_SHARE",
+    "WORST_FOLD_IC",
+    "TOP_MINUS_BOTTOM_SPREAD",
+    "PAIRED_IC_DIFFERENCE_VS_52W_HIGH"
+  ]
+}
