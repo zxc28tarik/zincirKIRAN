@@ -1,0 +1,566 @@
+{
+  "contract": "LONG_ONLY_COST_SENSITIVITY_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37662161280,
+  "artifact_id": 11501626922,
+  "artifact_digest": "sha256:b8bcd7c3633d776817bf415dd05612e95ea2f3c6e220756d24d4c22bce40797b",
+  "common_panel_rows": 4647,
+  "common_signal_dates": 60,
+  "selection": "TOP_20_PERCENT_EQUAL_WEIGHT",
+  "fold_boundary_policy": "RESET_TO_CASH",
+  "turnover_definition": "SUM_ABS_NEW_MINUS_OLD_WEIGHT",
+  "cost_scenarios_bps_per_unit_traded_notional": [
+    10,
+    25,
+    50
+  ],
+  "cost_scenarios_are_observed_historical_costs": false,
+  "results": {
+    "H20": {
+      "evaluated_folds": 7,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.009329702771567378,
+          "worst_fold_gross_forward_excess_proxy": -0.007843493881969147,
+          "positive_gross_fold_share": 0.8571428571428571,
+          "mean_fold_gross_turnover": 0.863375350140056,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.008466327421427323,
+              "worst_fold_net_forward_excess_proxy": -0.008818493881969142,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.007171264396217237,
+              "worst_fold_net_forward_excess_proxy": -0.010280993881969147,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.005012826020867099,
+              "worst_fold_net_forward_excess_proxy": -0.012718493881969143,
+              "positive_fold_share": 0.5714285714285714
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.009067407861926039,
+          "worst_fold_gross_forward_excess_proxy": -0.01245534047321263,
+          "positive_gross_fold_share": 0.8571428571428571,
+          "mean_fold_gross_turnover": 0.6161064425770307,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.008451301419349007,
+              "worst_fold_net_forward_excess_proxy": -0.013030340473212632,
+              "positive_fold_share": 0.8571428571428571
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.007527141755483462,
+              "worst_fold_net_forward_excess_proxy": -0.01389284047321263,
+              "positive_fold_share": 0.8571428571428571
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0059868756490408835,
+              "worst_fold_net_forward_excess_proxy": -0.015330340473212628,
+              "positive_fold_share": 0.8571428571428571
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.002357133465012393,
+          "worst_fold_gross_forward_excess_proxy": -0.012425445620385505,
+          "positive_gross_fold_share": 0.7142857142857143,
+          "mean_fold_gross_turnover": 0.6891223155929038,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0016680111494194896,
+              "worst_fold_net_forward_excess_proxy": -0.013050445620385504,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0006343276760301336,
+              "worst_fold_net_forward_excess_proxy": -0.013987945620385505,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.0010884781129521257,
+              "worst_fold_net_forward_excess_proxy": -0.015550445620385506,
+              "positive_fold_share": 0.5714285714285714
+            }
+          }
+        }
+      },
+      "paired_dynamic_vs_ew5": {
+        "paired_folds": 7,
+        "mean_gross_difference": -0.006710274396913645,
+        "left_beats_right_gross_fold_share": 0.2857142857142857,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.006783290269929519,
+            "left_beats_right_fold_share": 0.14285714285714285
+          },
+          "25bps": {
+            "mean_net_difference": -0.006892814079453329,
+            "left_beats_right_fold_share": 0.14285714285714285
+          },
+          "50bps": {
+            "mean_net_difference": -0.00707535376199301,
+            "left_beats_right_fold_share": 0.14285714285714285
+          }
+        }
+      },
+      "paired_dynamic_vs_champion": {
+        "paired_folds": 7,
+        "mean_gross_difference": -0.006972569306554983,
+        "left_beats_right_gross_fold_share": 0.42857142857142855,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.006798316272007831,
+            "left_beats_right_fold_share": 0.42857142857142855
+          },
+          "25bps": {
+            "mean_net_difference": -0.006536936720187104,
+            "left_beats_right_fold_share": 0.42857142857142855
+          },
+          "50bps": {
+            "mean_net_difference": -0.006101304133819223,
+            "left_beats_right_fold_share": 0.42857142857142855
+          }
+        }
+      },
+      "paired_ew5_vs_champion": {
+        "paired_folds": 7,
+        "mean_gross_difference": -0.0002622949096413394,
+        "left_beats_right_gross_fold_share": 0.42857142857142855,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.000015026002078313045,
+            "left_beats_right_fold_share": 0.42857142857142855
+          },
+          "25bps": {
+            "mean_net_difference": 0.0003558773592662249,
+            "left_beats_right_fold_share": 0.42857142857142855
+          },
+          "50bps": {
+            "mean_net_difference": 0.0009740496281737859,
+            "left_beats_right_fold_share": 0.42857142857142855
+          }
+        }
+      }
+    },
+    "H60": {
+      "evaluated_folds": 4,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": 0.008688819829208211,
+          "worst_fold_gross_forward_excess_proxy": -0.03421182969598477,
+          "positive_gross_fold_share": 0.5,
+          "mean_fold_gross_turnover": 0.8331290849673202,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.007855690744240891,
+              "worst_fold_net_forward_excess_proxy": -0.03495627414042922,
+              "positive_fold_share": 0.5
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.006605997116789915,
+              "worst_fold_net_forward_excess_proxy": -0.03607294080709588,
+              "positive_fold_share": 0.5
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.004523174404371612,
+              "worst_fold_net_forward_excess_proxy": -0.03793405191820699,
+              "positive_fold_share": 0.5
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": -0.0029348731913811156,
+          "worst_fold_gross_forward_excess_proxy": -0.015705314963065393,
+          "positive_gross_fold_share": 0.25,
+          "mean_fold_gross_turnover": 0.6473243464052287,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.0035821975377863463,
+              "worst_fold_net_forward_excess_proxy": -0.016317814963065398,
+              "positive_fold_share": 0.25
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.004553184057394187,
+              "worst_fold_net_forward_excess_proxy": -0.01723656496306539,
+              "positive_fold_share": 0.25
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.00617149492340726,
+              "worst_fold_net_forward_excess_proxy": -0.018767814963065396,
+              "positive_fold_share": 0.25
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": -0.007136262840243564,
+          "worst_fold_gross_forward_excess_proxy": -0.010558847337761917,
+          "positive_gross_fold_share": 0,
+          "mean_fold_gross_turnover": 0.767361111111111,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.007903623951354676,
+              "worst_fold_net_forward_excess_proxy": -0.011308847337761918,
+              "positive_fold_share": 0
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.009054665618021344,
+              "worst_fold_net_forward_excess_proxy": -0.012433847337761919,
+              "positive_fold_share": 0
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.010973068395799122,
+              "worst_fold_net_forward_excess_proxy": -0.014308847337761917,
+              "positive_fold_share": 0
+            }
+          }
+        }
+      },
+      "paired_dynamic_vs_ew5": {
+        "paired_folds": 4,
+        "mean_gross_difference": -0.004201389648862448,
+        "left_beats_right_gross_fold_share": 0.5,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.0043214264135683295,
+            "left_beats_right_fold_share": 0.5
+          },
+          "25bps": {
+            "mean_net_difference": -0.004501481560627156,
+            "left_beats_right_fold_share": 0.5
+          },
+          "50bps": {
+            "mean_net_difference": -0.004801573472391862,
+            "left_beats_right_fold_share": 0.5
+          }
+        }
+      },
+      "paired_dynamic_vs_champion": {
+        "paired_folds": 4,
+        "mean_gross_difference": -0.015825082669451776,
+        "left_beats_right_gross_fold_share": 0.5,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.015759314695595567,
+            "left_beats_right_fold_share": 0.5
+          },
+          "25bps": {
+            "mean_net_difference": -0.015660662734811256,
+            "left_beats_right_fold_share": 0.5
+          },
+          "50bps": {
+            "mean_net_difference": -0.015496242800170732,
+            "left_beats_right_fold_share": 0.5
+          }
+        }
+      },
+      "paired_ew5_vs_champion": {
+        "paired_folds": 4,
+        "mean_gross_difference": -0.011623693020589328,
+        "left_beats_right_gross_fold_share": 0.5,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.011437888282027239,
+            "left_beats_right_fold_share": 0.5
+          },
+          "25bps": {
+            "mean_net_difference": -0.011159181174184102,
+            "left_beats_right_fold_share": 0.5
+          },
+          "50bps": {
+            "mean_net_difference": -0.01069466932777887,
+            "left_beats_right_fold_share": 0.5
+          }
+        }
+      }
+    },
+    "H120": {
+      "evaluated_folds": 3,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": 0.0318893983957717,
+          "worst_fold_gross_forward_excess_proxy": 0.011250351897304084,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.8388888888888889,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.031050509506882804,
+              "worst_fold_net_forward_excess_proxy": 0.01029618523063741,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.02979217617354947,
+              "worst_fold_net_forward_excess_proxy": 0.008864935230637415,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.027694953951327247,
+              "worst_fold_net_forward_excess_proxy": 0.006479518563970746,
+              "positive_fold_share": 1
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": -0.00779863643029207,
+          "worst_fold_gross_forward_excess_proxy": -0.04221085386574116,
+          "positive_gross_fold_share": 0.3333333333333333,
+          "mean_fold_gross_turnover": 0.6305555555555555,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.008429191985847621,
+              "worst_fold_net_forward_excess_proxy": -0.042919187199074484,
+              "positive_fold_share": 0.3333333333333333
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.009375025319180958,
+              "worst_fold_net_forward_excess_proxy": -0.04398168719907449,
+              "positive_fold_share": 0.3333333333333333
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.010951414208069846,
+              "worst_fold_net_forward_excess_proxy": -0.045752520532407824,
+              "positive_fold_share": 0.3333333333333333
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": 0.012523084699738096,
+          "worst_fold_gross_forward_excess_proxy": -0.013953890255955365,
+          "positive_gross_fold_share": 0.6666666666666666,
+          "mean_fold_gross_turnover": 0.6949074074074074,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.011828177292330688,
+              "worst_fold_net_forward_excess_proxy": -0.014662223589288698,
+              "positive_fold_share": 0.6666666666666666
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.010785816181219576,
+              "worst_fold_net_forward_excess_proxy": -0.015724723589288697,
+              "positive_fold_share": 0.6666666666666666
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.009048547662701054,
+              "worst_fold_net_forward_excess_proxy": -0.017495556922622033,
+              "positive_fold_share": 0.6666666666666666
+            }
+          }
+        }
+      },
+      "paired_dynamic_vs_ew5": {
+        "paired_folds": 3,
+        "mean_gross_difference": 0.020321721130030165,
+        "left_beats_right_gross_fold_share": 1,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.020257369278178308,
+            "left_beats_right_fold_share": 1
+          },
+          "25bps": {
+            "mean_net_difference": 0.020160841500400532,
+            "left_beats_right_fold_share": 1
+          },
+          "50bps": {
+            "mean_net_difference": 0.019999961870770896,
+            "left_beats_right_fold_share": 1
+          }
+        }
+      },
+      "paired_dynamic_vs_champion": {
+        "paired_folds": 3,
+        "mean_gross_difference": -0.019366313696033602,
+        "left_beats_right_gross_fold_share": 0.6666666666666666,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.019222332214552117,
+            "left_beats_right_fold_share": 0.6666666666666666
+          },
+          "25bps": {
+            "mean_net_difference": -0.019006359992329896,
+            "left_beats_right_fold_share": 0.6666666666666666
+          },
+          "50bps": {
+            "mean_net_difference": -0.018646406288626193,
+            "left_beats_right_fold_share": 0.6666666666666666
+          }
+        }
+      },
+      "paired_ew5_vs_champion": {
+        "paired_folds": 3,
+        "mean_gross_difference": -0.03968803482606376,
+        "left_beats_right_gross_fold_share": 0,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.039479701492730425,
+            "left_beats_right_fold_share": 0
+          },
+          "25bps": {
+            "mean_net_difference": -0.03916720149273043,
+            "left_beats_right_fold_share": 0
+          },
+          "50bps": {
+            "mean_net_difference": -0.03864636815939709,
+            "left_beats_right_fold_share": 0
+          }
+        }
+      }
+    },
+    "H252": {
+      "evaluated_folds": 1,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.05878220895721851,
+          "worst_fold_gross_forward_excess_proxy": 0.05878220895721851,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.7180555555555554,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.05806415340166297,
+              "worst_fold_net_forward_excess_proxy": 0.05806415340166297,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.05698707006832963,
+              "worst_fold_net_forward_excess_proxy": 0.05698707006832963,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.05519193117944075,
+              "worst_fold_net_forward_excess_proxy": 0.05519193117944075,
+              "positive_fold_share": 1
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.06133867529540108,
+          "worst_fold_gross_forward_excess_proxy": 0.06133867529540108,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.6138888888888887,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.06072478640651221,
+              "worst_fold_net_forward_excess_proxy": 0.06072478640651221,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.059803953073178866,
+              "worst_fold_net_forward_excess_proxy": 0.059803953073178866,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.058269230850956644,
+              "worst_fold_net_forward_excess_proxy": 0.058269230850956644,
+              "positive_fold_share": 1
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.02083726477848913,
+          "worst_fold_gross_forward_excess_proxy": 0.02083726477848913,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.6319444444444443,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.020205320334044683,
+              "worst_fold_net_forward_excess_proxy": 0.020205320334044683,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.019257403667378017,
+              "worst_fold_net_forward_excess_proxy": 0.019257403667378017,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.01767754255626691,
+              "worst_fold_net_forward_excess_proxy": 0.01767754255626691,
+              "positive_fold_share": 1
+            }
+          }
+        }
+      },
+      "paired_dynamic_vs_ew5": {
+        "paired_folds": 1,
+        "mean_gross_difference": -0.04050141051691195,
+        "left_beats_right_gross_fold_share": 0,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.04051946607246752,
+            "left_beats_right_fold_share": 0
+          },
+          "25bps": {
+            "mean_net_difference": -0.04054654940580085,
+            "left_beats_right_fold_share": 0
+          },
+          "50bps": {
+            "mean_net_difference": -0.04059168829468973,
+            "left_beats_right_fold_share": 0
+          }
+        }
+      },
+      "paired_dynamic_vs_champion": {
+        "paired_folds": 1,
+        "mean_gross_difference": -0.03794494417872938,
+        "left_beats_right_gross_fold_share": 0,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.03785883306761828,
+            "left_beats_right_fold_share": 0
+          },
+          "25bps": {
+            "mean_net_difference": -0.037729666400951614,
+            "left_beats_right_fold_share": 0
+          },
+          "50bps": {
+            "mean_net_difference": -0.03751438862317384,
+            "left_beats_right_fold_share": 0
+          }
+        }
+      },
+      "paired_ew5_vs_champion": {
+        "paired_folds": 1,
+        "mean_gross_difference": 0.0025564663381825725,
+        "left_beats_right_gross_fold_share": 1,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.0026606330048492416,
+            "left_beats_right_fold_share": 1
+          },
+          "25bps": {
+            "mean_net_difference": 0.0028168830048492383,
+            "left_beats_right_fold_share": 1
+          },
+          "50bps": {
+            "mean_net_difference": 0.003077299671515897,
+            "left_beats_right_fold_share": 1
+          }
+        }
+      }
+    }
+  },
+  "decision": {
+    "replace_general_champion": false,
+    "H20": "EW5 becomes slightly stronger than 52W High under 25/50 bps scenarios because of materially lower turnover; evidence is not sufficient for promotion.",
+    "H60": "52W High remains the clear long-leg benchmark; both composite challengers are negative on mean gross and net forward-excess proxy.",
+    "H120": "Train-only dynamic materially beats EW5 in 3/3 folds, but its mean long-leg forward-excess proxy remains below 52W High across the cost grid.",
+    "H252": "Only one independent embargoed fold; no stability conclusion.",
+    "key_research_finding": "High rank IC does not guarantee the strongest investable long leg. Cost-aware long-leg validation adds information beyond IC."
+  },
+  "production_ready": false,
+  "automatic_promotion": false
+}
