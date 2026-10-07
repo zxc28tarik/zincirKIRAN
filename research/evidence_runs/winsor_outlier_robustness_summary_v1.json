@@ -1,0 +1,74 @@
+{
+  "contract": "WINSORIZATION_OUTLIER_ROBUSTNESS_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37637120034,
+  "artifact_id": 11491176308,
+  "artifact_digest": "sha256:6bb0ec77e89774fb30c3421125089c4ab30cabb688101a0a4da1e51d45576d84",
+  "coverage": {
+    "factors_materialized": 11,
+    "price_panel_rows": 5988,
+    "financial_panel_rows": 5087
+  },
+  "winsorization_results": {
+    "sign_flips_across_all_factor_horizons": 0,
+    "max_abs_mean_ic_delta": 0.0003556419259961169,
+    "max_delta_case": {
+      "factor": "MOM_6_1",
+      "horizon": 252,
+      "transform": "WINSOR_2_5_97_5",
+      "raw_mean_ic": 0.09488797671377203,
+      "transformed_mean_ic": 0.09524361863976814
+    },
+    "winsor_1_99_rank_ic_effect": "IDENTICAL_ACROSS_TESTED_FACTOR_HORIZONS",
+    "zscore_after_winsor_1_99_rank_ic_effect": "IDENTICAL_ACROSS_TESTED_FACTOR_HORIZONS"
+  },
+  "key_h252": {
+    "roa": {
+      "raw": -0.14576451561091316,
+      "winsor_1_99": -0.14576451561091316,
+      "winsor_2_5_97_5": -0.14549884907697827,
+      "sector_neutral": -0.11794697095987063
+    },
+    "operating_profitability": {
+      "raw": -0.10803521071389978,
+      "winsor_1_99": -0.10803521071389978,
+      "winsor_2_5_97_5": -0.10828919555661345,
+      "sector_neutral": -0.06616027872470752
+    },
+    "gross_profitability": {
+      "raw": -0.058844301832964234,
+      "winsor_1_99": -0.058844301832964234,
+      "winsor_2_5_97_5": -0.058966850937428164,
+      "sector_neutral": 0.01962202777111051
+    },
+    "operating_margin_acceleration": {
+      "raw": 0.04016990904049122,
+      "winsor_2_5_97_5": 0.040495281113362196,
+      "sector_neutral": 0.05502716210652569
+    },
+    "asset_growth": {
+      "raw": 0.0992125181087075,
+      "winsor_2_5_97_5": 0.09924457720225444,
+      "sector_neutral": 0.08757221481517455
+    },
+    "HIGH_52W_PROXIMITY": {
+      "raw": 0.19832931078094915,
+      "winsor_2_5_97_5": 0.1982628950962055,
+      "sector_neutral": 0.16138666996359755
+    },
+    "LOW_VOL_63D": {
+      "raw": 0.18263985581336306,
+      "winsor_2_5_97_5": 0.1825956604684609,
+      "sector_neutral": 0.16866008848518504
+    }
+  },
+  "interpretation": {
+    "roa_negative_ic_driven_by_raw_value_outliers": false,
+    "operating_profitability_negative_ic_driven_by_raw_value_outliers": false,
+    "gross_profitability_raw_negative_ic_driven_by_raw_value_outliers": false,
+    "sector_composition_matters_more_than_outlier_clipping": true,
+    "rank_signals_are_robust_to_cross_sectional_winsorization": true
+  },
+  "production_ready": false,
+  "weight_change_authorized": false
+}
