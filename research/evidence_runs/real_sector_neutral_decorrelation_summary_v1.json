@@ -1,0 +1,97 @@
+{
+  "contract": "REAL_SECTOR_NEUTRAL_DECORRELATION_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37633454009,
+  "artifact_id": 11486439222,
+  "artifact_digest": "sha256:1c5e5f8042a44df406adc62e8bfe727a7eb2fbedd0bb3bcd27a85c513abed54a",
+  "coverage": {
+    "factor_count": 13,
+    "price_panel_rows": 5988,
+    "price_rows_with_sector": 5988,
+    "financial_panel_rows": 5087,
+    "financial_rows_with_sector": 5087
+  },
+  "method": {
+    "within_sector_transform": "PERCENTILE_RANK_MINUS_0_5",
+    "minimum_sector_size": 5,
+    "redundancy_method": "MEAN_WITHIN_DATE_SPEARMAN",
+    "redundancy_absolute_threshold": 0.70
+  },
+  "key_h252_comparison": {
+    "gross_profitability": {
+      "raw_mean_ic": -0.058844301832964234,
+      "sector_neutral_mean_ic": 0.01962202777111051,
+      "raw_icir": -0.39994467994582245,
+      "sector_neutral_icir": 0.14324683515422706
+    },
+    "operating_profitability": {
+      "raw_mean_ic": -0.10803521071389978,
+      "sector_neutral_mean_ic": -0.06616027872470752,
+      "raw_icir": -0.7699111470788854,
+      "sector_neutral_icir": -0.5403744257512393
+    },
+    "roa": {
+      "raw_mean_ic": -0.14576451561091316,
+      "sector_neutral_mean_ic": -0.11794697095987063,
+      "raw_icir": -0.9999041449149648,
+      "sector_neutral_icir": -0.7472665739355199
+    },
+    "operating_margin_acceleration": {
+      "raw_mean_ic": 0.04016990904049122,
+      "sector_neutral_mean_ic": 0.05502716210652569,
+      "raw_icir": 0.28337353873621157,
+      "sector_neutral_icir": 0.41554410686546855
+    },
+    "asset_growth": {
+      "raw_mean_ic": 0.0992125181087075,
+      "sector_neutral_mean_ic": 0.08757221481517455,
+      "raw_icir": 0.6585834750418734,
+      "sector_neutral_icir": 0.5776743089074221
+    },
+    "HIGH_52W_PROXIMITY": {
+      "raw_mean_ic": 0.19832931078094915,
+      "sector_neutral_mean_ic": 0.16138666996359755,
+      "raw_icir": 1.3749007601691434,
+      "sector_neutral_icir": 1.243761822070011
+    },
+    "LOW_VOL_63D": {
+      "raw_mean_ic": 0.18263985581336306,
+      "sector_neutral_mean_ic": 0.16866008848518504,
+      "raw_icir": 1.2775630339275872,
+      "sector_neutral_icir": 1.3429277168335183
+    }
+  },
+  "redundancy_candidates_at_abs_rho_0_70": 0,
+  "largest_pairwise_mean_spearman": [
+    {
+      "left": "gross_margin_acceleration",
+      "right": "operating_margin_acceleration",
+      "mean_spearman": 0.6690944349686084
+    },
+    {
+      "left": "gross_margin",
+      "right": "operating_margin",
+      "mean_spearman": 0.6618281321380642
+    },
+    {
+      "left": "operating_profitability",
+      "right": "roa",
+      "mean_spearman": 0.6338303031946513
+    },
+    {
+      "left": "MOM_12_1",
+      "right": "MOM_6_1",
+      "mean_spearman": 0.6316991912193076
+    }
+  ],
+  "interpretation": {
+    "gross_profitability_negative_raw_ic_explained_by_sector_mix": true,
+    "operating_profitability_negative_raw_ic_partially_explained_by_sector_mix": true,
+    "roa_negative_raw_ic_fully_explained_by_sector_mix": false,
+    "price_factor_52w_high_remains_strong_after_sector_neutralization": true,
+    "low_vol_remains_strong_after_sector_neutralization": true
+  },
+  "production_ready": false,
+  "factor_deletion_authorized": false,
+  "weight_change_authorized": false
+}
