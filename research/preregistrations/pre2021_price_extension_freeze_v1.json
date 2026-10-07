@@ -1,0 +1,74 @@
+{
+  "preregistration_id": "PRE2021_PRICE_EXTENSION_FREEZE_V1",
+  "registered_before_results": true,
+  "authority": "FROZEN_RESEARCH_PRICE_EVIDENCE",
+  "parent_issue": 104,
+  "target_signal_month_start": "2020-09",
+  "target_signal_month_end": "2021-07",
+  "fetch_start": "2018-01-01",
+  "fetch_end_exclusive": "2022-09-01",
+  "membership_source": "IMPLEMENTATION_42A_FAIL_CLOSED_EVENT_CHAIN",
+  "runtime": {
+    "python": "3.11",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4",
+    "yfinance": "0.2.66"
+  },
+  "ticker_policy": {
+    "direct_historical_symbol_first": true,
+    "official_lineage_source": {
+      "repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+      "commit": "883e680a2564e38f4c08a21bc88aa95b8f164036",
+      "path": "data/backtest_sources/bist_ticker_code_changes_2021-08_2026-08.csv",
+      "official_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+    },
+    "allowed_aliases": [
+      "DGKLB->DGNMO",
+      "ITTFH->LRSHO",
+      "IPEKE->TRENJ",
+      "KERVT->BESLR",
+      "KOZAA->TRMET",
+      "KOZAL->TRALT"
+    ],
+    "disallowed_auto_alias_examples": [
+      "GUSGR->TURSG",
+      "ADANA->OYAKC",
+      "ANACM->SISE",
+      "SODA->SISE",
+      "TRKCM->SISE"
+    ],
+    "no_guessing": true,
+    "no_forward_fill": true,
+    "no_date_shift": true
+  },
+  "deterministic_output": {
+    "gzip_mtime_zero": true,
+    "sort_keys": [
+      "ticker",
+      "trade_date"
+    ],
+    "columns": [
+      "ticker",
+      "source_ticker",
+      "price_resolution",
+      "alias_effective_date",
+      "trade_date",
+      "open",
+      "high",
+      "low",
+      "close",
+      "adj_close",
+      "volume",
+      "currency"
+    ]
+  },
+  "acceptance": {
+    "target_months": 11,
+    "exact_members_per_month": 100,
+    "minimum_five_factor_h252_cells_per_target_month": 20,
+    "performance_metrics_forbidden": true,
+    "factor_ic_forbidden": true,
+    "model_fit_forbidden": true
+  },
+  "production_ready": false
+}
