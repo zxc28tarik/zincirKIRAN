@@ -1,0 +1,19 @@
+name: Prospective Shadow Protocol
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  prospective-shadow-protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependency
+        run: python -m pip install "pytest==8.3.5"
+      - name: Validate prospective shadow protocol
+        run: PYTHONPATH=src pytest -q tests/test_prospective_shadow_protocol.py
