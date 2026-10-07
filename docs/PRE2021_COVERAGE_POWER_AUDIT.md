@@ -115,3 +115,27 @@ The audit therefore now:
 This amendment changes no factor, score, target, threshold, or performance
 result. It is solely a data-authority/sanity correction made before any H252
 alpha rerun.
+
+
+## Protocol amendment A2 — evaluable-fold gate
+
+A second sanity check identified another distinction in the existing
+Implementation 35 protocol: a calendar validation block is not automatically an
+evaluated fold.
+
+For H252, each validation block must still contain at least
+`MIN_TEST_MONTHS = 3` monthly cross-sections with at least 20 valid
+factor/target rows. A second calendar block can therefore exist while the
+published H252 result still contains only one evaluated fold.
+
+42B now reproduces that gate without calculating IC:
+
+- the current-period evaluable dates are derived from the frozen exact 5-of-5
+  common panel;
+- a month is evaluable only when `TARGET_252` is present for at least 20 rows;
+- a fold counts only with at least three such test months;
+- the pre-2021 extension uses the analogous five-factor-score + H252-endpoint
+  availability gate.
+
+This amendment uses no factor returns, IC values, portfolio results, or model
+performance. It corrects fold-count semantics only.
