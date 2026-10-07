@@ -1,0 +1,99 @@
+{
+  "contract": "REAL_SHADOW_READINESS_INVENTORY_SUMMARY_V1",
+  "workflow_run_id": 37692674697,
+  "artifact_id": 11513244383,
+  "artifact_digest": "sha256:b79661d620da9823d652b0e078fb65caa012cc429164ec61cdbae1c9d34a42b3",
+  "authority": "EVIDENCE_INVENTORY_ONLY",
+  "status_by_dimension": {
+    "UNIVERSE_HISTORY": "VERIFIED_READY",
+    "HISTORICAL_PRICES": "RESEARCH_ONLY",
+    "VOLUME_LIQUIDITY": "RESEARCH_ONLY",
+    "FINANCIAL_PIT_AUTHORITY": "BLOCKED",
+    "PUBLICATION_REVISION_AUTHORITY": "BLOCKED",
+    "CORPORATE_ACTION_AUTHORITY": "BLOCKED",
+    "RESEARCH_REPLAY_INTEGRITY": "VERIFIED_READY",
+    "LIVE_SHADOW_REPLAY_INTEGRITY": "MISSING",
+    "COST_MODEL_AUTHORITY": "BLOCKED",
+    "CAPACITY_EVIDENCE": "RESEARCH_ONLY",
+    "SELF_FINANCING_NAV_DRAWDOWN": "MISSING",
+    "PROSPECTIVE_SHADOW_PROTOCOL": "MISSING",
+    "PROSPECTIVE_SHADOW_RUNS": "MISSING",
+    "REALIZED_SHADOW_LABELS": "MISSING",
+    "PRODUCTION_THRESHOLDS_PREREGISTERED": "MISSING"
+  },
+  "production_blockers": [
+    "CORPORATE_ACTION_AUTHORITY",
+    "COST_MODEL_AUTHORITY",
+    "FINANCIAL_PIT_AUTHORITY",
+    "LIVE_SHADOW_REPLAY_INTEGRITY",
+    "PRODUCTION_THRESHOLDS_PREREGISTERED",
+    "PROSPECTIVE_SHADOW_PROTOCOL",
+    "PROSPECTIVE_SHADOW_RUNS",
+    "PUBLICATION_REVISION_AUTHORITY",
+    "REALIZED_SHADOW_LABELS",
+    "SELF_FINANCING_NAV_DRAWDOWN"
+  ],
+  "decision": {
+    "shadow_preparation": "PROTOCOL_DESIGN_READY",
+    "shadow_execution": "BLOCKED",
+    "historical_shadow_backfill": "FORBIDDEN",
+    "production_eligibility": "BLOCKED",
+    "automatic_deployment": false,
+    "production_threshold_selection": "FORBIDDEN_IN_THIS_IMPLEMENTATION",
+    "next_required_work": [
+      "PREREGISTER_PROSPECTIVE_SHADOW_PROTOCOL",
+      "LOCK_LIVE_POINT_IN_TIME_DATA_SNAPSHOT_PATH",
+      "DO_NOT_BACKFILL_SHADOW_HISTORY"
+    ]
+  },
+  "key_research_state": {
+    "extended_h252_folds": 2,
+    "extended_h252_portfolio_folds": 2,
+    "financial_version_enumeration_complete": false,
+    "corporate_action_dividend_catalog_complete": false,
+    "minimum_observed_selected_adv_coverage": 1
+  },
+  "source_receipts": {
+    "financial_version": {
+      "path": "research/evidence_runs/financial_version_authority_v1.json",
+      "sha256": "92db72a5d2babc58095b1a0fb4bd941136d1ec826b66bec00c54246ec8bc42d6"
+    },
+    "corporate_actions": {
+      "path": "research/evidence_runs/corporate_action_event_bootstrap_v1.json",
+      "sha256": "ee986d4f15c4f96b9f58615a9e7bf2308598b5a9cbd050fb4d46c51c424b2f1f"
+    },
+    "historical_market": {
+      "path": "research/evidence_runs/historical_market_bootstrap_v1.json",
+      "sha256": "60b95613a788fa018d6aaa2190ed76d50095783d1e6e555ed065a82020e729c3"
+    },
+    "membership_backcast": {
+      "path": "research/evidence_runs/bist100_membership_backcast_2019_2021_summary_v1.json",
+      "sha256": "2f65768da151fc9e970fa1753c950eabbd135c36b5c00bb90dfd84a54b0ca2a1"
+    },
+    "price_freeze": {
+      "path": "research/evidence_runs/pre2021_price_extension_freeze_summary_v1.json",
+      "sha256": "5cf96e03d3aad772c30ddf2a8de023ecf52192916f8422bf3b24fc9dd2065630"
+    },
+    "walk_forward": {
+      "path": "research/evidence_runs/real_walk_forward_factor_stability_summary_v1.json",
+      "sha256": "e6678bb84d9cd20d5d3e2b4cd2c603b5a49bac7408bc8b93682bd1f08408ef6f"
+    },
+    "h252_tournament": {
+      "path": "research/evidence_runs/extended_h252_tournament_summary_v1.json",
+      "sha256": "b55686baf5f5754d245a55b0e863c3d7fffdae60903cb9e3a46ef11cd4e3383c"
+    },
+    "h252_portfolio": {
+      "path": "research/evidence_runs/extended_h252_portfolio_realism_summary_v1.json",
+      "sha256": "b481b2e293ffb1e5942a82511123cab3dc3305ed5b3d983cf9967d98d360ef88"
+    },
+    "cost_sensitivity": {
+      "path": "research/evidence_runs/long_only_cost_sensitivity_summary_v1.json",
+      "sha256": "25c205cda3a43b0740fa98b9668429189b675f2dd1e3af277404664c3dc0f9ab"
+    },
+    "capacity": {
+      "path": "research/evidence_runs/historical_liquidity_capacity_summary_v1.json",
+      "sha256": "5c16cbeec3f255884d08f64dde1d5aa6784f072d5dbe5e942abdd172a76a6b2d"
+    }
+  },
+  "production_ready": false
+}
