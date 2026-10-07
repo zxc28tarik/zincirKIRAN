@@ -1,0 +1,77 @@
+{
+  "contract": "ACCOUNTING_REGIME_SUBPERIOD_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37635206970,
+  "artifact_id": 11489440732,
+  "artifact_digest": "sha256:d928945654262d96990c289ba40fa9524e77899c185135ba067983f98c6de6f5",
+  "tms29_observation_level_flag_available": false,
+  "regime_classification": "CALENDAR_PROXY_ONLY",
+  "primary_breakpoint": "2024-04-01",
+  "primary_results_sector_neutral": {
+    "roa": {
+      "H60": {"pre": -0.058587, "post": 0.017052, "delta": 0.075638},
+      "H120": {"pre": -0.097900, "post": 0.042421, "delta": 0.140321},
+      "H252": {"pre": -0.182599, "post": 0.019977, "delta": 0.202576}
+    },
+    "operating_profitability": {
+      "H60": {"pre": -0.030036, "post": -0.002825, "delta": 0.027211},
+      "H120": {"pre": -0.057314, "post": 0.015973, "delta": 0.073286},
+      "H252": {"pre": -0.112257, "post": 0.032179, "delta": 0.144435}
+    },
+    "gross_profitability": {
+      "H60": {"pre": 0.036352, "post": -0.029138, "delta": -0.065489},
+      "H120": {"pre": 0.053599, "post": -0.009888, "delta": -0.063486},
+      "H252": {"pre": 0.052408, "post": -0.050322, "delta": -0.102730}
+    },
+    "operating_margin": {
+      "H60": {"pre": -0.051760, "post": 0.017683, "delta": 0.069442},
+      "H120": {"pre": -0.080242, "post": 0.034371, "delta": 0.114613},
+      "H252": {"pre": -0.152699, "post": 0.036063, "delta": 0.188762}
+    },
+    "gross_margin": {
+      "H60": {"pre": -0.020041, "post": 0.004266, "delta": 0.024308},
+      "H120": {"pre": -0.020928, "post": 0.005858, "delta": 0.026786},
+      "H252": {"pre": -0.059849, "post": -0.043915, "delta": 0.015933}
+    },
+    "operating_margin_acceleration": {
+      "H60": {"pre": 0.010294, "post": 0.064260, "delta": 0.053966},
+      "H120": {"pre": 0.022023, "post": 0.087358, "delta": 0.065336},
+      "H252": {"pre": 0.030802, "post": 0.106708, "delta": 0.075906}
+    },
+    "gross_margin_acceleration": {
+      "H60": {"pre": 0.032373, "post": 0.043999, "delta": 0.011626},
+      "H120": {"pre": 0.032500, "post": 0.073556, "delta": 0.041056},
+      "H252": {"pre": 0.008329, "post": 0.041016, "delta": 0.032687}
+    },
+    "asset_growth": {
+      "H60": {"pre": -0.020342, "post": 0.017077, "delta": 0.037419},
+      "H120": {"pre": -0.006891, "post": 0.014396, "delta": 0.021287},
+      "H252": {"pre": 0.118972, "post": 0.020587, "delta": -0.098385}
+    }
+  },
+  "annual_h252_sector_neutral": {
+    "roa": {
+      "2022": -0.115999,
+      "2023": -0.176700,
+      "2024": -0.110332,
+      "2025": 0.121222
+    },
+    "operating_profitability": {
+      "2022": -0.177188,
+      "2023": -0.016213,
+      "2024": -0.009939,
+      "2025": 0.068899
+    }
+  },
+  "interpretation": {
+    "roa_negative_signal_is_post_2023_only": false,
+    "operating_profitability_negative_signal_is_post_2023_only": false,
+    "roa_improves_after_transition_proxy": true,
+    "operating_profitability_improves_after_transition_proxy": true,
+    "gross_profitability_deteriorates_after_transition_proxy": true,
+    "margin_acceleration_strengthens_after_transition_proxy": true,
+    "tms29_causal_attribution_allowed": false
+  },
+  "production_ready": false,
+  "weight_change_authorized": false
+}
