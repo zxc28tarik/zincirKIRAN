@@ -22,6 +22,7 @@ if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
 import reconstruct_bist100_membership_backcast as backcast  # noqa: E402
+import run_first_equal_weight_multifactor_challenger as ew  # noqa: E402
 import run_real_financial_factor_lab as fin  # noqa: E402
 import run_real_sector_neutral_decorrelation as sn  # noqa: E402
 import run_real_walk_forward_factor_stability as wf  # noqa: E402
@@ -332,29 +333,55 @@ def sector_neutralize_availability(
     return out
 
 
-def expected_blocks(
+def expected_evaluable_blocks(
     signal_dates: list[pd.Timestamp],
+    evaluable_dates: set[pd.Timestamp],
     calendar: pd.DataFrame,
-) -> list[dict[str, object]]:
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
     ordered = sorted(pd.Timestamp(x) for x in signal_dates)
     maturity = wf.maturity_map(ordered, calendar, 252)
-    blocks = wf.validation_blocks(ordered, maturity)
-    rows: list[dict[str, object]] = []
-    for idx, block in enumerate(blocks, start=1):
-        rows.append(
-            {
-                "fold_index": idx,
-                "validation_start": min(block).date().isoformat(),
-                "validation_end": max(block).date().isoformat(),
-                "validation_signal_months": len(block),
-                "validation_last_label_maturity": (
-                    None
-                    if maturity.get(max(block)) is None
-                    else maturity[max(block)].date().isoformat()
-                ),
-            }
-        )
-    return rows
+    calendar_blocks = wf.validation_blocks(ordered, maturity)
+
+    raw_rows: list[dict[str, object]] = []
+    evaluated_rows: list[dict[str, object]] = []
+    for idx, block in enumerate(calendar_blocks, start=1):
+        test_start = min(block)
+        test_end = max(block)
+        train_dates = [
+            signal
+            for signal in ordered
+            if signal < test_start
+            and maturity.get(signal) is not None
+            and maturity[signal] < test_start
+        ]
+        valid_test_dates = [
+            signal for signal in block if pd.Timestamp(signal) in evaluable_dates
+        ]
+        row = {
+            "fold_index": idx,
+            "validation_start": test_start.date().isoformat(),
+            "validation_end": test_end.date().isoformat(),
+            "calendar_signal_months": len(block),
+            "evaluable_signal_months": len(valid_test_dates),
+            "evaluable_signal_dates": [
+                day.date().isoformat() for day in valid_test_dates
+            ],
+            "train_signal_months": len(train_dates),
+            "validation_last_label_maturity": (
+                None
+                if maturity.get(test_end) is None
+                else maturity[test_end].date().isoformat()
+            ),
+        }
+        raw_rows.append(row)
+        if len(train_dates) < wf.MIN_INITIAL_TRAIN_MONTHS:
+            continue
+        if len(valid_test_dates) < wf.MIN_TEST_MONTHS:
+            continue
+        if maturity.get(test_end) is None:
+            continue
+        evaluated_rows.append(row)
+    return raw_rows, evaluated_rows
 
 
 def main() -> int:
@@ -488,15 +515,52 @@ def main() -> int:
     if len(original_dates) != 60:
         raise RuntimeError(f"expected 60 original signal dates, found {len(original_dates)}")
 
-    current_blocks = expected_blocks(original_dates, frozen_index_calendar)
-    if len(current_blocks) != 1:
+    frozen_common_panel, _ = ew.build_common_panel()
+    frozen_common_panel["signal_date"] = pd.to_datetime(
+        frozen_common_panel["signal_date"]
+    ).dt.normalize()
+    original_signal_dates = sorted(
+        pd.Timestamp(x)
+        for x in frozen_common_panel["signal_date"].dropna().unique()
+    )
+    if original_signal_dates != original_dates:
         raise RuntimeError(
-            "frozen-calendar H252 sanity mismatch: "
-            f"expected 1 existing fold from Implementation 35, found {len(current_blocks)}"
+            "frozen common-panel signal dates do not match pinned 60-month anchor"
         )
 
-    extended_dates = sorted(set(original_dates) | set(eligible_pre_dates))
-    extended_blocks = expected_blocks(extended_dates, index_calendar)
+    original_evaluable_dates = {
+        pd.Timestamp(signal)
+        for signal, group in frozen_common_panel.groupby("signal_date")
+        if int(group["TARGET_252"].notna().sum()) >= MIN_ROWS
+    }
+    current_calendar_blocks, current_blocks = expected_evaluable_blocks(
+        original_dates,
+        original_evaluable_dates,
+        frozen_index_calendar,
+    )
+    if len(current_blocks) != 1:
+        raise RuntimeError(
+            "frozen common-panel H252 sanity mismatch: "
+            f"expected 1 existing evaluable fold from Implementation 35, found {len(current_blocks)}"
+        )
+
+    eligible_pre_score_dates = {
+        pd.Timestamp(row["signal_date"])
+        for row in monthly
+        if int(row["five_factor_score_eligible"]) >= MIN_ROWS
+    }
+    pre_evaluable_dates = {
+        pd.Timestamp(row["signal_date"])
+        for row in monthly
+        if bool(row["h252_test_month_eligible"])
+    }
+    extended_dates = sorted(set(original_dates) | eligible_pre_score_dates)
+    extended_evaluable_dates = original_evaluable_dates | pre_evaluable_dates
+    extended_calendar_blocks, extended_blocks = expected_evaluable_blocks(
+        extended_dates,
+        extended_evaluable_dates,
+        index_calendar,
+    )
 
     lineage_candidates: dict[str, object] = {}
     for old, meta in KNOWN_LINEAGE_CANDIDATES.items():
@@ -608,13 +672,19 @@ def main() -> int:
             "hybrid_rule": "LIVE_ONLY_BEFORE_FROZEN_MIN_DATE_THEN_FROZEN",
         },
         "h252_power": {
-            "sanity_rule": "CURRENT_FROZEN_PROTOCOL_MUST_REPRODUCE_IMPLEMENTATION35_ONE_H252_FOLD",
+            "sanity_rule": "CURRENT_FROZEN_COMMON_PANEL_MUST_REPRODUCE_IMPLEMENTATION35_ONE_EVALUABLE_H252_FOLD",
             "sanity_pass": len(current_blocks) == 1,
+            "minimum_evaluable_months_per_fold": wf.MIN_TEST_MONTHS,
+            "minimum_rows_per_evaluable_month": MIN_ROWS,
             "current_original_signal_dates": len(original_dates),
-            "current_expected_blocks": current_blocks,
+            "current_h252_evaluable_signal_dates": len(original_evaluable_dates),
+            "current_calendar_blocks": current_calendar_blocks,
+            "current_evaluable_blocks": current_blocks,
             "current_expected_fold_count": len(current_blocks),
             "extended_signal_dates": len(extended_dates),
-            "extended_expected_blocks": extended_blocks,
+            "extended_h252_evaluable_signal_dates": len(extended_evaluable_dates),
+            "extended_calendar_blocks": extended_calendar_blocks,
+            "extended_evaluable_blocks": extended_blocks,
             "extended_expected_fold_count": len(extended_blocks),
             "additional_expected_folds": len(extended_blocks) - len(current_blocks),
         },
