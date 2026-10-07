@@ -1,0 +1,41 @@
+{
+  "preregistration_id": "REAL_SHADOW_READINESS_INVENTORY_V1",
+  "registered_before_results": true,
+  "authority": "EVIDENCE_INVENTORY_ONLY",
+  "classifications": [
+    "VERIFIED_READY",
+    "RESEARCH_ONLY",
+    "MISSING",
+    "BLOCKED"
+  ],
+  "exact_production_threshold_selection_allowed": false,
+  "historical_shadow_backfill_allowed": false,
+  "automatic_promotion_allowed": false,
+  "production_eligibility_allowed": false,
+  "allowed_decision": "PROTOCOL_DESIGN_ONLY_OR_BLOCKED",
+  "required_dimensions": [
+    "UNIVERSE_HISTORY",
+    "HISTORICAL_PRICES",
+    "VOLUME_LIQUIDITY",
+    "FINANCIAL_PIT_AUTHORITY",
+    "PUBLICATION_REVISION_AUTHORITY",
+    "CORPORATE_ACTION_AUTHORITY",
+    "RESEARCH_REPLAY_INTEGRITY",
+    "LIVE_SHADOW_REPLAY_INTEGRITY",
+    "COST_MODEL_AUTHORITY",
+    "CAPACITY_EVIDENCE",
+    "SELF_FINANCING_NAV_DRAWDOWN",
+    "PROSPECTIVE_SHADOW_PROTOCOL",
+    "PROSPECTIVE_SHADOW_RUNS",
+    "REALIZED_SHADOW_LABELS",
+    "PRODUCTION_THRESHOLDS_PREREGISTERED"
+  ],
+  "locked_known_blockers": [
+    "financial version enumeration incomplete",
+    "historical financial PIT authority false for experimental semantic corpus",
+    "transaction-cost values are sensitivity scenarios rather than observed execution costs",
+    "no prospective shadow runs or realized shadow labels exist",
+    "exact production thresholds intentionally unlocked by Research Constitution"
+  ],
+  "performance_recomputation_allowed": false
+}
