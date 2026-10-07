@@ -92,3 +92,26 @@ It reports:
 
 This determines whether further data acquisition is worth doing before any
 performance test is opened.
+
+
+## Protocol amendment A1 — frozen-calendar sanity
+
+The first coverage-only workflow revealed a protocol mismatch before any alpha
+performance was opened: applying a refreshed live Yahoo XU100 calendar to the
+existing 60-month period mechanically produced two H252 validation blocks,
+whereas Implementation 35 on the frozen research data produced one.
+
+That is not accepted as "new power." The existing-period baseline must remain
+on the same frozen XU100 calendar used by the validated research stack.
+
+The audit therefore now:
+
+1. uses the frozen M3 XU100 calendar for the existing research period;
+2. uses live Yahoo XU100 dates only before the frozen calendar begins;
+3. splices the two calendars at the frozen minimum date;
+4. fails closed unless the current 60-month baseline reproduces exactly **one**
+   H252 fold.
+
+This amendment changes no factor, score, target, threshold, or performance
+result. It is solely a data-authority/sanity correction made before any H252
+alpha rerun.
