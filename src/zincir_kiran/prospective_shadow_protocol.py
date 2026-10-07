@@ -11,7 +11,7 @@ import json
 from dataclasses import dataclass
 from datetime import datetime
 from enum import StrEnum
-from typing import Iterable
+from collections.abc import Iterable
 
 from .pit import require_aware_timestamp
 
