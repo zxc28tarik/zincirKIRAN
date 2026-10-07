@@ -1,0 +1,39 @@
+{
+  "preregistration_id": "REAL_FIXED_RIDGE_ML_5F_V1",
+  "registered_before_results": true,
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "model": "DETERMINISTIC_LINEAR_RIDGE",
+  "ridge_penalty": 1.0,
+  "hyperparameter_search": false,
+  "feature_interactions": false,
+  "features": [
+    "HIGH_52W_PROXIMITY",
+    "LOW_VOL_63D",
+    "MOM_6_1",
+    "operating_margin_acceleration",
+    "gross_margin_acceleration"
+  ],
+  "feature_representation": "SECTOR_NEUTRAL_PERCENTILE_CENTERED",
+  "sample_policy": "EXACT_COMMON_5_OF_5_ROWS",
+  "horizons": [20, 60, 120, 252],
+  "walk_forward_protocol": "IMPLEMENTATION_35_MATURED_LABEL_PURGE_AND_VALIDATION_EMBARGO",
+  "fit_rows": "POOLED_STOCK_MONTH_ROWS_FROM_MATURED_TRAIN_DATES_ONLY",
+  "standardization": "TRAIN_ROWS_ONLY_MEAN_AND_POPULATION_STD",
+  "target_winsorization": false,
+  "validation_information_allowed_in_fit": false,
+  "outcome_based_feature_removal": false,
+  "comparators": [
+    "HIGH_52W_PROXIMITY",
+    "EW5_COMPOSITE",
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F"
+  ],
+  "metrics": [
+    "MEAN_FOLD_SPEARMAN_IC",
+    "WORST_FOLD_IC",
+    "POSITIVE_FOLD_SHARE",
+    "MEAN_TOP_QUINTILE_FORWARD_EXCESS_PROXY",
+    "MEAN_Q5_MINUS_Q1"
+  ],
+  "automatic_promotion_allowed": false,
+  "production_ready": false
+}
