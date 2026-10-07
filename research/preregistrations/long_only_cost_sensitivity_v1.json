@@ -1,0 +1,45 @@
+{
+  "preregistration_id": "LONG_ONLY_COST_SENSITIVITY_V1",
+  "registered_before_results": true,
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "contenders": [
+    "HIGH_52W_PROXIMITY",
+    "EW5_COMPOSITE",
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F"
+  ],
+  "champion_reference": "HIGH_52W_PROXIMITY",
+  "factor_universe": [
+    "HIGH_52W_PROXIMITY",
+    "LOW_VOL_63D",
+    "MOM_6_1",
+    "operating_margin_acceleration",
+    "gross_margin_acceleration"
+  ],
+  "score_basis": "SECTOR_NEUTRAL_PERCENTILE_CENTERED",
+  "sample_policy": "EXACT_COMMON_5_OF_5_ROWS",
+  "horizons": [20, 60, 120, 252],
+  "walk_forward_protocol": "IMPLEMENTATION_35_MATURED_LABEL_PURGE_AND_VALIDATION_EMBARGO",
+  "dynamic_weight_rule": "w_i=max(train_mean_ic_i,0)/sum_j(max(train_mean_ic_j,0))",
+  "dynamic_weight_information": "PURGED_MATURED_TRAIN_DATES_ONLY",
+  "validation_information_allowed_in_dynamic_weights": false,
+  "selection_rule": "TOP_20_PERCENT_BY_SCORE",
+  "sizing_rule": "EQUAL_WEIGHT",
+  "rebalance_frequency": "EACH_AVAILABLE_MONTHLY_SIGNAL_DATE_WITHIN_VALIDATION_FOLD",
+  "fold_boundary_policy": "RESET_TO_CASH_AT_START_OF_EACH_VALIDATION_FOLD",
+  "turnover_definition": "SUM_ABS_NEW_WEIGHT_MINUS_OLD_WEIGHT",
+  "cost_scenarios_bps_per_unit_traded_notional": [10.0, 25.0, 50.0],
+  "cost_scenarios_are_observed_historical_costs": false,
+  "cost_adjustment_formula": "net_forward_excess_proxy=gross_forward_excess_proxy-(gross_turnover*cost_bps/10000)",
+  "minimum_cross_section_names": 20,
+  "missingness_policy": "NO_NEUTRAL_FILL",
+  "success_question": "Does a challenger preserve useful long-leg excess-return evidence after its realized rebalance turnover is charged under transparent cost-sensitivity scenarios?",
+  "automatic_promotion_allowed": false,
+  "production_ready": false,
+  "explicit_non_claims": [
+    "Not a self-financing overlapping-horizon NAV backtest",
+    "No historical bid-ask spread series is claimed",
+    "No historical slippage series is claimed",
+    "No historical market-impact series is claimed",
+    "No capacity threshold is selected in this implementation"
+  ]
+}
