@@ -1,0 +1,80 @@
+{
+  "contract": "NESTED_TRAIN_ONLY_EVIDENCE_WEIGHTED_COMPOSITE_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37643465787,
+  "artifact_id": 11494010777,
+  "artifact_digest": "sha256:0d8437ae28f62ace499ddb0f6ac4da247ce5f26ef960d7471fc7c86daaddf016",
+  "common_panel_rows": 4647,
+  "common_signal_dates": 60,
+  "weight_rule": "w_i=max(train_mean_ic_i,0)/sum(max(train_mean_ic,0))",
+  "validation_data_used_in_weights": false,
+  "results": {
+    "H20": {
+      "dynamic_mean_test_ic": 0.10724734061522319,
+      "ew5_mean_test_ic": 0.10846997312771244,
+      "high52_mean_test_ic": 0.08493290965936744,
+      "dynamic_minus_ew5": -0.0012226325124892472,
+      "dynamic_minus_high52": 0.02231443095585575,
+      "dynamic_beats_ew5_fold_share": 0.2857142857142857,
+      "dynamic_beats_high52_fold_share": 0.8571428571428571,
+      "dynamic_positive_fold_share": 0.8571428571428571,
+      "dynamic_worst_fold_ic": -0.01972764078027235,
+      "stability": "STRONG_STABILITY"
+    },
+    "H60": {
+      "dynamic_mean_test_ic": 0.12342067715718019,
+      "ew5_mean_test_ic": 0.12457868183896925,
+      "high52_mean_test_ic": 0.11356154792780304,
+      "dynamic_minus_ew5": -0.0011580046817890478,
+      "dynamic_minus_high52": 0.00985912922937716,
+      "dynamic_beats_ew5_fold_share": 0.5,
+      "dynamic_beats_high52_fold_share": 0.75,
+      "dynamic_positive_fold_share": 0.75,
+      "dynamic_worst_fold_ic": -0.005469930865013561,
+      "stability": "STRONG_STABILITY"
+    },
+    "H120": {
+      "dynamic_mean_test_ic": 0.22271416046454565,
+      "ew5_mean_test_ic": 0.20067761561076639,
+      "high52_mean_test_ic": 0.22257077934897618,
+      "dynamic_minus_ew5": 0.02203654485377929,
+      "dynamic_minus_high52": 0.00014338111556947789,
+      "dynamic_beats_ew5_fold_share": 1.0,
+      "dynamic_beats_high52_fold_share": 0.6666666666666666,
+      "dynamic_positive_fold_share": 1.0,
+      "dynamic_worst_fold_ic": 0.14387905142735255,
+      "stability": "STRONG_STABILITY"
+    },
+    "H252": {
+      "dynamic_mean_test_ic": 0.2232462895764987,
+      "ew5_mean_test_ic": 0.178283375709639,
+      "high52_mean_test_ic": 0.20482198725369197,
+      "dynamic_minus_ew5": 0.04496291386685969,
+      "dynamic_minus_high52": 0.01842430232280673,
+      "paired_folds": 1,
+      "stability": "INSUFFICIENT_FOLDS"
+    }
+  },
+  "weight_behavior": {
+    "H20_first_fold_high52_weight": 0.603977548270975,
+    "H20_last_fold_high52_weight": 0.3401082587359649,
+    "H20_last_fold_low_vol_weight": 0.2938422997879902,
+    "H20_last_fold_mom_6_1_weight": 0.15534562626121892,
+    "H20_last_fold_gross_margin_acceleration_weight": 0.11228399023624724,
+    "H20_last_fold_operating_margin_acceleration_weight": 0.09841982497857861,
+    "H120_last_fold_high52_weight": 0.37906719932685656,
+    "H120_last_fold_low_vol_weight": 0.2742192165712227,
+    "H120_last_fold_mom_6_1_weight": 0.20113880370774745,
+    "H120_last_fold_gross_margin_acceleration_weight": 0.07080309501517944,
+    "H120_last_fold_operating_margin_acceleration_weight": 0.07477168537899394
+  },
+  "decision": {
+    "dynamic_beats_ew5_materially_at_h120": true,
+    "dynamic_is_effectively_tied_with_ew5_at_h20_h60": true,
+    "dynamic_is_effectively_tied_with_high52_at_h120": true,
+    "replace_general_champion": false,
+    "retain_nested_dynamic_as_strong_challenger": true,
+    "automatic_promotion": false
+  },
+  "production_ready": false
+}
