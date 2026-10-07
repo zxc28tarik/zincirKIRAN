@@ -1,0 +1,67 @@
+{
+  "contract": "REAL_WALK_FORWARD_FACTOR_STABILITY_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37639466456,
+  "artifact_id": 11491124103,
+  "artifact_digest": "sha256:ea1234826ed7ec342f749f4a855ed12b1dd39c666b55fb1d01b5088d9f23657c",
+  "design": {
+    "chronological_only": true,
+    "random_split": false,
+    "expanding_train": true,
+    "test_block_months": 6,
+    "train_purge_rule": "TRAIN_LABEL_MATURITY_STRICTLY_BEFORE_VALIDATION_START",
+    "validation_embargo_rule": "NEXT_VALIDATION_START_STRICTLY_AFTER_PRIOR_VALIDATION_LAST_LABEL_MATURITY",
+    "minimum_folds_for_stability_classification": 2,
+    "primary_score": "SECTOR_NEUTRAL"
+  },
+  "sector_neutral_results": {
+    "HIGH_52W_PROXIMITY": {
+      "H20": {"folds": 7, "mean_test_ic": 0.068022, "worst_fold_ic": -0.007073, "positive_fold_share": 0.857143, "stability": "STRONG_STABILITY"},
+      "H60": {"folds": 4, "mean_test_ic": 0.105613, "worst_fold_ic": -0.017146, "positive_fold_share": 0.75, "stability": "STRONG_STABILITY"},
+      "H120": {"folds": 3, "mean_test_ic": 0.230413, "worst_fold_ic": 0.124716, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H252": {"folds": 1, "mean_test_ic": 0.198175, "stability": "INSUFFICIENT_FOLDS"}
+    },
+    "LOW_VOL_63D": {
+      "H20": {"folds": 7, "mean_test_ic": 0.080652, "worst_fold_ic": -0.073821, "positive_fold_share": 0.857143, "stability": "MODERATE_STABILITY"},
+      "H60": {"folds": 4, "mean_test_ic": 0.147349, "worst_fold_ic": 0.036425, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H120": {"folds": 3, "mean_test_ic": 0.171898, "worst_fold_ic": 0.047169, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H252": {"folds": 1, "mean_test_ic": 0.110438, "stability": "INSUFFICIENT_FOLDS"}
+    },
+    "MOM_6_1": {
+      "H20": {"folds": 7, "mean_test_ic": 0.046978, "worst_fold_ic": -0.017108, "positive_fold_share": 0.857143, "stability": "MODERATE_STABILITY"},
+      "H60": {"folds": 4, "mean_test_ic": 0.046956, "worst_fold_ic": 0.013230, "positive_fold_share": 1.0, "stability": "MODERATE_STABILITY"},
+      "H120": {"folds": 3, "mean_test_ic": 0.100371, "worst_fold_ic": 0.027556, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H252": {"folds": 1, "mean_test_ic": 0.148303, "stability": "INSUFFICIENT_FOLDS"}
+    },
+    "operating_margin_acceleration": {
+      "H20": {"folds": 7, "mean_test_ic": 0.059517, "worst_fold_ic": 0.041060, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H60": {"folds": 4, "mean_test_ic": 0.065901, "worst_fold_ic": 0.003760, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H120": {"folds": 3, "mean_test_ic": 0.090359, "worst_fold_ic": 0.006864, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H252": {"folds": 1, "mean_test_ic": 0.120117, "stability": "INSUFFICIENT_FOLDS"}
+    },
+    "gross_margin_acceleration": {
+      "H20": {"folds": 7, "mean_test_ic": 0.044375, "worst_fold_ic": 0.025519, "positive_fold_share": 1.0, "stability": "MODERATE_STABILITY"},
+      "H60": {"folds": 4, "mean_test_ic": 0.052109, "worst_fold_ic": -0.061307, "positive_fold_share": 0.75, "stability": "MODERATE_STABILITY"},
+      "H120": {"folds": 3, "mean_test_ic": 0.085452, "worst_fold_ic": 0.008928, "positive_fold_share": 1.0, "stability": "STRONG_STABILITY"},
+      "H252": {"folds": 1, "mean_test_ic": 0.026370, "stability": "INSUFFICIENT_FOLDS"}
+    },
+    "asset_growth": {
+      "H20": {"folds": 7, "mean_test_ic": 0.001401, "worst_fold_ic": -0.044406, "positive_fold_share": 0.285714, "stability": "FRAGILE_POSITIVE"},
+      "H60": {"folds": 4, "mean_test_ic": 0.042338, "worst_fold_ic": -0.060084, "positive_fold_share": 0.5, "stability": "FRAGILE_POSITIVE"},
+      "H120": {"folds": 3, "mean_test_ic": 0.094390, "worst_fold_ic": -0.056147, "positive_fold_share": 0.666667, "stability": "MODERATE_STABILITY"},
+      "H252": {"folds": 1, "mean_test_ic": -0.024570, "stability": "INSUFFICIENT_FOLDS"}
+    }
+  },
+  "interpretation": {
+    "strongest_cross_horizon_candidate": "HIGH_52W_PROXIMITY",
+    "most_consistent_financial_candidate": "operating_margin_acceleration",
+    "low_vol_strong_but_late_fold_degradation_visible": true,
+    "mom_6_1_survives_oos": true,
+    "gross_margin_acceleration_survives_oos": true,
+    "asset_growth_is_horizon_sensitive_and_fragile": true,
+    "h252_stability_claim_allowed": false
+  },
+  "production_ready": false,
+  "champion_promotion_authorized": false,
+  "weight_change_authorized": false
+}
