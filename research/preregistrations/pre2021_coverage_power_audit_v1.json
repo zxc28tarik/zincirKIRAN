@@ -1,0 +1,46 @@
+{
+  "preregistration_id": "PRE2021_COVERAGE_POWER_AUDIT_V1",
+  "registered_before_results": true,
+  "authority": "COVERAGE_AUDIT_ONLY",
+  "parent_issue": 104,
+  "membership_source": "IMPLEMENTATION_42A_EVENT_CHAIN",
+  "target_month_start": "2019-04",
+  "target_month_end": "2021-07",
+  "stock_price_discovery_start": "2018-01-01",
+  "stock_price_discovery_end_exclusive": "2022-09-01",
+  "benchmark_calendar_start": "2018-01-01",
+  "benchmark_calendar_end_exclusive": "2026-09-01",
+  "yahoo_symbol_rule": "<ticker>.IS",
+  "alias_policy": "DIRECT_HISTORICAL_TICKER_ONLY_FOR_ELIGIBILITY; LINEAGE_CANDIDATES_REPORTED_NOT_AUTO_USED",
+  "no_forward_fill": true,
+  "no_date_shift": true,
+  "price_requirements": [
+    "EXACT_SIGNAL_DATE",
+    "HIGH_52W_252_STOCK_OBSERVATIONS",
+    "MOM_6_1_LOOKBACK",
+    "LOW_VOL_63D_LOOKBACK",
+    "ADV63",
+    "EXACT_H252_FUTURE_BENCHMARK_DATE_STOCK_PRICE"
+  ],
+  "financial_sources": "EXISTING_FROZEN_EXPERIMENTAL_SEMANTIC_CORPUS",
+  "financial_requirements": [
+    "gross_margin_acceleration",
+    "operating_margin_acceleration"
+  ],
+  "sector_neutralization": {
+    "method": "WITHIN_DATE_SECTOR_PERCENTILE_RANK_MINUS_0_5",
+    "minimum_sector_size_per_factor": 5
+  },
+  "mechanical_test_month_minimum_common_rows": 20,
+  "walk_forward_protocol": {
+    "minimum_initial_train_months": 18,
+    "validation_block_months": 6,
+    "minimum_test_months": 3,
+    "train_label_maturity_strictly_before_validation": true,
+    "next_validation_after_prior_last_label_maturity": true
+  },
+  "performance_metrics_forbidden": true,
+  "model_fit_forbidden": true,
+  "factor_ic_forbidden": true,
+  "production_ready": false
+}
