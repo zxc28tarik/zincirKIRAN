@@ -1,0 +1,24 @@
+name: ML Portfolio Cost Capacity
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ml-portfolio-cost-capacity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install diagnostic dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3"
+      - name: Run ML portfolio cost + capacity tournament
+        run: python scripts/run_ml_portfolio_cost_capacity.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ml-portfolio-cost-capacity-v1
+          path: research/evidence_runs/ml_portfolio_cost_capacity_v1.json
+          if-no-files-found: error

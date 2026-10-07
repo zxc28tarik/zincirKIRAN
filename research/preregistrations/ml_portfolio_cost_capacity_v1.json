@@ -1,0 +1,26 @@
+{
+  "preregistration_id": "ML_PORTFOLIO_COST_CAPACITY_V1",
+  "registered_before_results": true,
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "contenders": [
+    "HIGH_52W_PROXIMITY",
+    "EW5_COMPOSITE",
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F",
+    "FIXED_RIDGE_5F"
+  ],
+  "ridge_penalty": 1.0,
+  "ridge_hyperparameter_search": false,
+  "sample_policy": "EXACT_COMMON_5_OF_5_ROWS",
+  "portfolio_rule": "TOP_20_PERCENT_EQUAL_WEIGHT",
+  "fold_boundary_policy": "RESET_TO_CASH",
+  "horizons": [20, 60, 120, 252],
+  "cost_scenarios_bps_per_unit_traded_notional": [10.0, 25.0, 50.0],
+  "adv_definition": "MEAN_63_TRADING_OBSERVATIONS_RAW_CLOSE_TIMES_VOLUME_ENDING_ON_SIGNAL_DATE",
+  "participation_rate_scenarios": [0.01, 0.05, 0.10],
+  "execution_day_scenarios": [1, 3],
+  "illustrative_portfolio_notional_try": [1000000, 5000000, 10000000, 25000000, 50000000],
+  "scenario_selection_allowed": false,
+  "portfolio_parameter_tuning_allowed": false,
+  "automatic_promotion_allowed": false,
+  "production_ready": false
+}

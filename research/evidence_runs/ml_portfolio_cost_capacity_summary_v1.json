@@ -1,0 +1,2038 @@
+{
+  "contract": "ML_PORTFOLIO_COST_CAPACITY_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37666165189,
+  "artifact_id": 11502159919,
+  "artifact_digest": "sha256:376340e541b3f9efd806e89f64074707b0d8a47b1cd4bde2e770d68a7ff8e87b",
+  "ridge_penalty": 1,
+  "common_panel_rows": 4647,
+  "common_signal_dates": 60,
+  "historical_adv_source": {
+    "source_commit": "883e680a2564e38f4c08a21bc88aa95b8f164036",
+    "path": "data/backtest_sources/yahoo_resolved/historical_member_prices_resolved_2020-07_2026-08.csv.gz",
+    "sha256": "b3413840f7516b2dd51611efa9139b28ddee1eb2d11d14dd418097138dd33141",
+    "daily_rows": 271267,
+    "adv63_rows": 258309,
+    "authority": "VALIDATED_DERIVED_MARKET_DATA"
+  },
+  "results": {
+    "H20": {
+      "evaluated_folds": 7,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.009329702771567378,
+          "worst_fold_gross_forward_excess_proxy": -0.007843493881969147,
+          "positive_gross_fold_share": 0.8571428571428571,
+          "mean_fold_gross_turnover": 0.863375350140056,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.008466327421427323,
+              "worst_fold_net_forward_excess_proxy": -0.008818493881969142,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.007171264396217237,
+              "worst_fold_net_forward_excess_proxy": -0.010280993881969147,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.005012826020867099,
+              "worst_fold_net_forward_excess_proxy": -0.012718493881969143,
+              "positive_fold_share": 0.5714285714285714
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 25892922.578191,
+              "worst_capacity_across_folds_try": 6460090.441177828,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9523809523809524,
+                "25000000": 0.519047619047619,
+                "50000000": 0.05238095238095238
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 77678767.73457299,
+              "worst_capacity_across_folds_try": 19380271.323533483,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.9523809523809524,
+                "50000000": 0.761904761904762
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 129464612.89095497,
+              "worst_capacity_across_folds_try": 32300452.205889143,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9523809523809524
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 388393838.672865,
+              "worst_capacity_across_folds_try": 96901356.61766744,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 258929225.78190994,
+              "worst_capacity_across_folds_try": 64600904.411778286,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 776787677.34573,
+              "worst_capacity_across_folds_try": 193802713.23533487,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.009067407861926039,
+          "worst_fold_gross_forward_excess_proxy": -0.01245534047321263,
+          "positive_gross_fold_share": 0.8571428571428571,
+          "mean_fold_gross_turnover": 0.6161064425770307,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.008451301419349007,
+              "worst_fold_net_forward_excess_proxy": -0.013030340473212632,
+              "positive_fold_share": 0.8571428571428571
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.007527141755483462,
+              "worst_fold_net_forward_excess_proxy": -0.01389284047321263,
+              "positive_fold_share": 0.8571428571428571
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0059868756490408835,
+              "worst_fold_net_forward_excess_proxy": -0.015330340473212628,
+              "positive_fold_share": 0.8571428571428571
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 25060247.11598429,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9523809523809524,
+                "25000000": 0.4761904761904762,
+                "50000000": 0.08095238095238096
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 75180741.34795287,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8095238095238095
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 125301235.57992147,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9523809523809524
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 375903706.73976433,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 250602471.15984294,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 751807413.4795287,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.002357133465012393,
+          "worst_fold_gross_forward_excess_proxy": -0.012425445620385505,
+          "positive_gross_fold_share": 0.7142857142857143,
+          "mean_fold_gross_turnover": 0.6891223155929038,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0016680111494194896,
+              "worst_fold_net_forward_excess_proxy": -0.013050445620385504,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0006343276760301336,
+              "worst_fold_net_forward_excess_proxy": -0.013987945620385505,
+              "positive_fold_share": 0.7142857142857143
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.001088478112952126,
+              "worst_fold_net_forward_excess_proxy": -0.015550445620385506,
+              "positive_fold_share": 0.5714285714285714
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 24975599.56287474,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9761904761904763,
+                "25000000": 0.39999999999999997,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 74926798.68862423,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.761904761904762
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 124877997.81437373,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9761904761904763
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 374633993.44312114,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 249755995.62874746,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 749267986.8862423,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 7,
+          "mean_fold_gross_forward_excess_proxy": 0.00273764514138237,
+          "worst_fold_gross_forward_excess_proxy": -0.008859580750659108,
+          "positive_gross_fold_share": 0.5714285714285714,
+          "mean_fold_gross_turnover": 0.7240546218487395,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0020135905195336297,
+              "worst_fold_net_forward_excess_proxy": -0.009534580750659109,
+              "positive_fold_share": 0.5714285714285714
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0009275085867605207,
+              "worst_fold_net_forward_excess_proxy": -0.010892484418982218,
+              "positive_fold_share": 0.5714285714285714
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.000882627967861328,
+              "worst_fold_net_forward_excess_proxy": -0.013426185399374376,
+              "positive_fold_share": 0.5714285714285714
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 23963480.859900754,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9761904761904763,
+                "25000000": 0.4476190476190475,
+                "50000000": 0.023809523809523808
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 71890442.57970227,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.761904761904762
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 119817404.2995038,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9761904761904763
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 359452212.8985114,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 239634808.5990076,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 718904425.7970228,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds": 7,
+        "mean_gross_forward_excess_difference": -0.006592057630185008,
+        "ridge_beats_other_gross_fold_share": 0.2857142857142857,
+        "mean_turnover_difference": -0.1393207282913165,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.006452736901893692,
+            "ridge_beats_other_fold_share": 0.2857142857142857
+          },
+          "25bps": {
+            "mean_net_difference": -0.006243755809456716,
+            "ridge_beats_other_fold_share": 0.2857142857142857
+          },
+          "50bps": {
+            "mean_net_difference": -0.005895453988728426,
+            "ridge_beats_other_fold_share": 0.42857142857142855
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -1929441.71829024
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -5788325.154870719
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -9647208.5914512
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -28941625.774353605
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -19294417.1829024
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -57883251.54870721
+          }
+        }
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds": 7,
+        "mean_gross_forward_excess_difference": -0.006329762720543667,
+        "ridge_beats_other_gross_fold_share": 0.2857142857142857,
+        "mean_turnover_difference": 0.1079481792717087,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.006437710899815377,
+            "ridge_beats_other_fold_share": 0.2857142857142857
+          },
+          "25bps": {
+            "mean_net_difference": -0.006599633168722942,
+            "ridge_beats_other_fold_share": 0.2857142857142857
+          },
+          "50bps": {
+            "mean_net_difference": -0.006869503616902211,
+            "ridge_beats_other_fold_share": 0.2857142857142857
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -1096766.2560835339
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -3290298.7682506004
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -5483831.280417672
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -16451493.841252986
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -10967662.560835345
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -32902987.682505973
+          }
+        }
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds": 7,
+        "mean_gross_forward_excess_difference": 0.00038051167636997694,
+        "ridge_beats_other_gross_fold_share": 0.8571428571428571,
+        "mean_turnover_difference": 0.03493230625583569,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.00034557937011413996,
+            "ridge_beats_other_fold_share": 0.8571428571428571
+          },
+          "25bps": {
+            "mean_net_difference": 0.00029318091073038687,
+            "ridge_beats_other_fold_share": 0.7142857142857143
+          },
+          "50bps": {
+            "mean_net_difference": 0.00020585014509079836,
+            "ridge_beats_other_fold_share": 0.7142857142857143
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -1012118.7029739842
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -3036356.1089219525
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -5060593.5148699265
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -15181780.544609768
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -10121187.029739853
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -30363561.089219537
+          }
+        }
+      }
+    },
+    "H60": {
+      "evaluated_folds": 4,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": 0.008688819829208211,
+          "worst_fold_gross_forward_excess_proxy": -0.03421182969598477,
+          "positive_gross_fold_share": 0.5,
+          "mean_fold_gross_turnover": 0.8331290849673202,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.007855690744240891,
+              "worst_fold_net_forward_excess_proxy": -0.03495627414042922,
+              "positive_fold_share": 0.5
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.006605997116789915,
+              "worst_fold_net_forward_excess_proxy": -0.03607294080709588,
+              "positive_fold_share": 0.5
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.004523174404371612,
+              "worst_fold_net_forward_excess_proxy": -0.03793405191820699,
+              "positive_fold_share": 0.5
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 27976246.331868727,
+              "worst_capacity_across_folds_try": 6460090.441177828,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9166666666666666,
+                "25000000": 0.6666666666666666,
+                "50000000": 0.041666666666666664
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 83928738.99560618,
+              "worst_capacity_across_folds_try": 19380271.323533483,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.9166666666666666,
+                "50000000": 0.7916666666666666
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 139881231.65934363,
+              "worst_capacity_across_folds_try": 32300452.205889143,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9166666666666666
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 419643694.9780309,
+              "worst_capacity_across_folds_try": 96901356.61766744,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 279762463.31868726,
+              "worst_capacity_across_folds_try": 64600904.411778286,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 839287389.9560618,
+              "worst_capacity_across_folds_try": 193802713.23533487,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": -0.0029348731913811156,
+          "worst_fold_gross_forward_excess_proxy": -0.015705314963065393,
+          "positive_gross_fold_share": 0.25,
+          "mean_fold_gross_turnover": 0.6473243464052287,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.0035821975377863463,
+              "worst_fold_net_forward_excess_proxy": -0.016317814963065398,
+              "positive_fold_share": 0.25
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.004553184057394187,
+              "worst_fold_net_forward_excess_proxy": -0.01723656496306539,
+              "positive_fold_share": 0.25
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.00617149492340726,
+              "worst_fold_net_forward_excess_proxy": -0.018767814963065396,
+              "positive_fold_share": 0.25
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 26526814.16080545,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5833333333333334,
+                "50000000": 0.08333333333333333
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 79580442.48241635,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9583333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 132634070.80402724,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 397902212.4120817,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 265268141.6080545,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 795804424.8241634,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": -0.007136262840243564,
+          "worst_fold_gross_forward_excess_proxy": -0.010558847337761917,
+          "positive_gross_fold_share": 0,
+          "mean_fold_gross_turnover": 0.767361111111111,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.007903623951354676,
+              "worst_fold_net_forward_excess_proxy": -0.011308847337761918,
+              "positive_fold_share": 0
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.009054665618021344,
+              "worst_fold_net_forward_excess_proxy": -0.012433847337761919,
+              "positive_fold_share": 0
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.010973068395799122,
+              "worst_fold_net_forward_excess_proxy": -0.014308847337761917,
+              "positive_fold_share": 0
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 27180126.3171809,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5833333333333334,
+                "50000000": 0.08333333333333333
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 81540378.9515427,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.75
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 135900631.58590454,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 407701894.75771356,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 271801263.1718091,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 815403789.5154271,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 4,
+          "mean_fold_gross_forward_excess_proxy": -0.013215547325056434,
+          "worst_fold_gross_forward_excess_proxy": -0.027993036579497397,
+          "positive_gross_fold_share": 0.25,
+          "mean_fold_gross_turnover": 0.8148897058823529,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.014030437030938791,
+              "worst_fold_net_forward_excess_proxy": -0.028649981023941843,
+              "positive_fold_share": 0.25
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.015252771589762317,
+              "worst_fold_net_forward_excess_proxy": -0.029635397690608505,
+              "positive_fold_share": 0.25
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.0172899958544682,
+              "worst_fold_net_forward_excess_proxy": -0.03127775880171962,
+              "positive_fold_share": 0.25
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 27801255.36760671,
+              "worst_capacity_across_folds_try": 9688100.354425617,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9583333333333334,
+                "25000000": 0.5833333333333333,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 83403766.10282013,
+              "worst_capacity_across_folds_try": 29064301.063276853,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 139006276.83803356,
+              "worst_capacity_across_folds_try": 48440501.77212808,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9583333333333334
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 417018830.5141007,
+              "worst_capacity_across_folds_try": 145321505.31638426,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 278012553.6760671,
+              "worst_capacity_across_folds_try": 96881003.54425617,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 834037661.0282013,
+              "worst_capacity_across_folds_try": 290643010.6327685,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds": 4,
+        "mean_gross_forward_excess_difference": -0.021904367154264644,
+        "ridge_beats_other_gross_fold_share": 0.25,
+        "mean_turnover_difference": -0.01823937908496731,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.021886127775179683,
+            "ridge_beats_other_fold_share": 0.25
+          },
+          "25bps": {
+            "mean_net_difference": -0.02185876870655223,
+            "ridge_beats_other_fold_share": 0.25
+          },
+          "50bps": {
+            "mean_net_difference": -0.02181317025883981,
+            "ridge_beats_other_fold_share": 0.25
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -174990.96426201425
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -524972.8927860409
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -874954.8213100731
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -2624864.4639302194
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -1749909.6426201463
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -5249728.927860439
+          }
+        }
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds": 4,
+        "mean_gross_forward_excess_difference": -0.010280674133675321,
+        "ridge_beats_other_gross_fold_share": 0.25,
+        "mean_turnover_difference": 0.16756535947712417,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.010448239493152444,
+            "ridge_beats_other_fold_share": 0.25
+          },
+          "25bps": {
+            "mean_net_difference": -0.010699587532368129,
+            "ridge_beats_other_fold_share": 0.25
+          },
+          "50bps": {
+            "mean_net_difference": -0.01111850093106094,
+            "ridge_beats_other_fold_share": 0.25
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": 1274441.2068012636
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": 3823323.620403791
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": 6372206.03400632
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": 19116618.102018967
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": 12744412.06801264
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": 38233236.204037935
+          }
+        }
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds": 4,
+        "mean_gross_forward_excess_difference": -0.00607928448481287,
+        "ridge_beats_other_gross_fold_share": 0.25,
+        "mean_turnover_difference": 0.0475285947712418,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.0061268130795841145,
+            "ridge_beats_other_fold_share": 0.25
+          },
+          "25bps": {
+            "mean_net_difference": -0.006198105971740973,
+            "ridge_beats_other_fold_share": 0.25
+          },
+          "50bps": {
+            "mean_net_difference": -0.006316927458669079,
+            "ridge_beats_other_fold_share": 0.25
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": 621129.0504258089
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": 1863387.1512774285
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": 3105645.2521290556
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": 9316935.756387137
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": 6211290.504258111
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": 18633871.512774274
+          }
+        }
+      }
+    },
+    "H120": {
+      "evaluated_folds": 3,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": 0.0318893983957717,
+          "worst_fold_gross_forward_excess_proxy": 0.011250351897304084,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.8388888888888889,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.031050509506882804,
+              "worst_fold_net_forward_excess_proxy": 0.01029618523063741,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.02979217617354947,
+              "worst_fold_net_forward_excess_proxy": 0.008864935230637415,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.027694953951327247,
+              "worst_fold_net_forward_excess_proxy": 0.006479518563970746,
+              "positive_fold_share": 1
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 26094333.62871105,
+              "worst_capacity_across_folds_try": 7321441.689482915,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9444444444444445,
+                "25000000": 0.5555555555555555,
+                "50000000": 0.05555555555555555
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 78283000.88613315,
+              "worst_capacity_across_folds_try": 21964325.068448745,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.9444444444444445,
+                "50000000": 0.7777777777777777
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 130471668.14355524,
+              "worst_capacity_across_folds_try": 36607208.44741458,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9444444444444445
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 391415004.4306658,
+              "worst_capacity_across_folds_try": 109821625.34224373,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 260943336.28711048,
+              "worst_capacity_across_folds_try": 73214416.89482915,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 782830008.8613316,
+              "worst_capacity_across_folds_try": 219643250.68448746,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": -0.00779863643029207,
+          "worst_fold_gross_forward_excess_proxy": -0.04221085386574116,
+          "positive_gross_fold_share": 0.3333333333333333,
+          "mean_fold_gross_turnover": 0.6305555555555555,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": -0.008429191985847621,
+              "worst_fold_net_forward_excess_proxy": -0.042919187199074484,
+              "positive_fold_share": 0.3333333333333333
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": -0.009375025319180958,
+              "worst_fold_net_forward_excess_proxy": -0.04398168719907449,
+              "positive_fold_share": 0.3333333333333333
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": -0.010951414208069846,
+              "worst_fold_net_forward_excess_proxy": -0.045752520532407824,
+              "positive_fold_share": 0.3333333333333333
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 24995094.346464697,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5555555555555555,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 74985283.0393941,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9444444444444445
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 124975471.73232348,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 374926415.19697046,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 249950943.46464697,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 749852830.3939409,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": 0.012523084699738096,
+          "worst_fold_gross_forward_excess_proxy": -0.013953890255955365,
+          "positive_gross_fold_share": 0.6666666666666666,
+          "mean_fold_gross_turnover": 0.6949074074074074,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.011828177292330688,
+              "worst_fold_net_forward_excess_proxy": -0.014662223589288698,
+              "positive_fold_share": 0.6666666666666666
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.010785816181219576,
+              "worst_fold_net_forward_excess_proxy": -0.015724723589288697,
+              "positive_fold_share": 0.6666666666666666
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.009048547662701054,
+              "worst_fold_net_forward_excess_proxy": -0.017495556922622033,
+              "positive_fold_share": 0.6666666666666666
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 22815476.03247873,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.3333333333333333,
+                "50000000": 0.05555555555555555
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 68446428.09743617,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.7777777777777777
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 114077380.16239363,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 342232140.4871809,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 228154760.32478726,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 684464280.9743618,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 3,
+          "mean_fold_gross_forward_excess_proxy": 0.004043689526748738,
+          "worst_fold_gross_forward_excess_proxy": -0.0065657295929212565,
+          "positive_gross_fold_share": 0.6666666666666666,
+          "mean_fold_gross_turnover": 0.7597222222222221,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.003283967304526515,
+              "worst_fold_net_forward_excess_proxy": -0.00732406292625459,
+              "positive_fold_share": 0.6666666666666666
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0021443839711931833,
+              "worst_fold_net_forward_excess_proxy": -0.008461562926254588,
+              "positive_fold_share": 0.6666666666666666
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.0002450784156376263,
+              "worst_fold_net_forward_excess_proxy": -0.010357396259587927,
+              "positive_fold_share": 0.6666666666666666
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 24604933.72839291,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 73814801.18517874,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.888888888888889
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 123024668.64196455,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 369074005.9258936,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 246049337.2839291,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 738148011.8517872,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds": 3,
+        "mean_gross_forward_excess_difference": -0.027845708869022958,
+        "ridge_beats_other_gross_fold_share": 0,
+        "mean_turnover_difference": -0.07916666666666672,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.027766542202356286,
+            "ridge_beats_other_fold_share": 0
+          },
+          "25bps": {
+            "mean_net_difference": -0.027647792202356285,
+            "ridge_beats_other_fold_share": 0
+          },
+          "50bps": {
+            "mean_net_difference": -0.02744987553568962,
+            "ridge_beats_other_fold_share": 0
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -1489399.9003181395
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -4468199.700954415
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -7446999.501590689
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -22340998.504772108
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -14893999.003181377
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -44681997.009544216
+          }
+        }
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds": 3,
+        "mean_gross_forward_excess_difference": 0.011842325957040808,
+        "ridge_beats_other_gross_fold_share": 0.3333333333333333,
+        "mean_turnover_difference": 0.12916666666666657,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.011713159290374135,
+            "ridge_beats_other_fold_share": 0.3333333333333333
+          },
+          "25bps": {
+            "mean_net_difference": 0.011519409290374141,
+            "ridge_beats_other_fold_share": 0.3333333333333333
+          },
+          "50bps": {
+            "mean_net_difference": 0.011196492623707472,
+            "ridge_beats_other_fold_share": 0.3333333333333333
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -390160.6180717883
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -1170481.8542153612
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -1950803.0903589278
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -5852409.271076818
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -3901606.1807178557
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -11704818.542153636
+          }
+        }
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds": 3,
+        "mean_gross_forward_excess_difference": -0.008479395172989358,
+        "ridge_beats_other_gross_fold_share": 0.3333333333333333,
+        "mean_turnover_difference": 0.06481481481481477,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": -0.00854420998780417,
+            "ridge_beats_other_fold_share": 0.3333333333333333
+          },
+          "25bps": {
+            "mean_net_difference": -0.008641432210026391,
+            "ridge_beats_other_fold_share": 0.3333333333333333
+          },
+          "50bps": {
+            "mean_net_difference": -0.008803469247063428,
+            "ridge_beats_other_fold_share": 0.3333333333333333
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": 1789457.6959141828
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": 5368373.087742555
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": 8947288.479570925
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": 26841865.438712757
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": 17894576.95914185
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": 53683730.877425514
+          }
+        }
+      }
+    },
+    "H252": {
+      "evaluated_folds": 1,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.05878220895721851,
+          "worst_fold_gross_forward_excess_proxy": 0.05878220895721851,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.7180555555555553,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.05806415340166297,
+              "worst_fold_net_forward_excess_proxy": 0.05806415340166297,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.05698707006832963,
+              "worst_fold_net_forward_excess_proxy": 0.05698707006832963,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.05519193117944075,
+              "worst_fold_net_forward_excess_proxy": 0.05519193117944075,
+              "positive_fold_share": 1
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 21785989.061944336,
+              "worst_capacity_across_folds_try": 10533256.067021046,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.3333333333333333,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 65357967.18583302,
+              "worst_capacity_across_folds_try": 31599768.201063138,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 108929945.30972168,
+              "worst_capacity_across_folds_try": 52666280.33510523,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 326789835.9291651,
+              "worst_capacity_across_folds_try": 157998841.0053157,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 217859890.61944336,
+              "worst_capacity_across_folds_try": 105332560.67021047,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 653579671.8583302,
+              "worst_capacity_across_folds_try": 315997682.0106314,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.06133867529540108,
+          "worst_fold_gross_forward_excess_proxy": 0.06133867529540108,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.6138888888888888,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.06072478640651221,
+              "worst_fold_net_forward_excess_proxy": 0.06072478640651221,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.059803953073178866,
+              "worst_fold_net_forward_excess_proxy": 0.059803953073178866,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.058269230850956644,
+              "worst_fold_net_forward_excess_proxy": 0.058269230850956644,
+              "positive_fold_share": 1
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 20397439.5384669,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.8333333333333334,
+                "25000000": 0.16666666666666666,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 61192318.6154007,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 101987197.69233452,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 305961593.07700354,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 203974395.38466904,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 611923186.1540071,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.02083726477848913,
+          "worst_fold_gross_forward_excess_proxy": 0.02083726477848913,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.6319444444444443,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.020205320334044683,
+              "worst_fold_net_forward_excess_proxy": 0.020205320334044683,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.019257403667378017,
+              "worst_fold_net_forward_excess_proxy": 0.019257403667378017,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.01767754255626691,
+              "worst_fold_net_forward_excess_proxy": 0.01767754255626691,
+              "positive_fold_share": 1
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 20580780.518259287,
+              "worst_capacity_across_folds_try": 11839918.868919482,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.16666666666666666,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 61742341.55477785,
+              "worst_capacity_across_folds_try": 35519756.606758446,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.6666666666666666
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 102903902.59129643,
+              "worst_capacity_across_folds_try": 59199594.344597414,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 308711707.7738893,
+              "worst_capacity_across_folds_try": 177598783.03379223,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 205807805.18259287,
+              "worst_capacity_across_folds_try": 118399188.68919483,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 617423415.5477786,
+              "worst_capacity_across_folds_try": 355197566.06758446,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 1,
+          "mean_fold_gross_forward_excess_proxy": 0.08184526256027495,
+          "worst_fold_gross_forward_excess_proxy": 0.08184526256027495,
+          "positive_gross_fold_share": 1,
+          "mean_fold_gross_turnover": 0.5499999999999998,
+          "total_missing_adv_dates": 0,
+          "mean_fold_selected_adv_coverage": 1,
+          "cost_scenarios": {
+            "10bps": {
+              "mean_fold_net_forward_excess_proxy": 0.08129526256027496,
+              "worst_fold_net_forward_excess_proxy": 0.08129526256027496,
+              "positive_fold_share": 1
+            },
+            "25bps": {
+              "mean_fold_net_forward_excess_proxy": 0.08047026256027495,
+              "worst_fold_net_forward_excess_proxy": 0.08047026256027495,
+              "positive_fold_share": 1
+            },
+            "50bps": {
+              "mean_fold_net_forward_excess_proxy": 0.07909526256027495,
+              "worst_fold_net_forward_excess_proxy": 0.07909526256027495,
+              "positive_fold_share": 1
+            }
+          },
+          "capacity_scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 14414090.14703806,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.6666666666666666,
+                "25000000": 0.3333333333333333,
+                "50000000": 0.16666666666666666
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 43242270.44111418,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.5
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 72070450.7351903,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.6666666666666666
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 216211352.20557088,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 144140901.4703806,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 432422704.41114175,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds": 1,
+        "mean_gross_forward_excess_difference": 0.023063053603056445,
+        "ridge_beats_other_gross_fold_share": 1,
+        "mean_turnover_difference": -0.1680555555555555,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.02323110915861199,
+            "ridge_beats_other_fold_share": 1
+          },
+          "25bps": {
+            "mean_net_difference": 0.023483192491945325,
+            "ridge_beats_other_fold_share": 1
+          },
+          "50bps": {
+            "mean_net_difference": 0.023903331380834204,
+            "ridge_beats_other_fold_share": 1
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -7371898.914906276
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -22115696.744718842
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -36859494.57453138
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -110578483.72359425
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -73718989.14906275
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -221156967.4471885
+          }
+        }
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds": 1,
+        "mean_gross_forward_excess_difference": 0.020506587264873873,
+        "ridge_beats_other_gross_fold_share": 1,
+        "mean_turnover_difference": -0.063888888888889,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.02057047615376275,
+            "ridge_beats_other_fold_share": 1
+          },
+          "25bps": {
+            "mean_net_difference": 0.020666309487096086,
+            "ridge_beats_other_fold_share": 1
+          },
+          "50bps": {
+            "mean_net_difference": 0.020826031709318307,
+            "ridge_beats_other_fold_share": 1
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -5983349.391428841
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -17950048.174286522
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -29916746.957144216
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -89750240.87143266
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -59833493.91428843
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -179500481.74286532
+          }
+        }
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds": 1,
+        "mean_gross_forward_excess_difference": 0.061007997781785825,
+        "ridge_beats_other_gross_fold_share": 1,
+        "mean_turnover_difference": -0.08194444444444449,
+        "cost_scenarios": {
+          "10bps": {
+            "mean_net_difference": 0.06108994222623028,
+            "ridge_beats_other_fold_share": 1
+          },
+          "25bps": {
+            "mean_net_difference": 0.06121285889289693,
+            "ridge_beats_other_fold_share": 1
+          },
+          "50bps": {
+            "mean_net_difference": 0.06141772000400804,
+            "ridge_beats_other_fold_share": 1
+          }
+        },
+        "capacity_scenarios": {
+          "p1_d1": {
+            "mean_median_capacity_difference_try": -6166690.371221228
+          },
+          "p1_d3": {
+            "mean_median_capacity_difference_try": -18500071.113663673
+          },
+          "p5_d1": {
+            "mean_median_capacity_difference_try": -30833451.856106132
+          },
+          "p5_d3": {
+            "mean_median_capacity_difference_try": -92500355.56831843
+          },
+          "p10_d1": {
+            "mean_median_capacity_difference_try": -61666903.712212265
+          },
+          "p10_d3": {
+            "mean_median_capacity_difference_try": -185000711.13663685
+          }
+        }
+      }
+    }
+  },
+  "decision": {
+    "promote_ridge": false,
+    "replace_general_champion": false,
+    "escalate_to_more_complex_ml_automatically": false,
+    "key_findings": [
+      "Ridge has complete historical ADV coverage and similar capacity to existing contenders, so weak H20-H120 portfolio evidence is not explained by missing liquidity.",
+      "At H20 ridge modestly beats the train-only dynamic composite after costs but remains far behind EW5 and 52W High.",
+      "At H60 ridge is the weakest long-only contender and remains materially negative after costs.",
+      "At H120 ridge improves on EW5 but remains well behind the train-only dynamic composite and 52W High after costs.",
+      "H252 ridge is strongest in the only available fold, but one independent fold is insufficient for any stability or promotion conclusion.",
+      "The first real ML challenger does not justify automatic escalation to more complex ML; any nonlinear challenger must be separately preregistered."
+    ]
+  },
+  "production_ready": false
+}
