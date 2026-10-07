@@ -1,0 +1,26 @@
+{
+  "preregistration_id": "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F_V1",
+  "registered_before_results": true,
+  "factor_universe": [
+    "HIGH_52W_PROXIMITY",
+    "LOW_VOL_63D",
+    "MOM_6_1",
+    "operating_margin_acceleration",
+    "gross_margin_acceleration"
+  ],
+  "score_basis": "SECTOR_NEUTRAL_PERCENTILE_CENTERED",
+  "weight_rule": "POSITIVE_PART_TRAIN_MEAN_MONTHLY_SPEARMAN_IC_NORMALIZED",
+  "formula": "w_i=max(train_mean_ic_i,0)/sum_j(max(train_mean_ic_j,0))",
+  "zero_denominator_policy": "NO_SIGNAL_FOLD",
+  "training_information": "PURGED_MATURED_TRAIN_DATES_ONLY",
+  "validation_information_allowed_in_weights": false,
+  "weight_caps": false,
+  "weight_floors": false,
+  "smoothing_constants": false,
+  "horizon_specific_manual_weights": false,
+  "missingness_policy": "REQUIRE_5_OF_5_NO_NEUTRAL_FILL",
+  "comparison_policy": "EVIDENCE_WEIGHTED_VS_EW5_VS_52W_ON_EXACT_COMMON_SAMPLE",
+  "horizons": [20, 60, 120, 252],
+  "minimum_folds_for_stability_classification": 2,
+  "automatic_promotion_allowed": false
+}
