@@ -1,0 +1,24 @@
+name: Long Only Cost Sensitivity
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  long-only-cost-sensitivity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install diagnostic dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3"
+      - name: Run long-only turnover / cost-sensitivity diagnostic
+        run: python scripts/run_long_only_cost_sensitivity.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: long-only-cost-sensitivity-v1
+          path: research/evidence_runs/long_only_cost_sensitivity_v1.json
+          if-no-files-found: error
