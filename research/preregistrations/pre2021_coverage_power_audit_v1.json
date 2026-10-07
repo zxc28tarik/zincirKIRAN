@@ -50,6 +50,13 @@
       "reason": "The first live-Yahoo calendar power calculation produced 2 current H252 folds, contradicting the already observed Implementation 35 frozen-data result of 1 fold. Existing-period power must be measured on the frozen research calendar, not a refreshed vendor calendar.",
       "rule": "Use frozen M3 XU100 index calendar for the existing 2021+ baseline; use live Yahoo XU100 dates only before the frozen calendar minimum; require current baseline fold count == 1 or fail closed.",
       "performance_information_used": false
+    },
+    {
+      "amendment_id": "A2_EVALUABLE_FOLD_SANITY",
+      "timing": "AFTER_COVERAGE_OUTPUT_BEFORE_ANY_ALPHA_PERFORMANCE_RERUN",
+      "reason": "Implementation 35 counts a validation fold only when at least MIN_TEST_MONTHS monthly cross-sections have >=20 valid factor/target rows. Counting calendar blocks alone overstated current H252 power.",
+      "rule": "Derive current evaluable H252 dates from the frozen exact 5-of-5 common panel using TARGET_252 non-null rows >=20; require at least 3 evaluable test months per fold. Apply the same availability-only gate to the pre-2021 extension.",
+      "performance_information_used": false
     }
   ],
   "benchmark_calendar_policy": {
