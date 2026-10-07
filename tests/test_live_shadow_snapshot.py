@@ -121,7 +121,7 @@ def test_missing_required_snapshot_is_factor_unavailable():
         snapshots=[snap("MARKET_PRICES"), snap("UNIVERSE")],
     )
     assert result.decision is ShadowTrackDecision.FACTOR_UNAVAILABLE
-    assert "MISSING_DOMAIN:CORPORATE_ACTIONS" in result.reasons
+    assert "UNAVAILABLE_DOMAIN:CORPORATE_ACTIONS:NO_LIVE_SNAPSHOT" in result.reasons
 
 
 def test_snapshot_after_shadow_as_of_is_blocked():
