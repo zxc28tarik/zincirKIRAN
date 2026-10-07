@@ -65,13 +65,40 @@ def maturity_map(
     return out
 
 
-def month_blocks(signal_dates: list[pd.Timestamp]) -> list[list[pd.Timestamp]]:
+def validation_blocks(
+    signal_dates: list[pd.Timestamp],
+    maturity: dict[pd.Timestamp, pd.Timestamp | None],
+) -> list[list[pd.Timestamp]]:
+    """Build non-overlapping validation blocks with label-maturity embargo.
+
+    After one validation block ends, the next block may begin only after the
+    final signal in the previous block has fully matured for the tested horizon.
+    """
     ordered = sorted(pd.Timestamp(x) for x in signal_dates)
     blocks: list[list[pd.Timestamp]] = []
-    for start in range(MIN_INITIAL_TRAIN_MONTHS, len(ordered), TEST_BLOCK_MONTHS):
+    start = MIN_INITIAL_TRAIN_MONTHS
+
+    while start < len(ordered):
         block = ordered[start : start + TEST_BLOCK_MONTHS]
-        if len(block) >= MIN_TEST_MONTHS:
-            blocks.append(block)
+        block = [signal for signal in block if maturity.get(signal) is not None]
+        if len(block) < MIN_TEST_MONTHS:
+            break
+        blocks.append(block)
+
+        last_signal = max(block)
+        last_maturity = maturity.get(last_signal)
+        if last_maturity is None:
+            break
+
+        next_candidates = [
+            idx
+            for idx, signal in enumerate(ordered)
+            if idx > start and signal > last_maturity
+        ]
+        if not next_candidates:
+            break
+        start = next_candidates[0]
+
     return blocks
 
 
@@ -170,9 +197,18 @@ def run_factor_horizon(
     maturity = maturity_map(signal_dates, calendar, horizon)
     folds: list[dict[str, object]] = []
 
-    for fold_idx, test_dates in enumerate(month_blocks(signal_dates), start=1):
+    blocks = validation_blocks(signal_dates, maturity)
+    previous_validation_label_maturity: pd.Timestamp | None = None
+
+    for fold_idx, test_dates in enumerate(blocks, start=1):
         test_start = min(test_dates)
         test_end = max(test_dates)
+
+        if (
+            previous_validation_label_maturity is not None
+            and test_start <= previous_validation_label_maturity
+        ):
+            raise RuntimeError("validation block violates horizon label embargo")
 
         train_dates = [
             signal for signal in signal_dates
@@ -190,6 +226,10 @@ def run_factor_horizon(
 
         train_summary = summarize_months(train_rows)
         test_summary = summarize_months(test_rows)
+        validation_last_maturity = maturity.get(test_end)
+        if validation_last_maturity is None:
+            continue
+
         folds.append(
             {
                 "fold_id": f"{factor}-H{horizon}-F{fold_idx}",
@@ -200,12 +240,15 @@ def run_factor_horizon(
                 ).date().isoformat(),
                 "validation_start": test_start.date().isoformat(),
                 "validation_end": test_end.date().isoformat(),
+                "validation_last_label_maturity": validation_last_maturity.date().isoformat(),
                 "horizon_trading_days": horizon,
                 "train": train_summary,
                 "test": test_summary,
                 "purge_verified_by_label_maturity": True,
+                "validation_embargo_verified_by_label_maturity": True,
             }
         )
+        previous_validation_label_maturity = validation_last_maturity
 
     fold_ics = [
         float(fold["test"]["mean_ic"])
@@ -272,6 +315,7 @@ def main() -> int:
             "chronological_only": True,
             "random_split": False,
             "test_block_months": TEST_BLOCK_MONTHS,
+            "validation_embargo_rule": "NEXT_VALIDATION_START_STRICTLY_AFTER_PRIOR_VALIDATION_LAST_LABEL_MATURITY",
             "minimum_initial_train_months": MIN_INITIAL_TRAIN_MONTHS,
             "minimum_test_months": MIN_TEST_MONTHS,
             "purge_rule": "TRAIN_LABEL_MATURITY_STRICTLY_BEFORE_VALIDATION_START",
