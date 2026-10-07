@@ -123,6 +123,19 @@ def main() -> int:
         json.dumps(audit, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+
+    sums_path = OUT / "SHA256SUMS"
+    rows = {}
+    if sums_path.exists():
+        for line in sums_path.read_text(encoding="utf-8").splitlines():
+            digest, name = line.split("  ", 1)
+            rows[name] = digest
+    rows[path.name] = sha(path)
+    sums_path.write_text(
+        "\n".join(f"{rows[name]}  {name}" for name in sorted(rows)) + "\n",
+        encoding="utf-8",
+    )
+
     print(json.dumps(audit, ensure_ascii=False, indent=2))
     return 0
 
