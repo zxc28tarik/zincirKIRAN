@@ -3,14 +3,14 @@
 Implementation 42C successfully converted the live 42B recoverability audit into
 a frozen research data package.
 
-Freeze workflow: **37686065246**  
-Artifact: **11511480842**  
+Freeze workflow: **37686387496**  
+Artifact: **11511291939**  
 Artifact digest:
-`sha256:f71944c036021d304a7106469c4748c8afb942647464dd7c990735f9271a9641`
+`sha256:13878964230d4956eb7b12cbf274d82255070927e0963df6aa2c2c412c7e92d6`
 
 Frozen package commit:
 
-`32d4d9f8e51124f1be992bb70eee75308e6a8a22`
+`9bec14cd18a6b9f521c0a77b4dedf8ed4d5b6438`
 
 ## Frozen price corpus
 
@@ -19,7 +19,7 @@ Frozen package commit:
 - direct Yahoo tickers: **123**
 - official-lineage alias tickers: **4**
 - deterministic gzip SHA256:
-  `57a16c08cee591acf18ba9955b45b5e1deba9cea784bb70c49a7c5e2f16cb2bd`
+  `e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e`
 
 Official-lineage aliases actually used:
 
@@ -71,3 +71,22 @@ H252 research panel**.
 No IC, return, long-leg, ML, cost, portfolio, or champion result was opened in
 42C. Parent issue #104 remains open until the extended H252 evidence itself is
 evaluated.
+
+
+## Vendor replay drift and freeze policy
+
+A second coverage-only capture was intentionally observed before any H252 alpha
+result was opened. It returned the same row count and the same 11/11 acceptance
+profile, but the historical price bytes differed:
+
+- first capture SHA256:
+  `57a16c08cee591acf18ba9955b45b5e1deba9cea784bb70c49a7c5e2f16cb2bd`
+- second capture SHA256:
+  `e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e`
+
+This demonstrates that a live vendor replay is not an immutable research
+source, even over a historical date range.
+
+The **second capture is therefore the canonical V1 freeze**. CI no longer
+downloads Yahoo history. It only verifies exact committed hashes. Any future
+refresh must create a new dataset/version rather than silently rewrite V1.
