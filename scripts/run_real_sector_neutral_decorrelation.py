@@ -9,12 +9,18 @@ import math
 import urllib.request
 from itertools import combinations
 from pathlib import Path
+import sys
 
 import numpy as np
 import pandas as pd
 
-from scripts import run_real_financial_factor_lab as fin
-from scripts import run_real_price_factor_lab as px
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPTS = ROOT / "scripts"
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
+
+import run_real_financial_factor_lab as fin  # noqa: E402
+import run_real_price_factor_lab as px  # noqa: E402
 
 SOURCE_COMMIT = "445e9a7cb788124a52fd4ac171f3e16e6c67137e"
 SECTOR_PATH = "data/backtest_sources/m3_source_package/sector_routes.csv.gz"
