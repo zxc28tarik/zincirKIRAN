@@ -1,0 +1,466 @@
+{
+  "contract": "REAL_FIXED_RIDGE_ML_5F_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37665294593,
+  "artifact_id": 11502153966,
+  "artifact_digest": "sha256:64e3ccd48b0f0b8f8dc1044df38631f1d4b48ee3f8d0865aa25e03ea00bcdbb6",
+  "model": "DETERMINISTIC_LINEAR_RIDGE",
+  "ridge_penalty": 1,
+  "hyperparameter_search": false,
+  "features": [
+    "HIGH_52W_PROXIMITY",
+    "LOW_VOL_63D",
+    "MOM_6_1",
+    "operating_margin_acceleration",
+    "gross_margin_acceleration"
+  ],
+  "common_panel_rows": 4647,
+  "common_signal_dates": 60,
+  "results": {
+    "H20": {
+      "evaluated_folds": 7,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 7,
+          "mean_test_ic": 0.08493290965936744,
+          "worst_fold_ic": 0.006539245053115553,
+          "positive_fold_share": 1,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.008743021625326487,
+          "mean_q5_minus_q1": 0.025354471538873474
+        },
+        "EW5_COMPOSITE": {
+          "folds": 7,
+          "mean_test_ic": 0.10846997312771244,
+          "worst_fold_ic": -0.009503623259938632,
+          "positive_fold_share": 0.8571428571428571,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.009445139051465285,
+          "mean_q5_minus_q1": 0.032104906447401334
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 7,
+          "mean_test_ic": 0.10724734061522319,
+          "worst_fold_ic": -0.01972764078027235,
+          "positive_fold_share": 0.8571428571428571,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.0024080077863952868,
+          "mean_q5_minus_q1": 0.02212900431464526
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 7,
+          "mean_test_ic": 0.10601005383319352,
+          "worst_fold_ic": -0.003627950996372048,
+          "positive_fold_share": 0.8571428571428571,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.0020506365496680647,
+          "mean_q5_minus_q1": 0.02005029583774545
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds_ic": 7,
+        "mean_ic_difference": 0.02107714417382609,
+        "left_beats_right_ic_fold_share": 0.7142857142857143,
+        "paired_folds_long_leg": 7,
+        "mean_top_quintile_difference": -0.006692385075658421,
+        "left_beats_right_long_leg_fold_share": 0.42857142857142855
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds_ic": 7,
+        "mean_ic_difference": -0.002459919294518908,
+        "left_beats_right_ic_fold_share": 0.7142857142857143,
+        "paired_folds_long_leg": 7,
+        "mean_top_quintile_difference": -0.007394502501797223,
+        "left_beats_right_long_leg_fold_share": 0.2857142857142857
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds_ic": 7,
+        "mean_ic_difference": -0.00123728678202966,
+        "left_beats_right_ic_fold_share": 0.42857142857142855,
+        "paired_folds_long_leg": 7,
+        "mean_top_quintile_difference": -0.00035737123672722207,
+        "left_beats_right_long_leg_fold_share": 0.7142857142857143
+      },
+      "fold_coefficients": [
+        {
+          "fold_id": "H20-F1",
+          "training_observations": 1415,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.014942329911841181,
+            "LOW_VOL_63D": 0.0011594867071758168,
+            "MOM_6_1": -0.0011578342139442327,
+            "operating_margin_acceleration": -0.0027480414705705293,
+            "gross_margin_acceleration": 0.00247244480541966
+          }
+        },
+        {
+          "fold_id": "H20-F2",
+          "training_observations": 1889,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.012661684130355642,
+            "LOW_VOL_63D": 0.0035042220873885833,
+            "MOM_6_1": -0.002534754428324656,
+            "operating_margin_acceleration": -0.0012999387953764841,
+            "gross_margin_acceleration": 0.004923424696915894
+          }
+        },
+        {
+          "fold_id": "H20-F3",
+          "training_observations": 2354,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.009488059082391396,
+            "LOW_VOL_63D": 0.005316622286173318,
+            "MOM_6_1": 0.00042647289822039374,
+            "operating_margin_acceleration": 0.00040414598543082316,
+            "gross_margin_acceleration": 0.004791896647128017
+          }
+        },
+        {
+          "fold_id": "H20-F4",
+          "training_observations": 2793,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.01041981959293119,
+            "LOW_VOL_63D": 0.006240683911992023,
+            "MOM_6_1": 0.0013062017599569954,
+            "operating_margin_acceleration": 0.00042080180580948495,
+            "gross_margin_acceleration": 0.004323707790166295
+          }
+        },
+        {
+          "fold_id": "H20-F5",
+          "training_observations": 3242,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.009972918119921851,
+            "LOW_VOL_63D": 0.005807377379605734,
+            "MOM_6_1": 0.000509120638622194,
+            "operating_margin_acceleration": 0.0009403178345283097,
+            "gross_margin_acceleration": 0.004276475926603261
+          }
+        },
+        {
+          "fold_id": "H20-F6",
+          "training_observations": 3717,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.009306980627929754,
+            "LOW_VOL_63D": 0.005155152857694876,
+            "MOM_6_1": -0.00023236253035658082,
+            "operating_margin_acceleration": 0.0020077436073236954,
+            "gross_margin_acceleration": 0.003932783510257115
+          }
+        },
+        {
+          "fold_id": "H20-F7",
+          "training_observations": 4182,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.009772121426697984,
+            "LOW_VOL_63D": 0.005064085093898105,
+            "MOM_6_1": 0.0007246671396136147,
+            "operating_margin_acceleration": 0.0025766887566718313,
+            "gross_margin_acceleration": 0.0036804634204643397
+          }
+        }
+      ]
+    },
+    "H60": {
+      "evaluated_folds": 4,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 4,
+          "mean_test_ic": 0.11356154792780304,
+          "worst_fold_ic": -0.009143452631895274,
+          "positive_fold_share": 0.75,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.009524750043695263,
+          "mean_q5_minus_q1": 0.06024224143816625
+        },
+        "EW5_COMPOSITE": {
+          "folds": 4,
+          "mean_test_ic": 0.12457868183896925,
+          "worst_fold_ic": -0.023021283858058194,
+          "positive_fold_share": 0.75,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": -0.0022039078113447064,
+          "mean_q5_minus_q1": 0.05975208208604481
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 4,
+          "mean_test_ic": 0.12342067715718019,
+          "worst_fold_ic": -0.005469930865013561,
+          "positive_fold_share": 0.75,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": -0.00780833377586651,
+          "mean_q5_minus_q1": 0.0528326489192467
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 4,
+          "mean_test_ic": 0.11255323638834125,
+          "worst_fold_ic": -0.016588416145739377,
+          "positive_fold_share": 0.75,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": -0.014538379110297425,
+          "mean_q5_minus_q1": 0.0339782737012171
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds_ic": 4,
+        "mean_ic_difference": -0.001008311539461806,
+        "left_beats_right_ic_fold_share": 0.5,
+        "paired_folds_long_leg": 4,
+        "mean_top_quintile_difference": -0.024063129153992686,
+        "left_beats_right_long_leg_fold_share": 0
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds_ic": 4,
+        "mean_ic_difference": -0.012025445450628017,
+        "left_beats_right_ic_fold_share": 0.5,
+        "paired_folds_long_leg": 4,
+        "mean_top_quintile_difference": -0.012334471298952716,
+        "left_beats_right_long_leg_fold_share": 0.25
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds_ic": 4,
+        "mean_ic_difference": -0.010867440768838967,
+        "left_beats_right_ic_fold_share": 0.25,
+        "paired_folds_long_leg": 4,
+        "mean_top_quintile_difference": -0.006730045334430915,
+        "left_beats_right_long_leg_fold_share": 0.25
+      },
+      "fold_coefficients": [
+        {
+          "fold_id": "H60-F2",
+          "training_observations": 1889,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.03759763212442769,
+            "LOW_VOL_63D": -0.0030861387055670436,
+            "MOM_6_1": 0.003952648008251269,
+            "operating_margin_acceleration": 0.003099196301388758,
+            "gross_margin_acceleration": 0.005456452096333348
+          }
+        },
+        {
+          "fold_id": "H60-F3",
+          "training_observations": 2499,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.03321952417573323,
+            "LOW_VOL_63D": 0.00703227018129261,
+            "MOM_6_1": 0.009180027823984364,
+            "operating_margin_acceleration": 0.0063528004957152774,
+            "gross_margin_acceleration": 0.005917186412185667
+          }
+        },
+        {
+          "fold_id": "H60-F4",
+          "training_observations": 3089,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.02997252524031247,
+            "LOW_VOL_63D": 0.010307806084046363,
+            "MOM_6_1": 0.007969015154452686,
+            "operating_margin_acceleration": 0.004682789097716345,
+            "gross_margin_acceleration": 0.007210533849276233
+          }
+        },
+        {
+          "fold_id": "H60-F5",
+          "training_observations": 3717,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.026640482522946193,
+            "LOW_VOL_63D": 0.00688182475160207,
+            "MOM_6_1": 0.006476541341874036,
+            "operating_margin_acceleration": 0.00822628432472802,
+            "gross_margin_acceleration": 0.0028460986507970005
+          }
+        }
+      ]
+    },
+    "H120": {
+      "evaluated_folds": 3,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 3,
+          "mean_test_ic": 0.22257077934897618,
+          "worst_fold_ic": 0.12676841640703104,
+          "positive_fold_share": 1,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.03110669534774656,
+          "mean_q5_minus_q1": 0.18166311530213494
+        },
+        "EW5_COMPOSITE": {
+          "folds": 3,
+          "mean_test_ic": 0.20067761561076639,
+          "worst_fold_ic": 0.12011792218561984,
+          "positive_fold_share": 1,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": -0.00801569421782268,
+          "mean_q5_minus_q1": 0.12961309950966507
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 3,
+          "mean_test_ic": 0.22271416046454565,
+          "worst_fold_ic": 0.14387905142735255,
+          "positive_fold_share": 1,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.01307416811685688,
+          "mean_q5_minus_q1": 0.1423818864737911
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 3,
+          "mean_test_ic": 0.17588428253133456,
+          "worst_fold_ic": 0.13729946459959783,
+          "positive_fold_share": 1,
+          "stability": "STRONG_STABILITY",
+          "mean_top_quintile_forward_excess_proxy": 0.003100172111649445,
+          "mean_q5_minus_q1": 0.1244915761591952
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds_ic": 3,
+        "mean_ic_difference": -0.046686496817641664,
+        "left_beats_right_ic_fold_share": 0.3333333333333333,
+        "paired_folds_long_leg": 3,
+        "mean_top_quintile_difference": -0.02800652323609712,
+        "left_beats_right_long_leg_fold_share": 0
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds_ic": 3,
+        "mean_ic_difference": -0.02479333307943185,
+        "left_beats_right_ic_fold_share": 0.3333333333333333,
+        "paired_folds_long_leg": 3,
+        "mean_top_quintile_difference": 0.011115866329472123,
+        "left_beats_right_long_leg_fold_share": 0.3333333333333333
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds_ic": 3,
+        "mean_ic_difference": -0.04682987793321114,
+        "left_beats_right_ic_fold_share": 0,
+        "paired_folds_long_leg": 3,
+        "mean_top_quintile_difference": -0.009973996005207438,
+        "left_beats_right_long_leg_fold_share": 0.3333333333333333
+      },
+      "fold_coefficients": [
+        {
+          "fold_id": "H120-F2",
+          "training_observations": 1889,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.05305327356157875,
+            "LOW_VOL_63D": -0.006765081146361132,
+            "MOM_6_1": 0.039569408226181255,
+            "operating_margin_acceleration": 0.017868675492852624,
+            "gross_margin_acceleration": 0.00294204206399306
+          }
+        },
+        {
+          "fold_id": "H120-F3",
+          "training_observations": 2720,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.0538538272459161,
+            "LOW_VOL_63D": 0.015090807536778628,
+            "MOM_6_1": 0.031342525193464185,
+            "operating_margin_acceleration": 0.014648150665899506,
+            "gross_margin_acceleration": 0.008280390589067217
+          }
+        },
+        {
+          "fold_id": "H120-F4",
+          "training_observations": 3556,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.046292747126139316,
+            "LOW_VOL_63D": 0.007717325600773429,
+            "MOM_6_1": 0.024362832967187012,
+            "operating_margin_acceleration": 0.016535597330857743,
+            "gross_margin_acceleration": 0.003162582614721651
+          }
+        }
+      ]
+    },
+    "H252": {
+      "evaluated_folds": 1,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 1,
+          "mean_test_ic": 0.20482198725369197,
+          "worst_fold_ic": 0.20482198725369197,
+          "positive_fold_share": 1,
+          "stability": "INSUFFICIENT_FOLDS",
+          "mean_top_quintile_forward_excess_proxy": 0.05745157888777047,
+          "mean_q5_minus_q1": -0.15150824289112388
+        },
+        "EW5_COMPOSITE": {
+          "folds": 1,
+          "mean_test_ic": 0.178283375709639,
+          "worst_fold_ic": 0.178283375709639,
+          "positive_fold_share": 1,
+          "stability": "INSUFFICIENT_FOLDS",
+          "mean_top_quintile_forward_excess_proxy": 0.06201944685767114,
+          "mean_q5_minus_q1": 0.11545631245581615
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 1,
+          "mean_test_ic": 0.2232462895764987,
+          "worst_fold_ic": 0.2232462895764987,
+          "positive_fold_share": 1,
+          "stability": "INSUFFICIENT_FOLDS",
+          "mean_top_quintile_forward_excess_proxy": 0.025048632802585208,
+          "mean_q5_minus_q1": -0.1236021498031147
+        },
+        "FIXED_RIDGE_5F": {
+          "folds": 1,
+          "mean_test_ic": 0.21829504538949385,
+          "worst_fold_ic": 0.21829504538949385,
+          "positive_fold_share": 1,
+          "stability": "INSUFFICIENT_FOLDS",
+          "mean_top_quintile_forward_excess_proxy": 0.06591811777702579,
+          "mean_q5_minus_q1": -0.07883173984696362
+        }
+      },
+      "paired_ridge_vs_champion": {
+        "paired_folds_ic": 1,
+        "mean_ic_difference": 0.01347305813580188,
+        "left_beats_right_ic_fold_share": 1,
+        "paired_folds_long_leg": 1,
+        "mean_top_quintile_difference": 0.008466538889255318,
+        "left_beats_right_long_leg_fold_share": 1
+      },
+      "paired_ridge_vs_ew5": {
+        "paired_folds_ic": 1,
+        "mean_ic_difference": 0.04001166967985484,
+        "left_beats_right_ic_fold_share": 1,
+        "paired_folds_long_leg": 1,
+        "mean_top_quintile_difference": 0.003898670919354648,
+        "left_beats_right_long_leg_fold_share": 1
+      },
+      "paired_ridge_vs_dynamic": {
+        "paired_folds_ic": 1,
+        "mean_ic_difference": -0.00495124418700485,
+        "left_beats_right_ic_fold_share": 0,
+        "paired_folds_long_leg": 1,
+        "mean_top_quintile_difference": 0.04086948497444058,
+        "left_beats_right_long_leg_fold_share": 1
+      },
+      "fold_coefficients": [
+        {
+          "fold_id": "H252-F2",
+          "training_observations": 1889,
+          "coefficients": {
+            "HIGH_52W_PROXIMITY": 0.1334167950791927,
+            "LOW_VOL_63D": 0.04644973798711845,
+            "MOM_6_1": 0.019126044503400254,
+            "operating_margin_acceleration": 0.047503142702046336,
+            "gross_margin_acceleration": -0.08576417557689717
+          }
+        }
+      ]
+    }
+  },
+  "decision": {
+    "replace_general_champion": false,
+    "promote_ml": false,
+    "key_findings": [
+      "Fixed ridge produces strong H20 rank IC but does not improve the H20 top-quintile long leg.",
+      "H60 ridge long-leg evidence is materially negative and weaker than 52W High.",
+      "H120 ridge remains strongly positive in rank IC but trails 52W High and train-only dynamic on IC and long-leg evidence.",
+      "Across mature folds the largest positive standardized coefficient is generally 52W High Proximity; the model does not reveal a clearly superior independent ML combination.",
+      "H252 has only one independent fold and cannot support a stability or promotion conclusion."
+    ]
+  },
+  "production_ready": false
+}
