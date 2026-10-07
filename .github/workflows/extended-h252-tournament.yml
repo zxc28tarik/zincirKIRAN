@@ -1,0 +1,25 @@
+name: Extended H252 Tournament
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  extended-h252-tournament:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned tournament dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3"
+      - name: Run extended H252 champion-challenger tournament
+        run: python scripts/run_extended_h252_tournament.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: extended-h252-tournament-v1
+          path: research/evidence_runs/extended_h252_tournament_v1.json
+          if-no-files-found: error
