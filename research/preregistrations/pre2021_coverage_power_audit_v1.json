@@ -42,5 +42,19 @@
   "performance_metrics_forbidden": true,
   "model_fit_forbidden": true,
   "factor_ic_forbidden": true,
-  "production_ready": false
+  "production_ready": false,
+  "protocol_amendments": [
+    {
+      "amendment_id": "A1_FROZEN_CALENDAR_SANITY",
+      "timing": "AFTER_COVERAGE_OUTPUT_BEFORE_ANY_ALPHA_PERFORMANCE_RERUN",
+      "reason": "The first live-Yahoo calendar power calculation produced 2 current H252 folds, contradicting the already observed Implementation 35 frozen-data result of 1 fold. Existing-period power must be measured on the frozen research calendar, not a refreshed vendor calendar.",
+      "rule": "Use frozen M3 XU100 index calendar for the existing 2021+ baseline; use live Yahoo XU100 dates only before the frozen calendar minimum; require current baseline fold count == 1 or fail closed.",
+      "performance_information_used": false
+    }
+  ],
+  "benchmark_calendar_policy": {
+    "pre_frozen_history": "LIVE_YAHOO_XU100_DISCOVERY",
+    "existing_research_period": "FROZEN_M3_XU100_INDEX_CLOSE_SOURCE",
+    "splice_rule": "LIVE_ONLY_BEFORE_FROZEN_MIN_DATE_THEN_FROZEN"
+  }
 }
