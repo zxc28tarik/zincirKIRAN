@@ -1,0 +1,18 @@
+{
+  "direct_failures": {
+    "ANACM": "YFTzMissingError('$ANACM.IS: possibly delisted; no timezone found')",
+    "GUSGR": "YFTzMissingError('$GUSGR.IS: possibly delisted; no timezone found')",
+    "IPEKE": "YFTzMissingError('$IPEKE.IS: possibly delisted; no timezone found')",
+    "KERVT": "YFTzMissingError('$KERVT.IS: possibly delisted; no timezone found')",
+    "KOZAA": "YFTzMissingError('$KOZAA.IS: possibly delisted; no timezone found')",
+    "KOZAL": "YFTzMissingError('$KOZAL.IS: possibly delisted; no timezone found')",
+    "SODA": "YFTzMissingError('$SODA.IS: possibly delisted; no timezone found')",
+    "TRKCM": "YFTzMissingError('$TRKCM.IS: possibly delisted; no timezone found')"
+  },
+  "remaining_unresolved": {
+    "ANACM": "YFTzMissingError('$ANACM.IS: possibly delisted; no timezone found')",
+    "GUSGR": "YFTzMissingError('$GUSGR.IS: possibly delisted; no timezone found')",
+    "SODA": "YFTzMissingError('$SODA.IS: possibly delisted; no timezone found')",
+    "TRKCM": "YFTzMissingError('$TRKCM.IS: possibly delisted; no timezone found')"
+  }
+}
