@@ -1,0 +1,960 @@
+{
+  "contract": "HISTORICAL_LIQUIDITY_CAPACITY_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37663645104,
+  "artifact_id": 11501163693,
+  "artifact_digest": "sha256:65828f56800184c582ddbc45876cc620ea4884752f6b832612d65c5aff1ff8d0",
+  "historical_adv_source": {
+    "source_commit": "883e680a2564e38f4c08a21bc88aa95b8f164036",
+    "path": "data/backtest_sources/yahoo_resolved/historical_member_prices_resolved_2020-07_2026-08.csv.gz",
+    "sha256": "b3413840f7516b2dd51611efa9139b28ddee1eb2d11d14dd418097138dd33141",
+    "daily_rows": 271267,
+    "adv63_rows": 258309,
+    "authority": "VALIDATED_DERIVED_MARKET_DATA"
+  },
+  "common_panel_rows": 4647,
+  "common_signal_dates": 60,
+  "adv_definition": "MEAN_63_RAW_CLOSE_TIMES_VOLUME_ENDING_SIGNAL_DATE",
+  "capacity_formula": "ADV63_X_PARTICIPATION_X_DAYS_DIV_ABS_DELTA_WEIGHT",
+  "participation_rates": [
+    0.01,
+    0.05,
+    0.1
+  ],
+  "execution_days": [
+    1,
+    3
+  ],
+  "illustrative_portfolio_notionals_try": [
+    1000000,
+    5000000,
+    10000000,
+    25000000,
+    50000000
+  ],
+  "results": {
+    "H20": {
+      "evaluated_folds": 7,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 7,
+          "mean_fold_turnover": 0.863375350140056,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 25892922.578191,
+              "worst_capacity_across_folds_try": 6460090.441177828,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9523809523809524,
+                "25000000": 0.519047619047619,
+                "50000000": 0.05238095238095238
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 77678767.73457299,
+              "worst_capacity_across_folds_try": 19380271.323533483,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.9523809523809524,
+                "50000000": 0.761904761904762
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 129464612.89095497,
+              "worst_capacity_across_folds_try": 32300452.205889143,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9523809523809524
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 388393838.672865,
+              "worst_capacity_across_folds_try": 96901356.61766744,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 258929225.78190994,
+              "worst_capacity_across_folds_try": 64600904.411778286,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 776787677.34573,
+              "worst_capacity_across_folds_try": 193802713.23533487,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 7,
+          "mean_fold_turnover": 0.6161064425770307,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 25060247.11598429,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9523809523809524,
+                "25000000": 0.4761904761904762,
+                "50000000": 0.08095238095238096
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 75180741.34795287,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8095238095238095
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 125301235.57992147,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9523809523809524
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 375903706.73976433,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 250602471.15984294,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 751807413.4795287,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 7,
+          "mean_fold_turnover": 0.6891223155929038,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 24975599.56287474,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9761904761904763,
+                "25000000": 0.39999999999999997,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 74926798.68862423,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.761904761904762
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 124877997.81437373,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9761904761904763
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 374633993.44312114,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 249755995.62874746,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 749267986.8862423,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "H60": {
+      "evaluated_folds": 4,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 4,
+          "mean_fold_turnover": 0.8331290849673202,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 27976246.331868727,
+              "worst_capacity_across_folds_try": 6460090.441177828,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9166666666666666,
+                "25000000": 0.6666666666666666,
+                "50000000": 0.041666666666666664
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 83928738.99560618,
+              "worst_capacity_across_folds_try": 19380271.323533483,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.9166666666666666,
+                "50000000": 0.7916666666666666
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 139881231.65934363,
+              "worst_capacity_across_folds_try": 32300452.205889143,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9166666666666666
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 419643694.9780309,
+              "worst_capacity_across_folds_try": 96901356.61766744,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 279762463.31868726,
+              "worst_capacity_across_folds_try": 64600904.411778286,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 839287389.9560618,
+              "worst_capacity_across_folds_try": 193802713.23533487,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 4,
+          "mean_fold_turnover": 0.6473243464052287,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 26526814.16080545,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5833333333333334,
+                "50000000": 0.08333333333333333
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 79580442.48241635,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9583333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 132634070.80402724,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 397902212.4120817,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 265268141.6080545,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 795804424.8241634,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 4,
+          "mean_fold_turnover": 0.767361111111111,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 27180126.3171809,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5833333333333334,
+                "50000000": 0.08333333333333333
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 81540378.9515427,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.75
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 135900631.58590454,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 407701894.75771356,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 271801263.1718091,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 815403789.5154271,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "H120": {
+      "evaluated_folds": 3,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 3,
+          "mean_fold_turnover": 0.8388888888888889,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 26094333.62871105,
+              "worst_capacity_across_folds_try": 7321441.689482915,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.9444444444444445,
+                "25000000": 0.5555555555555555,
+                "50000000": 0.05555555555555555
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 78283000.88613315,
+              "worst_capacity_across_folds_try": 21964325.068448745,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.9444444444444445,
+                "50000000": 0.7777777777777777
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 130471668.14355524,
+              "worst_capacity_across_folds_try": 36607208.44741458,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9444444444444445
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 391415004.4306658,
+              "worst_capacity_across_folds_try": 109821625.34224373,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 260943336.28711048,
+              "worst_capacity_across_folds_try": 73214416.89482915,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 782830008.8613316,
+              "worst_capacity_across_folds_try": 219643250.68448746,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 3,
+          "mean_fold_turnover": 0.6305555555555555,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 24995094.346464697,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.5555555555555555,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 74985283.0393941,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.9444444444444445
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 124975471.73232348,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 374926415.19697046,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 249950943.46464697,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 749852830.3939409,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 3,
+          "mean_fold_turnover": 0.6949074074074074,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 22815476.03247873,
+              "worst_capacity_across_folds_try": 11724763.021575857,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.3333333333333333,
+                "50000000": 0.05555555555555555
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 68446428.09743617,
+              "worst_capacity_across_folds_try": 35174289.064727575,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.7777777777777777
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 114077380.16239363,
+              "worst_capacity_across_folds_try": 58623815.10787928,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 342232140.4871809,
+              "worst_capacity_across_folds_try": 175871445.32363784,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 228154760.32478726,
+              "worst_capacity_across_folds_try": 117247630.21575856,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 684464280.9743618,
+              "worst_capacity_across_folds_try": 351742890.6472757,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "H252": {
+      "evaluated_folds": 1,
+      "aggregates": {
+        "HIGH_52W_PROXIMITY": {
+          "folds": 1,
+          "mean_fold_turnover": 0.7180555555555553,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 21785989.061944336,
+              "worst_capacity_across_folds_try": 10533256.067021046,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.3333333333333333,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 65357967.18583302,
+              "worst_capacity_across_folds_try": 31599768.201063138,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 108929945.30972168,
+              "worst_capacity_across_folds_try": 52666280.33510523,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 326789835.9291651,
+              "worst_capacity_across_folds_try": 157998841.0053157,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 217859890.61944336,
+              "worst_capacity_across_folds_try": 105332560.67021047,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 653579671.8583302,
+              "worst_capacity_across_folds_try": 315997682.0106314,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "EW5_COMPOSITE": {
+          "folds": 1,
+          "mean_fold_turnover": 0.6138888888888888,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 20397439.5384669,
+              "worst_capacity_across_folds_try": 9313188.444490729,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 0.8333333333333334,
+                "25000000": 0.16666666666666666,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 61192318.6154007,
+              "worst_capacity_across_folds_try": 27939565.333472185,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 101987197.69233452,
+              "worst_capacity_across_folds_try": 46565942.22245365,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.8333333333333334
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 305961593.07700354,
+              "worst_capacity_across_folds_try": 139697826.66736093,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 203974395.38466904,
+              "worst_capacity_across_folds_try": 93131884.4449073,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 611923186.1540071,
+              "worst_capacity_across_folds_try": 279395653.33472186,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        },
+        "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+          "folds": 1,
+          "mean_fold_turnover": 0.6319444444444443,
+          "mean_fold_selected_adv_coverage": 1,
+          "total_missing_adv_dates": 0,
+          "scenarios": {
+            "p1_d1": {
+              "mean_fold_median_capacity_try": 20580780.518259287,
+              "worst_capacity_across_folds_try": 11839918.868919482,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 0.16666666666666666,
+                "50000000": 0
+              }
+            },
+            "p1_d3": {
+              "mean_fold_median_capacity_try": 61742341.55477785,
+              "worst_capacity_across_folds_try": 35519756.606758446,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 0.6666666666666666
+              }
+            },
+            "p5_d1": {
+              "mean_fold_median_capacity_try": 102903902.59129643,
+              "worst_capacity_across_folds_try": 59199594.344597414,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p5_d3": {
+              "mean_fold_median_capacity_try": 308711707.7738893,
+              "worst_capacity_across_folds_try": 177598783.03379223,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d1": {
+              "mean_fold_median_capacity_try": 205807805.18259287,
+              "worst_capacity_across_folds_try": 118399188.68919483,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            },
+            "p10_d3": {
+              "mean_fold_median_capacity_try": 617423415.5477786,
+              "worst_capacity_across_folds_try": 355197566.06758446,
+              "mean_fold_support_fraction_by_portfolio_notional_try": {
+                "1000000": 1,
+                "5000000": 1,
+                "10000000": 1,
+                "25000000": 1,
+                "50000000": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "decision": {
+    "adv_coverage_complete_for_all_tested_portfolios": true,
+    "choose_production_participation_rate": false,
+    "choose_production_portfolio_notional": false,
+    "replace_general_champion": false,
+    "key_findings": [
+      "All tested rebalance dates have dated ADV evidence; no neutral fill or capacity bypass was required.",
+      "Under 1% participation and one execution day, mean fold median capacity is roughly TRY 23m-28m for H20-H120 across contenders.",
+      "TRY 10m is supported on nearly all H20-H120 signal dates even under the strict 1%/1-day scenario.",
+      "TRY 25m is only partially supported under 1%/1-day, showing that capacity becomes economically relevant before it becomes a hard data-coverage problem.",
+      "At 5%/1-day, median capacity is roughly TRY 114m-140m for H20-H120, but this remains a sensitivity scenario rather than a production assumption."
+    ]
+  },
+  "production_ready": false,
+  "automatic_promotion": false
+}
