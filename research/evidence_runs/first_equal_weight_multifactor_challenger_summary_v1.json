@@ -1,0 +1,51 @@
+{
+  "contract": "FIRST_EQUAL_WEIGHT_MULTIFACTOR_CHALLENGER_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37642026018,
+  "artifact_id": 11493050543,
+  "artifact_digest": "sha256:e6c7ffa5d9de8a35940b0b5f4dfd21ae872563214490f3cae6a884eefa2fc0f7",
+  "common_panel": {"rows": 4647, "signal_dates": 60},
+  "champion": "HIGH_52W_PROXIMITY",
+  "challenger": "EW5_COMPOSITE",
+  "weights": {
+    "HIGH_52W_PROXIMITY": 0.20,
+    "LOW_VOL_63D": 0.20,
+    "MOM_6_1": 0.20,
+    "operating_margin_acceleration": 0.20,
+    "gross_margin_acceleration": 0.20
+  },
+  "H20": {
+    "composite_mean_test_ic": 0.10846997312771244,
+    "champion_mean_test_ic": 0.08493290965936744,
+    "paired_mean_ic_difference": 0.023537063468345002,
+    "composite_beats_champion_fold_share": 0.7142857142857143
+  },
+  "H60": {
+    "composite_mean_test_ic": 0.12457868183896925,
+    "champion_mean_test_ic": 0.11356154792780304,
+    "paired_mean_ic_difference": 0.011017133911166209,
+    "composite_beats_champion_fold_share": 0.5,
+    "low_vol_mean_test_ic": 0.1464320112879488
+  },
+  "H120": {
+    "composite_mean_test_ic": 0.20067761561076639,
+    "champion_mean_test_ic": 0.22257077934897618,
+    "paired_mean_ic_difference": -0.02189316373820981,
+    "composite_beats_champion_fold_share": 0.0
+  },
+  "H252": {
+    "composite_mean_test_ic": 0.178283375709639,
+    "champion_mean_test_ic": 0.20482198725369197,
+    "paired_folds": 1,
+    "stability": "INSUFFICIENT_FOLDS"
+  },
+  "decision": {
+    "replace_champion": false,
+    "retain_high_52w_as_general_benchmark": true,
+    "retain_ew5_as_h20_challenger": true,
+    "retain_ew5_as_possible_h60_challenger": true,
+    "automatic_promotion": false
+  },
+  "production_ready": false,
+  "weight_change_authorized": false
+}
