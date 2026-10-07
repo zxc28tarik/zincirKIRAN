@@ -1,0 +1,24 @@
+name: Real Fixed Ridge ML Challenger
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  real-fixed-ridge-ml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install diagnostic dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3"
+      - name: Run real fixed-ridge ML challenger
+        run: python scripts/run_real_fixed_ridge_ml_challenger.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: real-fixed-ridge-ml-5f-v1
+          path: research/evidence_runs/real_fixed_ridge_ml_5f_v1.json
+          if-no-files-found: error
