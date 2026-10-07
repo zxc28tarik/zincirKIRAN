@@ -135,6 +135,36 @@ def fetch_index_calendar() -> pd.DataFrame:
     return usable.sort_values("trade_date").reset_index(drop=True)
 
 
+def load_frozen_index_calendar() -> pd.DataFrame:
+    frame = fin.csv_from_market("index")
+    xu = frame.loc[frame["index_code"].astype(str).eq("XU100")].copy()
+    xu["trade_date"] = pd.to_datetime(xu["trade_date"], errors="raise").dt.normalize()
+    xu["close"] = pd.to_numeric(xu["close"], errors="coerce")
+    xu = xu.loc[xu["close"].notna() & (xu["close"] > 0), ["trade_date", "close"]]
+    xu = xu.sort_values("trade_date").drop_duplicates("trade_date").reset_index(drop=True)
+    if xu.empty:
+        raise RuntimeError("frozen XU100 calendar is empty")
+    return xu
+
+
+def build_hybrid_calendar(
+    live_calendar: pd.DataFrame,
+    frozen_calendar: pd.DataFrame,
+) -> pd.DataFrame:
+    frozen_start = pd.Timestamp(frozen_calendar["trade_date"].min())
+    early = live_calendar.loc[
+        live_calendar["trade_date"] < frozen_start,
+        ["trade_date", "close"],
+    ].copy()
+    combined = pd.concat([early, frozen_calendar], ignore_index=True)
+    combined = (
+        combined.sort_values("trade_date")
+        .drop_duplicates("trade_date", keep="last")
+        .reset_index(drop=True)
+    )
+    return combined
+
+
 def load_membership_events() -> tuple[set[str], list[dict[str, object]]]:
     catalog = json.loads(backcast.CATALOG_PATH.read_text(encoding="utf-8"))
     anchor, _ = backcast.load_anchor(catalog)
@@ -328,7 +358,12 @@ def expected_blocks(
 
 
 def main() -> int:
-    index_calendar = fetch_index_calendar()
+    live_index_calendar = fetch_index_calendar()
+    frozen_index_calendar = load_frozen_index_calendar()
+    index_calendar = build_hybrid_calendar(
+        live_index_calendar,
+        frozen_index_calendar,
+    )
     signal_dates = monthly_signal_dates(index_calendar)
     earliest_state, events = load_membership_events()
     membership = monthly_membership(earliest_state, events, signal_dates)
@@ -453,7 +488,13 @@ def main() -> int:
     if len(original_dates) != 60:
         raise RuntimeError(f"expected 60 original signal dates, found {len(original_dates)}")
 
-    current_blocks = expected_blocks(original_dates, index_calendar)
+    current_blocks = expected_blocks(original_dates, frozen_index_calendar)
+    if len(current_blocks) != 1:
+        raise RuntimeError(
+            "frozen-calendar H252 sanity mismatch: "
+            f"expected 1 existing fold from Implementation 35, found {len(current_blocks)}"
+        )
+
     extended_dates = sorted(set(original_dates) | set(eligible_pre_dates))
     extended_blocks = expected_blocks(extended_dates, index_calendar)
 
@@ -547,7 +588,28 @@ def main() -> int:
                 day.date().isoformat() for day in eligible_pre_dates
             ],
         },
+        "calendar_evidence": {
+            "live_yahoo_discovery": {
+                "symbol": "XU100.IS",
+                "start": CALENDAR_START,
+                "end_exclusive": CALENDAR_END,
+                "min_trade_date": live_index_calendar["trade_date"].min().date().isoformat(),
+                "max_trade_date": live_index_calendar["trade_date"].max().date().isoformat(),
+                "role": "DISCOVERY_ONLY_FOR_DATES_BEFORE_FROZEN_CALENDAR_START"
+            },
+            "frozen_existing": {
+                "source_commit": fin.MARKET_COMMIT,
+                "path": fin.MARKET_SOURCES["index"][0],
+                "sha256": fin.MARKET_SOURCES["index"][1],
+                "min_trade_date": frozen_index_calendar["trade_date"].min().date().isoformat(),
+                "max_trade_date": frozen_index_calendar["trade_date"].max().date().isoformat(),
+                "role": "AUTHORITATIVE_EXISTING_RESEARCH_CALENDAR"
+            },
+            "hybrid_rule": "LIVE_ONLY_BEFORE_FROZEN_MIN_DATE_THEN_FROZEN",
+        },
         "h252_power": {
+            "sanity_rule": "CURRENT_FROZEN_PROTOCOL_MUST_REPRODUCE_IMPLEMENTATION35_ONE_H252_FOLD",
+            "sanity_pass": len(current_blocks) == 1,
             "current_original_signal_dates": len(original_dates),
             "current_expected_blocks": current_blocks,
             "current_expected_fold_count": len(current_blocks),
@@ -558,6 +620,7 @@ def main() -> int:
         },
         "limitations": [
             "Yahoo/yfinance discovery is live vendor availability evidence and is not frozen price authority.",
+            "A protocol-amendment sanity correction uses the frozen existing XU100 calendar for the current baseline and live Yahoo dates only before the frozen calendar starts; this correction was made because the original live-calendar baseline failed to reproduce Implementation 35's known one-fold H252 mechanics.",
             "Direct historical ticker codes are used for eligibility; lineage candidates are reported but not auto-applied.",
             "The financial corpus remains EXPERIMENTAL_VERSION_RISK and is not extended by this audit.",
             "This audit measures data/test mechanics only and computes no alpha performance.",
