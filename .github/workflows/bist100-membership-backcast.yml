@@ -1,0 +1,22 @@
+name: BIST100 Membership Backcast
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  bist100-membership-backcast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run fail-closed BIST100 membership backcast
+        run: python scripts/reconstruct_bist100_membership_backcast.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bist100-membership-backcast-2019-2021-v1
+          path: research/evidence_runs/bist100_membership_backcast_2019_2021_v1.json
+          if-no-files-found: error
