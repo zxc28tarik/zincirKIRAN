@@ -23,6 +23,7 @@ def main() -> int:
         "market.csv.gz",
         "rejections.json",
         "provenance.json",
+        "gate_audit.json",
         "SHA256SUMS",
     ]
     for name in required:
@@ -52,6 +53,14 @@ def main() -> int:
     universe = pd.read_csv(OUT / "universe.csv", dtype=str)
     if len(universe) != 100 or universe["ticker"].nunique() != 100:
         raise RuntimeError("universe snapshot is not exactly 100 unique names")
+
+    gate = json.loads((OUT / "gate_audit.json").read_text(encoding="utf-8"))
+    if gate.get("contract") != "FIRST_POST_ACTIVATION_LIVE_SNAPSHOT_GATE_AUDIT_V1":
+        raise RuntimeError("unexpected gate audit contract")
+    if gate.get("shadow_execution_ready") is not False:
+        raise RuntimeError("45C snapshot must remain shadow-execution blocked")
+    if gate.get("real_shadow_run_created") is not False:
+        raise RuntimeError("45C gate audit must not create a shadow run")
 
     market = pd.read_csv(OUT / "market.csv.gz")
     if market["ticker"].duplicated().any():
