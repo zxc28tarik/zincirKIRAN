@@ -1,0 +1,22 @@
+{
+  "contract": "LIVE_PIT_SNAPSHOT_GATE_REFERENCE_AUDIT_SUMMARY_V1",
+  "workflow_run_id": 37694901041,
+  "artifact_id": 11514642519,
+  "artifact_digest": "sha256:1903d80135b8197325ae8a8cba5f8c24325414900ed9a0c73614c4ee70e2fe42",
+  "activation_commit": "1ae3ab623df58c8a22b7f943585f3d3835588e0a",
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "contract_ready": true,
+  "shadow_execution_ready": false,
+  "historical_backfill_allowed": false,
+  "post_activation_live_snapshot_set_present": false,
+  "blocking_reason": "NO_POST_ACTIVATION_LIVE_PIT_SNAPSHOT_SET",
+  "current_reference_artifacts_shadow_eligible": false,
+  "next_required_work": [
+    "CAPTURE_POST_ACTIVATION_LIVE_UNIVERSE_SNAPSHOT",
+    "CAPTURE_POST_ACTIVATION_LIVE_MARKET_SNAPSHOT",
+    "LOCK_FINANCIAL_PUBLICATION_REVISION_LIVE_SNAPSHOT_PATH",
+    "LOCK_CORPORATE_ACTION_LIVE_SNAPSHOT_PATH"
+  ],
+  "production_ready": false,
+  "real_shadow_run_created": false
+}
