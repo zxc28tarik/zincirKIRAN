@@ -1,0 +1,257 @@
+{
+  "contract": "EXTENDED_H252_TOURNAMENT_SUMMARY_V1",
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "workflow_run_id": 37687970807,
+  "artifact_id": 11511468267,
+  "artifact_digest": "sha256:3f41efe1a931523919a8b5555df33e35f9868b028fd3a61e7e4dc30bf5d792ab",
+  "frozen_extension": {
+    "price_sha256": "e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e",
+    "membership_sha256": "ce691744788fb74f8c904b2aa8b34528140d0785e6507989096362bb226c93ab"
+  },
+  "panel": {
+    "original_rows": 4647,
+    "original_signal_dates": 60,
+    "early_rows": 813,
+    "early_signal_dates": 11,
+    "extended_rows": 5460,
+    "extended_signal_dates": 71,
+    "early_coverage": {
+      "membership_rows": 1100,
+      "price_panel_rows": 1096,
+      "early_common_rows": 813,
+      "early_signal_dates": 11,
+      "month_counts": {
+        "2020-09-01": {
+          "five_factor_rows": 71,
+          "target_252_rows": 71
+        },
+        "2020-10-01": {
+          "five_factor_rows": 70,
+          "target_252_rows": 70
+        },
+        "2020-11-02": {
+          "five_factor_rows": 70,
+          "target_252_rows": 70
+        },
+        "2020-12-01": {
+          "five_factor_rows": 70,
+          "target_252_rows": 70
+        },
+        "2021-01-04": {
+          "five_factor_rows": 74,
+          "target_252_rows": 74
+        },
+        "2021-02-01": {
+          "five_factor_rows": 74,
+          "target_252_rows": 74
+        },
+        "2021-03-01": {
+          "five_factor_rows": 74,
+          "target_252_rows": 74
+        },
+        "2021-04-01": {
+          "five_factor_rows": 77,
+          "target_252_rows": 77
+        },
+        "2021-05-03": {
+          "five_factor_rows": 77,
+          "target_252_rows": 77
+        },
+        "2021-06-01": {
+          "five_factor_rows": 77,
+          "target_252_rows": 77
+        },
+        "2021-07-01": {
+          "five_factor_rows": 79,
+          "target_252_rows": 79
+        }
+      }
+    }
+  },
+  "original_sanity": {
+    "pass": true,
+    "evaluated_fold_count": 1
+  },
+  "evaluated_fold_count": 2,
+  "aggregates": {
+    "HIGH_52W_PROXIMITY": {
+      "folds": 2,
+      "mean_test_ic": 0.16336986303220746,
+      "worst_fold_ic": 0.16181576029621092,
+      "positive_fold_share": 1,
+      "stability": "STRONG_STABILITY",
+      "mean_top_quintile_forward_excess_proxy": 0.13823569238569955,
+      "mean_q5_minus_q1": 0.3750328921823085
+    },
+    "EW5_COMPOSITE": {
+      "folds": 2,
+      "mean_test_ic": 0.1999555545896769,
+      "worst_fold_ic": 0.1596403767559227,
+      "positive_fold_share": 1,
+      "stability": "STRONG_STABILITY",
+      "mean_top_quintile_forward_excess_proxy": -0.056922195683846835,
+      "mean_q5_minus_q1": 0.19484399975426048
+    },
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+      "folds": 2,
+      "mean_test_ic": 0.21426409651659725,
+      "worst_fold_ic": 0.13450577058229746,
+      "positive_fold_share": 1,
+      "stability": "STRONG_STABILITY",
+      "mean_top_quintile_forward_excess_proxy": -0.029367803825885982,
+      "mean_q5_minus_q1": 0.18581304060283063
+    },
+    "FIXED_RIDGE_5F": {
+      "folds": 2,
+      "mean_test_ic": 0.1255361795194995,
+      "worst_fold_ic": 0.11205487184536693,
+      "positive_fold_share": 1,
+      "stability": "STRONG_STABILITY",
+      "mean_top_quintile_forward_excess_proxy": -0.018243426101275405,
+      "mean_q5_minus_q1": 0.18823711617420258
+    }
+  },
+  "paired_ridge_vs_champion": {
+    "paired_folds_ic": 2,
+    "mean_ic_difference": -0.037833683512707945,
+    "left_beats_right_ic_fold_share": 0,
+    "paired_folds_long_leg": 2,
+    "mean_top_quintile_difference": -0.15647911848697493,
+    "left_beats_right_long_leg_fold_share": 0
+  },
+  "paired_ridge_vs_ew5": {
+    "paired_folds_ic": 2,
+    "mean_ic_difference": -0.0744193750701774,
+    "left_beats_right_ic_fold_share": 0,
+    "paired_folds_long_leg": 2,
+    "mean_top_quintile_difference": 0.03867876958257143,
+    "left_beats_right_long_leg_fold_share": 0.5
+  },
+  "paired_ridge_vs_dynamic": {
+    "paired_folds_ic": 2,
+    "mean_ic_difference": -0.08872791699709774,
+    "left_beats_right_ic_fold_share": 0.5,
+    "paired_folds_long_leg": 2,
+    "mean_top_quintile_difference": 0.011124377724610578,
+    "left_beats_right_long_leg_fold_share": 0.5
+  },
+  "folds": [
+    {
+      "fold_id": "H252-F2",
+      "train_start": "2020-09-01",
+      "train_end": "2022-08-01",
+      "validation_start": "2023-09-01",
+      "validation_end": "2024-02-01",
+      "validation_last_label_maturity": "2025-02-05",
+      "dynamic_weights": {
+        "HIGH_52W_PROXIMITY": 0.5121084234231824,
+        "LOW_VOL_63D": 0.4770707310122991,
+        "MOM_6_1": 0.010820845564518388,
+        "operating_margin_acceleration": 0,
+        "gross_margin_acceleration": 0
+      },
+      "ridge_training_observations": 1828,
+      "ridge_coefficients": {
+        "HIGH_52W_PROXIMITY": 0.09033834707731801,
+        "LOW_VOL_63D": 0.044730005594939545,
+        "MOM_6_1": 0.011570161214602335,
+        "operating_margin_acceleration": -0.08726566817810064,
+        "gross_margin_acceleration": 0.007892532182170812
+      },
+      "HIGH_52W_PROXIMITY": {
+        "months": 6,
+        "mean_ic": 0.16492396576820398,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": -0.07638823220480853,
+        "mean_q5_minus_q1": 0.1539716291058162
+      },
+      "EW5_COMPOSITE": {
+        "months": 6,
+        "mean_ic": 0.24027073242343108,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": -0.06145260277598949,
+        "mean_q5_minus_q1": 0.1978985372166612
+      },
+      "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+        "months": 6,
+        "mean_ic": 0.29402242245089705,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": -0.024909603067927708,
+        "mean_q5_minus_q1": 0.26752699306610456
+      },
+      "FIXED_RIDGE_5F": {
+        "months": 6,
+        "mean_ic": 0.11205487184536693,
+        "positive_ic_share": 0.8333333333333334,
+        "mean_top_quintile_forward_excess_proxy": -0.0889856200386017,
+        "mean_q5_minus_q1": 0.05997896661645143
+      }
+    },
+    {
+      "fold_id": "H252-F3",
+      "train_start": "2020-09-01",
+      "train_end": "2024-02-01",
+      "validation_start": "2025-03-03",
+      "validation_end": "2025-06-02",
+      "validation_last_label_maturity": "2026-06-05",
+      "dynamic_weights": {
+        "HIGH_52W_PROXIMITY": 0.47996977530932555,
+        "LOW_VOL_63D": 0.4840811923640734,
+        "MOM_6_1": 0.03594903232660112,
+        "operating_margin_acceleration": 0,
+        "gross_margin_acceleration": 0
+      },
+      "ridge_training_observations": 3239,
+      "ridge_coefficients": {
+        "HIGH_52W_PROXIMITY": 0.10466093268262038,
+        "LOW_VOL_63D": 0.0693924036239797,
+        "MOM_6_1": 0.015840314585320887,
+        "operating_margin_acceleration": 0.017544278027789285,
+        "gross_margin_acceleration": -0.052861263459010197
+      },
+      "HIGH_52W_PROXIMITY": {
+        "months": 4,
+        "mean_ic": 0.16181576029621092,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": 0.3528596169762076,
+        "mean_q5_minus_q1": 0.5960941552588008
+      },
+      "EW5_COMPOSITE": {
+        "months": 4,
+        "mean_ic": 0.1596403767559227,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": -0.05239178859170418,
+        "mean_q5_minus_q1": 0.19178946229185972
+      },
+      "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+        "months": 4,
+        "mean_ic": 0.13450577058229746,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": -0.03382600458384426,
+        "mean_q5_minus_q1": 0.1040990881395567
+      },
+      "FIXED_RIDGE_5F": {
+        "months": 4,
+        "mean_ic": 0.13901748719363208,
+        "positive_ic_share": 1,
+        "mean_top_quintile_forward_excess_proxy": 0.0524987678360509,
+        "mean_q5_minus_q1": 0.31649526573195375
+      }
+    }
+  ],
+  "decision": {
+    "previous_single_fold_ridge_advantage_confirmed": false,
+    "ridge_promoted": false,
+    "general_champion_replaced": false,
+    "h252_stability_claim_now_possible": true,
+    "key_findings": [
+      "The frozen extension increases evaluated H252 folds from one to two without changing the existing 60-month result.",
+      "FIXED_RIDGE_5F trails HIGH_52W_PROXIMITY in IC and top-quintile long-leg evidence in both independent folds.",
+      "The previous one-fold ridge long-leg advantage is rejected by the extended evidence.",
+      "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F has the highest two-fold mean IC, but its mean top-quintile forward excess proxy is negative.",
+      "HIGH_52W_PROXIMITY has positive IC in both folds and the strongest average long leg, but the long-leg sign is negative in the first fold and strongly positive in the second; rank stability and long-leg stability remain distinct.",
+      "Dynamic H252 weights concentrate almost entirely on HIGH_52W_PROXIMITY and LOW_VOL_63D; both financial acceleration factors receive zero weight in both folds."
+    ]
+  },
+  "production_ready": false
+}

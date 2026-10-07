@@ -1,0 +1,79 @@
+{
+  "preregistration_id": "EXTENDED_H252_TOURNAMENT_V1",
+  "registered_before_results": true,
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "parent_issue": 104,
+  "data": {
+    "original_common_panel": "EXISTING_60_MONTH_EXACT_5_OF_5_COMMON_PANEL",
+    "extension_price_package": {
+      "path": "data/research_sources/pre2021_price_extension_v1/prices_2018-01_2022-08.csv.gz",
+      "sha256": "e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e"
+    },
+    "extension_membership": {
+      "path": "data/research_sources/pre2021_price_extension_v1/membership_2020-09_2021-07.csv",
+      "sha256": "ce691744788fb74f8c904b2aa8b34528140d0785e6507989096362bb226c93ab"
+    },
+    "extension_signal_months": 11,
+    "financial_source": "EXISTING_FROZEN_EXPERIMENTAL_SEMANTIC_CORPUS",
+    "sector_source": "EXISTING_FROZEN_SECTOR_ROUTES",
+    "benchmark_calendar": "EXISTING_FROZEN_XU100_INDEX_CLOSE_SOURCE"
+  },
+  "factors": [
+    "HIGH_52W_PROXIMITY",
+    "LOW_VOL_63D",
+    "MOM_6_1",
+    "operating_margin_acceleration",
+    "gross_margin_acceleration"
+  ],
+  "contenders": [
+    "HIGH_52W_PROXIMITY",
+    "EW5_COMPOSITE",
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F",
+    "FIXED_RIDGE_5F"
+  ],
+  "horizon": 252,
+  "rules": {
+    "equal_weight_composite_each": 0.2,
+    "dynamic_rule": "MAX_MATURED_TRAIN_MEAN_IC_ZERO_THEN_NORMALIZE",
+    "ridge_penalty": 1,
+    "hyperparameter_search": false,
+    "exact_5_of_5_required": true,
+    "minimum_initial_train_months": 18,
+    "validation_block_months": 6,
+    "minimum_test_months": 3,
+    "train_label_maturity_strictly_before_validation": true,
+    "validation_embargo": true,
+    "no_factor_removal": true,
+    "no_threshold_change": true,
+    "no_neutral_fill": true
+  },
+  "original_sanity_expected": {
+    "evaluated_fold_count": 1,
+    "aggregates": {
+      "HIGH_52W_PROXIMITY": {
+        "mean_test_ic": 0.20482198725369197,
+        "mean_top_quintile_forward_excess_proxy": 0.05745157888777047,
+        "mean_q5_minus_q1": -0.15150824289112388
+      },
+      "EW5_COMPOSITE": {
+        "mean_test_ic": 0.178283375709639,
+        "mean_top_quintile_forward_excess_proxy": 0.06201944685767114,
+        "mean_q5_minus_q1": 0.11545631245581615
+      },
+      "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+        "mean_test_ic": 0.2232462895764987,
+        "mean_top_quintile_forward_excess_proxy": 0.025048632802585208,
+        "mean_q5_minus_q1": -0.1236021498031147
+      },
+      "FIXED_RIDGE_5F": {
+        "mean_test_ic": 0.21829504538949385,
+        "mean_top_quintile_forward_excess_proxy": 0.06591811777702579,
+        "mean_q5_minus_q1": -0.07883173984696362
+      }
+    },
+    "tolerance": 1e-12
+  },
+  "performance_opening_condition": "ORIGINAL_SANITY_MUST_PASS_FIRST",
+  "automatic_promotion_allowed": false,
+  "production_ready": false
+}
