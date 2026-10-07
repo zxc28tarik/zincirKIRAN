@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import gzip
 import hashlib
-import io
 import json
 import time
 import urllib.request
@@ -16,14 +15,10 @@ import yfinance as yf
 
 ROOT = Path(__file__).resolve().parents[1]
 PREREG = ROOT / "research/preregistrations/first_post_activation_live_snapshot_v1.json"
+CATALOG = ROOT / "research/source_catalogs/current_bist100_q4_2026_v1.json"
 OUT = ROOT / "data/live_shadow/first_post_activation_live_snapshot_v1"
 
 ACTIVATION = datetime.fromisoformat("2026-10-07T22:10:15+00:00")
-ANCHOR_URL = (
-    "https://raw.githubusercontent.com/zxc28tarik/TOTAL-RASYO-HESAPLAYICI/"
-    "883e680a2564e38f4c08a21bc88aa62efb95a26a1/"
-    "data/backtest_sources/yahoo_resolved/monthly_member_signal_price_coverage.csv"
-)
 ANNOUNCEMENT_URL = (
     "https://www.borsaistanbul.com/duyuru/15598/"
     "bist-pay-endeksleri-donemsel-degisiklikleri"
@@ -54,19 +49,19 @@ def fetch_bytes(url: str, *, attempts: int = 4) -> bytes:
 
 
 def load_anchor(prereg: dict) -> tuple[list[str], str]:
-    payload = fetch_bytes(ANCHOR_URL)
+    catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
+    anchor = catalog["anchor"]
     expected = prereg["universe"]["baseline"]["sha256"]
-    observed = sha256_bytes(payload)
-    if observed != expected:
-        raise RuntimeError(
-            f"anchor SHA mismatch expected={expected} observed={observed}"
-        )
-    frame = pd.read_csv(io.BytesIO(payload), dtype=str)
-    rows = frame.loc[frame["signal_date"].astype(str).str.startswith("2026-07")]
-    tickers = sorted(set(rows["ticker"].astype(str).str.strip().str.upper()))
+    if anchor["source_sha256"] != expected:
+        raise RuntimeError("source catalog anchor SHA does not match preregistration")
+    tickers = sorted(set(str(x).strip().upper() for x in anchor["members"]))
     if len(tickers) != 100:
         raise RuntimeError(f"expected 100 July anchor tickers, found {len(tickers)}")
-    return tickers, observed
+    if catalog["q4_event"]["adds"] != prereg["universe"]["q4_event"]["adds"]:
+        raise RuntimeError("source catalog Q4 additions drifted from preregistration")
+    if catalog["q4_event"]["removes"] != prereg["universe"]["q4_event"]["removes"]:
+        raise RuntimeError("source catalog Q4 removals drifted from preregistration")
+    return tickers, anchor["source_sha256"]
 
 
 def capture_announcement(prereg: dict) -> tuple[bytes, str]:
