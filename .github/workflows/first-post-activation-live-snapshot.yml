@@ -6,6 +6,8 @@ on:
     paths:
       - "scripts/capture_first_post_activation_live_snapshot.py"
       - "scripts/verify_first_post_activation_live_snapshot.py"
+      - "scripts/audit_first_post_activation_live_snapshot_gate.py"
+      - "research/source_catalogs/current_bist100_q4_2026_v1.json"
       - "research/preregistrations/first_post_activation_live_snapshot_v1.json"
       - "docs/FIRST_POST_ACTIVATION_LIVE_SNAPSHOT.md"
       - ".github/workflows/first-post-activation-live-snapshot.yml"
@@ -36,6 +38,8 @@ jobs:
           else
             python scripts/capture_first_post_activation_live_snapshot.py
           fi
+      - name: Audit captured snapshots through 45B execution gate
+        run: PYTHONPATH=src python scripts/audit_first_post_activation_live_snapshot_gate.py
       - uses: actions/upload-artifact@v4
         with:
           name: first-post-activation-live-snapshot-v1
