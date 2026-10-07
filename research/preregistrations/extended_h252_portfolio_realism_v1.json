@@ -1,0 +1,78 @@
+{
+  "preregistration_id": "EXTENDED_H252_PORTFOLIO_REALISM_V1",
+  "registered_before_results": true,
+  "authority": "EXPERIMENTAL_VERSION_RISK",
+  "horizon": 252,
+  "data": "IMPLEMENTATION_42D_EXTENDED_71_DATE_COMMON_PANEL",
+  "contenders": [
+    "HIGH_52W_PROXIMITY",
+    "EW5_COMPOSITE",
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F",
+    "FIXED_RIDGE_5F"
+  ],
+  "portfolio": {
+    "selection": "TOP_20_PERCENT",
+    "sizing": "EQUAL_WEIGHT",
+    "fold_boundary": "RESET_TO_CASH",
+    "turnover": "SUM_ABS_NEW_MINUS_OLD_WEIGHT",
+    "cost_bps": [
+      10,
+      25,
+      50
+    ],
+    "adv_definition": "MEAN_63_RAW_CLOSE_TIMES_VOLUME_ENDING_SIGNAL_DATE",
+    "participation_rates": [
+      0.01,
+      0.05,
+      0.1
+    ],
+    "execution_days": [
+      1,
+      3
+    ],
+    "illustrative_notionals_try": [
+      1000000,
+      5000000,
+      10000000,
+      25000000,
+      50000000
+    ]
+  },
+  "model_rules": {
+    "dynamic": "MAX_MATURED_TRAIN_MEAN_IC_ZERO_THEN_NORMALIZE",
+    "ridge_penalty": 1,
+    "hyperparameter_search": false
+  },
+  "original_sanity_expected": {
+    "evaluated_fold_count": 1,
+    "HIGH_52W_PROXIMITY": {
+      "gross": 0.05878220895721851,
+      "turnover": 0.7180555555555553,
+      "net_25bps": 0.05698707006832963,
+      "median_capacity_p1_d1": 21785989.061944336
+    },
+    "EW5_COMPOSITE": {
+      "gross": 0.06133867529540108,
+      "turnover": 0.6138888888888888,
+      "net_25bps": 0.059803953073178866,
+      "median_capacity_p1_d1": 20397439.5384669
+    },
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+      "gross": 0.02083726477848913,
+      "turnover": 0.6319444444444443,
+      "net_25bps": 0.019257403667378017,
+      "median_capacity_p1_d1": 20580780.518259287
+    },
+    "FIXED_RIDGE_5F": {
+      "gross": 0.08184526256027495,
+      "turnover": 0.5499999999999998,
+      "net_25bps": 0.08047026256027495,
+      "median_capacity_p1_d1": 14414090.14703806
+    },
+    "tolerance": 1e-12
+  },
+  "no_portfolio_tuning": true,
+  "no_scenario_selection": true,
+  "automatic_promotion_allowed": false,
+  "production_ready": false
+}
