@@ -171,6 +171,8 @@ def classify_stability(
 ) -> str:
     if not fold_ics or mean_ic is None:
         return "UNAVAILABLE"
+    if len(fold_ics) < 2:
+        return "INSUFFICIENT_FOLDS"
     positive_share = sum(value > 0 for value in fold_ics) / len(fold_ics)
     worst = min(fold_ics)
     if positive_share >= 0.75 and mean_ic >= 0.05 and worst >= -0.05:
@@ -318,6 +320,7 @@ def main() -> int:
             "validation_embargo_rule": "NEXT_VALIDATION_START_STRICTLY_AFTER_PRIOR_VALIDATION_LAST_LABEL_MATURITY",
             "minimum_initial_train_months": MIN_INITIAL_TRAIN_MONTHS,
             "minimum_test_months": MIN_TEST_MONTHS,
+            "minimum_folds_for_stability_classification": 2,
             "purge_rule": "TRAIN_LABEL_MATURITY_STRICTLY_BEFORE_VALIDATION_START",
             "expanding_train": True,
             "hyperparameter_tuning": False,
