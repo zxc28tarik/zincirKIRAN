@@ -1,0 +1,110 @@
+{
+  "protocol_id": "ZINCIR_KIRAN_PROSPECTIVE_SHADOW_V1",
+  "definition_version": "v1",
+  "preregistration_kind": "PROTOCOL_DESIGN_ONLY",
+  "activation_rule": "FIRST_MAIN_MERGE_COMMIT_CONTAINING_THIS_PROTOCOL",
+  "temporal_rule": {
+    "historical_backfill_allowed": false,
+    "first_shadow_as_of_rule": "STRICTLY_AFTER_ACTIVATION_AT",
+    "executed_at_rule": "AT_OR_AFTER_AS_OF"
+  },
+  "universe_rule": "CURRENT_INVESTABLE_BIST_UNIVERSE_SNAPSHOT_REQUIRED",
+  "horizons": [
+    "H20",
+    "H60",
+    "H120",
+    "H252"
+  ],
+  "tracks": [
+    {
+      "track_id": "HIGH_52W_PROXIMITY",
+      "kind": "INTERPRETABLE_SINGLE_FACTOR",
+      "required_domains": [
+        "UNIVERSE",
+        "MARKET_PRICES",
+        "CORPORATE_ACTIONS"
+      ],
+      "optional_domains": [
+        "VOLUME_LIQUIDITY"
+      ],
+      "missing_policy": "ABSTAIN"
+    },
+    {
+      "track_id": "EW5_COMPOSITE",
+      "kind": "INTERPRETABLE_FIXED_COMPOSITE",
+      "required_domains": [
+        "UNIVERSE",
+        "MARKET_PRICES",
+        "FINANCIALS",
+        "PUBLICATION_REVISIONS",
+        "CORPORATE_ACTIONS",
+        "SECTOR_ROUTES"
+      ],
+      "optional_domains": [
+        "VOLUME_LIQUIDITY"
+      ],
+      "missing_policy": "ABSTAIN"
+    },
+    {
+      "track_id": "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F",
+      "kind": "INTERPRETABLE_DYNAMIC_COMPOSITE",
+      "required_domains": [
+        "UNIVERSE",
+        "MARKET_PRICES",
+        "FINANCIALS",
+        "PUBLICATION_REVISIONS",
+        "CORPORATE_ACTIONS",
+        "SECTOR_ROUTES",
+        "TRAIN_EVIDENCE_STATE"
+      ],
+      "optional_domains": [
+        "VOLUME_LIQUIDITY"
+      ],
+      "missing_policy": "ABSTAIN"
+    },
+    {
+      "track_id": "FIXED_RIDGE_5F",
+      "kind": "ML_CHALLENGER",
+      "required_domains": [
+        "UNIVERSE",
+        "MARKET_PRICES",
+        "FINANCIALS",
+        "PUBLICATION_REVISIONS",
+        "CORPORATE_ACTIONS",
+        "SECTOR_ROUTES",
+        "TRAINED_MODEL_STATE"
+      ],
+      "optional_domains": [
+        "VOLUME_LIQUIDITY"
+      ],
+      "missing_policy": "ABSTAIN"
+    }
+  ],
+  "run_receipt_required_fields": [
+    "shadow_run_id",
+    "protocol_id",
+    "definition_version",
+    "activation_at",
+    "as_of",
+    "executed_at",
+    "universe_snapshot_id",
+    "universe_snapshot_sha256",
+    "domain_snapshots",
+    "track_outputs",
+    "input_receipt_hash",
+    "output_receipt_hash"
+  ],
+  "allowed_track_decisions": [
+    "SIGNAL_ELIGIBLE",
+    "NO_SIGNAL",
+    "DATA_BLOCKED",
+    "FACTOR_UNAVAILABLE"
+  ],
+  "neutral_fill_allowed": false,
+  "historical_shadow_backfill_allowed": false,
+  "broker_actions_allowed": false,
+  "orders_allowed": false,
+  "production_promotion_allowed": false,
+  "production_thresholds_defined": false,
+  "realized_label_rule": "ATTACH_ONLY_AFTER_LOCKED_TRADING_DAY_HORIZON_MATURES"
+}
