@@ -1,0 +1,58 @@
+name: First Post-Activation Live Snapshot
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "scripts/capture_first_post_activation_live_snapshot.py"
+      - "scripts/verify_first_post_activation_live_snapshot.py"
+      - "research/preregistrations/first_post_activation_live_snapshot_v1.json"
+      - "docs/FIRST_POST_ACTIVATION_LIVE_SNAPSHOT.md"
+      - ".github/workflows/first-post-activation-live-snapshot.yml"
+      - "data/live_shadow/first_post_activation_live_snapshot_v1/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  live-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned live capture dependencies
+        run: python -m pip install "pandas==2.2.3" "yfinance==0.2.66"
+      - name: Capture once or verify immutable snapshot
+        run: |
+          if [ -f data/live_shadow/first_post_activation_live_snapshot_v1/provenance.json ]; then
+            python scripts/verify_first_post_activation_live_snapshot.py
+          else
+            python scripts/capture_first_post_activation_live_snapshot.py
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: first-post-activation-live-snapshot-v1
+          path: data/live_shadow/first_post_activation_live_snapshot_v1/
+          if-no-files-found: error
+      - name: Persist first capture on PR branch
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live_shadow/first_post_activation_live_snapshot_v1/
+          if git diff --cached --quiet; then
+            echo "Snapshot already frozen; no commit."
+            exit 0
+          fi
+          git commit -m "Implementation 45C: freeze first post-activation live snapshot"
+          git push origin "HEAD:${HEAD_REF}"
