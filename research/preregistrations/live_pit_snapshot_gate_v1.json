@@ -1,0 +1,45 @@
+{
+  "preregistration_id": "LIVE_PIT_SNAPSHOT_GATE_V1",
+  "registered_before_results": true,
+  "authority": "SHADOW_EXECUTION_CONTRACT_ONLY",
+  "shadow_protocol_id": "ZINCIR_KIRAN_PROSPECTIVE_SHADOW_V1",
+  "shadow_protocol_definition_version": "v1",
+  "activation_commit": "1ae3ab623df58c8a22b7f943585f3d3835588e0a",
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "historical_backfill_allowed": false,
+  "real_shadow_run_creation_allowed": false,
+  "domains": [
+    "UNIVERSE",
+    "MARKET_PRICES",
+    "VOLUME_LIQUIDITY",
+    "FINANCIALS",
+    "PUBLICATION_REVISIONS",
+    "CORPORATE_ACTIONS",
+    "SECTOR_ROUTES",
+    "TRAIN_EVIDENCE_STATE",
+    "TRAINED_MODEL_STATE"
+  ],
+  "authorities": [
+    "AUTHORITATIVE_LIVE",
+    "VALIDATED_LIVE_RESEARCH",
+    "DISCOVERY_ONLY",
+    "BLOCKED"
+  ],
+  "executable_authorities": [
+    "AUTHORITATIVE_LIVE",
+    "VALIDATED_LIVE_RESEARCH"
+  ],
+  "temporal_rules": [
+    "captured_at > activation_at",
+    "source_available_at <= captured_at",
+    "captured_at <= shadow_as_of",
+    "captured_at <= retrieved_at <= executed_at"
+  ],
+  "conflict_policy": "SAME_LOGICAL_KEY_DIFFERENT_HASH_REJECT",
+  "missing_policy": "ABSTAIN_NEVER_NEUTRAL_FILL",
+  "current_bootstrap_reference_only": true,
+  "production_thresholds_defined": false,
+  "broker_actions_allowed": false,
+  "orders_allowed": false,
+  "production_ready": false
+}

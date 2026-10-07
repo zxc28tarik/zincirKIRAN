@@ -1,0 +1,26 @@
+name: Live PIT Snapshot Gate
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  live-pit-snapshot-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependency
+        run: python -m pip install "pytest==8.3.5"
+      - name: Test live PIT snapshot gate
+        run: PYTHONPATH=src pytest -q tests/test_live_shadow_snapshot.py
+      - name: Audit current reference artifacts against prospective gate
+        run: python scripts/audit_live_pit_snapshot_gate.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-pit-snapshot-gate-reference-audit-v1
+          path: research/evidence_runs/live_pit_snapshot_gate_reference_audit_v1.json
+          if-no-files-found: error
