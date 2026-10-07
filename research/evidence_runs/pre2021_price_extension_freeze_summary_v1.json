@@ -1,0 +1,279 @@
+{
+  "contract": "PRE2021_PRICE_EXTENSION_FREEZE_SUMMARY_V1",
+  "authority": "FROZEN_RESEARCH_PRICE_EVIDENCE",
+  "freeze_workflow_run_id": 37686387496,
+  "freeze_artifact_id": 11511291939,
+  "freeze_artifact_digest": "sha256:13878964230d4956eb7b12cbf274d82255070927e0963df6aa2c2c412c7e92d6",
+  "package_commit": "9bec14cd18a6b9f521c0a77b4dedf8ed4d5b6438",
+  "target_signal_window": {
+    "end_month": "2021-07",
+    "months": 11,
+    "start_month": "2020-09"
+  },
+  "membership": {
+    "all_months_exactly_100": true,
+    "rows": 1100,
+    "unique_tickers": 131
+  },
+  "prices": {
+    "alias_tickers": [
+      "IPEKE",
+      "KERVT",
+      "KOZAA",
+      "KOZAL"
+    ],
+    "canonical_tickers": 127,
+    "deterministic_gzip_sha256": "e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e",
+    "direct_tickers": 123,
+    "remaining_unresolved_tickers": [
+      "ANACM",
+      "GUSGR",
+      "SODA",
+      "TRKCM"
+    ],
+    "rows": 148578
+  },
+  "official_lineage": {
+    "official_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5",
+    "path": "data/backtest_sources/bist_ticker_code_changes_2021-08_2026-08.csv",
+    "selected_events": {
+      "DGKLB": {
+        "effective_date": "2022-01-03",
+        "event_sha256": "ca6fcaebcd8a2c71cd16a8aad5a9ea91115280d7c09180660dcc495a4388c971",
+        "new_ticker": "DGNMO",
+        "old_ticker": "DGKLB",
+        "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+      },
+      "IPEKE": {
+        "effective_date": "2025-11-24",
+        "event_sha256": "84b696d97db64eb5ed6538fcf1d70e1e6a50ba0988c308ff7b46cb030b278965",
+        "new_ticker": "TRENJ",
+        "old_ticker": "IPEKE",
+        "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+      },
+      "ITTFH": {
+        "effective_date": "2023-11-01",
+        "event_sha256": "0514812190bd62f3ef044cb3f7378099d010be0cc5aed24c8135366b4cfc9a38",
+        "new_ticker": "LRSHO",
+        "old_ticker": "ITTFH",
+        "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+      },
+      "KERVT": {
+        "effective_date": "2025-06-02",
+        "event_sha256": "f3c7c7fb8f0b07378d3b717fa7ca99529aa9137b33825ecb5bde15e97588fc84",
+        "new_ticker": "BESLR",
+        "old_ticker": "KERVT",
+        "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+      },
+      "KOZAA": {
+        "effective_date": "2025-11-24",
+        "event_sha256": "3884d03e3ff879a34875b8e78a14c35eb458bb5709c2c54ae1bf9c3bc858ecb5",
+        "new_ticker": "TRMET",
+        "old_ticker": "KOZAA",
+        "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+      },
+      "KOZAL": {
+        "effective_date": "2025-11-24",
+        "event_sha256": "ed77b42000bbba72650a29ff6dceeb3b4e6f6cc728a764552c3e3fad8d6c0e54",
+        "new_ticker": "TRALT",
+        "old_ticker": "KOZAL",
+        "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5"
+      }
+    },
+    "source_commit": "883e680a2564e38f4c08a21bc88aa95b8f164036",
+    "source_repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI"
+  },
+  "monthly_acceptance": [
+    {
+      "acceptance_pass": true,
+      "adv63": 96,
+      "exact_signal_price": 96,
+      "five_factor_score_eligible": 71,
+      "gross_margin_acceleration": 74,
+      "h252_label_endpoint": 96,
+      "h252_test_cells": 71,
+      "high52": 96,
+      "lowvol63": 96,
+      "members": 100,
+      "mom_6_1": 96,
+      "operating_margin_acceleration": 74,
+      "signal_date": "2020-09-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 70,
+      "gross_margin_acceleration": 74,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 70,
+      "high52": 99,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 74,
+      "signal_date": "2020-10-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 70,
+      "gross_margin_acceleration": 74,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 70,
+      "high52": 99,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 74,
+      "signal_date": "2020-11-02"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 70,
+      "gross_margin_acceleration": 74,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 70,
+      "high52": 99,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 74,
+      "signal_date": "2020-12-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 74,
+      "gross_margin_acceleration": 78,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 74,
+      "high52": 100,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 78,
+      "signal_date": "2021-01-04"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 74,
+      "gross_margin_acceleration": 78,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 74,
+      "high52": 100,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 78,
+      "signal_date": "2021-02-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 74,
+      "gross_margin_acceleration": 78,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 74,
+      "high52": 100,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 78,
+      "signal_date": "2021-03-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 77,
+      "gross_margin_acceleration": 80,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 77,
+      "high52": 98,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 98,
+      "operating_margin_acceleration": 80,
+      "signal_date": "2021-04-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 77,
+      "gross_margin_acceleration": 80,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 77,
+      "high52": 98,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 99,
+      "operating_margin_acceleration": 80,
+      "signal_date": "2021-05-03"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 77,
+      "gross_margin_acceleration": 80,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 77,
+      "high52": 98,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 99,
+      "operating_margin_acceleration": 80,
+      "signal_date": "2021-06-01"
+    },
+    {
+      "acceptance_pass": true,
+      "adv63": 100,
+      "exact_signal_price": 100,
+      "five_factor_score_eligible": 79,
+      "gross_margin_acceleration": 83,
+      "h252_label_endpoint": 100,
+      "h252_test_cells": 79,
+      "high52": 98,
+      "lowvol63": 100,
+      "members": 100,
+      "mom_6_1": 100,
+      "operating_margin_acceleration": 83,
+      "signal_date": "2021-07-01"
+    }
+  ],
+  "acceptance": {
+    "all_11_target_months_pass": true,
+    "minimum_h252_test_cells_per_month": 20
+  },
+  "decision": {
+    "price_extension_frozen": true,
+    "ready_for_extended_h252_research_input": true,
+    "parent_issue_104_closed": false,
+    "unresolved_merger_tickers": [
+      "ANACM",
+      "GUSGR",
+      "SODA",
+      "TRKCM"
+    ],
+    "performance_opened": false,
+    "next_step": "Build an extended 71-month exact common panel from the frozen 42C price package plus the existing frozen 60-month panel, then run a preregistered H252-only extension tournament."
+  },
+  "production_ready": false,
+  "vendor_replay_drift": {
+    "detected": true,
+    "first_capture_price_sha256": "57a16c08cee591acf18ba9955b45b5e1deba9cea784bb70c49a7c5e2f16cb2bd",
+    "canonical_capture_price_sha256": "e0894027610988651d9ffec6cb53cad5bcfc41ae7dbd132d5e55af06c7afcf5e",
+    "row_count_unchanged": true,
+    "monthly_acceptance_counts_unchanged": true,
+    "response": "Live refetch removed from CI; canonical snapshot is verified by pinned hashes only."
+  }
+}

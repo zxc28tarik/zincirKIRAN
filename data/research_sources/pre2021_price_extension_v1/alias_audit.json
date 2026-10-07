@@ -1,0 +1,46 @@
+[
+  {
+    "effective_date": "2025-11-24",
+    "error": null,
+    "event_sha256": "84b696d97db64eb5ed6538fcf1d70e1e6a50ba0988c308ff7b46cb030b278965",
+    "new_ticker": "TRENJ",
+    "old_ticker": "IPEKE",
+    "recovered_rows": 1187,
+    "source_symbol": "TRENJ.IS",
+    "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5",
+    "status": "RESOLVED"
+  },
+  {
+    "effective_date": "2025-06-02",
+    "error": null,
+    "event_sha256": "f3c7c7fb8f0b07378d3b717fa7ca99529aa9137b33825ecb5bde15e97588fc84",
+    "new_ticker": "BESLR",
+    "old_ticker": "KERVT",
+    "recovered_rows": 1187,
+    "source_symbol": "BESLR.IS",
+    "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5",
+    "status": "RESOLVED"
+  },
+  {
+    "effective_date": "2025-11-24",
+    "error": null,
+    "event_sha256": "3884d03e3ff879a34875b8e78a14c35eb458bb5709c2c54ae1bf9c3bc858ecb5",
+    "new_ticker": "TRMET",
+    "old_ticker": "KOZAA",
+    "recovered_rows": 1187,
+    "source_symbol": "TRMET.IS",
+    "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5",
+    "status": "RESOLVED"
+  },
+  {
+    "effective_date": "2025-11-24",
+    "error": null,
+    "event_sha256": "ed77b42000bbba72650a29ff6dceeb3b4e6f6cc728a764552c3e3fad8d6c0e54",
+    "new_ticker": "TRALT",
+    "old_ticker": "KOZAL",
+    "recovered_rows": 1187,
+    "source_symbol": "TRALT.IS",
+    "source_workbook_sha256": "cb5e2fc5ed8bd69b75db7707f0078facc3b900ae14cb51e8f3a286e13cf239b5",
+    "status": "RESOLVED"
+  }
+]
