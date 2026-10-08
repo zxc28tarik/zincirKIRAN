@@ -20,7 +20,7 @@ _PROCESS_ONLY_TITLE_MARKERS = (
 
 _ECONOMIC_CANDIDATE_TITLE_MARKERS = (
     "KAR PAYI DAĞITIM İŞLEMLERİNE İLİŞKİN BİLDİRİM",
-,)
+)
 
 
 @dataclass(frozen=True)
