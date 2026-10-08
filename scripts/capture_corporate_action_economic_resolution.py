@@ -398,7 +398,7 @@ def capture_excel_details(
     return capture, cell_records
 
 
-def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
+def capture_details(\n    queue: pd.DataFrame,\n    *,\n    fetch_missing: bool = False,\n) -> tuple[pd.DataFrame, list[dict]]:
     detail_dir = OUT / "kap_detail"
     parsed_dir = OUT / "parsed_detail"
     detail_dir.mkdir(parents=True, exist_ok=True)
@@ -425,6 +425,12 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
                     "error": f"EXISTING_CAPTURE_CORRUPT:{type(exc).__name__}",
                 }
         else:
+            if not fetch_missing:
+                return {
+                    "event_id": event_id,
+                    "captured": False,
+                    "error": "HTML_NOT_CAPTURED_A2_EXCEL_PRIMARY",
+                }
             raw, error = fetch_kap(event_id)
             if raw is None:
                 return {
@@ -607,7 +613,7 @@ def main() -> int:
         else None
     )
 
-    capture, field_records = capture_details(queue)
+    capture, field_records = capture_details(queue, fetch_missing=False)
     excel_capture, excel_cells = capture_excel_details(queue)
 
     actions_path = OUT / "yahoo_actions.csv"
