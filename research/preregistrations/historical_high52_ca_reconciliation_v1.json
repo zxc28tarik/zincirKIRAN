@@ -4,14 +4,15 @@
   "parent_issue": 126,
   "source": {
     "repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
-    "commit": "0c70e1607832624b1b90a9bf150271ab705a6036",
+    "commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
     "manifest_path": "data/backtest_sources/kap_monthly_ca_inventory_v1/capture_manifest.json",
     "manifest_lf_canonical_sha256": "1935232295360b1026a036e725809e0e73a62253ce07145bbc1f13fd6abd1345",
     "coverage_start": "2016-05-01",
     "coverage_end": "2026-07-31",
     "windows_ok": 595,
     "windows_failed": 0,
-    "windows_at_cap_unsplittable": 0
+    "windows_at_cap_unsplittable": 0,
+    "w6_audit_commit": "0c70e1607832624b1b90a9bf150271ab705a6036"
   },
   "price_source": "IMPLEMENTATION_45D_FROZEN_PRICE_HISTORY",
   "exact_lookback_observations": 252,
