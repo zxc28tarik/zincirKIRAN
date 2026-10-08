@@ -1,0 +1,45 @@
+ticker,event_id,publish_date,event_type,subject,summary,stock_codes,related_stocks,resolved_economic_adjustment
+AKFYE,1664976,18.09.2026 09:22:13,BONUS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Onayı ve Hak Kullanımına İlişkin Başlangıç Tarihinin Belirlenmesi,AKFYE,,False
+AKFYE,1666699,22.09.2026 17:05:57,BONUS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı Kapsamında Tadil Edilen Şirketimiz Esas Sözleşme?sinin 6 ncı Maddesinin Tescili Hk.,AKFYE,,False
+ASTOR,1645625,07.08.2026 18:40:40,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin 2025 yılı Olağan Genel Kurul Kararı,ASTOR,,False
+CVKMD,1642697,04.08.2026 14:54:20,RIGHTS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Yeni Pay Alma Hakkı Kullanım Tarihleri Hk.,CVKMD,,False
+CVKMD,1653504,20.08.2026 15:39:00,RIGHTS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımında Kullanılmayan Rüçhan Hakkı Tutarı Hk.,CVKMD,,False
+CVKMD,1654560,24.08.2026 18:11:43,RIGHTS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımında Rüçhan Hakkı Kullanımı Sonrası Kalan Payların Satışının Tamamlanması Hk.,CVKMD,,False
+CVKMD,1656455,31.08.2026 18:20:37,RIGHTS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımının Tamamlanması ve Şirket Esas Sözleşmesinin 6. Maddesinin Değişikliğine İlişkin Yönetim Kurulu Kararı ve SPK Başvurusu Hk.,CVKMD,,False
+CVKMD,1668262,25.09.2026 17:48:57,RIGHTS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Esas Sözleşme Tadil Metninin Tescil ve İlanı Hk.,CVKMD,,False
+CWENE,1654680,25.08.2026 09:38:57,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artımına İlişkin SPK Başvurusu,CWENE,,False
+CWENE,1655191,26.08.2026 18:16:08,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artımına İlişkin SPK Başvurusu - Şablona SPK Başvuru Tarihi Eklenmiştir,CWENE,,False
+ECILC,1667913,24.09.2026 18:45:32,MERGER,Birleşme İşlemlerine İlişkin Bildirim,Şirketimizin %100 bağlı ortaklığı olan Eczacıbaşı Gayrimenkul Geliştirme ve Yatırım A.Ş. ile devralma suretiyle kolaylaştırılmış usulde birleşmesine ilişkin yönetim kurulu kararı ve SPK başvurusu,ECILC,,False
+FENER,1653656,20.08.2026 18:29:19,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,01.06.2025-31.05.2026 özel hesap dönemi kar dağıtımı ile ilgili Yönetim Kurulu kararı hakkında,FENER,,False
+GUBRF,1657500,02.09.2026 18:05:59,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Teklifi,GUBRF,,False
+GUBRF,1658176,03.09.2026 15:26:40,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Teklifi,GUBRF,,False
+GUBRF,1670023,30.09.2026 12:12:18,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurul Sonucu,GUBRF,,False
+GUBRF,1674751,07.10.2026 16:04:10,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Tarihinin Belirlenmesi Hk,GUBRF,,False
+HALKB,1645607,07.08.2026 18:34:43,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Sermaye Artırımı ve Halka Arz Çalışmalarına İlişkin Yönetim Kurulu Kararı	
+","HALKB, THL",,False
+HALKB,1655506,27.08.2026 20:32:43,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Halka Arz Yoluyla Sermaye Artırımına İlişkin SPK Başvurusu,"HALKB, THL",,False
+HALKB,1655601,28.08.2026 14:12:16,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Halka Arz Yoluyla Sermaye Artırımına İlişkin SPK Başvurusu,"HALKB, THL",,False
+HEKTS,1667943,24.09.2026 20:01:51,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Kapsamında TTK 461 Raporu hk. Duyurumuzun İlgili Şablondan Yeniden Yayınlanması,HEKTS,,False
+HEKTS,1672585,05.10.2026 18:44:32,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Başvurumuzun SPK Onayı Kapsamında İhraç Belgesinin SPK Onayına Gönderilmesi ve Pay Alım Teklifi Tebliği Kapsamında Değerlendirme,HEKTS,,False
+KATMR,1661245,09.09.2026 18:20:04,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Teklifi,KATMR,,False
+KORDS,1661783,11.09.2026 10:27:20,BONUS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Başvurumuzun Onaylanması ve Bedelsiz Pay Alma Hakkı Kullanımı Başlangıç Tarihinin Belirlenmesi,KORDS,,False
+KORDS,1663784,16.09.2026 12:05:13,BONUS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Şirket Esas Sözleşmesinin Tescili - İlgili Şablondan Gönderim,KORDS,,False
+KORDS,1664867,17.09.2026 18:38:37,RIGHTS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımı,KORDS,,False
+KORDS,1670572,30.09.2026 23:11:00,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin SPK Başvurusu,KORDS,,False
+MAVI,1642637,04.08.2026 11:07:21,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Azaltımına İlişkin Yönetim Kurulu Kararı,MAVI,,False
+MAVI,1644470,06.08.2026 17:28:48,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Azaltımına İlişkin SPK Başvurusu,MAVI,,False
+RGYAS,1646542,10.08.2026 16:47:27,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin 2025 yılı Olağan Genel Kurul Kararı,RGYAS,,False
+RGYAS,1668305,25.09.2026 18:17:12,MERGER,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK Onayı",RGYAS,,False
+RGYAS,1669662,29.09.2026 17:26:18,MERGER,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin Ticaret Sicil Onayı",RGYAS,,False
+RGYAS,1670550,30.09.2026 19:39:26,MERGER,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin Ticaret Sicil Onayı",RGYAS,,False
+RGYAS,1671678,05.10.2026 09:00:07,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kesinleşen Nakit Kar Payı Hak Kullanım Tarihi,RGYAS,,False
+RGYAS,1672991,06.10.2026 13:24:03,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kesinleşen Nakit Kar Payı Hak Kullanım Tarihi,RGYAS,,False
+RYSAS,1650604,14.08.2026 19:25:26,BONUS_ISSUE_DISCLOSURE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli ve Bedelsiz Sermaye Artırımının Geri Çekilmesi Hk. Yönetim Kurulu Kararı,RYSAS,,False
+RYSAS,1656680,01.09.2026 13:26:59,BONUS_ISSUE_DISCLOSURE,Hak Kullanım Süreç İptal Bildirimi,Bedelli ve Bedelsiz Sermaye Artırımının Geri Çekilmesi Hk. ,RYSAS,,False
+SASA,1643990,05.08.2026 21:53:53,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta bağlı sermaye artırımı tescili,SASA,,False
+SASA,1651300,17.08.2026 18:21:46,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Nakdi ve Tahsisli Sermaye Artırımı Yönetim Kurulu Kararı,SASA,,False
+SASA,1654175,21.08.2026 18:11:06,CAPITAL_INCREASE,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Nakdi ve Tahsisli Sermaye Artırımı SPK Başvurusu,SASA,,False
+SOKM,1648213,11.08.2026 20:00:26,MERGER,Birleşme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış usulde birleşmesine ilişkin Ticaret Sicil Onayı,SOKM,,False
+TKFEN,1643702,05.08.2026 17:23:21,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payına İlişkin Yönetim Kurulu Kararı,TKFEN,,False
+TKFEN,1658689,03.09.2026 22:01:09,DIVIDEND_PROCESS_DISCLOSURE,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Genel Kurul Sonucu,TKFEN,,False
+TRGYO,1664212,16.09.2026 18:16:19,MERGER,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklıkları ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK başvurusu",TRGYO,,False

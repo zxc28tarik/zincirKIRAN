@@ -1,0 +1,43 @@
+{
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "capture_local_date": "2026-10-08",
+  "captured_at": "2026-10-08T16:04:22.670918+00:00",
+  "contract": "PROSPECTIVE_HIGH52_INPUT_CA_RISK_CAPTURE_V1",
+  "limitations": [
+    "Yahoo adjusted close is validated live research evidence, not official Borsa total-return truth.",
+    "Recent KAP subject/summary classification identifies risk disclosures but does not invent ex-date, ratio, payment date, or cash amount.",
+    "Corporate actions in the older portion of the 252-day window remain to be reconciled against the frozen historical KAP inventory.",
+    "No live factor score or shadow signal is emitted."
+  ],
+  "price_history": {
+    "auto_adjust": false,
+    "captured_rows": 32880,
+    "captured_tickers": 100,
+    "price_history_gzip_sha256": "4206e8e17ae6eacb1fd84b641bd902fffeded27d951f5acd3e11d96d2c706724",
+    "rejection_count": 0,
+    "requested_tickers": 100,
+    "tickers_with_252_adj_close": 99
+  },
+  "production_ready": false,
+  "real_shadow_run_created": false,
+  "recent_ca_gap": {
+    "coverage_complete": true,
+    "current_universe_risk_rows": 43,
+    "current_universe_tickers_with_risk": 18,
+    "end": "2026-10-08",
+    "market_wide_ca_rows": 3634,
+    "market_wide_rows": 18793,
+    "start": "2026-08-01",
+    "window_count": 16
+  },
+  "ticker_gate": {
+    "historical_ca_reconciliation_complete": false,
+    "score_computation_allowed": 0,
+    "shadow_signal_allowed": 0,
+    "status_counts": {
+      "HISTORICAL_CA_RECONCILIATION_REQUIRED": 81,
+      "PRICE_HISTORY_INSUFFICIENT": 1,
+      "RECENT_CA_RISK_UNRESOLVED": 18
+    }
+  }
+}
