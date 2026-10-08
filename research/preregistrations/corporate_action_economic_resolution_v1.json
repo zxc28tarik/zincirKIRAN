@@ -84,6 +84,28 @@
         "Reuse the frozen Yahoo corroboration snapshot; vendor-only evidence still cannot resolve an event.",
         "No event risk may be released until action-type-specific official field contracts are separately locked."
       ]
+    },
+    {
+      "amendment_id": "A2_OFFICIAL_KAP_EXCEL_FIELD_DISCOVERY",
+      "timing": "AFTER_A1_HTML_RATE_LIMIT_DIAGNOSIS_BEFORE_ANY_EVENT_RISK_RELEASE",
+      "performance_information_used": false,
+      "reason": [
+        "KAP detail HTML exposes official export endpoints in its own server-rendered payload.",
+        "After A1, 200 events remained HTTP-429 limited and most captured HTML pages still exposed zero taxonomy rows in the initial/server payload.",
+        "The official KAP Excel export is a stronger structured discovery surface for economic field names and values."
+      ],
+      "source": {
+        "url_template": "https://www.kap.org.tr/tr/api/notification/export/excel/{disclosureIndex}",
+        "authority": "OFFICIAL_KAP_EXPORT",
+        "capture_policy": "POST_ACTIVATION_CONTENT_ADDRESSED_RESUMABLE",
+        "parser_policy": "PRESERVE_ALL_NONEMPTY_WORKBOOK_CELLS_WITH_SHEET_AND_COORDINATE"
+      },
+      "locked_rules": [
+        "Excel capture is field discovery only in A2; risk_released remains zero.",
+        "No economic field contract is inferred merely because a numeric/date-like cell exists.",
+        "HTML and Excel are both official KAP detail channels; conflicts fail closed.",
+        "Vendor evidence remains corroboration-only."
+      ]
     }
   ]
 }
