@@ -1,0 +1,52 @@
+{
+  "contract": "HISTORICAL_HIGH52_CA_RECONCILIATION_SUMMARY_V1",
+  "workflow_run_id": 37807488119,
+  "artifact_id": 11563393415,
+  "artifact_digest": "sha256:4e15c3333aba8bd03881e1c67470642c2db6395ea75c9ee50cd1be3ab311c2db",
+  "package_commit": "78c8dd7fb8b1771e7830be86cd5ebf584413c9a8",
+  "source": {
+    "repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+    "source_data_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+    "w6_audit_commit": "0c70e1607832624b1b90a9bf150271ab705a6036",
+    "manifest_sha256": "1935232295360b1026a036e725809e0e73a62253ce07145bbc1f13fd6abd1345",
+    "selected_window_count": 55
+  },
+  "exact_lookbacks": {
+    "tickers": 100,
+    "price_sufficient": 99,
+    "historical_interval_min_start": "2025-10-13",
+    "historical_interval_max_end": "2026-07-31"
+  },
+  "historical_risk": {
+    "risk_rows": 368,
+    "risk_tickers": 98
+  },
+  "combined_gate": {
+    "HISTORICAL_CA_RISK_UNRESOLVED": 98,
+    "PRICE_HISTORY_INSUFFICIENT": 1,
+    "RECENT_CA_RISK_UNRESOLVED": 1,
+    "factor_input_ready": 0,
+    "score_computation_allowed": 0,
+    "shadow_signal_allowed": 0,
+    "price_insufficient_ticker": "PAHOL",
+    "price_insufficient_observations": 224,
+    "historical_clean_but_recent_risk_ticker": "TKFEN",
+    "historical_clean_but_recent_risk_events": 2
+  },
+  "decision": {
+    "high52_factor_input_ready": false,
+    "narrow_classifier_post_hoc": false,
+    "next_required_work": "RESOLVE_ECONOMIC_ADJUSTMENT_DETAILS_FOR_CLASSIFIED_HISTORICAL_AND_RECENT_CA_EVENTS",
+    "key_findings": [
+      "The exact historical portion of current 252-observation lookbacks begins as early as 2025-10-13.",
+      "Only 55 frozen W6 response windows were required and every fetched response matched the pinned source manifest SHA.",
+      "Ninety-eight of ninety-nine price-sufficient current names carry at least one conservative historical CA-risk disclosure in the exact lookback.",
+      "TKFEN is the only price-sufficient name without historical classified risk, but it has two unresolved recent CA-risk disclosures.",
+      "PAHOL remains price-history insufficient with 224 usable adjusted-close observations.",
+      "Event-absence screening yields zero factor-input-ready names; the next legitimate step is event-detail/economic-adjustment resolution, not post-hoc classifier narrowing."
+    ]
+  },
+  "real_shadow_run_created": false,
+  "score_values_computed": false,
+  "production_ready": false
+}

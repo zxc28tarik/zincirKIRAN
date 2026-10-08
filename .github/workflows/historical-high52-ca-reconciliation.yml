@@ -1,0 +1,65 @@
+name: Historical High52 CA Reconciliation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/zincir_kiran/live_high52_reconciliation.py"
+      - "tests/test_live_high52_reconciliation.py"
+      - "scripts/reconcile_historical_high52_ca.py"
+      - "scripts/verify_historical_high52_ca_reconciliation.py"
+      - "research/preregistrations/historical_high52_ca_reconciliation_v1.json"
+      - "docs/HISTORICAL_HIGH52_CA_RECONCILIATION.md"
+      - ".github/workflows/historical-high52-ca-reconciliation.yml"
+      - "data/live_shadow/high52_historical_ca_reconciliation_v1/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  historical-high52-ca-reconciliation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3" "pytest==8.3.5"
+      - name: Verify frozen 45D input package
+        run: python scripts/verify_prospective_high52_input_ca_risk.py
+      - name: Test combined historical reconciliation gate
+        run: PYTHONPATH=src pytest -q tests/test_live_high52_reconciliation.py
+      - name: Reconcile once or verify frozen package
+        run: |
+          if [ -f data/live_shadow/high52_historical_ca_reconciliation_v1/provenance.json ]; then
+            python scripts/verify_historical_high52_ca_reconciliation.py
+          else
+            PYTHONPATH=src python scripts/reconcile_historical_high52_ca.py
+            python scripts/verify_historical_high52_ca_reconciliation.py
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: historical-high52-ca-reconciliation-v1
+          path: data/live_shadow/high52_historical_ca_reconciliation_v1/
+          if-no-files-found: error
+      - name: Persist first reconciliation package on PR branch
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live_shadow/high52_historical_ca_reconciliation_v1/
+          if git diff --cached --quiet; then
+            echo "45E package already frozen; no commit."
+            exit 0
+          fi
+          git commit -m "Implementation 45E: freeze historical 52W CA reconciliation"
+          git push origin "HEAD:${HEAD_REF}"
