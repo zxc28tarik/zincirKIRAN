@@ -176,7 +176,7 @@
     "UNRESOLVED_OFFICIAL_DETAIL_MISSING": 200,
     "VENDOR_CORROBORATED_ONLY": 94
   },
-  "last_repair_at": "2026-10-08T18:03:50.884507+00:00",
+  "last_repair_at": "2026-10-08T19:03:04.736177+00:00",
   "next_required_work": "LOCK_ACTION_TYPE_SPECIFIC_OFFICIAL_FIELD_CONTRACTS_FROM_CAPTURED_TAXONOMY",
   "official_detail": {
     "captured": 200,
