@@ -20,6 +20,8 @@ def main() -> int:
         "event_queue.csv",
         "detail_capture.csv",
         "taxonomy_fields.csv",
+        "excel_capture.csv",
+        "excel_cells.csv.gz",
         "yahoo_actions.csv",
         "initial_resolution.csv",
         "provenance.json",
@@ -44,7 +46,17 @@ def main() -> int:
     if len(queue) != 400 or queue["event_id"].nunique() != 400:
         raise RuntimeError("45F event queue must have exactly 400 unique events")
 
+    excel = pd.read_csv(OUT / "excel_capture.csv")
+    if len(excel) != 400 or excel["event_id"].nunique() != 400:
+        raise RuntimeError(
+            "45F Excel capture table must have exactly 400 unique events"
+        )
+
     initial = pd.read_csv(OUT / "initial_resolution.csv")
+    if len(initial) != 400 or initial["event_id"].nunique() != 400:
+        raise RuntimeError(
+            "45F initial resolution must have exactly 400 unique events"
+        )
     if initial["risk_released"].astype(bool).any():
         raise RuntimeError("45F field-discovery run cannot release risk")
     if initial["shadow_signal_allowed"].astype(bool).any():
@@ -64,6 +76,15 @@ def main() -> int:
                 "official_detail_captured": provenance["official_detail"]["captured"],
                 "official_detail_failed": provenance["official_detail"]["failed"],
                 "taxonomy_field_records": provenance["official_detail"]["field_records"],
+                "official_excel_captured": provenance.get(
+                    "official_excel", {}
+                ).get("captured", 0),
+                "official_excel_failed": provenance.get(
+                    "official_excel", {}
+                ).get("failed", 400),
+                "official_excel_cell_records": provenance.get(
+                    "official_excel", {}
+                ).get("cell_records", 0),
                 "vendor_corroborated_events": provenance["vendor_corroboration"][
                     "events_with_nearby_vendor_action"
                 ],
