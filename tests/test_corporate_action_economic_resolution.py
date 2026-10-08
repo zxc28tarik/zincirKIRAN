@@ -3,6 +3,8 @@ import pytest
 from zincir_kiran.corporate_action_economic_resolution import (
     EconomicResolutionEvidence,
     EconomicResolutionStatus,
+    ShareMultiplierContractEvidence,
+    evaluate_share_multiplier_contract,
     resolve_economic_action,
 )
 
@@ -119,3 +121,91 @@ def test_vendor_corroboration_does_not_upgrade_insufficient_official_detail():
     assert result.status is EconomicResolutionStatus.VENDOR_CORROBORATED_ONLY
     assert result.risk_released is False
     assert result.shadow_signal_allowed is False
+
+
+def test_share_multiplier_contract_accepts_final_official_multiplier():
+    result = evaluate_share_multiplier_contract(
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=True,
+            effective_date="2026-10-08",
+            effective_date_finalized=True,
+            share_multiplier=2.0,
+            bonus_rate_percent=None,
+        )
+    )
+    assert result.complete is True
+    assert result.reason_codes == ()
+
+
+def test_share_multiplier_contract_accepts_explicit_bonus_mechanics():
+    result = evaluate_share_multiplier_contract(
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=True,
+            effective_date="2026-10-08",
+            effective_date_finalized=True,
+            share_multiplier=None,
+            bonus_rate_percent=100.0,
+        )
+    )
+    assert result.complete is True
+
+
+def test_share_multiplier_contract_rejects_proposed_date():
+    result = evaluate_share_multiplier_contract(
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=True,
+            effective_date="2026-10-08",
+            effective_date_finalized=False,
+            share_multiplier=2.0,
+            bonus_rate_percent=None,
+        )
+    )
+    assert result.complete is False
+    assert "EFFECTIVE_DATE_NOT_FINALIZED" in result.reason_codes
+
+
+def test_share_multiplier_contract_rejects_missing_economic_mechanics():
+    result = evaluate_share_multiplier_contract(
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=True,
+            effective_date="2026-10-08",
+            effective_date_finalized=True,
+            share_multiplier=1.0,
+            bonus_rate_percent=0.0,
+        )
+    )
+    assert result.complete is False
+    assert "SHARE_MULTIPLIER_OR_BONUS_MECHANICS_MISSING" in result.reason_codes
+
+
+def test_share_multiplier_contract_requires_exact_target_match():
+    result = evaluate_share_multiplier_contract(
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=False,
+            effective_date="2026-10-08",
+            effective_date_finalized=True,
+            share_multiplier=1.5,
+            bonus_rate_percent=None,
+        )
+    )
+    assert result.complete is False
+    assert "TARGET_SHARE_GROUP_NOT_EXACTLY_MATCHED_ONCE" in result.reason_codes
+
+
+def test_share_multiplier_contract_rejects_invalid_values():
+    with pytest.raises(ValueError, match="positive"):
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=True,
+            effective_date="2026-10-08",
+            effective_date_finalized=True,
+            share_multiplier=0.0,
+            bonus_rate_percent=None,
+        )
+    with pytest.raises(ValueError, match="negative"):
+        ShareMultiplierContractEvidence(
+            exact_listed_ticker_share_group_once=True,
+            effective_date="2026-10-08",
+            effective_date_finalized=True,
+            share_multiplier=None,
+            bonus_rate_percent=-1.0,
+        )
