@@ -1,0 +1,73 @@
+{
+  "contract": "PROSPECTIVE_HIGH52_INPUT_CA_RISK_SUMMARY_V1",
+  "workflow_run_id": 37805821958,
+  "artifact_id": 11562164197,
+  "artifact_digest": "sha256:5dd8e9c371d876e05ac18ca079fb3f1826aa1f1a70052a033d3dddba5362554a",
+  "package_commit": "d00efdc71fbefbb7644cbebcc8627a8c7bd9ad9b",
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "captured_at": "2026-10-08T16:04:22.670918+00:00",
+  "price_history": {
+    "requested_tickers": 100,
+    "captured_tickers": 100,
+    "captured_rows": 32880,
+    "rejection_count": 0,
+    "tickers_with_252_adj_close": 99,
+    "insufficient": [
+      {
+        "ticker": "PAHOL",
+        "finite_positive_adj_close_observations": 224
+      }
+    ],
+    "price_history_sha256": "4206e8e17ae6eacb1fd84b641bd902fffeded27d951f5acd3e11d96d2c706724"
+  },
+  "recent_ca_gap": {
+    "start": "2026-08-01",
+    "end": "2026-10-08",
+    "coverage_complete": true,
+    "window_count": 16,
+    "market_wide_rows": 18793,
+    "market_wide_ca_rows": 3634,
+    "current_universe_risk_rows": 43,
+    "risk_tickers": {
+      "AKFYE": 2,
+      "ASTOR": 1,
+      "CVKMD": 5,
+      "CWENE": 2,
+      "ECILC": 1,
+      "FENER": 1,
+      "GUBRF": 4,
+      "HALKB": 3,
+      "HEKTS": 2,
+      "KATMR": 1,
+      "KORDS": 4,
+      "MAVI": 2,
+      "RGYAS": 6,
+      "RYSAS": 2,
+      "SASA": 3,
+      "SOKM": 1,
+      "TKFEN": 2,
+      "TRGYO": 1
+    }
+  },
+  "ticker_gate": {
+    "HISTORICAL_CA_RECONCILIATION_REQUIRED": 81,
+    "RECENT_CA_RISK_UNRESOLVED": 18,
+    "PRICE_HISTORY_INSUFFICIENT": 1,
+    "score_computation_allowed": 0,
+    "shadow_signal_allowed": 0
+  },
+  "decision": {
+    "high52_live_factor_ready": false,
+    "real_shadow_run_created": false,
+    "next_required_work": "RECONCILE_HISTORICAL_CA_RISK_FOR_ACTUAL_252D_LOOKBACK_AND_RESOLVE_OR_EXCLUDE_RECENT_CA_RISK_TICKERS",
+    "key_findings": [
+      "Domain presence alone was correctly prevented from authorizing HIGH_52W_PROXIMITY.",
+      "99 of 100 current BIST100 names have sufficient captured adjusted-price history; PAHOL has only 224 usable observations.",
+      "The official KAP gap from 2026-08-01 through 2026-10-08 is captured with complete adaptive-window coverage.",
+      "Eighteen current BIST100 names have unresolved recent corporate-action risk disclosures and are blocked.",
+      "The remaining eighty-one names still require historical corporate-action reconciliation for the older portion of the 252-day lookback.",
+      "No score or shadow signal is authorized by Implementation 45D."
+    ]
+  },
+  "production_ready": false
+}
