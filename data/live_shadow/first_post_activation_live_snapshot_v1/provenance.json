@@ -1,0 +1,49 @@
+{
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "capture_once_then_verify": true,
+  "captured_at": "2026-10-07T23:37:36.184902+00:00",
+  "contract": "FIRST_POST_ACTIVATION_LIVE_SNAPSHOT_V1",
+  "limitations": [
+    "Universe is a validated live research reconstruction from a frozen Q3 anchor plus the official Q4 periodic event, not a direct full constituent export.",
+    "Market prices and volume are Yahoo-derived validated live research evidence, not official Borsa market data.",
+    "No corporate-action, financial revision, model-state or train-evidence live snapshot is captured in this implementation.",
+    "No shadow run is created."
+  ],
+  "market": {
+    "authority": "VALIDATED_LIVE_RESEARCH",
+    "auto_adjust": false,
+    "captured_rows": 100,
+    "market_gzip_sha256": "7d878df6d07534ab4c5f08d737e2efb9f1450ede32c3a9f28c48317d3783aabc",
+    "rejection_count": 0,
+    "rejections_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "requested_tickers": 100,
+    "trade_dates": [
+      "2026-10-06"
+    ]
+  },
+  "production_ready": false,
+  "real_shadow_run_created": false,
+  "shadow_protocol_id": "ZINCIR_KIRAN_PROSPECTIVE_SHADOW_V1",
+  "snapshot_domains_missing": [
+    "CORPORATE_ACTIONS",
+    "FINANCIALS",
+    "PUBLICATION_REVISIONS",
+    "SECTOR_ROUTES",
+    "TRAIN_EVIDENCE_STATE",
+    "TRAINED_MODEL_STATE"
+  ],
+  "snapshot_domains_present": [
+    "UNIVERSE",
+    "MARKET_PRICES",
+    "VOLUME_LIQUIDITY"
+  ],
+  "universe": {
+    "authority": "VALIDATED_LIVE_RESEARCH",
+    "baseline_sha256": "a3b14014aa4d3ff16a082bc0dac64346b906f4b7720aeae5a8c449a2add314f2",
+    "member_count": 100,
+    "official_q4_gzip_sha256": "ef56289e9603bdb90e76e7360e497b98335515a142697b6f2d2a251153010b27",
+    "official_q4_raw_sha256": "9dc2639d4c10d06b7668a2ff3348e0f6a591e4eff5711152c1d5af4ba304c0a1",
+    "official_q4_source_url": "https://www.borsaistanbul.com/duyuru/15598/bist-pay-endeksleri-donemsel-degisiklikleri",
+    "universe_csv_sha256": "4f32de18caaea7b4fe3f5b136f03aa810b5033510bbb59730dae3a47447761d9"
+  }
+}
