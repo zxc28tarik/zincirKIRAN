@@ -6,6 +6,7 @@ import gzip
 import hashlib
 import html as html_lib
 import json
+import io
 import re
 import time
 from datetime import UTC, datetime, timedelta
@@ -15,6 +16,7 @@ import pandas as pd
 import requests
 import yfinance as yf
 from bs4 import BeautifulSoup
+from openpyxl import load_workbook
 
 from zincir_kiran.corporate_action_economic_resolution import (
     EconomicResolutionEvidence,
@@ -39,6 +41,7 @@ UNIVERSE = (
 )
 OUT = ROOT / "data/live_shadow/corporate_action_economic_resolution_v1"
 KAP_TEMPLATE = "https://www.kap.org.tr/tr/Bildirim/{event_id}"
+KAP_EXCEL_TEMPLATE = "https://www.kap.org.tr/tr/api/notification/export/excel/{event_id}"
 ACTIVATION = datetime.fromisoformat("2026-10-07T22:10:15+00:00")
 PRICE_START = "2025-07-01"
 
@@ -218,6 +221,181 @@ def parse_taxonomy_fields(raw: bytes, expanded: str) -> list[dict]:
             item["values_tr"],
         ),
     )
+
+
+def fetch_kap_excel(
+    event_id: str,
+    attempts: int = 3,
+) -> tuple[bytes | None, str | None]:
+    url = KAP_EXCEL_TEMPLATE.format(event_id=event_id)
+    headers = {
+        "User-Agent": "zincir-kiran-ca-resolution/1.0",
+        "Accept-Language": "tr-TR,tr;q=0.9",
+        "Accept": (
+            "application/vnd.openxmlformats-officedocument."
+            "spreadsheetml.sheet,application/octet-stream,*/*"
+        ),
+    }
+    last = None
+    for attempt in range(1, attempts + 1):
+        try:
+            response = requests.get(url, headers=headers, timeout=30)
+            if response.status_code == 429:
+                retry_after = response.headers.get("Retry-After")
+                try:
+                    delay = min(max(float(retry_after or 0), 2.0), 30.0)
+                except ValueError:
+                    delay = 5.0
+                last = "HTTP_429"
+                time.sleep(delay)
+                continue
+            if response.status_code == 200 and response.content:
+                raw = response.content
+                if raw[:2] != b"PK":
+                    last = "NOT_XLSX_ZIP"
+                else:
+                    return raw, None
+            else:
+                last = f"HTTP_{response.status_code}"
+        except Exception as exc:  # noqa: BLE001
+            last = f"{type(exc).__name__}:{exc}"
+        time.sleep(min(2**attempt, 10))
+    return None, last
+
+
+def parse_excel_cells(raw: bytes) -> list[dict]:
+    workbook = load_workbook(
+        io.BytesIO(raw),
+        read_only=True,
+        data_only=True,
+    )
+    rows: list[dict] = []
+    try:
+        for sheet in workbook.worksheets:
+            for row in sheet.iter_rows():
+                for cell in row:
+                    value = cell.value
+                    if value is None:
+                        continue
+                    if isinstance(value, str):
+                        normalized = value.strip()
+                        if not normalized:
+                            continue
+                        rendered = normalized
+                    elif isinstance(value, datetime):
+                        rendered = value.isoformat()
+                    else:
+                        rendered = str(value)
+                    rows.append(
+                        {
+                            "sheet": sheet.title,
+                            "coordinate": cell.coordinate,
+                            "row": int(cell.row),
+                            "column": int(cell.column),
+                            "value": rendered,
+                            "value_type": type(value).__name__,
+                        }
+                    )
+    finally:
+        workbook.close()
+    return rows
+
+
+def capture_excel_details(
+    queue: pd.DataFrame,
+) -> tuple[pd.DataFrame, list[dict]]:
+    excel_dir = OUT / "kap_excel"
+    parsed_dir = OUT / "parsed_excel"
+    excel_dir.mkdir(parents=True, exist_ok=True)
+    parsed_dir.mkdir(parents=True, exist_ok=True)
+
+    rows: list[dict] = []
+    cell_records: list[dict] = []
+
+    def one(event_id: str) -> dict:
+        path = excel_dir / f"{event_id}.xlsx"
+        reused = path.exists()
+        if reused:
+            raw = path.read_bytes()
+            error = None
+        else:
+            raw, error = fetch_kap_excel(event_id)
+            if raw is None:
+                return {
+                    "event_id": event_id,
+                    "captured": False,
+                    "error": error,
+                }
+            path.write_bytes(raw)
+
+        if raw[:2] != b"PK":
+            return {
+                "event_id": event_id,
+                "captured": False,
+                "error": "EXCEL_CAPTURE_NOT_ZIP",
+            }
+        try:
+            cells = parse_excel_cells(raw)
+        except Exception as exc:  # noqa: BLE001
+            return {
+                "event_id": event_id,
+                "captured": False,
+                "error": f"EXCEL_PARSE:{type(exc).__name__}:{exc}",
+            }
+
+        parsed = {
+            "event_id": event_id,
+            "source_url": KAP_EXCEL_TEMPLATE.format(event_id=event_id),
+            "raw_sha256": sha256_bytes(raw),
+            "cells": cells,
+        }
+        parsed_path = parsed_dir / f"{event_id}.json"
+        parsed_path.write_text(
+            json.dumps(
+                parsed,
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=True,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        return {
+            "event_id": event_id,
+            "captured": True,
+            "error": None,
+            "raw_sha256": parsed["raw_sha256"],
+            "parsed_sha256": sha256_bytes(parsed_path.read_bytes()),
+            "nonempty_cell_count": len(cells),
+            "capture_source": (
+                "REUSED_FROZEN_XLSX"
+                if reused
+                else "NEW_OFFICIAL_XLSX"
+            ),
+        }
+
+    event_ids = queue["event_id"].astype(str).tolist()
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+        future_map = {
+            pool.submit(one, event_id): event_id
+            for event_id in event_ids
+        }
+        for future in concurrent.futures.as_completed(future_map):
+            rows.append(future.result())
+
+    capture = pd.DataFrame(rows).sort_values("event_id").reset_index(drop=True)
+    for row in capture.loc[capture["captured"].eq(True)].itertuples(index=False):
+        parsed = json.loads(
+            (parsed_dir / f"{row.event_id}.json").read_text(encoding="utf-8")
+        )
+        for cell in parsed["cells"]:
+            cell_records.append(
+                {
+                    "event_id": str(row.event_id),
+                    **cell,
+                }
+            )
+    return capture, cell_records
 
 
 def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
@@ -430,6 +608,8 @@ def main() -> int:
     )
 
     capture, field_records = capture_details(queue)
+    excel_capture, excel_cells = capture_excel_details(queue)
+
     actions_path = OUT / "yahoo_actions.csv"
     if actions_path.exists():
         actions = pd.read_csv(actions_path)
@@ -444,7 +624,31 @@ def main() -> int:
     capture.to_csv(capture_path, index=False, lineterminator="\n")
 
     fields_path = OUT / "taxonomy_fields.csv"
-    pd.DataFrame(field_records).to_csv(fields_path, index=False, lineterminator="\n")
+    pd.DataFrame(field_records).to_csv(
+        fields_path,
+        index=False,
+        lineterminator="\n",
+    )
+
+    excel_capture_path = OUT / "excel_capture.csv"
+    excel_capture.to_csv(
+        excel_capture_path,
+        index=False,
+        lineterminator="\n",
+    )
+
+    excel_cells_path = OUT / "excel_cells.csv.gz"
+    excel_cells_frame = pd.DataFrame(excel_cells)
+    excel_cells_frame.to_csv(
+        excel_cells_path,
+        index=False,
+        lineterminator="\n",
+        compression={
+            "method": "gzip",
+            "compresslevel": 9,
+            "mtime": 0,
+        },
+    )
 
     actions_path = OUT / "yahoo_actions.csv"
     actions.to_csv(actions_path, index=False, lineterminator="\n")
@@ -454,17 +658,27 @@ def main() -> int:
         str(row.event_id): row
         for row in capture.itertuples(index=False)
     }
+    excel_by_id = {
+        str(row.event_id): row
+        for row in excel_capture.itertuples(index=False)
+    }
     for row in queue.itertuples(index=False):
         event_id = str(row.event_id)
         cap = capture_by_id[event_id]
-        captured = bool(cap.captured)
+        xls = excel_by_id[event_id]
+        html_captured = bool(cap.captured)
+        excel_captured = bool(xls.captured)
+        captured = html_captured or excel_captured
+        official_sha = (
+            str(cap.raw_sha256)
+            if html_captured
+            else (str(xls.raw_sha256) if excel_captured else None)
+        )
         evidence = EconomicResolutionEvidence(
             event_id=event_id,
             event_type=str(row.event_type),
             official_detail_captured=captured,
-            official_detail_sha256=(
-                str(cap.raw_sha256) if captured else None
-            ),
+            official_detail_sha256=official_sha,
             # First 45F run is deliberately field-discovery only. Economic
             # completeness is promoted only after explicit field contracts
             # are written from captured evidence.
@@ -482,8 +696,21 @@ def main() -> int:
                 "scopes": row.scopes,
                 "official_detail_captured": captured,
                 "official_detail_sha256": evidence.official_detail_sha256,
+                "official_html_captured": html_captured,
+                "official_excel_captured": excel_captured,
+                "html_sha256": (
+                    str(cap.raw_sha256) if html_captured else None
+                ),
+                "excel_sha256": (
+                    str(xls.raw_sha256) if excel_captured else None
+                ),
                 "taxonomy_field_count": (
-                    int(cap.field_count) if captured else 0
+                    int(cap.field_count) if html_captured else 0
+                ),
+                "excel_nonempty_cell_count": (
+                    int(xls.nonempty_cell_count)
+                    if excel_captured
+                    else 0
                 ),
                 "vendor_corroboration_present": evidence.vendor_corroboration_present,
                 "status": result.status.value,
@@ -521,6 +748,29 @@ def main() -> int:
         field_summary = summary.to_dict("records")
 
     now = datetime.now(UTC).isoformat()
+    if excel_cells_frame.empty:
+        excel_inventory = []
+    else:
+        event_type_by_id = dict(
+            zip(
+                queue["event_id"].astype(str),
+                queue["event_type"],
+                strict=True,
+            )
+        )
+        excel_cells_frame["event_type"] = excel_cells_frame["event_id"].map(
+            event_type_by_id
+        )
+        excel_summary = (
+            excel_cells_frame.groupby("event_type", sort=True)
+            .agg(
+                event_count=("event_id", "nunique"),
+                nonempty_cell_count=("value", "count"),
+            )
+            .reset_index()
+        )
+        excel_inventory = excel_summary.to_dict("records")
+
     provenance = {
         "contract": "CORPORATE_ACTION_ECONOMIC_RESOLUTION_FIELD_DISCOVERY_V1",
         "captured_at": (
@@ -564,6 +814,34 @@ def main() -> int:
                 .sum()
             ),
         },
+        "official_excel": {
+            "captured": int(
+                excel_capture["captured"].astype(bool).sum()
+            ),
+            "failed": int(
+                (~excel_capture["captured"].astype(bool)).sum()
+            ),
+            "cell_records": int(len(excel_cells)),
+            "reused_frozen_xlsx": int(
+                excel_capture.get(
+                    "capture_source",
+                    pd.Series(dtype=str),
+                )
+                .astype(str)
+                .eq("REUSED_FROZEN_XLSX")
+                .sum()
+            ),
+            "new_official_xlsx": int(
+                excel_capture.get(
+                    "capture_source",
+                    pd.Series(dtype=str),
+                )
+                .astype(str)
+                .eq("NEW_OFFICIAL_XLSX")
+                .sum()
+            ),
+            "event_type_inventory": excel_inventory,
+        },
         "vendor_corroboration": {
             "yahoo_action_rows": int(len(actions)),
             "events_with_nearby_vendor_action": int(sum(vendor.values())),
@@ -589,12 +867,22 @@ def main() -> int:
         queue_path,
         capture_path,
         fields_path,
+        excel_capture_path,
+        excel_cells_path,
         actions_path,
         resolution_path,
         provenance_path,
     ]
     files.extend(path for path in (OUT / "kap_detail").glob("*") if path.is_file())
-    files.extend(path for path in (OUT / "parsed_detail").glob("*") if path.is_file())
+    files.extend(
+        path for path in (OUT / "parsed_detail").glob("*") if path.is_file()
+    )
+    files.extend(
+        path for path in (OUT / "kap_excel").glob("*") if path.is_file()
+    )
+    files.extend(
+        path for path in (OUT / "parsed_excel").glob("*") if path.is_file()
+    )
     sums = [
         f"{sha256_bytes(path.read_bytes())}  {path.relative_to(OUT)}"
         for path in sorted(files, key=lambda item: str(item.relative_to(OUT)))
