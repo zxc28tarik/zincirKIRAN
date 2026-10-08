@@ -1,0 +1,189 @@
+{
+  "captured_at": "2026-10-08T16:04:22.670918+00:00",
+  "complete": true,
+  "contract": "PROSPECTIVE_KAP_CA_GAP_CAPTURE_V1",
+  "source_url": "https://kap.org.tr/tr/api/disclosure/members/byCriteria",
+  "total_ca_rows": 3634,
+  "total_rows": 18793,
+  "window_count": 16,
+  "window_end": "2026-10-08",
+  "window_start": "2026-08-01",
+  "windows": [
+    {
+      "attempt": 1,
+      "ca_row_count": 136,
+      "end": "2026-08-04",
+      "request_sha256": "dba59113c29184c9ab6d635236ce5b517b1ba70b3fbaf9762cb9b19a9e9135af",
+      "response_gzip_sha256": "29dbe1d84e783bf690763666e6a53f5c020cfbb6e4a563d2823226df367c36ce",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:30 GMT",
+      "response_raw_sha256": "69eb1f7fadc938562fadbb10950867c50eb34256bfce63cd51e23da252725b8f",
+      "row_count": 661,
+      "start": "2026-08-01"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 214,
+      "end": "2026-08-07",
+      "request_sha256": "84116d1d88dc63f5ea152d25a68c1d7e00f0cef95f5afc83e136e0ce6f7328c2",
+      "response_gzip_sha256": "70cffb928e057f02858bd8f75b0313b748590ba6d27586c5832ddeff54f17125",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:31 GMT",
+      "response_raw_sha256": "b7ddf3dc28cdaaba0febc3eb85c46fd17f9080dd8a194dc20659824c6ca97fab",
+      "row_count": 1411,
+      "start": "2026-08-05"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 111,
+      "end": "2026-08-11",
+      "request_sha256": "4f1f92f6599551c7e5ec4b9214d726a39e8bebfb45f6c7036b4952c948c772e2",
+      "response_gzip_sha256": "6f4e0421691890f3bbc87e9e868010c2b7e0d511e4e8f40f2928aad55982afd3",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:35 GMT",
+      "response_raw_sha256": "8c66150afc0129f537174019da45f3d574e2b3ee4675cb1e2951aa76f0f226bb",
+      "row_count": 1279,
+      "start": "2026-08-08"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 235,
+      "end": "2026-08-14",
+      "request_sha256": "4508e51635879cbc1b709c3092cfc59dbe8a08342f9af3ee7fc56fc8f9ea5ed8",
+      "response_gzip_sha256": "58e36e10387d19c206465f29c7181395c5e8451aa16d8e6523e329e2a4de89ff",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:36 GMT",
+      "response_raw_sha256": "cd6d78e9b88d316d5f36f3c6ba356b2d12f04100b4c9a92739c73524b2cf2df1",
+      "row_count": 1336,
+      "start": "2026-08-12"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 112,
+      "end": "2026-08-18",
+      "request_sha256": "d907db0b1564174ecb42ad3f4bf8b9d4674a5a1d960efed4be5eeab10dffc073",
+      "response_gzip_sha256": "cb8a29fd4eb8ee8052b2e7b0f61dcac9ef8d5e2bdca3e2c8d89e6cbf894cd7c5",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:38 GMT",
+      "response_raw_sha256": "0985719aa6eadaf38fb335ffed218fe22808184dae8a36a1b8c301853b9c49d2",
+      "row_count": 1122,
+      "start": "2026-08-15"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 211,
+      "end": "2026-08-21",
+      "request_sha256": "18851963be7dcddc3aa3681f5fe4165806aba6033fa178450547c66e8efab4cc",
+      "response_gzip_sha256": "f02950ff476bb151fd4888644f9a887bf5c3344b75f588b256556ac435314273",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:39 GMT",
+      "response_raw_sha256": "7044948871afcf4b44355b409dfaca9e9f857e7028a79e8da42eb55fe0fc223a",
+      "row_count": 1339,
+      "start": "2026-08-19"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 278,
+      "end": "2026-08-28",
+      "request_sha256": "702890fffafffeeda3b8ad45058cd09b1c90bd70a6da3431bb12f627975a3921",
+      "response_gzip_sha256": "9e6fd10534ae4f02053ad927d8a32e8021fe3ca898fba72ad94547f365e34a36",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:40 GMT",
+      "response_raw_sha256": "1fd9633aa3437c60776473ed25706feb392abb952fcae4b97d5edf823a7ccdaa",
+      "row_count": 1093,
+      "start": "2026-08-22"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 337,
+      "end": "2026-09-04",
+      "request_sha256": "7f032c4b9bde3b0f4099a1e6944a02fe453f170f516ec8a973e93344435ffcf9",
+      "response_gzip_sha256": "096413f2feb6ef31a9808587efbd81d965d312732b1e679a47d3d5a05f97176f",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:41 GMT",
+      "response_raw_sha256": "08d60cb2791d485dd5684284b62160afe532ec37fa8751173d51d322ae3ef6a4",
+      "row_count": 1628,
+      "start": "2026-08-29"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 335,
+      "end": "2026-09-11",
+      "request_sha256": "4ad4253bb5920892930692ecd158e818ee2739061bbf9dcbc08dc10795149c8d",
+      "response_gzip_sha256": "cec4843a9323d748321e35af7a3751ef50430741170890de99c3760ac3b6bf98",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:42 GMT",
+      "response_raw_sha256": "00f0d078f2d6fe16f746baaed387b05037562aae44f80d38c974e8f4dc9352ff",
+      "row_count": 1188,
+      "start": "2026-09-05"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 137,
+      "end": "2026-09-15",
+      "request_sha256": "8babfdff06eec5342f18ea932432905e89348b85464994b95106ba53509dd430",
+      "response_gzip_sha256": "bdd8d77fadeb73bbc4dbc468773d7791c3b55d66a62aa20a6d68a98bc383cad8",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:44 GMT",
+      "response_raw_sha256": "9a010367e8769b97b3a97f11cc366957142db0766f6d520497abce2ece3d12ef",
+      "row_count": 626,
+      "start": "2026-09-12"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 213,
+      "end": "2026-09-18",
+      "request_sha256": "840796f7e4bdfe9347c65cc98ddd506e31f7fea89450464285d5e68a704811b0",
+      "response_gzip_sha256": "5b74a529cf479fca7a0984ad493b7cebb86a5bfa99cf87759afea09f4bf7e650",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:46 GMT",
+      "response_raw_sha256": "191962a6f0f708429da081f67cb97f5965a52c8c76c5ac6f1a4b92d2ceb0a16e",
+      "row_count": 1662,
+      "start": "2026-09-16"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 174,
+      "end": "2026-09-22",
+      "request_sha256": "9b0054088ce060d939614f44168f29ab53d06dd210d6430cc36d5b16c4b8f0f7",
+      "response_gzip_sha256": "6f5adeba7d13658725f2470a6b55b9f83e7d0bf3b0db63d1b63014d490a97f86",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:48 GMT",
+      "response_raw_sha256": "b5f8021d1eb580cb9fca64e5e3e6e8112d8200d705df6a0cd336f87371f14b26",
+      "row_count": 885,
+      "start": "2026-09-19"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 274,
+      "end": "2026-09-25",
+      "request_sha256": "942c48be5c3977a5748555ab8849df11ea8b106a8d069da061bcfc1899ee0c95",
+      "response_gzip_sha256": "8390dc420cc687e43e256e6e6f7478d6b104ab55ccd73a96a471f898c224d15a",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:49 GMT",
+      "response_raw_sha256": "1371084872cfb23ef6bfc7466e420108ad79febd81e9601b5f2cb376898deceb",
+      "row_count": 1079,
+      "start": "2026-09-23"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 175,
+      "end": "2026-09-29",
+      "request_sha256": "2f17258dd824625337c528c2f7f4752ebaba3c55aff28ccefd7f7a068c390399",
+      "response_gzip_sha256": "9286f2e2bb499c7db1ce48ddf8fbcf0e8f3208369345311b09030c00961ddf9d",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:51 GMT",
+      "response_raw_sha256": "3897df719b5c1034ca9966283d683626ecbb9893b6f3aa624fbfcce8d4783e37",
+      "row_count": 975,
+      "start": "2026-09-26"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 298,
+      "end": "2026-10-02",
+      "request_sha256": "355e4025f55ad207db3582539d8859f1cdfa37ec90cc27030f68d56873906bd3",
+      "response_gzip_sha256": "30ce682e12b3999303c6d22666727bc0bed15ce48c35dda105c0a043e1588ede",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:52 GMT",
+      "response_raw_sha256": "b24dd9c11b268e5807afe7c6e39cd5c3295629e9285ff7c48c7565ea731e0eff",
+      "row_count": 1171,
+      "start": "2026-09-30"
+    },
+    {
+      "attempt": 1,
+      "ca_row_count": 394,
+      "end": "2026-10-08",
+      "request_sha256": "5ab16faf04d6c4ec697cd83e4aece11e0b88fea904a0e4309ee5c0b96ec5661a",
+      "response_gzip_sha256": "911052bbe5c41ebe27ec564b3495b47f3e40bbaf865f51908276ae4ce0d42d37",
+      "response_http_date": "Thu, 08 Oct 2026 16:04:53 GMT",
+      "response_raw_sha256": "490c888e151317171ee7daf2270d361527499cac251a2fb0c4bfbc6fe2196fd6",
+      "row_count": 1338,
+      "start": "2026-10-03"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+name: Prospective High52 Input CA Risk Gate
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/zincir_kiran/live_high52_gate.py"
+      - "tests/test_live_high52_gate.py"
+      - "scripts/capture_prospective_high52_input_ca_risk.py"
+      - "scripts/verify_prospective_high52_input_ca_risk.py"
+      - "research/preregistrations/prospective_high52_input_ca_risk_gate_v1.json"
+      - "docs/PROSPECTIVE_HIGH52_INPUT_CA_RISK_GATE.md"
+      - ".github/workflows/prospective-high52-input-ca-risk.yml"
+      - "data/live_shadow/high52_input_ca_risk_v1/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  high52-input-ca-risk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3" "yfinance==0.2.66" "requests==2.34.2" "pytest==8.3.5"
+      - name: Test 52W factor input gate
+        run: PYTHONPATH=src pytest -q tests/test_live_high52_gate.py
+      - name: Capture once or verify frozen 52W/CA package
+        run: |
+          if [ -f data/live_shadow/high52_input_ca_risk_v1/provenance.json ]; then
+            python scripts/verify_prospective_high52_input_ca_risk.py
+          else
+            PYTHONPATH=src python scripts/capture_prospective_high52_input_ca_risk.py
+            python scripts/verify_prospective_high52_input_ca_risk.py
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prospective-high52-input-ca-risk-v1
+          path: data/live_shadow/high52_input_ca_risk_v1/
+          if-no-files-found: error
+      - name: Persist first capture on PR branch
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live_shadow/high52_input_ca_risk_v1/
+          if git diff --cached --quiet; then
+            echo "45D package already frozen; no commit."
+            exit 0
+          fi
+          git commit -m "Implementation 45D: freeze prospective 52W input and CA risk package"
+          git push origin "HEAD:${HEAD_REF}"

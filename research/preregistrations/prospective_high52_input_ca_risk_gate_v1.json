@@ -1,0 +1,51 @@
+{
+  "preregistration_id": "PROSPECTIVE_HIGH52_INPUT_CA_RISK_GATE_V1",
+  "registered_before_capture": true,
+  "parent_issue": 124,
+  "shadow_protocol_id": "ZINCIR_KIRAN_PROSPECTIVE_SHADOW_V1",
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "real_shadow_run_creation_allowed": false,
+  "price_history": {
+    "universe_source": "FIRST_POST_ACTIVATION_LIVE_SNAPSHOT_V1",
+    "capture_start": "2025-07-01",
+    "minimum_adj_close_observations": 252,
+    "require_finite_positive_adj_close": true,
+    "raw_close_retained": true,
+    "volume_retained": true,
+    "auto_adjust": false,
+    "alias_guessing_allowed": false,
+    "missing_policy": "FACTOR_UNAVAILABLE",
+    "vendor": "Yahoo Finance via yfinance",
+    "versions": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "yfinance": "0.2.66"
+    }
+  },
+  "recent_corporate_action_gap": {
+    "source_id": "kap",
+    "endpoint": "https://kap.org.tr/tr/api/disclosure/members/byCriteria",
+    "start_date": "2026-08-01",
+    "end_rule": "CAPTURE_LOCAL_DATE",
+    "safe_margin": 1900,
+    "hard_cap": 2000,
+    "adaptive_bisection": true,
+    "preserve_request_response_bytes": true,
+    "complete_coverage_required": true
+  },
+  "corporate_action_risk": {
+    "classifier": "EXISTING_CORPORATE_ACTION_BOOTSTRAP_CLASSIFIER",
+    "process_labels_do_not_imply_resolved_adjustment": true,
+    "unresolved_positive_risk_blocks_ticker": true,
+    "pre_gap_historical_252d_reconciliation_required": true
+  },
+  "factor_gate": {
+    "domain_presence_alone_sufficient": false,
+    "price_window_ready_required": true,
+    "recent_ca_gap_complete_required": true,
+    "unresolved_recent_ca_risk_forbidden": true,
+    "historical_ca_reconciliation_required": true,
+    "signal_emission_allowed": false
+  },
+  "production_ready": false
+}
