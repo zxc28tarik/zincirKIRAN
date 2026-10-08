@@ -19,6 +19,7 @@ PACKAGE = ROOT / "data/live_shadow/corporate_action_economic_resolution_v1"
 QUEUE = PACKAGE / "event_queue.csv"
 CELLS = PACKAGE / "official_table_cells.csv.gz"
 DETAIL_STAGE = PACKAGE / "detail_stage.csv"
+DETAIL_CAPTURE = PACKAGE / "detail_capture.csv"
 OUT = PACKAGE / "share_multiplier_resolution.csv"
 SUMMARY = PACKAGE / "share_multiplier_resolution_summary.json"
 
@@ -29,6 +30,11 @@ def main() -> int:
     queue = pd.read_csv(QUEUE, dtype=str, keep_default_na=False)
     cells = pd.read_csv(CELLS, dtype=str, keep_default_na=False)
     detail_stage = pd.read_csv(DETAIL_STAGE, dtype=str, keep_default_na=False)
+    detail_capture = pd.read_csv(
+        DETAIL_CAPTURE,
+        dtype=str,
+        keep_default_na=False,
+    )
 
     bonus = queue.loc[queue["event_type"].eq(TARGET_EVENT_TYPE)].copy()
     if len(bonus) != 33:
@@ -37,6 +43,10 @@ def main() -> int:
     stage_by_id = {
         str(row.event_id): row
         for row in detail_stage.itertuples(index=False)
+    }
+    capture_by_id = {
+        str(row.event_id): row
+        for row in detail_capture.itertuples(index=False)
     }
     cells_by_id = {
         str(event_id): group.to_dict("records")
@@ -56,6 +66,7 @@ def main() -> int:
                     "event_id": event_id,
                     "tickers": str(row.tickers),
                     "official_detail_present": official_present,
+                    "official_detail_sha256": "",
                     "matched_target_rows": 0,
                     "effective_date": "",
                     "effective_date_finalized": False,
@@ -85,6 +96,7 @@ def main() -> int:
                     "event_id": event_id,
                     "tickers": tickers[0],
                     "official_detail_present": False,
+                    "official_detail_sha256": "",
                     "matched_target_rows": 0,
                     "effective_date": "",
                     "effective_date_finalized": False,
@@ -97,20 +109,23 @@ def main() -> int:
             )
             continue
 
+        capture = capture_by_id.get(event_id)
+        raw_sha256 = str(getattr(capture, "raw_sha256", "") or "")
+        if len(raw_sha256) != 64:
+            raise RuntimeError(
+                f"captured official detail lacks raw SHA256 for event {event_id}"
+            )
+
         event_cells = cells_by_id.get(event_id, [])
         extraction = extract_share_multiplier_contract(
             event_cells,
             ticker=tickers[0],
         )
-
-        # The table-cell artifact is derived from captured official KAP HTML.
-        # 45F does not need to re-use the raw content hash here; the upstream
-        # package hashes and SHA256SUMS preserve byte identity.
         evidence = EconomicResolutionEvidence(
             event_id=event_id,
             event_type=TARGET_EVENT_TYPE,
             official_detail_captured=True,
-            official_detail_sha256="0" * 64,
+            official_detail_sha256=raw_sha256,
             official_economic_fields_complete=extraction.contract.complete,
             official_non_price_affecting_explicit=False,
             vendor_corroboration_present=False,
@@ -128,6 +143,7 @@ def main() -> int:
                 "event_id": event_id,
                 "tickers": tickers[0],
                 "official_detail_present": True,
+                "official_detail_sha256": raw_sha256,
                 "matched_target_rows": extraction.matched_target_rows,
                 "effective_date": extraction.evidence.effective_date or "",
                 "effective_date_finalized": extraction.evidence.effective_date_finalized,
