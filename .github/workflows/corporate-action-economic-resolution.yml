@@ -5,9 +5,12 @@ on:
     branches: [main]
     paths:
       - "src/zincir_kiran/corporate_action_economic_resolution.py"
+      - "src/zincir_kiran/share_multiplier_resolution.py"
       - "tests/test_corporate_action_economic_resolution.py"
+      - "tests/test_share_multiplier_resolution.py"
       - "scripts/capture_corporate_action_economic_resolution.py"
       - "scripts/verify_corporate_action_economic_resolution.py"
+      - "scripts/materialize_share_multiplier_resolution.py"
       - "research/preregistrations/corporate_action_economic_resolution_v1.json"
       - "docs/CORPORATE_ACTION_ECONOMIC_RESOLUTION.md"
       - ".github/workflows/corporate-action-economic-resolution.yml"
@@ -32,7 +35,10 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install "numpy==1.26.4" "pandas==2.2.3" "yfinance==0.2.66" "requests==2.34.2" "beautifulsoup4==4.15.0" "openpyxl==3.1.5" "pytest==8.3.5"
       - name: Test economic resolution ladder
-        run: PYTHONPATH=src pytest -q tests/test_corporate_action_economic_resolution.py
+        run: |
+          PYTHONPATH=src pytest -q \
+            tests/test_corporate_action_economic_resolution.py \
+            tests/test_share_multiplier_resolution.py
       - name: Resume incomplete field discovery or verify frozen package
         run: |
           NEED_CAPTURE=1
@@ -61,6 +67,8 @@ jobs:
         run: python scripts/materialize_official_kap_table_cells.py
       - name: Materialize official detail-stage triage
         run: PYTHONPATH=src python scripts/materialize_official_detail_stages.py
+      - name: Materialize locked share-multiplier receipts
+        run: PYTHONPATH=src python scripts/materialize_share_multiplier_resolution.py
       - uses: actions/upload-artifact@v4
         with:
           name: corporate-action-economic-resolution-v1
