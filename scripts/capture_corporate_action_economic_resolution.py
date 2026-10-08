@@ -107,6 +107,15 @@ def fetch_kap(event_id: str, attempts: int = 2) -> tuple[bytes | None, str | Non
     for attempt in range(1, attempts + 1):
         try:
             response = requests.get(url, headers=headers, timeout=20)
+            if response.status_code == 429:
+                retry_after = response.headers.get("Retry-After")
+                try:
+                    delay = min(max(float(retry_after or 0), 2.0), 30.0)
+                except ValueError:
+                    delay = 5.0
+                last = "HTTP_429"
+                time.sleep(delay)
+                continue
             if response.status_code == 200 and response.content:
                 raw = response.content
                 text = raw.decode("utf-8", errors="ignore")
@@ -148,8 +157,8 @@ def parse_basic(expanded: str) -> dict:
         return {}
 
 
-def parse_taxonomy_fields(expanded: str) -> list[dict]:
-    soup = BeautifulSoup(expanded, "html.parser")
+def _taxonomy_fields_from_html(document: str) -> list[dict]:
+    soup = BeautifulSoup(document, "html.parser")
     fields: list[dict] = []
     for row in soup.find_all("tr"):
         name_node = row.select_one(".taxonomy-field-name")
@@ -186,6 +195,31 @@ def parse_taxonomy_fields(expanded: str) -> list[dict]:
     return fields
 
 
+def parse_taxonomy_fields(raw: bytes, expanded: str) -> list[dict]:
+    """Merge taxonomy rows from raw SSR HTML and decoded Next payload."""
+    combined: dict[tuple[str, tuple[str, ...], tuple[str, ...]], dict] = {}
+    documents = [
+        raw.decode("utf-8", errors="ignore"),
+        expanded,
+    ]
+    for document in documents:
+        for field in _taxonomy_fields_from_html(document):
+            key = (
+                field["field_name"],
+                tuple(field["titles_tr"]),
+                tuple(field["values_tr"]),
+            )
+            combined[key] = field
+    return sorted(
+        combined.values(),
+        key=lambda item: (
+            item["field_name"],
+            item["titles_tr"],
+            item["values_tr"],
+        ),
+    )
+
+
 def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
     detail_dir = OUT / "kap_detail"
     parsed_dir = OUT / "parsed_detail"
@@ -210,7 +244,7 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
 
         expanded = decode_next_payload(raw)
         basic = parse_basic(expanded)
-        fields = parse_taxonomy_fields(expanded)
+        fields = parse_taxonomy_fields(raw, expanded)
         if str(basic.get("disclosureIndex") or "") not in {"", event_id}:
             return {
                 "event_id": event_id,
@@ -248,7 +282,7 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
         }
 
     event_ids = queue["event_id"].astype(str).tolist()
-    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         future_map = {pool.submit(one, event_id): event_id for event_id in event_ids}
         for future in concurrent.futures.as_completed(future_map):
             rows.append(future.result())
