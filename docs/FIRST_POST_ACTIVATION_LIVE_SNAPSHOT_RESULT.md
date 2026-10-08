@@ -93,3 +93,25 @@ threshold.
 
 The next narrow blocker for the simplest 52W track is a prospective
 CORPORATE_ACTIONS live-domain snapshot.
+
+
+## Factor-input sufficiency boundary
+
+The 45B gate above validates **domain snapshot presence and authority**, not yet
+the full numerical input coverage of every factor.
+
+The research definition of `HIGH_52W_PROXIMITY` requires **252 finite positive
+adjusted-close observations ending on the signal date**. The 45C market
+snapshot intentionally contains only the current/latest raw Close + Volume row
+per security.
+
+Therefore:
+
+- 45C proves a prospective MARKET_PRICES/VOLUME_LIQUIDITY snapshot exists;
+- it does **not** prove that the live 52W factor is computable;
+- adding CORPORATE_ACTIONS alone must not make HIGH_52W_PROXIMITY executable;
+- a later input-sufficiency gate must require the full 252-observation
+  adjusted-price window (or an equivalently content-addressed factor-state
+  snapshot) before any real shadow signal can be emitted.
+
+This distinction is locked before the first real shadow run.
