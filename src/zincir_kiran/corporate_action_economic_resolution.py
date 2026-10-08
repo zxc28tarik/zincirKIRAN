@@ -20,6 +20,63 @@ class EconomicResolutionStatus(StrEnum):
 
 
 @dataclass(frozen=True)
+class ShareMultiplierContractEvidence:
+    """Official fields required to resolve bonus/split share-multiplier economics."""
+
+    exact_listed_ticker_share_group_once: bool
+    effective_date: str | None
+    effective_date_finalized: bool
+    share_multiplier: float | None
+    bonus_rate_percent: float | None
+
+    def __post_init__(self) -> None:
+        if self.share_multiplier is not None and self.share_multiplier <= 0:
+            raise ValueError("share_multiplier must be positive")
+        if self.bonus_rate_percent is not None and self.bonus_rate_percent < 0:
+            raise ValueError("bonus_rate_percent cannot be negative")
+
+
+@dataclass(frozen=True)
+class ShareMultiplierContractResult:
+    complete: bool
+    reason_codes: tuple[str, ...]
+
+
+def evaluate_share_multiplier_contract(
+    evidence: ShareMultiplierContractEvidence,
+) -> ShareMultiplierContractResult:
+    """Evaluate the locked official share-multiplier contract.
+
+    Vendor data is intentionally absent: vendor evidence can corroborate but can
+    never satisfy this official economic contract.
+    """
+
+    reasons: list[str] = []
+    if not evidence.exact_listed_ticker_share_group_once:
+        reasons.append("TARGET_SHARE_GROUP_NOT_EXACTLY_MATCHED_ONCE")
+    if not evidence.effective_date or not evidence.effective_date.strip():
+        reasons.append("FINAL_EFFECTIVE_DATE_MISSING")
+    elif not evidence.effective_date_finalized:
+        reasons.append("EFFECTIVE_DATE_NOT_FINALIZED")
+
+    mechanics_present = False
+    if (
+        evidence.share_multiplier is not None
+        and abs(evidence.share_multiplier - 1.0) > 1e-12
+    ):
+        mechanics_present = True
+    if evidence.bonus_rate_percent is not None and evidence.bonus_rate_percent > 0:
+        mechanics_present = True
+    if not mechanics_present:
+        reasons.append("SHARE_MULTIPLIER_OR_BONUS_MECHANICS_MISSING")
+
+    return ShareMultiplierContractResult(
+        complete=not reasons,
+        reason_codes=tuple(sorted(reasons)),
+    )
+
+
+@dataclass(frozen=True)
 class EconomicResolutionEvidence:
     event_id: str
     event_type: str
