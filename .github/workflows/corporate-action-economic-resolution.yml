@@ -57,6 +57,8 @@ jobs:
             PYTHONPATH=src python scripts/capture_corporate_action_economic_resolution.py
           fi
           python scripts/verify_corporate_action_economic_resolution.py
+      - name: Materialize official KAP table-cell discovery
+        run: python scripts/materialize_official_kap_table_cells.py
       - uses: actions/upload-artifact@v4
         with:
           name: corporate-action-economic-resolution-v1
