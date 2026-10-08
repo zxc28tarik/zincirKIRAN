@@ -38,6 +38,34 @@ They **cannot release an event risk alone**.
 
 Missing detail, insufficient detail or source conflict remains blocked.
 
+## Locked action contracts
+
+### Cash dividend v1
+
+Pure-cash resolution requires an exact listed ticker/share-group match plus
+official KAP evidence for TRY currency, finalized ex/hak-kullanim date, gross
+cash per 1 TL nominal share, payment date, and an explicit zero share-dividend
+component. Proposed dates and vendor-only evidence cannot resolve risk.
+
+### Share multiplier v1
+
+Bonus/split-style share-multiplier resolution requires:
+
+- exact listed ticker/share-group match exactly once;
+- finalized effective/ex/hak-kullanim date; and
+- either an explicit non-unit share multiplier or a positive official
+  bonus-rate mechanic.
+
+A unit multiplier with no positive bonus mechanic is insufficient. Proposed
+dates are insufficient. Yahoo Stock Splits may corroborate but can never
+satisfy this contract alone. Rights issues remain a separate contract because
+subscription price, entitlement ratio and rights-use dates change the economic
+mechanics.
+
+The contract evaluator returns deterministic reason codes and remains separate
+from the generic resolution ladder. No event is promoted merely because a
+vendor action exists or because the subject line resembles a bonus/split.
+
 ## KAP detail structure
 
 A frozen KAP detail-page sample confirms that current KAP pages server-render
