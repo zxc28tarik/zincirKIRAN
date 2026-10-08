@@ -87,3 +87,35 @@ def test_resolution_claim_requires_captured_official_detail():
             official_detail_sha256=None,
             official_economic_fields_complete=True,
         )
+
+
+def test_captured_official_detail_without_locked_field_contract_stays_unresolved():
+    result = resolve_economic_action(
+        evidence(
+            official_detail_captured=True,
+            official_detail_sha256="b" * 64,
+            official_economic_fields_complete=False,
+            official_non_price_affecting_explicit=False,
+            vendor_corroboration_present=False,
+        )
+    )
+    assert (
+        result.status
+        is EconomicResolutionStatus.UNRESOLVED_OFFICIAL_DETAIL_INSUFFICIENT
+    )
+    assert result.risk_released is False
+
+
+def test_vendor_corroboration_does_not_upgrade_insufficient_official_detail():
+    result = resolve_economic_action(
+        evidence(
+            official_detail_captured=True,
+            official_detail_sha256="c" * 64,
+            official_economic_fields_complete=False,
+            official_non_price_affecting_explicit=False,
+            vendor_corroboration_present=True,
+        )
+    )
+    assert result.status is EconomicResolutionStatus.VENDOR_CORROBORATED_ONLY
+    assert result.risk_released is False
+    assert result.shadow_signal_allowed is False
