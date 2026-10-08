@@ -123,5 +123,20 @@
         "Risk release remains zero until action-specific field contracts are separately preregistered."
       ]
     }
-  ]
+  ],
+  "locked_action_contracts": {
+    "cash_dividend_v1": {
+      "target_match": "EXACT_LISTED_TICKER_SHARE_GROUP_ONCE",
+      "required_fields": [
+        "TRY currency",
+        "finalized cash-dividend ex/hak-kullanim date",
+        "gross cash per 1 TL nominal share",
+        "payment date",
+        "explicit zero share-dividend component for pure-cash resolution"
+      ],
+      "proposed_date_only_resolves": false,
+      "vendor_only_resolves": false,
+      "mixed_cash_and_share_dividend_resolves_under_cash_contract": false
+    }
+  }
 }
