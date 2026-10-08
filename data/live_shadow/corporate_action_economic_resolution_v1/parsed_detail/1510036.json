@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "REYSAŞ TAŞIMACILIK VE LOJİSTİK TİCARET A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c998ee9d5019a34e55d2a55d9",
+    "disclosureIndex": 1510036,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140ee847b0140f203980d0030",
+    "period": "HZ",
+    "publishDate": "2025.10.31 17:40:59",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "RYSAS",
+    "summary": "Bedelli ve Bedelsiz Sermaye Artırımına İlişkin SPK Onayına Sunulan Taslak İzahname",
+    "title": "İzahname (SPK Onayına Sunulan)",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1510036",
+  "fields": [
+    {
+      "field_name": "oda_ProspectusDraftAbstract",
+      "titles_tr": [
+        "İzahname (SPK Onayına Sunulan)"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimizin 15.000.000.000 TL tutarındaki kayıtlı sermaye tavanı içinde 2.000.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak suretiyle %100 oranında, 2.000.000.000 TL tutarında artırılarak 4.000.000.000 TL'ye çıkarılmasına ve bedelli sermaye artırımı ile eşanlı olarak çıkarılmış sermayenin tamamı iç kaynaklardan karşılanmak suretiyle %50 oranında 1.000.000.000 TL tutarında artırılarak toplam 5.000.000.000 TL'ye çıkarılmasına ilişkin 24.10.2025 tarihli Yönetim Kurulu Kararı çerçevesinde 31.10.2025 tarihinde Sermaye Piyasası Kurulu'na sunulan taslak izahname ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgilerine sunarız."
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "bc38513a236e3e779905ad24fc85363f70af750835039c445f36bbcdec5a2dd5",
+  "raw_sha256": "a23cfaeae5675612d8b2eeed837d742f4dd8d05d983e90ce65021ed5493436d8",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1510036"
+}

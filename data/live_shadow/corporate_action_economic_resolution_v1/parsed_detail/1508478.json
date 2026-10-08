@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TOFAŞ TÜRK OTOMOBİL FABRİKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d998eebe8019a26461d1009ba",
+    "disclosureIndex": 1508478,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed710140f328bed700a5",
+    "period": "HZ",
+    "publishDate": "2025.10.27 18:38:53",
+    "relatedDisclosureOid": "4028328d98455cf70198cd50630067d6",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TOASO",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1508478",
+  "fields": [],
+  "raw_gzip_sha256": "e63c1ff006254a9fca17292be77775d6d723f4723239a5a54ea91450dabb6688",
+  "raw_sha256": "f53a32873ffcb022ed7defc5b1480320d519b939c94138b9cbbbf8e116899d55",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1508478"
+}

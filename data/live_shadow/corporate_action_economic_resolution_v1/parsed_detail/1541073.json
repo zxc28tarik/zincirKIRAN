@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "RÖNESANS GAYRİMENKUL YATIRIM A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9b827483019bb2c95c6c3af7",
+    "disclosureIndex": 1541073,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a241b612d80141d9a52e2a2727",
+    "period": "HZ",
+    "publishDate": "2026.01.12 19:00:12",
+    "relatedDisclosureOid": "4028328c998ee9d7019a4f850be85918",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "RGYAS",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1541073",
+  "fields": [],
+  "raw_gzip_sha256": "8f62946836abdec2fa412e5e07f8267866904798c3866d596f4c0c6cbe57c48c",
+  "raw_sha256": "373c71d3ae216cf6e1bac23f15cf9c4efe41c2b0a2892422cd818a54f53443cb",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1541073"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "CW ENERJİ MÜHENDİSLİK TİCARET VE SANAYİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d998eebe8019a3ac80f3b6dfd",
+    "disclosureIndex": 1510232,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c56faf888c016fd6c2036e0a5d",
+    "period": "HZ",
+    "publishDate": "2025.10.31 18:53:22",
+    "relatedDisclosureOid": "4028328c98455aea019875bb746b6988",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CWENE",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1510232",
+  "fields": [],
+  "raw_gzip_sha256": "20f51f638e2d9bbbdf35c3284b9ae19d13acba722f6c71bfad5a4d1d923914b4",
+  "raw_sha256": "640bac576be7f89b969b895762c3b771ac4f25c6e53e969e80b4f787cc39bac0",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1510232"
+}

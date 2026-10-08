@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "MARMARİS ALTINYUNUS TURİSTİK TESİSLER A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9b827481019c0873e0f748d7",
+    "disclosureIndex": 1548136,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed710141179bf0630308",
+    "period": "HZ",
+    "publishDate": "2026.01.29 09:39:33",
+    "relatedDisclosureOid": "4028328c9b82727a019b93b4aeff6972",
+    "relatedStocks": "KCHOL",
+    "senderType": "IGS",
+    "stockCode": "MAALT",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1548136",
+  "fields": [],
+  "raw_gzip_sha256": "b3f3c42fda838c816ed00a9a18bc505f8b7d431401b894eb1bd37e5894ccf4f5",
+  "raw_sha256": "7bdf55286d39f7a37c026896be7fec4cb9eb9f0c7015815ba3271ac729db2d8c",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1548136"
+}

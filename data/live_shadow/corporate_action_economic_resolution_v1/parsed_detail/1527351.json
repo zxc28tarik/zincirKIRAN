@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "RÖNESANS GAYRİMENKUL YATIRIM A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9af2405e019b2c048941002d",
+    "disclosureIndex": 1527351,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a241b612d80141d9a52e2a2727",
+    "period": "HZ",
+    "publishDate": "2025.12.17 14:15:12",
+    "relatedDisclosureOid": "4028328c9af2405e019b21516f0337f7",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "RGYAS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1527351",
+  "fields": [],
+  "raw_gzip_sha256": "85887e777e4c79b6adc44bcdeeb3ad2c7fc055564fe11d86a2e7117eb6d72707",
+  "raw_sha256": "5da897472db14c848b8cc0d8547c2873f8e17da6e92f3029fb3afc913f1467ba",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1527351"
+}

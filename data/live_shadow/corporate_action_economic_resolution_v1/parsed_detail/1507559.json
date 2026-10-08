@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 9,
+    "companyTitle": "İPEK DOĞAL ENERJİ KAYNAKLARI ARAŞTIRMA VE ÜRETİM A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c998ee9d5019a1239748c7b5a",
+    "disclosureIndex": 1507559,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2422d9a6e0142bd9255a37a70",
+    "period": "HZ",
+    "publishDate": "2025.10.23 21:01:08",
+    "relatedDisclosureOid": "4028328d992f6f660199801cbb70074c",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TRENJ",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1507559",
+  "fields": [],
+  "raw_gzip_sha256": "0fcfa3c2f8d327fc64c1caf700bc6a65528e7376abd95611872312015a895b7a",
+  "raw_sha256": "7f377f44081112e636aa1de26b3666241543cf0df4b9273b2b2caa5cc3b2c3b4",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1507559"
+}

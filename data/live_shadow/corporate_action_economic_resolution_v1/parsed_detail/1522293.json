@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "OBA MAKARNACILIK SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9aaa2bf9019adf3c654671cf",
+    "disclosureIndex": 1522293,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": "DUZENLENEN",
+    "isLate": false,
+    "mkkMemberOid": "8acae2c58b2fa64e018dc01d63686b27",
+    "period": "HZ",
+    "publishDate": "2025.12.02 18:11:15",
+    "relatedDisclosureOid": "4028328c98455aea01985c3189c64621",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "OBAMS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1522293",
+  "fields": [],
+  "raw_gzip_sha256": "b224bd16ef8713b2c772b852264f8e5fb080ba4fc0bb4d84abc4d9dce0338e48",
+  "raw_sha256": "cac718c37a963bb22bde2a14677a08a1d34e7802e51d522288889f68e8547c36",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1522293"
+}

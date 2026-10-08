@@ -1,0 +1,199 @@
+{
+  "captured_at": "2026-10-08T16:45:51.559859+00:00",
+  "contract": "CORPORATE_ACTION_ECONOMIC_RESOLUTION_FIELD_DISCOVERY_V1",
+  "field_inventory": [
+    {
+      "event_count": 3,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_AnnouncementContentSection",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 1,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ChangeInArticlesOfAssociationAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 3,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "nonempty_value_count": 3
+    },
+    {
+      "event_count": 2,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject",
+      "nonempty_value_count": 2
+    },
+    {
+      "event_count": 1,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "nonempty_value_count": 1
+    },
+    {
+      "event_count": 1,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_DelayedAnnouncementFlag",
+      "nonempty_value_count": 1
+    },
+    {
+      "event_count": 3,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ExplanationSection",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 3,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ExplanationTextBlock",
+      "nonempty_value_count": 3
+    },
+    {
+      "event_count": 1,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_IssueDocumentAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 1,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ProspectusDraftAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 3,
+      "event_type": "BONUS_ISSUE_DISCLOSURE",
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "nonempty_value_count": 3
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_AnnouncementContentSection",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "nonempty_value_count": 6
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "nonempty_value_count": 6
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_ExplanationSection",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_ExplanationTextBlock",
+      "nonempty_value_count": 6
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 6,
+      "event_type": "CAPITAL_INCREASE",
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "nonempty_value_count": 6
+    },
+    {
+      "event_count": 5,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_AnnouncementContentSection",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 5,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "nonempty_value_count": 5
+    },
+    {
+      "event_count": 2,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject",
+      "nonempty_value_count": 2
+    },
+    {
+      "event_count": 3,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "nonempty_value_count": 3
+    },
+    {
+      "event_count": 5,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ExplanationSection",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 5,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ExplanationTextBlock",
+      "nonempty_value_count": 5
+    },
+    {
+      "event_count": 1,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ProspectusAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 1,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ProspectusDraftAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 3,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "nonempty_value_count": 0
+    },
+    {
+      "event_count": 5,
+      "event_type": "RIGHTS_ISSUE_DISCLOSURE",
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "nonempty_value_count": 5
+    }
+  ],
+  "initial_resolution": {
+    "UNRESOLVED_OFFICIAL_DETAIL_INSUFFICIENT": 72,
+    "UNRESOLVED_OFFICIAL_DETAIL_MISSING": 300,
+    "VENDOR_CORROBORATED_ONLY": 28
+  },
+  "next_required_work": "LOCK_ACTION_TYPE_SPECIFIC_OFFICIAL_FIELD_CONTRACTS_FROM_CAPTURED_TAXONOMY",
+  "official_detail": {
+    "captured": 100,
+    "failed": 300,
+    "field_records": 99
+  },
+  "production_ready": false,
+  "queue": {
+    "affected_tickers": 99,
+    "ticker_event_rows": 411,
+    "unique_events": 400
+  },
+  "real_shadow_run_created": false,
+  "risk_released": 0,
+  "score_values_computed": false,
+  "vendor_corroboration": {
+    "can_resolve_event_alone": false,
+    "events_with_nearby_vendor_action": 244,
+    "yahoo_action_rows": 574
+  }
+}

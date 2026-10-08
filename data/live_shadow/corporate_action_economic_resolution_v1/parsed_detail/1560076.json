@@ -1,0 +1,98 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "BİM BİRLEŞİK MAĞAZALAR A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9b82727a019c486edd02737d",
+    "disclosureIndex": 1560076,
+    "disclosureType": "ODA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee1b7b030119",
+    "period": "HZ",
+    "publishDate": "2026.02.20 23:20:36",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BIMAS",
+    "summary": "Bedelsiz sermaye artırımına ilişkin esas sözleşme tadil tasarısı",
+    "title": "Esas Sözleşme Tadili",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1560076",
+  "fields": [
+    {
+      "field_name": "oda_ChangeInArticlesOfAssociationAbstract",
+      "titles_tr": [
+        "Esas Sözleşme Tadili"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_DelayedAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Ertelenmiş Bir Açıklama mı?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirket Yönetim Kurulu 19 Şubat 2026 tarihinde aldığı kararda, 600.000.000 TL olan Şirket ödenmiş sermayesinin, tamamı iç kaynaklardan karşılanmak üzere 600.000.000 TL artırılarak 1.2000.000.000 TL'ye çıkarılmasına ve bedelsiz pay dağıtılmasına ilişkin olarak; Sermaye Piyasası Kurulu ve Ticaret Bakanlığı'ndan gerekli izinlerin alınmasını takiben, iç kaynaklardan sermaye artırımı amacıyla Şirket ana sözleşmesinin \"Sermaye ve Payların Devri\" başlıklı 6. maddesinin ekli tadil tasarısı çerçevesinde değiştirilmesi ve söz konusu tadil tasarısının tescil ve ilanı için gerekli başvuruların yapılmasına karar vermiştir. İşbu açıklamamızın İngilizce çevirisinde herhangi bir farklılık olması durumunda Türkçe açıklama esas kabul edilecektir."
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "c973ef212bf597c5d26744124bdaff73c48fbae288002e79ce0620f080698622",
+  "raw_sha256": "9a4f7cc1eb2d962d06f212902c5ff8bbdae24c3a25dc75b9c53060ab2557f250",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1560076"
+}

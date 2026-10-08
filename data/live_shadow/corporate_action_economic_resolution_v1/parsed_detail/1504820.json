@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "BATISÖKE SÖKE ÇİMENTO SANAYİİ T.A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c998ee9d50199e7ee4e0835b0",
+    "disclosureIndex": 1504820,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a24158e42401415920fc3308c5",
+    "period": "HZ",
+    "publishDate": "2025.10.15 18:19:05",
+    "relatedDisclosureOid": null,
+    "relatedStocks": "BTCIM",
+    "senderType": "IGS",
+    "stockCode": "BSOKE",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1504820",
+  "fields": [],
+  "raw_gzip_sha256": "f4cca9d2b7ebeaa5347a34aaee2f4797cc1d2120cdc94bbbf6632207ab1ebe51",
+  "raw_sha256": "fb392867f1de7ea658e3952213db5070aed86b8db26c72185486d62fc7f7fc08",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1504820"
+}

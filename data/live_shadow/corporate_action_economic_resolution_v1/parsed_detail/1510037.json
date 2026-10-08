@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "REYSAŞ TAŞIMACILIK VE LOJİSTİK TİCARET A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c998ee9d5019a34ef68545716",
+    "disclosureIndex": 1510037,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140ee847b0140f203980d0030",
+    "period": "HZ",
+    "publishDate": "2025.10.31 17:41:17",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "RYSAS",
+    "summary": "Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1510037",
+  "fields": [
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimizin 15.000.000.000 TL tutarındaki kayıtlı sermaye tavanı içinde 2.000.000.000 TL olan çıkarılmış sermayesinin tamamı nakden ve karşılanmak suretiyle %100 oranında, 2.000.000.000 TL tutarında artırılarak 4.000.000.000 TL'ye çıkarılmasına ve bedelli sermaye artırımı ile eşanlı olarak çıkarılmış sermayenin tamamı iç kaynaklardan karşılanmak suretiyle %50 oranında 1.000.000.000 TL tutarında artırılarak 5.000.000.000 TL'ye çıkarılması sebebiyle nakit olarak artırılacak kısımdan elde edilecek fonun kullanımına ilişkin olarak, Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33 üncü maddesi gereğince hazırlanmış olan \"Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerine İlişkin Rapor\" ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgilerine sunarız."
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "9f826495c00780e9ff03475f158f720a1e9e3d25315d26ee038690961a7454de",
+  "raw_sha256": "5e19d8f2917f2b2ab9aa7d21f950d09276f4e4ea0bf575234794695afee562ff",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1510037"
+}

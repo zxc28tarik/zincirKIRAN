@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "KORDSA TEKNİK TEKSTİL A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c998ee9d5019a119ba6ab6f27",
+    "disclosureIndex": 1507412,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f30606a700ec",
+    "period": "HZ",
+    "publishDate": "2025.10.23 18:16:40",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KORDS",
+    "summary": "Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Raporun Güncellenmesi",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1507412",
+  "fields": [
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Evet (Yes)"
+      ]
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "26.09.2025"
+      ]
+    },
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33.maddesi kapsamında hazırlanan ve 26.09.2025 tarih ve 2025/25 sayılı Yönetim Kurulu ile kabul edilen Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor'un ana ortağımız tarafından verilen sermaye avansının kullanıldığı dikkate alınarak güncellenmiş versiyonunu ekte bulabilirsiniz."
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "a51e05d665b55042871a763becd5a10ac0cd517f4037309e0cc027b798a78806",
+  "raw_sha256": "cdc4f7028945c5ccf9f16f3efc796d87b1bff80059bb9b678087ef52d7db2601",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1507412"
+}

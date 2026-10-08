@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ALTINAY SAVUNMA TEKNOLOJİLERİ A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c9af2405e019b54ac53276af4",
+    "disclosureIndex": 1529740,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c58b2fa64e018f3d2d712476e2",
+    "period": "HZ",
+    "publishDate": "2025.12.25 16:26:06",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ALTNY",
+    "summary": "Bedelsiz Sermaye Artırımına İlişkin Onaylı Borsa İhraç Belgesi",
+    "title": "İhraç Belgesi",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1529740",
+  "fields": [
+    {
+      "field_name": "oda_IssueDocumentAbstract",
+      "titles_tr": [
+        "İhraç Belgesi"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimizin 235.294.118,00-TL çıkarılmış sermayesinin, 1.000.000.000-TL'lik kayıtlı sermaye tavanı içerisinde %325,0 oranında iç kaynaklardan bedelsiz olarak 764.705.882-TL artışla 1.000.000.000-TL'ye yükseltilmesine; Vergi Usul Kanunu'na göre hazırlanan finansal raporlara göre 721.938.628,74-TL tutarındaki kısmının Sermaye Düzeltmesi Olumlu Farkları hesabından, 42.767.253,26-TL tutarındaki kısmının Hisse Senetleri İhraç Primleri hesabından karşılanmasına yönelik Sermaye Piyasası Kurulu'na yapmış olduğu başvurusu Kurul tarafından onaylanmış, 18.12.2025 tarih ve 2025/63 sayılı SPK bülteninde yayımlanmıştır. SPK onaylı \"Borsa İhraç Belgesi\" ve Esas Sözleşmemizin \"Sermaye \" başlıklı 6. Maddesinin SPK tarafından onaylanmış yeni şekli ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgisine saygılarımızla sunarız."
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "377812c8403058b5f89c690343a5feaad66fc5aebff584121ff7a311781c89bb",
+  "raw_sha256": "c735490e6b904c2d630e440501d30aa92d7f8a145fd3f1914f33ed65049bb89d",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1529740"
+}

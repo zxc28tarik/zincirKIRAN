@@ -1,0 +1,416 @@
+event_id,event_type,publish_date,subject,summary,tickers,scopes
+1503897,MERGER,2025-10-14,Birleşme İşlemlerine İlişkin Bildirim,Birleşme İşlemi İçin SPK Başvurusu,TAVHL,historical
+1504820,CAPITAL_INCREASE,2025-10-15,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı SPK Başvurusu Hk.,BTCIM,historical
+1505186,CAPITAL_INCREASE,2025-10-17,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Tahsisli Sermaye Artırımına İlişkin SPK Onayı Hakkında
+",ANSGR|TSKB,historical
+1507412,RIGHTS_ISSUE_DISCLOSURE,2025-10-23,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Raporun Güncellenmesi,KORDS,historical
+1507463,CAPITAL_INCREASE,2025-10-23,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Satış Fiyatının ve Nihai Artırım Tutarının Belirlenmesi ile İhraç Belgesinin Onaylanması İçin SPK'ya Başvurulması,ANSGR|TSKB,historical
+1507550,DIVIDEND_PROCESS_DISCLOSURE,2025-10-23,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2016 - 2024 Yılı Kar Payı Dağıtımı Hk.,TRMET,historical
+1507559,DIVIDEND_PROCESS_DISCLOSURE,2025-10-23,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2016 - 2024 Yılı Kar Payı Dağıtımı Hk.,TRENJ,historical
+1507659,MERGER,2025-10-24,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin %100 sahip olduğu TAV Esenboğa Yatırım Yapım ve İşletme A.Ş'nin, Şirketimiz tarafından devir alınması suretiyle, kolaylaştırılmış usulde birleşmesine ilişkin SPK Onayı Hk.",TAVHL,historical
+1507942,DIVIDEND_PROCESS_DISCLOSURE,2025-10-24,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2023 - 2024 Yılı Kar Payı Dağıtımı Hk.,TRALT,historical
+1507950,CAPITAL_INCREASE,2025-10-24,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Satış Fiyatının ve Nihai Artırım Tutarının Belirlenmesi ile İhraç Belgesinin Onaylanması İçin SPK'ya Başvurulması,ANSGR|ISMEN|TSKB,historical
+1507966,CAPITAL_INCREASE,2025-10-24,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Sermaye Artırımından Elde Edilen Fonun Kullanımına İlişkin Rapor,FENER,historical
+1507969,CAPITAL_INCREASE,2025-10-24,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımına İlişkin SPK Onaylı İhraç Belgesi,ANSGR|ISMEN|TSKB,historical
+1508282,MERGER,2025-10-27,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin %100 sahip olduğu TAV Esenboğa Yatırım Yapım ve İşletme A.Ş'nin, Şirketimiz tarafından devir alınması suretiyle, kolaylaştırılmış usulde birleşmesine ilişkin SPK Onayı Hk.",TAVHL,historical
+1508478,MERGER,2025-10-27,Birleşme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış Usulde Birleşmeye İlişkin SPK Onayı Hk.,TOASO,historical
+1509356,DIVIDEND_PROCESS_DISCLOSURE,2025-10-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Önerisi,FROTO,historical
+1509847,CAPITAL_INCREASE,2025-10-31,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Satış İşleminin Tamamlanması,ANSGR|ISMEN|TSKB,historical
+1510035,BONUS_ISSUE_DISCLOSURE,2025-10-31,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli ve Bedelsiz Sermaye Artırımına İlişkin Yönetim Kurulu Kararı / SPK Başvuru Hk.,RYSAS,historical
+1510036,BONUS_ISSUE_DISCLOSURE,2025-10-31,İzahname (SPK Onayına Sunulan),Bedelli ve Bedelsiz Sermaye Artırımına İlişkin SPK Onayına Sunulan Taslak İzahname,RYSAS,historical
+1510037,CAPITAL_INCREASE,2025-10-31,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor,RYSAS,historical
+1510177,MERGER,2025-10-31,Birleşme İşlemlerine İlişkin Bildirim,Devralma suretiyle kolaylaştırılmış usulde birleşme işleminin tescili hakkında,TOASO,historical
+1510232,BONUS_ISSUE_DISCLOSURE,2025-10-31,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı SPK Onayı,CWENE,historical
+1510385,BONUS_ISSUE_DISCLOSURE,2025-11-03,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli ve Bedelsiz Sermaye Artırımına İlişkin Yönetim Kurulu Kararı / SPK Başvuru Hk. (SPK Başvuru Tarihi Düzeltme),RYSAS,historical
+1510761,BONUS_ISSUE_DISCLOSURE,2025-11-03,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı SPK Onayı,CWENE,historical
+1511318,MERGER,2025-11-04,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK Başvurusu",RGYAS,historical
+1511588,CAPITAL_INCREASE,2025-11-05,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor,CVKMD,historical
+1514402,BONUS_ISSUE_DISCLOSURE,2025-11-10,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı Tescili,CWENE,historical
+1515682,DIVIDEND_PROCESS_DISCLOSURE,2025-11-11,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,CANTE,historical
+1516306,BONUS_ISSUE_DISCLOSURE,2025-11-12,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Bedelsiz Sermaye Artırımına İlişkin Revize Yönetim Kurulu Kararı Hakkında,",OBAMS,historical
+1516497,DIVIDEND_PROCESS_DISCLOSURE,2025-11-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,ODAS,historical
+1516521,RIGHTS_ISSUE_DISCLOSURE,2025-11-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımı Revize Yönetim Kurulu Kararı,CANTE,historical
+1516522,RIGHTS_ISSUE_DISCLOSURE,2025-11-13,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor,CANTE,historical
+1516676,CAPITAL_INCREASE,2025-11-13,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor,BINHO,historical
+1517737,MERGER,2025-11-18,Birleşme İşlemlerine İlişkin Bildirim,Şirketimizin %100 sahip olduğu TAV Esenboğa Yatırım Yapım ve İşletme A.Ş ile kolaylaştırılmış usulde birleşmesine ilişkin Ticaret Sicil Onayı,TAVHL,historical
+1517877,DIVIDEND_PROCESS_DISCLOSURE,2025-11-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Bildirim,KATMR,historical
+1517969,MERGER,2025-11-19,Birleşme İşlemlerine İlişkin Bildirim,Şirketimizin %100 sahip olduğu TAV Esenboğa Yatırım Yapım ve İşletme A.Ş ile kolaylaştırılmış usulde birleşmesine ilişkin Ticaret Sicil Onayı,TAVHL,historical
+1518300,DIVIDEND_PROCESS_DISCLOSURE,2025-11-19,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"Kar Dağıtımına İlişkin Yönetim Kurulu Kararı
+",RGYAS,historical
+1519666,DIVIDEND_PROCESS_DISCLOSURE,2025-11-25,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kesinleşen nakit kar payı hak kullanım tarihi hk.,GWIND,historical
+1520267,RIGHTS_ISSUE_DISCLOSURE,2025-11-26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Yönetim Kurulu Kararı ,FENER,historical
+1520268,CAPITAL_INCREASE,2025-11-26,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor,FENER,historical
+1520373,BONUS_ISSUE_DISCLOSURE,2025-11-26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Bedelsiz Sermaye Artırımı Başvurusu Spk Onayı Hakkında,",OBAMS,historical
+1520603,CAPITAL_INCREASE,2025-11-26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin SPK Başvurusu Hk. ,FENER,historical
+1520652,MERGER,2025-11-27,Birleşme İşlemlerine İlişkin Bildirim,"Bağlı Ortaklığımız Artel Bilişim Servisleri A.Ş. ile Devralma Yoluyla Birleşme Kararı / SPK Onayı
+
+",TCELL,historical
+1520745,BONUS_ISSUE_DISCLOSURE,2025-11-27,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Bedelsiz Sermaye Artırımına İlişkin SPK Onaylı İhraç Belgesi ve Esas Sözleşme Tadil Metni Hakkında,",OBAMS,historical
+1520751,CAPITAL_INCREASE,2025-11-27,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Bedelsiz Pay Alma Hakkı Kullanım Başlangıç Tarihi Hakkında,",OBAMS,historical
+1520922,CAPITAL_INCREASE,2025-11-27,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Sermaye Artırımından Elde Edilen Fonun Kullanımına İlişkin Rapor,FENER,historical
+1521070,DIVIDEND_PROCESS_DISCLOSURE,2025-11-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağanüstü Genel Kurul Kar Dağıtım Sonucu,FROTO,historical
+1522293,DIVIDEND_PROCESS_DISCLOSURE,2025-12-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"Güncel Kar Payı Dağıtımı Hakkında,",OBAMS,historical
+1523166,DIVIDEND_PROCESS_DISCLOSURE,2025-12-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Genel Kurul Kararı,CANTE,historical
+1524012,CAPITAL_INCREASE,2025-12-05,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımına İlişkin SPK Onayı hakkında ,KCHOL,historical
+1524834,MERGER,2025-12-08,Birleşme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış Usulde Birleşme İşlemine İlişkin SPK Onayı,AKSA,historical
+1525363,CAPITAL_INCREASE,2025-12-09,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımına İlişkin Borsa İstanbul A.Ş. Başvurusu Hakkında ,KCHOL,historical
+1526086,CAPITAL_INCREASE,2025-12-11,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımında Satış Fiyatının Belirlenmesi ile İhraç Belgesinin Onaylanması için SPK?ya Başvurulması  ,KCHOL,historical
+1526421,RIGHTS_ISSUE_DISCLOSURE,2025-12-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Yönetim Kurulu Kararı Hk.,CVKMD,historical
+1526422,RIGHTS_ISSUE_DISCLOSURE,2025-12-13,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor,CVKMD,historical
+1526423,RIGHTS_ISSUE_DISCLOSURE,2025-12-14,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin SPK Başvurusu Hk.,CVKMD,historical
+1526424,RIGHTS_ISSUE_DISCLOSURE,2025-12-14,İzahname (SPK Onayına Sunulan),Bedelli Sermaye Artırımına İlişkin SPK Onayına Sunulan Taslak İzahname,CVKMD,historical
+1526531,DIVIDEND_PROCESS_DISCLOSURE,2025-12-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Genel Kurul Kararı,RGYAS,historical
+1526923,DEMERGER,2025-12-16,Bölünme İşlemlerine İlişkin Bildirim,İştirak modeliyle kolaylaştırılmış usulde kısmi bölünmeye ilişkin Yönetim Kurulu Kararı ve SPK Başvurusunun 30.09.2025 Tarihli Finansal Tablolara Göre Revize Edilmesi Hk.,ASTOR,historical
+1527351,DIVIDEND_PROCESS_DISCLOSURE,2025-12-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kesinleşen Nakit Kar Payı Hak Kullanım Tarihi,RGYAS,historical
+1527434,DIVIDEND_PROCESS_DISCLOSURE,2025-12-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Genel Kurul Kararı,ODAS,historical
+1527530,CAPITAL_INCREASE,2025-12-17,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı İhraç Belgesinin Onaylanması ,KCHOL,historical
+1527959,BONUS_ISSUE_DISCLOSURE,2025-12-19,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı Başvurumuza İlişkin SPK Onayı,ALTNY,historical
+1527986,DEMERGER,2025-12-19,Bölünme İşlemlerine İlişkin Bildirim,Sehven Yazılan Tarih Hatasının Düzeltilmesi Hk.,ASTOR,historical
+1528725,CAPITAL_INCREASE,2025-12-22,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımında Payların Satışının Tamamlanması ,KCHOL,historical
+1529740,BONUS_ISSUE_DISCLOSURE,2025-12-25,İhraç Belgesi,Bedelsiz Sermaye Artırımına İlişkin Onaylı Borsa İhraç Belgesi,ALTNY,historical
+1529741,BONUS_ISSUE_DISCLOSURE,2025-12-25,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı Hak Kullanım İşlemleri Başlangıç Tarihi,ALTNY,historical
+1529797,MERGER,2025-12-25,Birleşme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış Usulde Birleşme İşlemine İlişkin Tescili Hakkında,AKSA,historical
+1530265,DEMERGER,2025-12-26,Bölünme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış Usulde Kısmi Bölünme Başvurusunun SPK Onayı Hk.,ASTOR,historical
+1531470,RIGHTS_ISSUE_DISCLOSURE,2025-12-31,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin SPK Onayı,FENER,historical
+1531701,MERGER,2025-12-31,Birleşme İşlemlerine İlişkin Bildirim,Bağlı Ortaklığımız Artel Bilişim Servisleri A.Ş. ile Devralma Yoluyla Birleşmenin Tamamlanması,TCELL,historical
+1531710,BONUS_ISSUE_DISCLOSURE,2025-12-31,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Esas Sözleşme Tescili,ALTNY,historical
+1532142,RIGHTS_ISSUE_DISCLOSURE,2026-01-02,İzahname (SPK Tarafından Onaylanan),Bedelli Sermaye Artırımına İlişkin SPK Onaylı İzahname,FENER,historical
+1532323,RIGHTS_ISSUE_DISCLOSURE,2026-01-02,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Yeni Pay Alma Hakkı Kullanım Tarihleri,FENER,historical
+1533919,CAPITAL_INCREASE,2026-01-06,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımında Payların Satışının Tamamlanması Sonucunda Esas Sözleşmenin Değiştirilmesine İlişkin Yönetim Kurulu Kararı alınması ve SPK Başvurusu																		,KCHOL,historical
+1541073,MERGER,2026-01-12,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK Onayı",RGYAS,historical
+1544330,MERGER,2026-01-16,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin Ticaret Sicil Onayı",RGYAS,historical
+1544891,CAPITAL_INCREASE,2026-01-20,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Kullanılmayan Rüçhan Hakkı Tutarına İlişkin Açıklama,FENER,historical
+1545371,CAPITAL_INCREASE,2026-01-21,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Rüçhan Haklarının Kullanılmasının Ardından Kalan Payların Borsada Satışının Tamamlanması Hk.,FENER,historical
+1546944,CAPITAL_INCREASE,2026-01-26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımının Tamamlanması ve Tadil Metninin Tescili Hakkında,FENER,historical
+1548136,CAPITAL_INCREASE,2026-01-29,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Sonucunda Esas Sözleşme Değişikliği SPK Onayı	,KCHOL,historical
+1549136,RIGHTS_ISSUE_DISCLOSURE,2026-01-30,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımı SPK Başvuru Sonucu,CANTE,historical
+1551326,CAPITAL_INCREASE,2026-02-02,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin Yeni Pay Alma Hakkı Kullanım Tarihleri ve Rüçhan ISIN Kodu,CANTE,historical
+1552604,CAPITAL_INCREASE,2026-02-04,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Sonucunda Esas Sözleşme Değişikliğinin Tescili,KCHOL,historical
+1554108,DIVIDEND_PROCESS_DISCLOSURE,2026-02-06,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtım Önerisi,TUPRS,historical
+1555157,DIVIDEND_PROCESS_DISCLOSURE,2026-02-10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"	
+2025 Yılı Kar Payı Dağıtım Önerisi",TTRAK,historical
+1555960,DIVIDEND_PROCESS_DISCLOSURE,2026-02-11,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtım Önerisi ,OTKAR,historical
+1556573,CAPITAL_INCREASE,2026-02-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımının Tamamlanması ve Esas Sözleşme Tadilinin Tescili Hakkında,FENER,historical
+1556628,CAPITAL_INCREASE,2026-02-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Tescili,ANSGR|ISMEN|TSKB,historical
+1556665,DIVIDEND_PROCESS_DISCLOSURE,2026-02-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar dağıtımına ilişkin Yönetim Kurulu kararı,YKBNK,historical
+1556705,DIVIDEND_PROCESS_DISCLOSURE,2026-02-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtım Önerisi,AYGAZ,historical
+1557060,DIVIDEND_PROCESS_DISCLOSURE,2026-02-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Kar Dağıtım Önerisi,FROTO,historical
+1557935,DIVIDEND_PROCESS_DISCLOSURE,2026-02-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtım Önerisi,TOASO,historical
+1558033,DIVIDEND_PROCESS_DISCLOSURE,2026-02-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kâr Payı Dağıtımı,TAVHL,historical
+1558207,RIGHTS_ISSUE_DISCLOSURE,2026-02-18,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımında Kullanılmayan Paylar Hakkında,CANTE,historical
+1558674,DIVIDEND_PROCESS_DISCLOSURE,2026-02-19,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Şirket Yönetim Kurulu'nun Kar Payı Dağıtım Önerisi,ARCLK,historical
+1559061,CAPITAL_INCREASE,2026-02-19,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Rüçhan Haklarının Kullanılmasının Ardından Kalan Payların Birincil Piyasada Satışının Tamamlanması,CANTE,historical
+1559307,DIVIDEND_PROCESS_DISCLOSURE,2026-02-19,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,KCHOL,historical
+1559426,DIVIDEND_PROCESS_DISCLOSURE,2026-02-19,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,AKSA,historical
+1560075,BONUS_ISSUE_DISCLOSURE,2026-02-20,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,İç Kaynaklardan Bedelsiz Sermaye Artırımına ilişkin Yönetim Kurulu Kararı,BIMAS,historical
+1560076,BONUS_ISSUE_DISCLOSURE,2026-02-20,Esas Sözleşme Tadili,Bedelsiz sermaye artırımına ilişkin esas sözleşme tadil tasarısı,BIMAS,historical
+1561151,BONUS_ISSUE_DISCLOSURE,2026-02-25,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,İç Kaynaklardan Bedelsiz Sermaye Artırımı Kapsamında SPK Başvurusu,BIMAS,historical
+1561178,DIVIDEND_PROCESS_DISCLOSURE,2026-02-25,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı.,AKBNK,historical
+1561582,DIVIDEND_PROCESS_DISCLOSURE,2026-02-25,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ISCTR,historical
+1561880,CAPITAL_INCREASE,2026-02-26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımının Tamamlanması ve Esas Sözleşme Tadil Metni SPK Başvurusu Hakkında,CANTE,historical
+1562103,DIVIDEND_PROCESS_DISCLOSURE,2026-02-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,TSKB,historical
+1562167,DIVIDEND_PROCESS_DISCLOSURE,2026-02-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı karının kullanım şeklinin belirlenmesi,CIMSA,historical
+1562305,DIVIDEND_PROCESS_DISCLOSURE,2026-02-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ANSGR,historical
+1562476,DEMERGER,2026-02-27,Bölünme İşlemlerine İlişkin Bildirim,İştirak Modeliyle Kolaylaştırılmış Usulde Kısmi Bölünmeye ilişkin Olağanüstü Genel Kurul Sonucu,ASTOR,historical
+1562892,DIVIDEND_PROCESS_DISCLOSURE,2026-02-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ANHYT,historical
+1563114,DIVIDEND_PROCESS_DISCLOSURE,2026-02-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulunun 2025 Faaliyet Yılı Kar Dağıtımı Teklifi,DOAS,historical
+1563131,DIVIDEND_PROCESS_DISCLOSURE,2026-02-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurula sunulmak üzere 2025 Yılı Kârın/Zararın kullanım şeklinin belirlenmesi hakkında.,KORDS,historical
+1563204,MERGER,2026-02-27,Birleşme İşlemlerine İlişkin Bildirim,Devralma Şeklinde Birleşme ve SPK Başvurusu Hakkında,BTCIM,historical
+1563267,MERGER,2026-02-28,Birleşme İşlemlerine İlişkin Bildirim,Devralma Şeklinde Birleşme ve SPK Başvurusu Hakkında,BTCIM,historical
+1564412,DIVIDEND_PROCESS_DISCLOSURE,2026-03-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurula Kar Payı Dağıtım Önerisi,ENJSA,historical
+1564604,DIVIDEND_PROCESS_DISCLOSURE,2026-03-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payına Dağıtımına İlişkin Yönetim Kurulu Kararı,EGEEN,historical
+1565148,DIVIDEND_PROCESS_DISCLOSURE,2026-03-03,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ISDMR,historical
+1565152,DIVIDEND_PROCESS_DISCLOSURE,2026-03-03,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,EREGL,historical
+1565239,DIVIDEND_PROCESS_DISCLOSURE,2026-03-03,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Teklifi,CCOLA,historical
+1566022,DIVIDEND_PROCESS_DISCLOSURE,2026-03-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulu'nun Kar Payı Dağıtım Teklifi,SAHOL,historical
+1566043,DIVIDEND_PROCESS_DISCLOSURE,2026-03-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,SISE,historical
+1566045,DIVIDEND_PROCESS_DISCLOSURE,2026-03-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtımına İlişkin Yönetim Kurulu Kararı Hk.,GARAN,historical
+1566093,DIVIDEND_PROCESS_DISCLOSURE,2026-03-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Dönem Karı/Zararı Hakkında Bildirim,PGSUS,historical
+1566290,CAPITAL_INCREASE,2026-03-05,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Şirketimizin 194.529.076 TL olan çıkarılmış sermayesinin 484.305.475 TL'ye bedelli olarak artırılmasına ilişkin başvurusu, Sermaye Piyasası Kurulu tarafından olumsuz karşılanmıştır.",KORDS,historical
+1566493,DIVIDEND_PROCESS_DISCLOSURE,2026-03-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtım Önerisi,ENKAI,historical
+1566638,DIVIDEND_PROCESS_DISCLOSURE,2026-03-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,SISE,historical
+1566774,DIVIDEND_PROCESS_DISCLOSURE,2026-03-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulu'nun kar dağıtım öneri kararı.,ISMEN,historical
+1566784,DIVIDEND_PROCESS_DISCLOSURE,2026-03-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Teklifi,AEFES,historical
+1566788,DIVIDEND_PROCESS_DISCLOSURE,2026-03-06,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,AKSA,historical
+1566863,MERGER,2026-03-06,Birleşme İşlemlerine İlişkin Bildirim,"Revize - Bu açıklama yalnızca uzman kuruluş raporunun okunabilir şekilde yeniden yüklenmesi amacıyla yapılmaktadır, bildirim içeriğinde herhangi bir değişiklik bulunmamaktadır.",BTCIM,historical
+1567718,DIVIDEND_PROCESS_DISCLOSURE,2026-03-06,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,OYAKC,historical
+1567861,DIVIDEND_PROCESS_DISCLOSURE,2026-03-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Kar Payı Dağıtımı,EKGYO,historical
+1569063,DIVIDEND_PROCESS_DISCLOSURE,2026-03-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulunun 2025 Faaliyet Yılı Kar Dağıtımı Teklifi,GWIND,historical
+1569214,DIVIDEND_PROCESS_DISCLOSURE,2026-03-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Kar Dağıtım Sonucu,TTRAK,historical
+1569957,DIVIDEND_PROCESS_DISCLOSURE,2026-03-10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtım Önerisi'nin Olağan Genel Kurul'da kabulü ,OTKAR,historical
+1570111,DIVIDEND_PROCESS_DISCLOSURE,2026-03-10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı hesap dönemi kar dağıtımına ilişkin Yönetim Kurulu Kararı,BRYAT,historical
+1570775,DIVIDEND_PROCESS_DISCLOSURE,2026-03-11,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Önerisi'nin Olağan Genel Kurul Toplantısında Onaylanması,AYGAZ,historical
+1570793,DIVIDEND_PROCESS_DISCLOSURE,2026-03-11,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Önerisi'nin Olağan Genel Kurul Toplantısında Onaylanması ,TUPRS,historical
+1571600,DIVIDEND_PROCESS_DISCLOSURE,2026-03-12,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Kar Dağıtım Sonucu,FROTO,historical
+1571924,DIVIDEND_PROCESS_DISCLOSURE,2026-03-12,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,TCKRC,historical
+1571936,DIVIDEND_PROCESS_DISCLOSURE,2026-03-12,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Dağıtım Tablosu,VAKBN,historical
+1571946,DIVIDEND_PROCESS_DISCLOSURE,2026-03-12,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,HALKB,historical
+1572009,DIVIDEND_PROCESS_DISCLOSURE,2026-03-12,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar dağıtımının Genel Kurul tarafından onaylanması,YKBNK,historical
+1572520,DIVIDEND_PROCESS_DISCLOSURE,2026-03-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,01.01.2025-31.12.2025 dönemine ait Kâr Payı dağıtımı,TURSG,historical
+1572522,DIVIDEND_PROCESS_DISCLOSURE,2026-03-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,TTKOM,historical
+1572527,BONUS_ISSUE_DISCLOSURE,2026-03-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Yönetim Kurulu Kararı,TURSG,historical
+1572603,DIVIDEND_PROCESS_DISCLOSURE,2026-03-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Hk,KRDMD,historical
+1573180,DIVIDEND_PROCESS_DISCLOSURE,2026-03-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ALARK,historical
+1573202,DIVIDEND_PROCESS_DISCLOSURE,2026-03-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Kar Dağıtım Sonucu,TOASO,historical
+1573219,DIVIDEND_PROCESS_DISCLOSURE,2026-03-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Kar Dağıtım Sonucu,ARCLK,historical
+1573590,DIVIDEND_PROCESS_DISCLOSURE,2026-03-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulu'nun Kar Payı Dağıtımı Önerisi,DOHOL,historical
+1573612,DIVIDEND_PROCESS_DISCLOSURE,2026-03-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Teklifi YK Kararı,MAVI,historical
+1573684,DIVIDEND_PROCESS_DISCLOSURE,2026-03-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulu Kar Payı Dağıtım Teklifi Kararı,TCELL,historical
+1574205,DIVIDEND_PROCESS_DISCLOSURE,2026-03-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Genel Kurul Kararı,KCHOL,historical
+1574285,DIVIDEND_PROCESS_DISCLOSURE,2026-03-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulu'nun 2025 yılına ilişkin kar payı dağıtımı önerisi,MGROS,historical
+1575126,RIGHTS_ISSUE_DISCLOSURE,2026-03-24,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Bedelli Sermaye Artırımından Elde Edilen Fonun Kullanımına İlişkin Rapor,CANTE,historical
+1575220,DIVIDEND_PROCESS_DISCLOSURE,2026-03-24,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Teklifi,AGHOL,historical
+1575270,DIVIDEND_PROCESS_DISCLOSURE,2026-03-24,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kârının Dağıtımı Hakkında.,AKBNK,historical
+1575308,DIVIDEND_PROCESS_DISCLOSURE,2026-03-24,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Nakit Kar Payı Dağıtım Tarihi,ANHYT,historical
+1575358,DIVIDEND_PROCESS_DISCLOSURE,2026-03-25,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kâr Dağıtımına İlişkin Yönetim Kurulu Kararı Hk.,ALBRK,historical
+1575612,DIVIDEND_PROCESS_DISCLOSURE,2026-03-25,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılına Ait Karın Kullanım Şekli ile İlgili Genel Kurul Kararı,ENJSA,historical
+1576165,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı kar payı dağıtımının 26.03.2026 tarihinde gerçekleştirilen Genel Kurul'da görüşülmesi hk.,EGEEN,historical
+1576279,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Faaliyet Yılı Kar Dağıtımı Genel Kurul Kararı,DOAS,historical
+1576340,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kuru Kararı,TSKB,historical
+1576629,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Karının Kullanım Şekline İlişkin Yönetim Kurulu Kararı,TUKAS,historical
+1576673,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Olağan Genel Kurul Toplantısı Kar Dağıtım Sonucu,ISDMR,historical
+1576725,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul Onayına Sunulacak Yönetim Kurulu Kar Dağıtım Teklifi,EGGUB,historical
+1576833,DIVIDEND_PROCESS_DISCLOSURE,2026-03-26,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Olağan Genel Kurul Toplantısı Kar Dağıtım Sonucu,EREGL,historical
+1577389,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,TAVHL,historical
+1577520,CAPITAL_INCREASE,2026-03-27,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Esas Sözleşmenin Sermaye Maddesinin Tadiline İlişkin SPK Onayı Hakkında,CANTE,historical
+1577628,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımı,ENKAI,historical
+1577707,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,SISE,historical
+1577755,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ECILC,historical
+1577756,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ECZYT,historical
+1577806,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,BRSAN,historical
+1577845,DIVIDEND_PROCESS_DISCLOSURE,2026-03-27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Genel Kurul Kararı,ALBRK,historical
+1578853,DIVIDEND_PROCESS_DISCLOSURE,2026-03-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Olağan Genel Kurul Toplantısı Kar Dağıtım Sonucu,ISDMR,historical
+1578858,DIVIDEND_PROCESS_DISCLOSURE,2026-03-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Olağan Genel Kurul Toplantısı Kar Dağıtım Sonucu,EREGL,historical
+1579304,DIVIDEND_PROCESS_DISCLOSURE,2026-03-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılına ait karın kullanım şekli ile ilgili Genel Kurul kararı,CIMSA,historical
+1579442,DIVIDEND_PROCESS_DISCLOSURE,2026-03-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Nakit Kar Payı Dağıtımı,ANSGR,historical
+1579549,DIVIDEND_PROCESS_DISCLOSURE,2026-03-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul'un kar dağıtım kararı,ISMEN,historical
+1579839,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı konsolide dönem zararının kullanım şekli ile ilgili Genel Kurul Kararı.,KORDS,historical
+1580260,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımı Hakkında,ISCTR,historical
+1580370,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Dönem Karının Kullanımına İlişkin Genel Kurul Kararı,PGSUS,historical
+1580562,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul'un Kar Payı Dağıtım Kararı,SAHOL,historical
+1580837,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,MPARK Kâr Dağıtım Teklifine İlişkin Açıklama,MPARK,historical
+1581038,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,AKSA,historical
+1581049,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"2025 Yılı Kar Dağıtımı Hk.
+",GARAN,historical
+1581260,DIVIDEND_PROCESS_DISCLOSURE,2026-03-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurul Toplantısı Kar Dağıtım Sonucu,OYAKC,historical
+1582237,DEMERGER,2026-04-01,Bölünme İşlemlerine İlişkin Bildirim,Kısmi Bölünmeye ilişkin Genel Kurul kararlarının tescil edilmesi hk.,ASTOR,historical
+1582408,CAPITAL_INCREASE,2026-04-01,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta Bağlı Sermaye Artırımı - İhraç Belgesi Spk Onay Başvurusu,SASA,historical
+1582812,DIVIDEND_PROCESS_DISCLOSURE,2026-04-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı kar payı ödemesinin belirlenmesine ve Genel Kurulun onayına sunulmasına ilişkin Yönetim Kurulu kararımız.,GRSEL,historical
+1582981,CAPITAL_INCREASE,2026-04-02,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta Bağlı Sermaye Artırımı - İhraç Belgesi Spk Onay Başvurusu,SASA,historical
+1582983,CAPITAL_INCREASE,2026-04-02,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Esas Sözleşme Tadil Metni Tescili Hakkında,CANTE,historical
+1582991,DIVIDEND_PROCESS_DISCLOSURE,2026-04-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı ,AKFYE,historical
+1582995,DIVIDEND_PROCESS_DISCLOSURE,2026-04-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,REYSAŞ TAŞIMACILIK ve LOJİSTİK TİC. A.S. 2025 YILI KAR DAĞITIM TEKLİFİ,RYSAS,historical
+1583016,DIVIDEND_PROCESS_DISCLOSURE,2026-04-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,KARSN,historical
+1583162,DIVIDEND_PROCESS_DISCLOSURE,2026-04-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Faaliyet Yılı Kar Dağıtımı Genel Kurul Kararı,GWIND,historical
+1585800,DIVIDEND_PROCESS_DISCLOSURE,2026-04-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Kararı,BRYAT,historical
+1587022,MERGER,2026-04-07,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklıkları ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK Başvurusu",RGYAS,historical
+1587323,DIVIDEND_PROCESS_DISCLOSURE,2026-04-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Karının Dağıtımı Hakkında Yönetim Kurulu Tavsiye Kararı,BIMAS,historical
+1589325,DIVIDEND_PROCESS_DISCLOSURE,2026-04-08,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Temettü Ödeme Tarihinin Belirlenmesi Hakkında,DOAS,historical
+1589406,DIVIDEND_PROCESS_DISCLOSURE,2026-04-08,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Toplantısında Onaylanan Kar Dağıtım Teklifi,CCOLA,historical
+1589851,DIVIDEND_PROCESS_DISCLOSURE,2026-04-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Kararının Genel Kurul'da Onaylanması hk,TURSG,historical
+1590051,DIVIDEND_PROCESS_DISCLOSURE,2026-04-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,TTKOM,historical
+1590325,DIVIDEND_PROCESS_DISCLOSURE,2026-04-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,TCKRC,historical
+1590331,DIVIDEND_PROCESS_DISCLOSURE,2026-04-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Tablosunun Onaylanması,HALKB,historical
+1590365,DIVIDEND_PROCESS_DISCLOSURE,2026-04-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kâr Dağıtımı ile ilgili Genel Kurul Kararı,THYAO,historical
+1590368,DIVIDEND_PROCESS_DISCLOSURE,2026-04-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Dağıtım Tablosu Onaylanması ,VAKBN,historical
+1590591,DIVIDEND_PROCESS_DISCLOSURE,2026-04-10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Olağan Genel Kurul Kar Dağıtım Sonucu,DOHOL,historical
+1590967,DIVIDEND_PROCESS_DISCLOSURE,2026-04-10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kâr Dağıtım Önerisi,SASA,historical
+1591013,DIVIDEND_PROCESS_DISCLOSURE,2026-04-10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Hk.,KRDMD,historical
+1591430,DIVIDEND_PROCESS_DISCLOSURE,2026-04-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,GUBRF,historical
+1592286,DIVIDEND_PROCESS_DISCLOSURE,2026-04-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtımına İlişkin Genel Kurul Kararı Hk.,AEFES,historical
+1592462,DIVIDEND_PROCESS_DISCLOSURE,2026-04-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Nakit Kar Payı Ödeme Tarihi,ALARK,historical
+1592592,DIVIDEND_PROCESS_DISCLOSURE,2026-04-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,HEKTS,historical
+1592676,DIVIDEND_PROCESS_DISCLOSURE,2026-04-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurul Kararı,MGROS,historical
+1593096,BONUS_ISSUE_DISCLOSURE,2026-04-14,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Başvurusu,TURSG,historical
+1594433,DIVIDEND_PROCESS_DISCLOSURE,2026-04-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul Onayına Sunulacak Yönetim Kurulu Kar Dağıtım Teklifi Hakkında,EUREN,historical
+1594450,DIVIDEND_PROCESS_DISCLOSURE,2026-04-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Önerisi hk.,GLYHO,historical
+1594456,DIVIDEND_PROCESS_DISCLOSURE,2026-04-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,VESTL,historical
+1594469,DIVIDEND_PROCESS_DISCLOSURE,2026-04-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımı İle İlgili Genel Kurula Yapılacak Teklif Hk.,CVKMD,historical
+1594693,DIVIDEND_PROCESS_DISCLOSURE,2026-04-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımı,ASELS,historical
+1594798,DIVIDEND_PROCESS_DISCLOSURE,2026-04-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul Onayına Sunulacak Yönetim Kurulu Kar Dağıtım Teklifi Hakkında,EUREN,historical
+1594963,DIVIDEND_PROCESS_DISCLOSURE,2026-04-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar payı dağıtım teklifinin Genel Kurul'da onaylanması hakkında,AGHOL,historical
+1595406,BONUS_ISSUE_DISCLOSURE,2026-04-20,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli ve Bedelsiz Sermaye Artırımına İlişkin Revize Yönetim Kurulu Kararı ,RYSAS,historical
+1595752,DIVIDEND_PROCESS_DISCLOSURE,2026-04-20,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr payı dağıtımı yapılamayacağının 2025 yılı Olağan Genel Kurul Toplantısı?nda pay sahiplerinin bilgisine sunulması hakkında,ZOREN,historical
+1595777,RIGHTS_ISSUE_DISCLOSURE,2026-04-20,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor'un Revize Edilmesi,CVKMD,historical
+1595805,DIVIDEND_PROCESS_DISCLOSURE,2026-04-20,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Karının/Zararının Kullanım Şeklinin Belirlenmesi,PETKM,historical
+1595809,DIVIDEND_PROCESS_DISCLOSURE,2026-04-20,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,ENTRA,historical
+1596316,DIVIDEND_PROCESS_DISCLOSURE,2026-04-21,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr payı dağıtımı yapılamayacağının 2025 yılı Olağan Genel Kurul Toplantısı'nda pay sahiplerinin bilgisine sunulması hakkında,ZOREN,historical
+1596355,DIVIDEND_PROCESS_DISCLOSURE,2026-04-21,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Limak Doğu Anadolu Çimento Sanayi ve Ticaret A.Ş. 2025 Yılı Kar Dağıtım Teklifi,LMKDC,historical
+1596568,CAPITAL_INCREASE,2026-04-22,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Hakkında Yönetim Kurulu Kararı,GLRMK,historical
+1596687,DIVIDEND_PROCESS_DISCLOSURE,2026-04-22,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı faaliyet dönemi kar payı dağıtım teklifi,TRGYO,historical
+1596939,DIVIDEND_PROCESS_DISCLOSURE,2026-04-23,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul Onayına Sunulan Yönetim Kurulu Kar Dağıtım Teklifi,EGGUB,historical
+1596958,DIVIDEND_PROCESS_DISCLOSURE,2026-04-23,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul'a sunulmak üzere 2025 Yılı Kârının kullanım şeklinin belirlenmesi hakkında,AKCNS,historical
+1596963,CAPITAL_INCREASE,2026-04-24,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin SPK Onayı,ENTRA,historical
+1597282,CAPITAL_INCREASE,2026-04-24,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Sermaye Artırımından Elde Edilen Fonun Kullanımına İlişkin Rapor,FENER,historical
+1597820,CAPITAL_INCREASE,2026-04-27,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Avansı Ödemesi Hakkında,GLRMK,historical
+1598023,DIVIDEND_PROCESS_DISCLOSURE,2026-04-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,MLP Care 2025 yılı Kâr Dağıtımına İlişkin Açıklama,MPARK,historical
+1598053,DIVIDEND_PROCESS_DISCLOSURE,2026-04-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurul Kararı ,AKFYE,historical
+1598185,DIVIDEND_PROCESS_DISCLOSURE,2026-04-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul Onayına Sunulan Yönetim Kurulu Kar Dağıtım Teklifi,EGGUB,historical
+1598380,DIVIDEND_PROCESS_DISCLOSURE,2026-04-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Kararı,BRSAN,historical
+1598404,DIVIDEND_PROCESS_DISCLOSURE,2026-04-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Nakit Kar Payı Ödeme Tarihi,ISDMR,historical
+1598409,DIVIDEND_PROCESS_DISCLOSURE,2026-04-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Nakit Kar Payı Ödeme Tarihi,EREGL,historical
+1598581,DIVIDEND_PROCESS_DISCLOSURE,2026-04-29,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Teklifi GK Onayı,MAVI,historical
+1598692,DIVIDEND_PROCESS_DISCLOSURE,2026-04-29,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Yönetim Kurulu Kar Dağıtım Teklifi,BERA,historical
+1598761,DIVIDEND_PROCESS_DISCLOSURE,2026-04-29,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"2025 Yılı Olağan Genel Kurul Toplantısı Kar Payı Dağıtım İşlemleri Sonuçları Hakkında,",RYSAS,historical
+1598915,DIVIDEND_PROCESS_DISCLOSURE,2026-04-29,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Pay başına düşen temettü tutarının güncellenmesi,ALARK,historical
+1599016,DIVIDEND_PROCESS_DISCLOSURE,2026-04-29,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Kar Dağıtımı Hakkında,EKGYO,historical
+1599833,DIVIDEND_PROCESS_DISCLOSURE,2026-04-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı Kar Payı Dağıtımına İlişkin Genel Kurul Kararı,KARSN,historical
+1600040,DIVIDEND_PROCESS_DISCLOSURE,2026-04-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurul Kararı,ECILC,historical
+1600041,DIVIDEND_PROCESS_DISCLOSURE,2026-04-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"Kar Payı Dağıtımına İlişkin Genel Kurul Kararı
+",ECZYT,historical
+1600774,DIVIDEND_PROCESS_DISCLOSURE,2026-05-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kâr Dağıtımı Hakkında,GLRMK,historical
+1600847,DIVIDEND_PROCESS_DISCLOSURE,2026-05-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,KCAER,historical
+1600862,DIVIDEND_PROCESS_DISCLOSURE,2026-05-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin,BTCIM,historical
+1601205,DIVIDEND_PROCESS_DISCLOSURE,2026-05-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"	
+2025 Yılı Olağan Genel Kurul Toplantısı Kâr Dağıtım Sonucu",SASA,historical
+1601357,DIVIDEND_PROCESS_DISCLOSURE,2026-05-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,05.05.2026 tarihli Olağan Genel Kurul toplantısında 2025 Yılı karından brüt 150.000.000.-TL nin dağıtılmasına ilişkin Yönetim Kurulu'nun teklifi onaylanmıştır. ,GRSEL,historical
+1601407,DIVIDEND_PROCESS_DISCLOSURE,2026-05-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kâr Dağıtımı Hakkında,GLRMK,historical
+1601470,DIVIDEND_PROCESS_DISCLOSURE,2026-05-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"Kâr Payı Dağıtımına İlişkin Genel Kurul Kararı
+",BIMAS,historical
+1602139,DIVIDEND_PROCESS_DISCLOSURE,2026-05-06,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımına İlişkin Genel Kurul Kararı,TUKAS,historical
+1602349,DIVIDEND_PROCESS_DISCLOSURE,2026-05-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı ödeme tarihlerinin belirlenmesine ilişkin Yönetim Kurulu kararı.,GRSEL,historical
+1602781,MERGER,2026-05-07,Birleşme İşlemlerine İlişkin Bildirim,Ortaklığımızın %100 hissedarı olduğu UCZ Mağazacılık Ticaret A.Ş. ile kolaylaştırılmış usulde birleşmesine ilişkin Yönetim Kurulu Kararı,SOKM,historical
+1602814,DIVIDEND_PROCESS_DISCLOSURE,2026-05-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"Kar Payı Dağıtımına İlişkin Olağan Genel Kurul Kararı
+",TCELL,historical
+1602822,DIVIDEND_PROCESS_DISCLOSURE,2026-05-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtım Teklifi,TABGD,historical
+1602857,DIVIDEND_PROCESS_DISCLOSURE,2026-05-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Olağan Genel Kurul Toplantısı Kar Dağıtım Sonucu,HEKTS,historical
+1603021,CAPITAL_INCREASE,2026-05-08,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta Bağlı Sermaye Artırımı SPK Onayı,SASA,historical
+1603068,DIVIDEND_PROCESS_DISCLOSURE,2026-05-08,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,ALTNY,historical
+1603304,DIVIDEND_PROCESS_DISCLOSURE,2026-05-08,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtım Teklifi,TABGD,historical
+1603872,DIVIDEND_PROCESS_DISCLOSURE,2026-05-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Hesap Dönemi Kar Payı Dağıtım İşlemleri Hakkında,OBAMS,historical
+1604089,CAPITAL_INCREASE,2026-05-11,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı İçin Sermaye Piyasası Kurulu'na Başvuru Yapılması Hakkında,GLRMK,historical
+1604404,DIVIDEND_PROCESS_DISCLOSURE,2026-05-11,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Dağıtımı Konusundaki Genel Kurul Kararı,GUBRF,historical
+1605088,DIVIDEND_PROCESS_DISCLOSURE,2026-05-11,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,ULKER,historical
+1605654,MERGER,2026-05-11,Birleşme İşlemlerine İlişkin Bildirim,Ortaklığımızın %100 hissedarı olduğu UCZ Mağazacılık Ticaret A.Ş. ile kolaylaştırılmış usulde birleşmesine ilişkin SPK başvurusu,SOKM,historical
+1606141,CAPITAL_INCREASE,2026-05-12,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı İçin Sermaye Piyasası Kurulu'na Başvuru Yapılması Hakkında,GLRMK,historical
+1606436,BONUS_ISSUE_DISCLOSURE,2026-05-12,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Onayı,BIMAS,historical
+1606642,CAPITAL_INCREASE,2026-05-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Pay Alma Hakkı Kullanım Başlangıç Tarihi Hakkında,BIMAS,historical
+1606779,RIGHTS_ISSUE_DISCLOSURE,2026-05-13,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Bedelli Sermaye Artırımından Elde Edilen Fonun Kullanımına İlişkin Rapor,CANTE,historical
+1607014,DIVIDEND_PROCESS_DISCLOSURE,2026-05-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtımı İle İlgili Genel Kurul Kararı Hakkında,EUREN,historical
+1607023,DIVIDEND_PROCESS_DISCLOSURE,2026-05-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımı Hakkında,AKSEN,historical
+1607067,DIVIDEND_PROCESS_DISCLOSURE,2026-05-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 YILI KAR PAYI DAĞITIM TEKLİFİNİN GÖRÜŞÜLMESİ,ENTRA,historical
+1607068,DIVIDEND_PROCESS_DISCLOSURE,2026-05-13,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtım,ASELS,historical
+1607530,DIVIDEND_PROCESS_DISCLOSURE,2026-05-14,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Kararı ,GLYHO,historical
+1607569,DIVIDEND_PROCESS_DISCLOSURE,2026-05-14,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurulu toplantısında onaylanan  Kar Payı Dağıtım Kararı,VESTL,historical
+1607691,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,SNGYO,historical
+1607865,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Teklifinin Genel Kurul Toplantısında Karara Bağlanması,LMKDC,historical
+1607901,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Pay Başına Düşen Temettü Tutarının Güncellenmesi,BIMAS,historical
+1608016,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,"	
+Nakit Kar Payı Dağıtım Tarihi Kesinleşen",TRGYO,historical
+1608216,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Karının/Zararının Kullanım Şeklinin Belirlenmesi,PETKM,historical
+1608261,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurulu Kar Dağıtımı Hk.,CVKMD,historical
+1608272,DIVIDEND_PROCESS_DISCLOSURE,2026-05-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurulu toplantısında onaylanan Kar Payı Dağıtım Kararı,ZOREN,historical
+1608719,DIVIDEND_PROCESS_DISCLOSURE,2026-05-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurulu Kar Dağıtımı Hk.,CVKMD,historical
+1609227,DIVIDEND_PROCESS_DISCLOSURE,2026-05-20,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Genel Kurul'un Kar Payı Dağıtım Kararı,AKCNS,historical
+1610042,CAPITAL_INCREASE,2026-05-21,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta Bağlı Sermaye Artırımının Tamamlanması ve Esas Sözleşme Değişikliğine İlişkin Yönetim Kurulu Kararı,SASA,historical
+1610169,DIVIDEND_PROCESS_DISCLOSURE,2026-05-21,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,AHGAZ,historical
+1610171,DIVIDEND_PROCESS_DISCLOSURE,2026-05-21,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,ENERY,historical
+1610850,BONUS_ISSUE_DISCLOSURE,2026-05-22,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Esas Sözleşme Değişikliğinin Tescili,BIMAS,historical
+1610874,CAPITAL_INCREASE,2026-05-25,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin Yeni Pay Alma Hakkı Kullanım Tarihleri,ENTRA,historical
+1612055,DIVIDEND_PROCESS_DISCLOSURE,2026-06-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin Genel Kurul Kararı ,GLRMK,historical
+1612219,DIVIDEND_PROCESS_DISCLOSURE,2026-06-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Yönetim Kurulunun kar payı dağıtım teklifinin Genel Kurul'da onaylanması,TABGD,historical
+1612739,CAPITAL_INCREASE,2026-06-03,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta bağlı sermaye artırımı tescili,SASA,historical
+1612805,DIVIDEND_PROCESS_DISCLOSURE,2026-06-03,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Genel Kurul Toplantı Sonucu,BTCIM,historical
+1613110,DIVIDEND_PROCESS_DISCLOSURE,2026-06-04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurul Onayı,KCAER,historical
+1613299,CAPITAL_INCREASE,2026-06-04,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"	
+Şarta bağlı sermaye artırımı tescili",SASA,historical
+1613469,CAPITAL_INCREASE,2026-06-05,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"	
+Şarta Bağlı Sermaye Artırımı SPK Onayı",SASA,historical
+1613885,DIVIDEND_PROCESS_DISCLOSURE,2026-06-05,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurulu Kararı,ALTNY,historical
+1614941,DIVIDEND_PROCESS_DISCLOSURE,2026-06-08,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,KAR DAĞITIM KARARINA İLİŞKİN  GENEL KURUL SONUCU,ULKER,historical
+1615088,DIVIDEND_PROCESS_DISCLOSURE,2026-06-08,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım işlemleri Hakkında,OBAMS,historical
+1615396,DIVIDEND_PROCESS_DISCLOSURE,2026-06-09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 yılı Kar Payı Dağıtım Teklifinin Genel Kurul tarafından onaylanması hakkında,AKSEN,historical
+1615928,CAPITAL_INCREASE,2026-06-10,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Esas Sözleşme Değişikliğine İlişkin Yönetim Kurulu Kararı,SASA,historical
+1616101,BONUS_ISSUE_DISCLOSURE,2026-06-11,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Onayı,TURSG,historical
+1616567,CAPITAL_INCREASE,2026-06-12,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Pay Alma Hakkı Kullanım Başlangıç Tarihi,TURSG,historical
+1617170,BONUS_ISSUE_DISCLOSURE,2026-06-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı Nedeni İle Nakit Kar Payı Düzeltmesi,TURSG,historical
+1617424,DIVIDEND_PROCESS_DISCLOSURE,2026-06-15,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı,BINHO,historical
+1617530,CAPITAL_INCREASE,2026-06-16,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Kullanılmayan Rüçhan Hakkı Tutarına İlişkin Açıklama,ENTRA,historical
+1617778,DIVIDEND_PROCESS_DISCLOSURE,2026-06-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurul Toplantısı Kâr Payı Dağıtım Sonucu,AHGAZ,historical
+1617819,DIVIDEND_PROCESS_DISCLOSURE,2026-06-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Kararı-Güncelleme,BINHO,historical
+1618075,CAPITAL_INCREASE,2026-06-17,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Rüçhan Haklarının Kullanılmasının Ardından Kalan Payların Borsada Satışının Tamamlanması,ENTRA,historical
+1618146,DIVIDEND_PROCESS_DISCLOSURE,2026-06-17,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurul Toplantısı Kâr Payı Dağıtım Sonucu,ENERY,historical
+1618575,DIVIDEND_PROCESS_DISCLOSURE,2026-06-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurulu Kararı,SNGYO,historical
+1618737,DIVIDEND_PROCESS_DISCLOSURE,2026-06-18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Olağan Genel Kurul Toplantısı Kâr Payı Dağıtım Sonucu,ENERY,historical
+1619526,DIVIDEND_PROCESS_DISCLOSURE,2026-06-22,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Yönetim Kurulu Kar Dağıtım Teklifi,BERA,historical
+1619643,CAPITAL_INCREASE,2026-06-23,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta bağlı sermaye artırımı tescili,SASA,historical
+1619813,BONUS_ISSUE_DISCLOSURE,2026-06-23,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Esas Sözleşme Tescili,TURSG,historical
+1619896,CAPITAL_INCREASE,2026-06-23,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta Bağlı Sermaye Artırımı - İhraç Belgesi Spk Onay Başvurusu,SASA,historical
+1621120,CAPITAL_INCREASE,2026-06-26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımının Tamamlanması ve Tadil Metninin Tescili Hakkında,ENTRA,historical
+1622148,DIVIDEND_PROCESS_DISCLOSURE,2026-06-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Teklifi,SOKM,historical
+1622679,DIVIDEND_PROCESS_DISCLOSURE,2026-07-01,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımı Hk.,CWENE,historical
+1622735,DIVIDEND_PROCESS_DISCLOSURE,2026-07-01,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımı Hakkında Yönetim Kurulu Teklifi,TRALT,historical
+1622784,CAPITAL_INCREASE,2026-07-02,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"	
+Şarta Bağlı Sermaye Artırımı SPK Onayı",SASA,historical
+1623302,DIVIDEND_PROCESS_DISCLOSURE,2026-07-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Faaliyet Yılına İlişkin Kar Dağıtılmamasının Genel Kurul?a Önerilmesi ve Bilgi Verilmesi Hakkında,TRENJ,historical
+1623304,DIVIDEND_PROCESS_DISCLOSURE,2026-07-02,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Faaliyet Yılına İlişkin Kar Dağıtılmamasının Genel Kurul?a Önerilmesi ve Bilgi Verilmesi Hakkında.,TRMET,historical
+1623404,CAPITAL_INCREASE,2026-07-02,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Hakkında Yönetim Kurulu Kararı,HEKTS,historical
+1624132,MERGER,2026-07-03,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklıkları ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK Onayı",RGYAS,historical
+1624193,CAPITAL_INCREASE,2026-07-03,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı İçin Sermaye Piyasası Kurulu'na Başvuru Yapılması Hakkında,HEKTS,historical
+1627416,DIVIDEND_PROCESS_DISCLOSURE,2026-07-07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımı Hakkında Yönetim Kurulu Teklifi,ASTOR,historical
+1628718,CAPITAL_INCREASE,2026-07-08,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Esas Sözleşme Değişikliği SPK Başvurusu,SASA,historical
+1632790,BONUS_ISSUE_DISCLOSURE,2026-07-13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Yönetim Kurulu Kararı,AKFYE,historical
+1633371,MERGER,2026-07-14,Birleşme İşlemlerine İlişkin Bildirim,Birleşme İşlemlerine İlişkin Revize Belgelerin Sunulması,BTCIM,historical
+1633768,DIVIDEND_PROCESS_DISCLOSURE,2026-07-14,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Dağıtımına İlişkin Genel Kurul Kararı,BINHO,historical
+1634271,DIVIDEND_PROCESS_DISCLOSURE,2026-07-16,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,RGYAS,historical
+1634985,BONUS_ISSUE_DISCLOSURE,2026-07-20,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Başvurusu ,AKFYE,historical
+1635133,MERGER,2026-07-20,Birleşme İşlemlerine İlişkin Bildirim,Birleşme İşlemlerine İlişkin Güncelleme Hk. ,BTCIM,historical
+1635210,MERGER,2026-07-20,Birleşme İşlemlerine İlişkin Bildirim,Birleşme İşlemlerine İlişkin Güncelleme hk.,BTCIM,historical
+1635523,MERGER,2026-07-21,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin Ticaret Sicil Onayı",RGYAS,historical
+1635844,DIVIDEND_PROCESS_DISCLOSURE,2026-07-22,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımı Hakkında Yönetim Kurulu Teklifi,TRALT,historical
+1636752,BONUS_ISSUE_DISCLOSURE,2026-07-27,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Yönetim Kurulu Kararı,KORDS,historical
+1636766,MERGER,2026-07-27,Birleşme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış Usulde Birleşmeye İlişkin SPK Onayı Hk.,SOKM,historical
+1638000,DIVIDEND_PROCESS_DISCLOSURE,2026-07-28,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Yılı Kar Payı Dağıtımı Hk.,CWENE,historical
+1638001,CAPITAL_INCREASE,2026-07-28,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin SPK Başvurusu,KORDS,historical
+1638970,CAPITAL_INCREASE,2026-07-29,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımının Tamamlanması ve Tadil Metninin Tescili Hakkında (REVİZE),ENTRA,historical
+1639071,RIGHTS_ISSUE_DISCLOSURE,2026-07-30,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin SPK Başvurusunun Onaylanması Hk.,CVKMD,historical
+1639734,CAPITAL_INCREASE,2026-07-30,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımına İlişkin Yönetim Kurulu Kararı ve  SPK Başvurusu hakkında   ,KCHOL|OTKAR,historical
+1639740,CAPITAL_INCREASE,2026-07-30,Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor,Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor,OTKAR,historical
+1639871,DIVIDEND_PROCESS_DISCLOSURE,2026-07-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Faaliyet Yılına İlişkin Kar Dağıtılmamasının 2025 Yılı Olağan Genel Kurul Toplantısında Onaylanması,TRENJ,historical
+1639872,DIVIDEND_PROCESS_DISCLOSURE,2026-07-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,2025 Faaliyet Yılına İlişkin Kar Dağıtılmamasının 2025 Yılı Olağan Genel Kurul Toplantısında Onaylanması,TRMET,historical
+1639873,DIVIDEND_PROCESS_DISCLOSURE,2026-07-30,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Önerisi'nin 2025 Yılı Olağan Genel Kurul Toplantısında Onaylanması,TRALT,historical
+1641660,DIVIDEND_PROCESS_DISCLOSURE,2026-07-31,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Kararına İlişkin Genel Kurul Sonucu,SOKM,historical
+1642637,CAPITAL_INCREASE,04.08.2026 11:07:21,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Azaltımına İlişkin Yönetim Kurulu Kararı,MAVI,recent
+1642697,RIGHTS_ISSUE_DISCLOSURE,04.08.2026 14:54:20,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Yeni Pay Alma Hakkı Kullanım Tarihleri Hk.,CVKMD,recent
+1643702,DIVIDEND_PROCESS_DISCLOSURE,05.08.2026 17:23:21,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payına İlişkin Yönetim Kurulu Kararı,TKFEN,recent
+1643990,CAPITAL_INCREASE,05.08.2026 21:53:53,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Şarta bağlı sermaye artırımı tescili,SASA,recent
+1644470,CAPITAL_INCREASE,06.08.2026 17:28:48,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Azaltımına İlişkin SPK Başvurusu,MAVI,recent
+1645607,CAPITAL_INCREASE,07.08.2026 18:34:43,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,"Sermaye Artırımı ve Halka Arz Çalışmalarına İlişkin Yönetim Kurulu Kararı	
+",HALKB,recent
+1645625,DIVIDEND_PROCESS_DISCLOSURE,07.08.2026 18:40:40,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin 2025 yılı Olağan Genel Kurul Kararı,ASTOR,recent
+1646542,DIVIDEND_PROCESS_DISCLOSURE,10.08.2026 16:47:27,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kâr Payı Dağıtımına İlişkin 2025 yılı Olağan Genel Kurul Kararı,RGYAS,recent
+1648213,MERGER,11.08.2026 20:00:26,Birleşme İşlemlerine İlişkin Bildirim,Kolaylaştırılmış usulde birleşmesine ilişkin Ticaret Sicil Onayı,SOKM,recent
+1650604,BONUS_ISSUE_DISCLOSURE,14.08.2026 19:25:26,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli ve Bedelsiz Sermaye Artırımının Geri Çekilmesi Hk. Yönetim Kurulu Kararı,RYSAS,recent
+1651300,CAPITAL_INCREASE,17.08.2026 18:21:46,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Nakdi ve Tahsisli Sermaye Artırımı Yönetim Kurulu Kararı,SASA,recent
+1653504,RIGHTS_ISSUE_DISCLOSURE,20.08.2026 15:39:00,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımında Kullanılmayan Rüçhan Hakkı Tutarı Hk.,CVKMD,recent
+1653656,DIVIDEND_PROCESS_DISCLOSURE,20.08.2026 18:29:19,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,01.06.2025-31.05.2026 özel hesap dönemi kar dağıtımı ile ilgili Yönetim Kurulu kararı hakkında,FENER,recent
+1654175,CAPITAL_INCREASE,21.08.2026 18:11:06,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Nakdi ve Tahsisli Sermaye Artırımı SPK Başvurusu,SASA,recent
+1654560,RIGHTS_ISSUE_DISCLOSURE,24.08.2026 18:11:43,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımında Rüçhan Hakkı Kullanımı Sonrası Kalan Payların Satışının Tamamlanması Hk.,CVKMD,recent
+1654680,CAPITAL_INCREASE,25.08.2026 09:38:57,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artımına İlişkin SPK Başvurusu,CWENE,recent
+1655191,CAPITAL_INCREASE,26.08.2026 18:16:08,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artımına İlişkin SPK Başvurusu - Şablona SPK Başvuru Tarihi Eklenmiştir,CWENE,recent
+1655506,CAPITAL_INCREASE,27.08.2026 20:32:43,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Halka Arz Yoluyla Sermaye Artırımına İlişkin SPK Başvurusu,HALKB,recent
+1655601,CAPITAL_INCREASE,28.08.2026 14:12:16,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Halka Arz Yoluyla Sermaye Artırımına İlişkin SPK Başvurusu,HALKB,recent
+1656455,RIGHTS_ISSUE_DISCLOSURE,31.08.2026 18:20:37,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımının Tamamlanması ve Şirket Esas Sözleşmesinin 6. Maddesinin Değişikliğine İlişkin Yönetim Kurulu Kararı ve SPK Başvurusu Hk.,CVKMD,recent
+1656680,BONUS_ISSUE_DISCLOSURE,01.09.2026 13:26:59,Hak Kullanım Süreç İptal Bildirimi,Bedelli ve Bedelsiz Sermaye Artırımının Geri Çekilmesi Hk. ,RYSAS,recent
+1657500,DIVIDEND_PROCESS_DISCLOSURE,02.09.2026 18:05:59,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Teklifi,GUBRF,recent
+1658176,DIVIDEND_PROCESS_DISCLOSURE,03.09.2026 15:26:40,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Yönetim Kurulu Teklifi,GUBRF,recent
+1658689,DIVIDEND_PROCESS_DISCLOSURE,03.09.2026 22:01:09,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım İşlemlerine İlişkin Genel Kurul Sonucu,TKFEN,recent
+1661245,DIVIDEND_PROCESS_DISCLOSURE,09.09.2026 18:20:04,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Dağıtım Teklifi,KATMR,recent
+1661783,BONUS_ISSUE_DISCLOSURE,11.09.2026 10:27:20,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Başvurumuzun Onaylanması ve Bedelsiz Pay Alma Hakkı Kullanımı Başlangıç Tarihinin Belirlenmesi,KORDS,recent
+1663784,BONUS_ISSUE_DISCLOSURE,16.09.2026 12:05:13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin Şirket Esas Sözleşmesinin Tescili - İlgili Şablondan Gönderim,KORDS,recent
+1664212,MERGER,16.09.2026 18:16:19,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklıkları ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK başvurusu",TRGYO,recent
+1664867,RIGHTS_ISSUE_DISCLOSURE,17.09.2026 18:38:37,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımı,KORDS,recent
+1664976,BONUS_ISSUE_DISCLOSURE,18.09.2026 09:22:13,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımına İlişkin SPK Onayı ve Hak Kullanımına İlişkin Başlangıç Tarihinin Belirlenmesi,AKFYE,recent
+1666699,BONUS_ISSUE_DISCLOSURE,22.09.2026 17:05:57,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelsiz Sermaye Artırımı Kapsamında Tadil Edilen Şirketimiz Esas Sözleşme?sinin 6 ncı Maddesinin Tescili Hk.,AKFYE,recent
+1667913,MERGER,24.09.2026 18:45:32,Birleşme İşlemlerine İlişkin Bildirim,Şirketimizin %100 bağlı ortaklığı olan Eczacıbaşı Gayrimenkul Geliştirme ve Yatırım A.Ş. ile devralma suretiyle kolaylaştırılmış usulde birleşmesine ilişkin yönetim kurulu kararı ve SPK başvurusu,ECILC,recent
+1667943,CAPITAL_INCREASE,24.09.2026 20:01:51,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Kapsamında TTK 461 Raporu hk. Duyurumuzun İlgili Şablondan Yeniden Yayınlanması,HEKTS,recent
+1668262,RIGHTS_ISSUE_DISCLOSURE,25.09.2026 17:48:57,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Bedelli Sermaye Artırımına İlişkin Esas Sözleşme Tadil Metninin Tescil ve İlanı Hk.,CVKMD,recent
+1668305,MERGER,25.09.2026 18:17:12,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin SPK Onayı",RGYAS,recent
+1669662,MERGER,29.09.2026 17:26:18,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin Ticaret Sicil Onayı",RGYAS,recent
+1670023,DIVIDEND_PROCESS_DISCLOSURE,30.09.2026 12:12:18,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtımına İlişkin Genel Kurul Sonucu,GUBRF,recent
+1670550,MERGER,30.09.2026 19:39:26,Birleşme İşlemlerine İlişkin Bildirim,"Şirketimizin, %100 Hissedarı Olduğu Bağlı Ortaklığı ile Kolaylaştırılmış Usulde Birleşmesine İlişkin Ticaret Sicil Onayı",RGYAS,recent
+1670572,CAPITAL_INCREASE,30.09.2026 23:11:00,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Sermaye Artırımına İlişkin SPK Başvurusu,KORDS,recent
+1671678,DIVIDEND_PROCESS_DISCLOSURE,05.10.2026 09:00:07,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kesinleşen Nakit Kar Payı Hak Kullanım Tarihi,RGYAS,recent
+1672585,CAPITAL_INCREASE,05.10.2026 18:44:32,Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim,Tahsisli Sermaye Artırımı Başvurumuzun SPK Onayı Kapsamında İhraç Belgesinin SPK Onayına Gönderilmesi ve Pay Alım Teklifi Tebliği Kapsamında Değerlendirme,HEKTS,recent
+1672991,DIVIDEND_PROCESS_DISCLOSURE,06.10.2026 13:24:03,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kesinleşen Nakit Kar Payı Hak Kullanım Tarihi,RGYAS,recent
+1674751,DIVIDEND_PROCESS_DISCLOSURE,07.10.2026 16:04:10,Kar Payı Dağıtım İşlemlerine İlişkin Bildirim,Kar Payı Dağıtım Tarihinin Belirlenmesi Hk,GUBRF,recent

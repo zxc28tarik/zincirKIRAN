@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "KOÇ HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c4c12c8019c766e55b12d0a",
+    "disclosureIndex": 1559307,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed710140f2f4d6c70039",
+    "period": "HZ",
+    "publishDate": "2026.02.19 18:15:12",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KCHOL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1559307",
+  "fields": [],
+  "raw_gzip_sha256": "bc62cdcf29d1a1e92fbe3cee22fe1e842fb19b2b59ed5e958ee5f4c2399983cf",
+  "raw_sha256": "768367daaec64c5cb78727d627e456ad40c4361a804824b8bc6b5153283ee322",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1559307"
+}

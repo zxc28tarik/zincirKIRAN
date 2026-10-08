@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "REYSAŞ TAŞIMACILIK VE LOJİSTİK TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c998ee9d5019a34db3a805449",
+    "disclosureIndex": 1510035,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140ee847b0140f203980d0030",
+    "period": "HZ",
+    "publishDate": "2025.10.31 17:40:40",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "RYSAS",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "event_id": "1510035",
+  "fields": [],
+  "raw_gzip_sha256": "8bf4c30f6ba747fd3ce988a0856c639f4193de94a35b1e9d1fece3de1e36982c",
+  "raw_sha256": "b84233ed93221c560d5104825f614ab0234ad59a510b4314ca6191c747f9defd",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1510035"
+}
