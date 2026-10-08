@@ -1,0 +1,39 @@
+{
+  "combined_gate": {
+    "factor_input_ready": 0,
+    "score_computation_allowed": 0,
+    "shadow_signal_allowed": 0,
+    "status_counts": {
+      "HISTORICAL_CA_RISK_UNRESOLVED": 98,
+      "PRICE_HISTORY_INSUFFICIENT": 1,
+      "RECENT_CA_RISK_UNRESOLVED": 1
+    }
+  },
+  "contract": "HISTORICAL_HIGH52_CA_RECONCILIATION_V1",
+  "historical_risk": {
+    "risk_rows": 368,
+    "risk_tickers": 98
+  },
+  "input_price_package": "data/live_shadow/high52_input_ca_risk_v1/price_history.csv.gz",
+  "limitations": [
+    "Historical positive disclosures are conservative unresolved risk evidence, not proof of completed economic adjustment.",
+    "No ex-date, ratio, cash amount or payment date is invented.",
+    "Factor-input-ready means data/reconciliation inputs are sufficient for later score computation; 45E itself computes no score and emits no shadow signal."
+  ],
+  "lookbacks": {
+    "historical_interval_max_end": "2026-07-31",
+    "historical_interval_min_start": "2025-10-13",
+    "price_sufficient_tickers": 99,
+    "tickers": 100
+  },
+  "production_ready": false,
+  "real_shadow_run_created": false,
+  "score_values_computed": false,
+  "source": {
+    "manifest_sha256": "1935232295360b1026a036e725809e0e73a62253ce07145bbc1f13fd6abd1345",
+    "repository": "zxc28tarik/TOTAL-RASYO-HESAPLAYICI",
+    "selected_window_count": 55,
+    "source_data_commit": "d0c5ce25832dc94c138fc6141bba8fa8392cd00b",
+    "w6_audit_commit": "0c70e1607832624b1b90a9bf150271ab705a6036"
+  }
+}
