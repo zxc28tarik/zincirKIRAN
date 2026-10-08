@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "FENERBAHÇE FUTBOL A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c998ee9d5019a16cf03885dae",
+    "disclosureIndex": 1507966,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e95dc90140ede7351a013d",
+    "period": "HZ",
+    "publishDate": "2025.10.24 18:23:28",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "FENER",
+    "summary": "Sermaye Artırımından Elde Edilen Fonun Kullanımına İlişkin Rapor",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1507966",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "22.05.2025"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Sermaye Piyasası Kurulu'nun 22.06.2013 tarihli (VII-128.1) \"Pay Tebliği\"nin \"Bedelli sermaye artırımından elde edilen fonların kullanımına ilişkin yapılacak açıklamalar\" başlıklı 33. maddesi gereğince hazırlanan rapor, ekte yer almaktadır. Yatırımcılarımızın bilgilerine sunarız."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Evet (Yes)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "1ea8f69ad56e41311614985dbf9ae6ee93f0c462a9d4fd238c7fbba3433eae34",
+  "raw_sha256": "2d86bc9ac9cf0cb39eae63b233c382c98baea88afa7db112bfcda64fef3065b2",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1507966"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "GALATA WIND ENERJİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9aaa2dfa019ab9788f12327a",
+    "disclosureIndex": 1519666,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c46d7599a6016dee0b5aec36b2",
+    "period": "HZ",
+    "publishDate": "2025.11.25 08:31:23",
+    "relatedDisclosureOid": "4028328c95959ac20195fc696f93196a",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "GWIND",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1519666",
+  "fields": [],
+  "raw_gzip_sha256": "78b055c41c1c0ca897171092d1ab4293ec0d52c0e345a5e94600a6d8e0bcb677",
+  "raw_sha256": "098667a52b0846e470c36cd9d6df6b681f8a549daa24fa8a28c208eafdee09c3",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1519666"
+}

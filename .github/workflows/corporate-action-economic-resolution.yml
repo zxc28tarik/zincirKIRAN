@@ -1,0 +1,91 @@
+name: Corporate Action Economic Resolution
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/zincir_kiran/corporate_action_economic_resolution.py"
+      - "src/zincir_kiran/share_multiplier_resolution.py"
+      - "tests/test_corporate_action_economic_resolution.py"
+      - "tests/test_share_multiplier_resolution.py"
+      - "scripts/capture_corporate_action_economic_resolution.py"
+      - "scripts/verify_corporate_action_economic_resolution.py"
+      - "scripts/materialize_share_multiplier_resolution.py"
+      - "research/preregistrations/corporate_action_economic_resolution_v1.json"
+      - "docs/CORPORATE_ACTION_ECONOMIC_RESOLUTION.md"
+      - ".github/workflows/corporate-action-economic-resolution.yml"
+      - "data/live_shadow/corporate_action_economic_resolution_v1/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  corporate-action-economic-resolution:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned dependencies
+        run: python -m pip install "numpy==1.26.4" "pandas==2.2.3" "yfinance==0.2.66" "requests==2.34.2" "beautifulsoup4==4.15.0" "openpyxl==3.1.5" "pytest==8.3.5"
+      - name: Test economic resolution ladder
+        run: |
+          PYTHONPATH=src pytest -q \
+            tests/test_corporate_action_economic_resolution.py \
+            tests/test_share_multiplier_resolution.py
+      - name: Resume incomplete field discovery or verify frozen package
+        run: |
+          NEED_CAPTURE=1
+          if [ -f data/live_shadow/corporate_action_economic_resolution_v1/provenance.json ]; then
+            FAILED=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("data/live_shadow/corporate_action_economic_resolution_v1/provenance.json")
+          data = json.loads(p.read_text())
+          excel = data.get("official_excel")
+          if excel is None:
+              print(400)
+          else:
+              print(excel.get("failed", 400))
+          PY
+          )
+            if [ "$FAILED" = "0" ]; then
+              NEED_CAPTURE=0
+            fi
+          fi
+          if [ "$NEED_CAPTURE" = "1" ]; then
+            PYTHONPATH=src python scripts/capture_corporate_action_economic_resolution.py
+          fi
+          python scripts/verify_corporate_action_economic_resolution.py
+      - name: Materialize official KAP table-cell discovery
+        run: python scripts/materialize_official_kap_table_cells.py
+      - name: Materialize official detail-stage triage
+        run: PYTHONPATH=src python scripts/materialize_official_detail_stages.py
+      - name: Materialize locked share-multiplier receipts
+        run: PYTHONPATH=src python scripts/materialize_share_multiplier_resolution.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: corporate-action-economic-resolution-v1
+          path: data/live_shadow/corporate_action_economic_resolution_v1/
+          if-no-files-found: error
+      - name: Persist first field-discovery package on PR branch
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live_shadow/corporate_action_economic_resolution_v1/
+          if git diff --cached --quiet; then
+            echo "45F package already frozen; no commit."
+            exit 0
+          fi
+          git commit -m "Implementation 45F: freeze corporate-action detail field discovery"
+          git push origin "HEAD:${HEAD_REF}"

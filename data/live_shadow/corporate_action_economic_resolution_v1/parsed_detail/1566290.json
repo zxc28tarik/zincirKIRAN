@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "KORDSA TEKNİK TEKSTİL A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f588019cbdbc15b6423a",
+    "disclosureIndex": 1566290,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f30606a700ec",
+    "period": "HZ",
+    "publishDate": "2026.03.05 14:24:18",
+    "relatedDisclosureOid": "4028328c998ee9d7019994b3a29507bf",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KORDS",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1566290",
+  "fields": [],
+  "raw_gzip_sha256": "8030502ce6ea7976bafb2596b9712d60bc66705e1d991771d2621ecd4ee53b7b",
+  "raw_sha256": "8a5df60ec75de184f20d4feedd558c87aef9ccfca4a14d0ed062591b57969404",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1566290"
+}

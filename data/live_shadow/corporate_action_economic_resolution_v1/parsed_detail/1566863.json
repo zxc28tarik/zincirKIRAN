@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "BATIÇİM BATI ANADOLU ÇİMENTO SANAYİİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f588019cc1bb4f1e0459",
+    "disclosureIndex": 1566863,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee07044700eb",
+    "period": "HZ",
+    "publishDate": "2026.03.06 09:01:33",
+    "relatedDisclosureOid": "4028328d9c81f588019ca16812541981",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BTCIM",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1566863",
+  "fields": [],
+  "raw_gzip_sha256": "a080d98dc6106b502fcc99bff6704fb1a6702dcc90aad67cb064d9e576049441",
+  "raw_sha256": "13c8e5d5bfb8a6a74896d53982e1442593fb9b09d0bfac2a7f2e3574d63570fb",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1566863"
+}

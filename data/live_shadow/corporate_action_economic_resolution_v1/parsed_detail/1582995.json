@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "REYSAŞ TAŞIMACILIK VE LOJİSTİK TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9d4a0485019d4eab1f37325a",
+    "disclosureIndex": 1582995,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140ee847b0140f203980d0030",
+    "period": "HZ",
+    "publishDate": "2026.04.02 18:24:07",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "RYSAS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1582995",
+  "fields": [],
+  "raw_gzip_sha256": "6a38ae465f8d6b082910881995f7e1b4a3db9bb4f7eccbaae6e9ab3eeee9d414",
+  "raw_sha256": "0141e17774074c63339f95a539bcb7397e4501b520ea8397f99fdb7fdeaf69f3",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1582995"
+}

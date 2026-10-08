@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "ÇAN2 TERMİK A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328d998eebe8019a7c7c55236270",
+    "disclosureIndex": 1516522,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c578080f31017811f4dca6032d",
+    "period": "HZ",
+    "publishDate": "2025.11.13 16:44:25",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CANTE",
+    "summary": "Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1516522",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "12.09.2025"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33. maddesi uyarınca hazırlanan bedelli sermaye artırımından elde edilecek fonun kullanım yerlerine ilişkin revize rapor, ekte yer almaktadır."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Evet (Yes)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "d1ecba20845d84611faf13ac226ca5ee9e569e5c645e085c864166f817e105f6",
+  "raw_sha256": "533cb85ba15c3998235eee48afd37d2aeb6f06ae3f2f05c8f041ccc9fedbf3ea",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1516522"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "OTOKAR OTOMOTİV VE SAVUNMA SANAYİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d175019cd87ea8854759",
+    "disclosureIndex": 1569957,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140ee35c70140ee4316b3001d",
+    "period": "HZ",
+    "publishDate": "2026.03.10 19:06:53",
+    "relatedDisclosureOid": "4028328d9c4c12c8019c4d79e8d11f96",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "OTKAR",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1569957",
+  "fields": [],
+  "raw_gzip_sha256": "c221410b1e43f70f8924ab1eb8841fc16c161eb1bc227fcecc2afce43b5f1fde",
+  "raw_sha256": "c854cea8a67b4aa1f3ab578fa2a62f273df6ed7d89faa32f6c2a71e3df5c9915",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1569957"
+}

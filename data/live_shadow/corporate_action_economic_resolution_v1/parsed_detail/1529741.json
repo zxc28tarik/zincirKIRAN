@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ALTINAY SAVUNMA TEKNOLOJİLERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9af2405e019b55ad43015ceb",
+    "disclosureIndex": 1529741,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c58b2fa64e018f3d2d712476e2",
+    "period": "HZ",
+    "publishDate": "2025.12.25 16:27:41",
+    "relatedDisclosureOid": "4028328c9af2405e019b358d802d4e4f",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ALTNY",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1529741",
+  "fields": [],
+  "raw_gzip_sha256": "0916dfcea46bc6a771e588a292d481ec88db4eab29ea9f244791dcfe87655259",
+  "raw_sha256": "2ca5908a09fc42f57cdd67febfd97666768fb8b0576cd2722ac76d1c09389591",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1529741"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TURKCELL İLETİŞİM HİZMETLERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9b5e6824019b73fe459c6e5f",
+    "disclosureIndex": 1531701,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": "DUZENLENEN",
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1486ec80a0148c55510d71d31",
+    "period": "HZ",
+    "publishDate": "2025.12.31 15:30:49",
+    "relatedDisclosureOid": "4028328d9aaa2dfa019ac414382a02a9",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TCELL",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1531701",
+  "fields": [],
+  "raw_gzip_sha256": "80f1f81d49fd44de6d11eda10ac9024b27fd22bc602f1af2e4bdf928d793028d",
+  "raw_sha256": "7f603dacdaecd4f71cb00c1659b7b9c10f203374c4c38d423bcccab326b44907",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1531701"
+}

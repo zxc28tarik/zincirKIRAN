@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "AKSA AKRİLİK KİMYA SANAYİİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9af24265019afe1fdaac1ed2",
+    "disclosureIndex": 1524834,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240f2ef470141175e189f0453",
+    "period": "HZ",
+    "publishDate": "2025.12.08 18:12:44",
+    "relatedDisclosureOid": "4028328d992f6f66019961ecbcc370b8",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "AKSA",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1524834",
+  "fields": [],
+  "raw_gzip_sha256": "bb149e81bb3273b1e88b33f34e3a773b0b23a1f921776bcdad0b29039b0b8f3a",
+  "raw_sha256": "d434af06d6383dbd1b9de9e8437c4e50459a2238157a2e4eabde91d0ccd7a8b7",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1524834"
+}

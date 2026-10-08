@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "ÇİMSA ÇİMENTO SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d3fa658e47ba2",
+    "disclosureIndex": 1579304,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240ee866c0140f1f64bdb0014",
+    "period": "HZ",
+    "publishDate": "2026.03.30 19:52:30",
+    "relatedDisclosureOid": "4028328d9c81f589019c9a030f026d1e",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CIMSA",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1579304",
+  "fields": [],
+  "raw_gzip_sha256": "70518ae368e89dd2d2368da228af07cc0ee1e49e4fdf1a540c1fd6ac0ce077bc",
+  "raw_sha256": "5eb9ca0ecac141d4212e2025ef05204df0fb9a8f13dfee47497842d5fb36ab92",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1579304"
+}

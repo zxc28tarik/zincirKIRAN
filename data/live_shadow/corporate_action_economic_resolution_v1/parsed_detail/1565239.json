@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "COCA-COLA İÇECEK A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f589019cb3e176833f06",
+    "disclosureIndex": 1565239,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140ee35c00140ee586bdd0034",
+    "period": "HZ",
+    "publishDate": "2026.03.03 19:29:21",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CCOLA",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1565239",
+  "fields": [],
+  "raw_gzip_sha256": "1ca3db0b7cc3ed26d65e03ca973b19afa506b4fd32bffd24ac9ed21afcf53391",
+  "raw_sha256": "779e976d38f165ba6468e0c9a3e68dd070881aba922a66ea120a77851afc1dfe",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1565239"
+}

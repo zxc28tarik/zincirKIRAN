@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "EİS ECZACIBAŞI İLAÇ SINAİ VE FİNANSAL YATIRIMLAR SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019d2fe5f2b309b5",
+    "disclosureIndex": 1577755,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1415f4d99014160034b683108",
+    "period": "HZ",
+    "publishDate": "2026.03.27 19:23:37",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ECILC",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1577755",
+  "fields": [],
+  "raw_gzip_sha256": "cb002ec14a9ef65c790f2dca0b879a218e8be588268119e0b6f0ea46b7adc690",
+  "raw_sha256": "6886068c6562487384947f1175d26a7351660408ab76585b650263c319e692e4",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577755"
+}

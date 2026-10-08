@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "FORD OTOMOTİV SANAYİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019ce19b46e9715d",
+    "disclosureIndex": 1571600,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed71014106890fae0138",
+    "period": "HZ",
+    "publishDate": "2026.03.12 13:36:14",
+    "relatedDisclosureOid": "4028328d9c4c12ca019c670ff05933fe",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "FROTO",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1571600",
+  "fields": [],
+  "raw_gzip_sha256": "4bb551a4e8bc4d096d371fbc3b7f2082b53e51320843a1ab5c95fe005d6e4a9d",
+  "raw_sha256": "8ae53798bf3a43eeeac0cd5fdec8c55de9f22581b1ae238bb627c4137d2f75e5",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1571600"
+}

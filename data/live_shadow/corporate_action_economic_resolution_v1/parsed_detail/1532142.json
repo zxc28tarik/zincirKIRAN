@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "FENERBAHÇE FUTBOL A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c9b5e661e019b7dd313c020cc",
+    "disclosureIndex": 1532142,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e95dc90140ede7351a013d",
+    "period": "HZ",
+    "publishDate": "2026.01.02 11:57:35",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "FENER",
+    "summary": "Bedelli Sermaye Artırımına İlişkin SPK Onaylı İzahname",
+    "title": "İzahname (SPK Tarafından Onaylanan)",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1532142",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimizin 26.11.2025 tarihli Yönetim Kurulu kararına istinaden 1.250.000.000 TL olan çıkarılmış sermayesinin, 5.000.000.000 TL (%400,00) nakit karşılığı (bedelli) olmak üzere, 6.250.000.000 TL'ye artırılması nedeniyle çıkaracağı toplam 5.000.000.000 TL nominal değerli payların ihracına ilişkin hazırlanan ve Sermaye Piyasası Kurulu'nun 30.12.2025 tarih ve 68/2447 sayılı toplantısında onaylanan izahname ekte yer almaktadır. Yatırımcılarımıza saygıyla duyurulur."
+      ]
+    },
+    {
+      "field_name": "oda_ProspectusAbstract",
+      "titles_tr": [
+        "İzahname"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "fe273e327dfc1919955ed9a06619e683614225f371f7fb4e46132cc817081260",
+  "raw_sha256": "24ef5f34e7cdbd89c05bacfbb715988276101103545fed84eeb53c9f57ffa4b2",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1532142"
+}

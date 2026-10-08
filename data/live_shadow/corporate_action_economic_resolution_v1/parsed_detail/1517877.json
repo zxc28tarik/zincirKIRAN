@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "KATMERCİLER ARAÇ ÜSTÜ EKİPMAN SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d998eebe8019a97aeda045e8d",
+    "disclosureIndex": 1517877,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a14184e9cf01419c001e945a74",
+    "period": "HZ",
+    "publishDate": "2025.11.18 18:58:36",
+    "relatedDisclosureOid": "4028328d992f6f6601994e05ca3a00fa",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KATMR",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1517877",
+  "fields": [],
+  "raw_gzip_sha256": "b8bc37fbaf50d7736e3454c73ac9cf279adfd76e803a1846be343b9001618c9d",
+  "raw_sha256": "1d4697ae23824df054a873ae81e9dda3063c7511cbc3e5c2decb8b2ae298e667",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1517877"
+}

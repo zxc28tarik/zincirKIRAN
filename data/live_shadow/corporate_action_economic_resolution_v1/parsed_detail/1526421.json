@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "CVK MADEN İŞLETMELERİ SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9af2405e019b18fb0b9e3c59",
+    "disclosureIndex": 1526421,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c586d22c510187381ba299429a",
+    "period": "HZ",
+    "publishDate": "2025.12.13 21:32:15",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CVKMD",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1526421",
+  "fields": [],
+  "raw_gzip_sha256": "540b5fccc9e1d0c09fac4765750a1d430d7fceb778ebf002d9568a23caf7632a",
+  "raw_sha256": "2ab1147db8886bd7a76cc1d490dd8ea2360a3b5aff96fca6df16d01118f3c435",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1526421"
+}

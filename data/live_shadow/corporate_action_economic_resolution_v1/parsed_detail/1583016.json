@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "KARSAN OTOMOTİV SANAYİİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9d4a0485019d4ddfba3216e4",
+    "disclosureIndex": 1583016,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f275530140f2e357a501f7",
+    "period": "HZ",
+    "publishDate": "2026.04.02 18:32:26",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KARSN",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1583016",
+  "fields": [],
+  "raw_gzip_sha256": "6243aaa1a4eba9987164bc1bfa97ca530c5f96686fb70a7c6c03dec8fcd722c1",
+  "raw_sha256": "e13705642cfa6fbc4298ea734b67e809c09f085ac7b9e886d49f1281c3e2109b",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1583016"
+}

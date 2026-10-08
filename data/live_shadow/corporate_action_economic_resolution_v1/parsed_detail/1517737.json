@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TAV HAVALİMANLARI HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d998eebe8019a9737c76565a7",
+    "disclosureIndex": 1517737,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f31195ef010e",
+    "period": "HZ",
+    "publishDate": "2025.11.18 17:00:31",
+    "relatedDisclosureOid": "4028328d998eebe8019a258561587439",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TAVHL",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1517737",
+  "fields": [],
+  "raw_gzip_sha256": "8e274c0228c8589f5875554614984a336ac91551e9a00bb5db1c34f41ada33c8",
+  "raw_sha256": "d6d52b9cb024a8eb571f88291be686323c4998f0253ccf57ff6cc77b4441f8e2",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1517737"
+}

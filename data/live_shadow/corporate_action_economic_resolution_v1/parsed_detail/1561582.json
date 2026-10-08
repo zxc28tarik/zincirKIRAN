@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE İŞ BANKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f589019c9532d58e2e0a",
+    "disclosureIndex": 1561582,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed7201411682b0cb05c6",
+    "period": "HZ",
+    "publishDate": "2026.02.25 18:54:09",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ISATR, ISBTR, ISCTR, ISKUR, TIB",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1561582",
+  "fields": [],
+  "raw_gzip_sha256": "73c8fc7feee65c895dfb6f5d1d30141340f29353fc026b198b7e336670429750",
+  "raw_sha256": "01cb666585be41eb58f0631345a7b4d4761af0b65b93604f7e7dbe5de08eb9cd",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1561582"
+}

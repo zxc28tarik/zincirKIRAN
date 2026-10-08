@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "TÜRKİYE SİGORTA A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019ce7c43a3d4ac7",
+    "disclosureIndex": 1572527,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee2f466d0159",
+    "period": "HZ",
+    "publishDate": "2026.03.13 18:16:07",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TURSG",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1572527",
+  "fields": [],
+  "raw_gzip_sha256": "b367d698b8df27401185f93f3f5b6748e2b5efa87ad35b110df8724754d211ad",
+  "raw_sha256": "631c15afa889c6f74ca26fbc1898b6e16d10316854252cce4243dd60f5cd56d5",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1572527"
+}

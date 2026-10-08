@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "CVK MADEN İŞLETMELERİ SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328c9af2405e019b180cbf7e3b82",
+    "disclosureIndex": 1526424,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c586d22c510187381ba299429a",
+    "period": "HZ",
+    "publishDate": "2025.12.14 13:37:45",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CVKMD",
+    "summary": "Bedelli Sermaye Artırımına İlişkin SPK Onayına Sunulan Taslak İzahname",
+    "title": "İzahname (SPK Onayına Sunulan)",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1526424",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'nin 12.500.000.000 TL olarak belirlenen kayıtlı sermaye tavanı içerisinde, 1.400.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak üzere %170 oranında 2.380.000.000 TL artırılarak 3.780.000.000 TL'ye çıkarılması nedeniyle artırılacak 2.380.000.000 TL nominal değerli paylarının ihraç ve halka arzına ilişkin hazırlanan izahnamenin onaylanması amacıyla bugün (14.12.2025 tarihinde) Sermaye Piyasası Kurulu'na başvuru yapılmış olup, onaya sunulan izahname ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
+      ]
+    },
+    {
+      "field_name": "oda_ProspectusDraftAbstract",
+      "titles_tr": [
+        "İzahname (SPK Onayına Sunulan)"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "0e0054db4057a2d1dc6ff7e640a326caac1475a1f9f59466ba0a3759ae31bd02",
+  "raw_sha256": "afc000ab030fcd4ed4f5a2ab0322da7b9a6cafe0976661b4dc8cb738478ea6b0",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1526424"
+}

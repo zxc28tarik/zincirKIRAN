@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "MAVİ GİYİM SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019cfb7e1cc427fa",
+    "disclosureIndex": 1573612,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a141733b5101417ea9aae11fec",
+    "period": "HZ",
+    "publishDate": "2026.03.17 18:19:24",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "MAVI",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1573612",
+  "fields": [],
+  "raw_gzip_sha256": "fb0b08bfd9267a97ef41e701335ea763491d9416658281bc8db3fbe39bf2ab75",
+  "raw_sha256": "da01e9ae005bb4902dd4145630ddbd8b14258199a4283a80af610afeb6fb138b",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1573612"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "ALBARAKA TÜRK KATILIM BANKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d30cd3adc2c16",
+    "disclosureIndex": 1577845,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240f2ef4c014106a1c5ef016d",
+    "period": "HZ",
+    "publishDate": "2026.03.27 22:53:17",
+    "relatedDisclosureOid": "4028328c9cc9d175019d239c97526acf",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ALBRK, ALK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1577845",
+  "fields": [],
+  "raw_gzip_sha256": "bc194b0e018d3be118acac1c29068532adb3adc479c6dfcd8825862f89f932de",
+  "raw_sha256": "bf82497583f80fc30851a47ea7f61cd99a7d6869956dd783ac4969f819f1694d",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577845"
+}

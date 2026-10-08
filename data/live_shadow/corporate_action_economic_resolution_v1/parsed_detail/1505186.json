@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "İŞ GİRİŞİM SERMAYESİ YATIRIM ORTAKLIĞI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c998ee9d50199f0cb00b34558",
+    "disclosureIndex": 1505186,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240ee866c0140f273ea66014d",
+    "period": "HZ",
+    "publishDate": "2025.10.17 09:32:23",
+    "relatedDisclosureOid": "4028328d969f29560196b55138330fe6",
+    "relatedStocks": "ANSGR, IYM, TSKB",
+    "senderType": "IGS",
+    "stockCode": "ISGSY",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1505186",
+  "fields": [],
+  "raw_gzip_sha256": "32ade2def1e0f97eac5c42ab5f1fe2eedeca0f58912d6c55c82335cf328502d3",
+  "raw_sha256": "40552cd0fb2ba4943cd15f2676b28dd2d66ebcbf29cb1051ba40b5bb72432171",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1505186"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "MİGROS TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019d026bb23b196c",
+    "disclosureIndex": 1574285,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a141462df2014150162e1c3424",
+    "period": "HZ",
+    "publishDate": "2026.03.18 22:38:35",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "MGROS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1574285",
+  "fields": [],
+  "raw_gzip_sha256": "a83d47940d5268955e8a5f0017f956ee41f0fd21ca4cccd1a857aa4344679239",
+  "raw_sha256": "77037cfbafa4c3fa9b779f9587df3340761c8bf7e3fa6bdede45472b7b160431",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1574285"
+}

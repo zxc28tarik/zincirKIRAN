@@ -1,0 +1,42 @@
+{
+  "contract": "KAP_OFFICIAL_TABLE_CELL_DISCOVERY_V1",
+  "events_with_table_cells": 200,
+  "official_html_present": 200,
+  "output_sha256": "cc7fa649b136ed84c3e7db0504ee3a89caaf260bd188837f6013bccfba089933",
+  "per_event_type": {
+    "BONUS_ISSUE_DISCLOSURE": {
+      "cell_records": 2842,
+      "events_with_table_cells": 17,
+      "events_with_taxonomy_field_name": 3
+    },
+    "CAPITAL_INCREASE": {
+      "cell_records": 4353,
+      "events_with_table_cells": 35,
+      "events_with_taxonomy_field_name": 6
+    },
+    "DEMERGER": {
+      "cell_records": 711,
+      "events_with_table_cells": 5,
+      "events_with_taxonomy_field_name": 0
+    },
+    "DIVIDEND_PROCESS_DISCLOSURE": {
+      "cell_records": 33413,
+      "events_with_table_cells": 111,
+      "events_with_taxonomy_field_name": 0
+    },
+    "MERGER": {
+      "cell_records": 2331,
+      "events_with_table_cells": 18,
+      "events_with_taxonomy_field_name": 0
+    },
+    "RIGHTS_ISSUE_DISCLOSURE": {
+      "cell_records": 1406,
+      "events_with_table_cells": 14,
+      "events_with_taxonomy_field_name": 6
+    }
+  },
+  "queue_events": 400,
+  "risk_released": 0,
+  "shadow_signal_allowed": false,
+  "table_cell_records": 45056
+}

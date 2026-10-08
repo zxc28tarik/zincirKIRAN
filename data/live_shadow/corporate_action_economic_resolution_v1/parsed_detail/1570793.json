@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜPRAŞ-TÜRKİYE PETROL RAFİNERİLERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019cdd9c796e6811",
+    "disclosureIndex": 1570793,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f37f139c01bc",
+    "period": "HZ",
+    "publishDate": "2026.03.11 18:58:50",
+    "relatedDisclosureOid": "4028328d9b827481019c33736aca75eb",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TUPRS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1570793",
+  "fields": [],
+  "raw_gzip_sha256": "c7800d0da66b02644147cc316f5ed90abb61c3c3c49941b1b00ff9e2354e5738",
+  "raw_sha256": "f45940240855891ed42cd8e1aab80128ae0fa15ba178168ed1121d8aab98a855",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1570793"
+}

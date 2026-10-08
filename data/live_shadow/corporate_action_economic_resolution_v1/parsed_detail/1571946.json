@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE HALK BANKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019ce2a0c6df0fee",
+    "disclosureIndex": 1571946,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "1DE05DAA82C3073AE0530A4A622A2EBD",
+    "period": "HZ",
+    "publishDate": "2026.03.12 18:21:31",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "HALKB, THL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1571946",
+  "fields": [],
+  "raw_gzip_sha256": "abbc2db8db921939983e30a748643c4a8cf3de836595ccb2bb00f2fc898ae7da",
+  "raw_sha256": "27b29247ddcb7ae628de4101da5f3d4b44f636f8385bdde434b987fe80eecf1f",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1571946"
+}

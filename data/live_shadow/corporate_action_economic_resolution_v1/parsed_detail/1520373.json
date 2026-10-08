@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "OBA MAKARNACILIK SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9aaa2dfa019abfc001b46738",
+    "disclosureIndex": 1520373,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c58b2fa64e018dc01d63686b27",
+    "period": "HZ",
+    "publishDate": "2025.11.26 13:41:48",
+    "relatedDisclosureOid": "4028328c998ee9d5019a794e755f40c5",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "OBAMS",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1520373",
+  "fields": [],
+  "raw_gzip_sha256": "7d582528013a4b789b79f82478d3f5e1cae5c9e68032ef25b0cfaec2f6dcf258",
+  "raw_sha256": "8f727d2d6605521f4c06cd13d02b4357f5e23e435559f4880a03c76071392747",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1520373"
+}

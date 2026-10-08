@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "ENKA İNŞAAT VE SANAYİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019d2f975f5c73db",
+    "disclosureIndex": 1577628,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e95dc90140ed3883fe0093",
+    "period": "HZ",
+    "publishDate": "2026.03.27 17:48:02",
+    "relatedDisclosureOid": "4028328c9c81f417019cbe84784e3aeb",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ENKAI",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1577628",
+  "fields": [],
+  "raw_gzip_sha256": "6a688279dc5b3f40470303426c9fcf97a7c5c30def7c045c347af99ca969a89b",
+  "raw_sha256": "692901cc06d4bd479af705183b4feb88d4c7936ff73d1f069a3336a2be97fec1",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577628"
+}

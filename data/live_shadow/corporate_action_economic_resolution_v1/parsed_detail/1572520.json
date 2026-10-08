@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE SİGORTA A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019ce7c1b1c64a42",
+    "disclosureIndex": 1572520,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee2f466d0159",
+    "period": "HZ",
+    "publishDate": "2026.03.13 18:13:30",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TURSG",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1572520",
+  "fields": [],
+  "raw_gzip_sha256": "750c72f060e6634189ddb22247cd4bbbe960b9e5cd4cdbb1bd2e9039c7d28edf",
+  "raw_sha256": "027d8cac69bb97d8f690c218b33a04dc72e16e0c26ea49d5507ee53594d20c04",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1572520"
+}

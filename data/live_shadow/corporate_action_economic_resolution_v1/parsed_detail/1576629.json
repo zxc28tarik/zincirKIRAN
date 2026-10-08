@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "TUKAŞ GIDA SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d2a98b7df31e0",
+    "disclosureIndex": 1576629,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240f2ef470140f373b77f00ac",
+    "period": "HZ",
+    "publishDate": "2026.03.26 18:23:50",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TUKAS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1576629",
+  "fields": [],
+  "raw_gzip_sha256": "5473a07eacdf4bfc3db9ac7b4d93255e755b90bb74f8a205d75324a14ceb1293",
+  "raw_sha256": "15ee45a9bd74b9a838515a40fab847b739de5f9e0c789d0bf08f5410677e8032",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1576629"
+}

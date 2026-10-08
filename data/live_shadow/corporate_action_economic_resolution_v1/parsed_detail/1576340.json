@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE SINAİ KALKINMA BANKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019d2a3f68c017d3",
+    "disclosureIndex": 1576340,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed710140f3831c6300fd",
+    "period": "HZ",
+    "publishDate": "2026.03.26 16:06:34",
+    "relatedDisclosureOid": "4028328c9c81f416019c9a95f96d1b57",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TSK, TSKB",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1576340",
+  "fields": [],
+  "raw_gzip_sha256": "53878859c3cc027b50f7a484637a2be82b1a2b5f0e0b898c0aea857d84eb3b95",
+  "raw_sha256": "5551f8420fee3434f45a2027c255acde052f11ae1526898b7e1820f1ddf7c024",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1576340"
+}

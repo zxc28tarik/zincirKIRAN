@@ -1,0 +1,37 @@
+{
+  "contract": "OFFICIAL_KAP_DETAIL_STAGE_TRIAGE_V1",
+  "events": 400,
+  "per_event_type": {
+    "BONUS_ISSUE_DISCLOSURE": {
+      "DETAIL_MISSING": 16,
+      "PROCESS_ONLY": 1,
+      "UNKNOWN": 16
+    },
+    "CAPITAL_INCREASE": {
+      "DETAIL_MISSING": 41,
+      "UNKNOWN": 35
+    },
+    "DEMERGER": {
+      "UNKNOWN": 5
+    },
+    "DIVIDEND_PROCESS_DISCLOSURE": {
+      "DETAIL_MISSING": 120,
+      "UNKNOWN": 111
+    },
+    "MERGER": {
+      "DETAIL_MISSING": 14,
+      "UNKNOWN": 18
+    },
+    "RIGHTS_ISSUE_DISCLOSURE": {
+      "DETAIL_MISSING": 9,
+      "PROCESS_ONLY": 1,
+      "UNKNOWN": 13
+    }
+  },
+  "risk_released": 0,
+  "status_counts": {
+    "DETAIL_MISSING": 200,
+    "PROCESS_ONLY": 2,
+    "UNKNOWN": 198
+  }
+}

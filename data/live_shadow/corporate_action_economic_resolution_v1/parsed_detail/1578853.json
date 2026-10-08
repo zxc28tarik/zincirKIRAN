@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "İSKENDERUN DEMİR VE ÇELİK A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019d3ed75ab10993",
+    "disclosureIndex": 1578853,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2416e696c01416ee8eb7b3770",
+    "period": "HZ",
+    "publishDate": "2026.03.30 18:11:21",
+    "relatedDisclosureOid": "4028328c9cc9d175019d2ac8adfd18e4",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ISDMR",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1578853",
+  "fields": [],
+  "raw_gzip_sha256": "66143693ffa8404ce9adeddec06306cdf97a3561b36e975f831a63a384e7b4ff",
+  "raw_sha256": "f91aacd06f86aad212b0ef075173f0fd13b8177a4da9c8806a3877d1067b8361",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1578853"
+}

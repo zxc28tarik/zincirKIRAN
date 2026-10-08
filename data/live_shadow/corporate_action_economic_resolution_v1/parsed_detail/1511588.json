@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "CVK MADEN İŞLETMELERİ SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328d998eebe8019a53c5e7aa6877",
+    "disclosureIndex": 1511588,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c586d22c510187381ba299429a",
+    "period": "HZ",
+    "publishDate": "2025.11.05 15:21:31",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CVKMD",
+    "summary": "Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1511588",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'ne ait Sermaye Piyasası Kanunu'nun VII-128.1 Sayılı Pay Tebliği'nin 33. Maddesi uyarınca, Denetimden Sorumlu Komite tarafından hazırlanan \"Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor\" ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "612ea84ff15cf855f009c6b727fa40018f941bcf8c121bd199b2bb7c15063010",
+  "raw_sha256": "4c5a964424cace529a279798e1f07c26ab725194e73e660ccf992175cca3bbed",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1511588"
+}

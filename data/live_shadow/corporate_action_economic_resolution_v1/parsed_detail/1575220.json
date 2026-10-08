@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "AG ANADOLU GRUBU HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019d1fa7a0ab750c",
+    "disclosureIndex": 1575220,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240f2ef4c014101b18dc000f7",
+    "period": "HZ",
+    "publishDate": "2026.03.24 18:15:23",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "AGHOL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1575220",
+  "fields": [],
+  "raw_gzip_sha256": "8cde19853756a9d35dc8c212b88705147b31ace604e5eecc062774884902883f",
+  "raw_sha256": "107e51eabd823a8b45f92dd3cd9ac7d01e30fc0b0f6c3f00cd71b3b743010826",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1575220"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "ÇAN2 TERMİK A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9b827483019c0da82b0776ca",
+    "disclosureIndex": 1549136,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c578080f31017811f4dca6032d",
+    "period": "HZ",
+    "publishDate": "2026.01.30 09:47:51",
+    "relatedDisclosureOid": "4028328d998eebe8019a7c4bfdf65fb0",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CANTE",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1549136",
+  "fields": [],
+  "raw_gzip_sha256": "28f1b704a1e60650cf80f7747cb53194ad47768fc4585134f30bbce2d30bf9f8",
+  "raw_sha256": "85c06f161f772de342a8ec56534a12987185d50133943714b9142ce917b41bc3",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1549136"
+}

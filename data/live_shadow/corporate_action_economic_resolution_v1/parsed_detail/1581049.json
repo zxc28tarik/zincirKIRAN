@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE GARANTİ BANKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d4400b09f11d8",
+    "disclosureIndex": 1581049,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f37cb2a601b7",
+    "period": "HZ",
+    "publishDate": "2026.03.31 19:23:50",
+    "relatedDisclosureOid": "4028328c9c81f417019cb9bbee8d00aa",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "GARAN, TGB",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1581049",
+  "fields": [],
+  "raw_gzip_sha256": "4e6a060219be1d893a9bd1bfd4a6985fa6343ec43f690c8c3559f8c6aa6fc880",
+  "raw_sha256": "8c579d575986d3adb2ad7a60bfcf337c300af022b008964a62e798c2443790dc",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1581049"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "AKFEN YENİLENEBİLİR ENERJİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9d4a029c019d4ec593cf3acd",
+    "disclosureIndex": 1582991,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c48304fe9e0186a66e7a9568ea",
+    "period": "HZ",
+    "publishDate": "2026.04.02 18:22:00",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "AKFYE",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1582991",
+  "fields": [],
+  "raw_gzip_sha256": "be4cda338dfe552711733331ac1e8732ea2cc35501f0201d3b77cb986339590c",
+  "raw_sha256": "334b22405cf3ac01988322d4605880ff7ef4b9ce20ba945d24be1e7acbf29723",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1582991"
+}

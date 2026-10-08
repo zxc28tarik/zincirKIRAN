@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "AKSA AKRİLİK KİMYA SANAYİİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9c4c12c4019c76359d370319",
+    "disclosureIndex": 1559426,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240f2ef470141175e189f0453",
+    "period": "HZ",
+    "publishDate": "2026.02.19 21:56:14",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "AKSA",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1559426",
+  "fields": [],
+  "raw_gzip_sha256": "231fcee2f239618b402dbbb582fb9584d6571b8152d488541ced0521ec0bce98",
+  "raw_sha256": "f2322eae96c16ddb6e3ed8158da94858dbb9dbaa83bc41d5d5cb442da807e23d",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1559426"
+}

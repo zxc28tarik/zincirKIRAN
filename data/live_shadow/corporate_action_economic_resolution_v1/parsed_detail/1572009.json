@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "YAPI VE KREDİ BANKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019ce2d2c82a0b38",
+    "disclosureIndex": 1572009,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240f2ef4c01412ae6d6630538",
+    "period": "HZ",
+    "publishDate": "2026.03.12 19:16:36",
+    "relatedDisclosureOid": "4028328c9c4c12c4019c57b01ff76b0c",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "YKB, YKBNK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1572009",
+  "fields": [],
+  "raw_gzip_sha256": "ee78255832833595121df6e31d32cdf34c3c1c6efed7642cbfa6bd33c8f0640d",
+  "raw_sha256": "2e52d8748939f2310119a49cc71eba96ce3e3f82809cb6244e3a835f10bed586",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1572009"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE VAKIFLAR BANKASI T.A.O.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019ce28cf1cc7ff1",
+    "disclosureIndex": 1571936,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1415f4d9b01415fe3340f36e4",
+    "period": "HZ",
+    "publishDate": "2026.03.12 18:15:50",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TVB, VAKBN",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1571936",
+  "fields": [],
+  "raw_gzip_sha256": "8637ca45a5b383dd96206e1ef358acc438c28a758b43b4c616a86f490f7b5b34",
+  "raw_sha256": "d8555c38766c565986b88b1616615992c80804c3d65b7835898b3c7885e783a6",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1571936"
+}

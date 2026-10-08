@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ODAŞ ELEKTRİK ÜRETİM SANAYİ TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c998ee9d7019a7d60140c79d3",
+    "disclosureIndex": 1516497,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2416e696c01416edd70713183",
+    "period": "HZ",
+    "publishDate": "2025.11.13 16:29:01",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ODAS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1516497",
+  "fields": [],
+  "raw_gzip_sha256": "b241c614449932817c367f2c2a9275ad51525641be943d5bdc27e2c6bd9504f3",
+  "raw_sha256": "6b12e73c31023501969c9bbcb41b945c7e2c5dfec204e2e2a6f7903f3b703942",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1516497"
+}

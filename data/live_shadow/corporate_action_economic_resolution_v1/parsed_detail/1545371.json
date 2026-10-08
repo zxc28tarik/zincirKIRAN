@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "FENERBAHÇE FUTBOL A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9b82727b019bdfc87da92663",
+    "disclosureIndex": 1545371,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e95dc90140ede7351a013d",
+    "period": "HZ",
+    "publishDate": "2026.01.21 13:23:51",
+    "relatedDisclosureOid": "4028328d9b827481019bda3f259a189a",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "FENER",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1545371",
+  "fields": [],
+  "raw_gzip_sha256": "bd0d9eac333f5057509aa4b39677816d09b797d6b8120d3f07ebddfa8bb402ae",
+  "raw_sha256": "f8a4627fd7477112c975bcfe3d040edf43b4e1b1618f781b2227bc0f271a74ac",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1545371"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "AKBANK T.A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f589019c9103c7c30c19",
+    "disclosureIndex": 1561178,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e8d1830140e905edcd0006",
+    "period": "HZ",
+    "publishDate": "2026.02.25 09:21:47",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "AKBNK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1561178",
+  "fields": [],
+  "raw_gzip_sha256": "731fa1661512dd5e8deb83d65ee7039f656eac31ece196ce0b0761633d060a9c",
+  "raw_sha256": "7194be3d83447ce9456a043ddd3220ce74c6529fbfdc1244ae2da8f7d8dcb0a6",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1561178"
+}

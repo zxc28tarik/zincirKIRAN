@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "KOZA ALTIN İŞLETMELERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d998eebe8019a16ca88827d2d",
+    "disclosureIndex": 1507942,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2422d9a6e0142bd91d3687a69",
+    "period": "HZ",
+    "publishDate": "2025.10.24 18:17:04",
+    "relatedDisclosureOid": "4028328d992f6f660199757b1cf62bc4",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TRALT",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1507942",
+  "fields": [],
+  "raw_gzip_sha256": "d1737c14ac7731a70d26c8c04c8c22755deb7e68ff2669ba1bf5411f2396ca46",
+  "raw_sha256": "3f9504b9334de0a1da36354ae014476dad2770dbcd85fdd7f769932767586984",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1507942"
+}

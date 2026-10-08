@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ECZACIBAŞI YATIRIM HOLDİNG ORTAKLIĞI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d2f7fd6487dbd",
+    "disclosureIndex": 1577756,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1415f4d9901416012a278321f",
+    "period": "HZ",
+    "publishDate": "2026.03.27 19:23:53",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ECZYT",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1577756",
+  "fields": [],
+  "raw_gzip_sha256": "0d89886e238c8cc36fc9d42b65d45a2c50122c158ba6e82bbd317a43471f1e8d",
+  "raw_sha256": "8a5feacca72681244f8f23e1d6207100fdb39a90b63095dedbe3cab60c4a96a8",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577756"
+}

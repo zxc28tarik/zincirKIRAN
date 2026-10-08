@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ÇAN2 TERMİK A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9aaa2dfa019ae9a628d62d55",
+    "disclosureIndex": 1523166,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c578080f31017811f4dca6032d",
+    "period": "HZ",
+    "publishDate": "2025.12.04 16:57:16",
+    "relatedDisclosureOid": "4028328d998eebe8019a731257ee1bd6",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CANTE",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1523166",
+  "fields": [],
+  "raw_gzip_sha256": "28cd214ec20215948143ea8743642ed1db7ef2e745be9433780bb39073d99223",
+  "raw_sha256": "75acf5158f599940391730fb309261734e6eaea681539d117bb0f7cd6d473e0e",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1523166"
+}

@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "1000 YATIRIMLAR HOLDİNG A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328d998eebe8019a7de1827108db",
+    "disclosureIndex": 1516676,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c48b2fa25a018bba0a5034596d",
+    "period": "HZ",
+    "publishDate": "2025.11.13 19:26:09",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BINHO",
+    "summary": "Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1516676",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimizin halka arzının sonucunda elde edilen fonun kullanımına ilişkin olarak, VII-128.1 sayılı Pay Tebliği'nin 33'üncü maddesi uyarınca hazırlanan rapor ekte sunulmuştur. Kamuoyunun bilgisine sunarız. Saygılarımızla, İşbu açıklamamızın İngilizce çevirisi ekte yer almakta olup, açıklama metinlerinde herhangi bir farklılık olması durumunda, Türkçe açıklama esas kabul edilecektir."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "2a144aaddb9eb94d7d841f97600a78e940fa5d803119c0e2a55ba7db342b5735",
+  "raw_sha256": "8060a062094aeae0d744ea656e729740fce1b9843695f590bb5cc3b0428c2c0e",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1516676"
+}

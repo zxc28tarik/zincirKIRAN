@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "BİM BİRLEŞİK MAĞAZALAR A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c4c12ca019c7b4572846783",
+    "disclosureIndex": 1560075,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee1b7b030119",
+    "period": "HZ",
+    "publishDate": "2026.02.20 23:20:24",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BIMAS",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1560075",
+  "fields": [],
+  "raw_gzip_sha256": "c700db06b9849ba2bc08f91fe3464ad46038c2c722e3eac2c74485591cea541c",
+  "raw_sha256": "ab612d0eae44a7b96de4050a54af93b0be539928474a1312544f64ab3b45bef0",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1560075"
+}

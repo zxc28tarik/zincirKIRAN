@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "PEGASUS HAVA TAŞIMACILIĞI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f589019cb960a1625ed6",
+    "disclosureIndex": 1566093,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2422d9a78014232e751bc22a4",
+    "period": "HZ",
+    "publishDate": "2026.03.04 21:18:17",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "PGSUS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1566093",
+  "fields": [],
+  "raw_gzip_sha256": "ba4ac4ff31efcf7d0e739eae691154558013938605ccf12e9dfd160326345779",
+  "raw_sha256": "7a0a97cbd66e05c4e2b174bdcf388b1553f24ac9f5c91f6051c16c57776d45e0",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1566093"
+}

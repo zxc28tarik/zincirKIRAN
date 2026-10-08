@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "EMLAK KONUT GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f589019cc4f04aef76b0",
+    "disclosureIndex": 1567861,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2422d9a780142513cda5b232e",
+    "period": "HZ",
+    "publishDate": "2026.03.07 00:32:32",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "EKGYO",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1567861",
+  "fields": [],
+  "raw_gzip_sha256": "1207bfeb9fee346e9036083f912c2edd54c75c4d26c2dc646f2292318ea80ab8",
+  "raw_sha256": "4971d6fa42ca0c72a9416a32498c70365eaeb579e512ac5758b31fa028d09bbf",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1567861"
+}

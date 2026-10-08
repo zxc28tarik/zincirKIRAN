@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "KIRAÇ GALVANİZ TELEKOMİNİKASYON METAL MAKİNE İNŞAAT ELEKTRİK SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019ce20f1e4e6805",
+    "disclosureIndex": 1571924,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c48c3efac0019137973fd07e5e",
+    "period": "HZ",
+    "publishDate": "2026.03.12 18:11:57",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TCKRC",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1571924",
+  "fields": [],
+  "raw_gzip_sha256": "d0615a1816167edb17a2adccfc2efac9cd1158a0d118d3b6ca9220c7c4a11149",
+  "raw_sha256": "c2d71b00c9bbd310f34411bad1c5fe5615cf46a0fa386ab6edb049fd495e3642",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1571924"
+}

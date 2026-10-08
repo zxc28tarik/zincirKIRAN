@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "TAV HAVALİMANLARI HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019d2f05a14f58f5",
+    "disclosureIndex": 1577389,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f31195ef010e",
+    "period": "HZ",
+    "publishDate": "2026.03.27 14:27:10",
+    "relatedDisclosureOid": "4028328d9c4c12ca019c6d717b404191",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TAVHL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1577389",
+  "fields": [],
+  "raw_gzip_sha256": "b07177920c7ee40a6db9ee9224e6bd13e9594156f69c7d9851540a5ecb0d0533",
+  "raw_sha256": "ac4a50a35fddffd98e76c09a1303a8bcb8ea5dde7d256f33e106b8729d1f0ab4",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577389"
+}

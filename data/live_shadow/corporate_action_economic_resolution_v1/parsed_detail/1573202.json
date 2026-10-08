@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TOFAŞ TÜRK OTOMOBİL FABRİKASI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019cf756a6452d75",
+    "disclosureIndex": 1573202,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed710140f328bed700a5",
+    "period": "HZ",
+    "publishDate": "2026.03.16 19:02:25",
+    "relatedDisclosureOid": "4028328c9c4c12c1019c6c7ee5163a26",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TOASO",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1573202",
+  "fields": [],
+  "raw_gzip_sha256": "dd4a26edcfd4875080b7fabd75a4cbd5523b291949803ea61c9f227f3f905271",
+  "raw_sha256": "f61f149aac15af10a880cdae3c2caf95c797ea58892dc302ad9e2470d6c94904",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1573202"
+}

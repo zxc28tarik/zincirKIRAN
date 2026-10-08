@@ -1,0 +1,89 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "CVK MADEN İŞLETMELERİ SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "ODA",
+    "disclosureClass": "DG",
+    "disclosureId": "4028328d9af24264019b17c673ed30f9",
+    "disclosureIndex": 1526422,
+    "disclosureType": "DG",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c586d22c510187381ba299429a",
+    "period": "HZ",
+    "publishDate": "2025.12.13 21:32:43",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "CVKMD",
+    "summary": "Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor",
+    "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1526422",
+  "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_CorrectionAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Düzeltme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    },
+    {
+      "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
+      "titles_tr": [
+        "Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi"
+      ],
+      "values_tr": [
+        "-"
+      ]
+    },
+    {
+      "field_name": "oda_ExplanationSection",
+      "titles_tr": [
+        "Açıklamalar"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_ExplanationTextBlock",
+      "titles_tr": [],
+      "values_tr": [
+        "Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'nin 12.500.000.000 TL olarak belirlenen kayıtlı sermaye tavanı içerisinde, 1.400.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak üzere %170 oranında 2.380.000.000 TL artırılarak 3.780.000.000 TL'ye çıkarılması kapsamında; Sermaye Piyasası Kurulu'nun (\"Kurul\") 22.06.2013 tarihli Pay Tebliği'nin (VII.128-1) \"Bedelli sermaye artırımından elde edilen fonların kullanımına ilişkin yapılacak açıklamalar\" başlıklı 33'üncü maddesi gereğince hazırlanan ve Şirketimiz Yönetim Kurulu'nun 12.12.2025 tarihli kararı ile onaylanan \"Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Yönetim Kurulu Raporu\" ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
+      ]
+    }
+  ],
+  "raw_gzip_sha256": "f5e92ed5b7b16fb959830cfc2b92c5b420cc6bf25d7d54b9aa866d1d67b6fa24",
+  "raw_sha256": "9c02f19268f39369c26ddf50806b9ef20d7566cc0bf84d175ca2b09fababd541",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1526422"
+}

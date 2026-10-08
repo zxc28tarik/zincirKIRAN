@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 3,
+    "companyTitle": "ASTOR ENERJİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9af24265019b26cb329b5af9",
+    "disclosureIndex": 1526923,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c562329bd10164405fe6c17996",
+    "period": "HZ",
+    "publishDate": "2025.12.16 13:58:16",
+    "relatedDisclosureOid": "4028328d98f74ef401991876a40f34b2",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ASTOR",
+    "summary": null,
+    "title": "Bölünme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1526923",
+  "fields": [],
+  "raw_gzip_sha256": "2306dbe44a4c9d4010d4839dd066f0a9e35b30b3f0d220102097c7fc319ad81a",
+  "raw_sha256": "c9c9db02c241cf21392c08b22233e8b569404a876b7f6bd9d91b2bc4ba1004d8",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1526923"
+}

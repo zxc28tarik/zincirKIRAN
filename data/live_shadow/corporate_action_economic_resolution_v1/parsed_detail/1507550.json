@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 9,
+    "companyTitle": "KOZA ANADOLU METAL MADENCİLİK İŞLETMELERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c998ee9d7019a12280fd34c91",
+    "disclosureIndex": 1507550,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2422d9a6e0142bd921d307a6d",
+    "period": "HZ",
+    "publishDate": "2025.10.23 20:42:23",
+    "relatedDisclosureOid": "4028328d992f6f6601997579896b2b74",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TRMET",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T18:44:52.423632+00:00",
+  "event_id": "1507550",
+  "fields": [],
+  "raw_gzip_sha256": "b4048d8343ff977077f52202b3acd8ce2e91fb0dc4b6640721d6fb7ecf2ce2c0",
+  "raw_sha256": "1d879148d9258395b51719c9590db453abd82ed2258f9afc32ecc7577342a2b9",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1507550"
+}
