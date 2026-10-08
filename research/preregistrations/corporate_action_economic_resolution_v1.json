@@ -1,0 +1,61 @@
+{
+  "preregistration_id": "CORPORATE_ACTION_ECONOMIC_RESOLUTION_V1",
+  "registered_before_capture": true,
+  "parent_issue": 128,
+  "risk_sources": [
+    "data/live_shadow/high52_historical_ca_reconciliation_v1/historical_ca_risks.csv",
+    "data/live_shadow/high52_input_ca_risk_v1/recent_ca_risks.csv"
+  ],
+  "expected_unique_event_ids": 400,
+  "resolution_tiers": [
+    "OFFICIAL_ECONOMIC_ACTION_RESOLVED",
+    "OFFICIAL_NON_PRICE_AFFECTING_PROCESS_RESOLVED",
+    "VENDOR_CORROBORATED_ONLY",
+    "UNRESOLVED_OFFICIAL_DETAIL_INSUFFICIENT",
+    "UNRESOLVED_OFFICIAL_DETAIL_MISSING",
+    "SOURCE_CONFLICT"
+  ],
+  "official_detail": {
+    "url_template": "https://www.kap.org.tr/tr/Bildirim/{disclosureIndex}",
+    "post_activation_capture_required": true,
+    "raw_html_sha256_required": true,
+    "parser_source": "SERVER_RENDERED_NEXT_PAYLOAD_TAXONOMY_FIELDS",
+    "explicit_fields_only": true,
+    "inference_from_subject_only_forbidden": true
+  },
+  "vendor_corroboration": {
+    "vendor": "Yahoo Finance via yfinance",
+    "actions": [
+      "Dividends",
+      "Stock Splits"
+    ],
+    "adjusted_price_factor": "Adj Close / Close",
+    "can_resolve_event_alone": false
+  },
+  "official_resolution_requirements": {
+    "cash_dividend": [
+      "economic/ex date",
+      "cash per share",
+      "TRY currency",
+      "payment date if contract requires"
+    ],
+    "share_multiplier": [
+      "effective/ex date",
+      "share multiplier or explicit bonus/split mechanics"
+    ],
+    "rights_issue": [
+      "effective/right-use dates",
+      "explicit rights mechanics sufficient to understand price/share discontinuity"
+    ],
+    "merger_demerger": [
+      "official effective mechanics sufficient to determine listed-security continuity"
+    ],
+    "non_price_affecting_process": [
+      "official detail must explicitly establish no listed-security price/share continuity change"
+    ]
+  },
+  "unresolved_policy": "FAIL_CLOSED",
+  "score_values_computed": false,
+  "shadow_signal_allowed": false,
+  "production_ready": false
+}
