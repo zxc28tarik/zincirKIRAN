@@ -57,5 +57,33 @@
   "unresolved_policy": "FAIL_CLOSED",
   "score_values_computed": false,
   "shadow_signal_allowed": false,
-  "production_ready": false
+  "production_ready": false,
+  "protocol_amendments": [
+    {
+      "amendment_id": "A1_RATE_LIMIT_AND_SSR_PARSER_REPAIR",
+      "timing": "AFTER_FIELD_DISCOVERY_BEFORE_ANY_EVENT_RISK_RELEASE",
+      "performance_information_used": false,
+      "initial_capture": {
+        "unique_events": 400,
+        "official_html_captured": 100,
+        "failed": 300,
+        "failure_reason_counts": {
+          "HTTP_429": 300
+        },
+        "taxonomy_field_records": 99,
+        "risk_released": 0
+      },
+      "diagnosis": [
+        "Every failed official-detail request failed with HTTP 429; failures are acquisition-rate limits, not evidence that official detail does not exist.",
+        "The initial parser inspected decoded Next payload chunks only. KAP detail pages also server-render taxonomy rows directly in raw HTML, so zero-field pages cannot be treated as detail-free."
+      ],
+      "repair_rule": [
+        "Reuse already frozen official HTML bytes and never refetch them.",
+        "Retry only missing event IDs with lower concurrency and Retry-After-aware backoff.",
+        "Parse taxonomy rows from both raw server-rendered HTML and decoded Next payload.",
+        "Reuse the frozen Yahoo corroboration snapshot; vendor-only evidence still cannot resolve an event.",
+        "No event risk may be released until action-type-specific official field contracts are separately locked."
+      ]
+    }
+  ]
 }
