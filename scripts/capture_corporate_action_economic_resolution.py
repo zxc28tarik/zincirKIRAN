@@ -234,13 +234,26 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
     field_records: list[dict] = []
 
     def one(event_id: str) -> dict:
-        raw, error = fetch_kap(event_id)
-        if raw is None:
-            return {
-                "event_id": event_id,
-                "captured": False,
-                "error": error,
-            }
+        raw_path = detail_dir / f"{event_id}.html.gz"
+        reused = raw_path.exists()
+        if reused:
+            try:
+                raw = gzip.decompress(raw_path.read_bytes())
+                error = None
+            except Exception as exc:
+                return {
+                    "event_id": event_id,
+                    "captured": False,
+                    "error": f"EXISTING_CAPTURE_CORRUPT:{type(exc).__name__}",
+                }
+        else:
+            raw, error = fetch_kap(event_id)
+            if raw is None:
+                return {
+                    "event_id": event_id,
+                    "captured": False,
+                    "error": error,
+                }
 
         expanded = decode_next_payload(raw)
         basic = parse_basic(expanded)
@@ -252,8 +265,10 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
                 "error": "DISCLOSURE_INDEX_CONFLICT",
             }
 
-        raw_path = detail_dir / f"{event_id}.html.gz"
-        raw_gzip_sha = write_gzip(raw_path, raw)
+        if reused:
+            raw_gzip_sha = sha256_bytes(raw_path.read_bytes())
+        else:
+            raw_gzip_sha = write_gzip(raw_path, raw)
         parsed = {
             "event_id": event_id,
             "captured_at": captured_at.isoformat(),
@@ -279,6 +294,9 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
             "field_count": len(fields),
             "basic_title": basic.get("title"),
             "basic_publish_date": basic.get("publishDate"),
+            "capture_source": (
+                "REUSED_FROZEN_HTML" if reused else "NEW_OFFICIAL_HTML"
+            ),
         }
 
     event_ids = queue["event_id"].astype(str).tolist()
@@ -404,8 +422,19 @@ def main() -> int:
     if len(tickers) != 100:
         raise RuntimeError("45F expected exact 100-name universe")
 
+    prior_provenance_path = OUT / "provenance.json"
+    prior_provenance = (
+        json.loads(prior_provenance_path.read_text(encoding="utf-8"))
+        if prior_provenance_path.exists()
+        else None
+    )
+
     capture, field_records = capture_details(queue)
-    actions = capture_yahoo_actions(tickers)
+    actions_path = OUT / "yahoo_actions.csv"
+    if actions_path.exists():
+        actions = pd.read_csv(actions_path)
+    else:
+        actions = capture_yahoo_actions(tickers)
     vendor = vendor_corroboration(queue, actions)
 
     queue_path = OUT / "event_queue.csv"
@@ -491,9 +520,16 @@ def main() -> int:
         )
         field_summary = summary.to_dict("records")
 
+    now = datetime.now(UTC).isoformat()
     provenance = {
         "contract": "CORPORATE_ACTION_ECONOMIC_RESOLUTION_FIELD_DISCOVERY_V1",
-        "captured_at": datetime.now(UTC).isoformat(),
+        "captured_at": (
+            prior_provenance.get("captured_at")
+            if prior_provenance
+            else now
+        ),
+        "last_repair_at": now,
+        "resumable_capture": True,
         "production_ready": False,
         "score_values_computed": False,
         "real_shadow_run_created": False,
@@ -515,6 +551,18 @@ def main() -> int:
             "captured": int(capture["captured"].astype(bool).sum()),
             "failed": int((~capture["captured"].astype(bool)).sum()),
             "field_records": int(len(field_records)),
+            "reused_frozen_html": int(
+                capture.get("capture_source", pd.Series(dtype=str))
+                .astype(str)
+                .eq("REUSED_FROZEN_HTML")
+                .sum()
+            ),
+            "new_official_html": int(
+                capture.get("capture_source", pd.Series(dtype=str))
+                .astype(str)
+                .eq("NEW_OFFICIAL_HTML")
+                .sum()
+            ),
         },
         "vendor_corroboration": {
             "yahoo_action_rows": int(len(actions)),
