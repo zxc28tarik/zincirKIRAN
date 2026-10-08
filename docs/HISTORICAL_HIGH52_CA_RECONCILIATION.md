@@ -7,9 +7,9 @@ Implementation 45E applies the frozen W6 KAP inventory to the **exact** current
 
 Historical corporate-action evidence is pinned directly to the W6 audit commit:
 
-`0c70e1607832624b1b90a9bf150271ab705a6036`
+`d0c5ce25832dc94c138fc6141bba8fa8392cd00b`
 
-and manifest LF-canonical SHA256:
+with W6 audit provenance commit `0c70e1607832624b1b90a9bf150271ab705a6036`\nand manifest LF-canonical SHA256:
 
 `1935232295360b1026a036e725809e0e73a62253ce07145bbc1f13fd6abd1345`
 
