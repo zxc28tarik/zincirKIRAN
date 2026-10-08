@@ -137,6 +137,22 @@
       "proposed_date_only_resolves": false,
       "vendor_only_resolves": false,
       "mixed_cash_and_share_dividend_resolves_under_cash_contract": false
+    },
+    "share_multiplier_v1": {
+      "scope": [
+        "BONUS_ISSUE",
+        "STOCK_SPLIT_OR_EQUIVALENT_SHARE_MULTIPLIER"
+      ],
+      "target_match": "EXACT_LISTED_TICKER_SHARE_GROUP_ONCE",
+      "required_fields": [
+        "finalized effective/ex/hak-kullanim date",
+        "explicit non-unit share multiplier OR positive bonus-rate mechanics"
+      ],
+      "unit_multiplier_without_positive_bonus_resolves": false,
+      "proposed_date_only_resolves": false,
+      "vendor_stock_split_only_resolves": false,
+      "rights_issue_resolves_under_share_multiplier_contract": false,
+      "missing_or_ambiguous_target_share_group_resolves": false
     }
   }
 }
