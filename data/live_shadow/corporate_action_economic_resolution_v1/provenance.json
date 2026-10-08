@@ -176,14 +176,22 @@
     "UNRESOLVED_OFFICIAL_DETAIL_MISSING": 200,
     "VENDOR_CORROBORATED_ONLY": 94
   },
-  "last_repair_at": "2026-10-08T17:00:14.621540+00:00",
+  "last_repair_at": "2026-10-08T18:03:50.884507+00:00",
   "next_required_work": "LOCK_ACTION_TYPE_SPECIFIC_OFFICIAL_FIELD_CONTRACTS_FROM_CAPTURED_TAXONOMY",
   "official_detail": {
     "captured": 200,
     "failed": 200,
     "field_records": 106,
-    "new_official_html": 100,
-    "reused_frozen_html": 100
+    "new_official_html": 0,
+    "reused_frozen_html": 200
+  },
+  "official_excel": {
+    "captured": 0,
+    "cell_records": 0,
+    "event_type_inventory": [],
+    "failed": 400,
+    "new_official_xlsx": 0,
+    "reused_frozen_xlsx": 0
   },
   "production_ready": false,
   "queue": {
