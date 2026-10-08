@@ -97,7 +97,7 @@ def load_queue() -> pd.DataFrame:
     return queue
 
 
-def fetch_kap(event_id: str, attempts: int = 4) -> tuple[bytes | None, str | None]:
+def fetch_kap(event_id: str, attempts: int = 2) -> tuple[bytes | None, str | None]:
     url = KAP_TEMPLATE.format(event_id=event_id)
     headers = {
         "User-Agent": "zincir-kiran-ca-resolution/1.0",
@@ -106,7 +106,7 @@ def fetch_kap(event_id: str, attempts: int = 4) -> tuple[bytes | None, str | Non
     last = None
     for attempt in range(1, attempts + 1):
         try:
-            response = requests.get(url, headers=headers, timeout=60)
+            response = requests.get(url, headers=headers, timeout=20)
             if response.status_code == 200 and response.content:
                 raw = response.content
                 text = raw.decode("utf-8", errors="ignore")
@@ -248,7 +248,7 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
         }
 
     event_ids = queue["event_id"].astype(str).tolist()
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
         future_map = {pool.submit(one, event_id): event_id for event_id in event_ids}
         for future in concurrent.futures.as_completed(future_map):
             rows.append(future.result())
@@ -273,49 +273,65 @@ def capture_details(queue: pd.DataFrame) -> tuple[pd.DataFrame, list[dict]]:
 
 def capture_yahoo_actions(tickers: list[str]) -> pd.DataFrame:
     rows: list[dict] = []
+    end_exclusive = (datetime.now(UTC).date() + timedelta(days=1)).isoformat()
 
-    def one(ticker: str) -> list[dict]:
-        symbol = f"{ticker}.IS"
+    for offset in range(0, len(tickers), 50):
+        batch = tickers[offset : offset + 50]
+        symbols = [f"{ticker}.IS" for ticker in batch]
         try:
-            frame = yf.Ticker(symbol).history(
+            frame = yf.download(
+                symbols,
                 start=PRICE_START,
-                end=(datetime.now(UTC).date() + timedelta(days=1)).isoformat(),
+                end=end_exclusive,
                 auto_adjust=False,
                 actions=True,
                 repair=False,
-                raise_errors=True,
+                progress=False,
+                threads=True,
+                group_by="ticker",
             )
         except Exception:
-            return []
-        if frame.empty:
-            return []
-        out = []
-        for index, row in frame.iterrows():
-            dividend = float(row.get("Dividends") or 0.0)
-            split = float(row.get("Stock Splits") or 0.0)
-            if dividend == 0.0 and split == 0.0:
-                continue
-            out.append(
-                {
-                    "ticker": ticker,
-                    "source_symbol": symbol,
-                    "trade_date": pd.Timestamp(index).date().isoformat(),
-                    "dividend": dividend,
-                    "stock_split": split,
-                }
-            )
-        return out
+            continue
+        if frame.empty or not isinstance(frame.columns, pd.MultiIndex):
+            continue
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        for result in pool.map(one, tickers):
-            rows.extend(result)
+        available = set(frame.columns.get_level_values(0))
+        for ticker in batch:
+            symbol = f"{ticker}.IS"
+            if symbol not in available:
+                continue
+            group = frame[symbol]
+            for index, row in group.iterrows():
+                dividend = float(row.get("Dividends") or 0.0)
+                split = float(row.get("Stock Splits") or 0.0)
+                if dividend == 0.0 and split == 0.0:
+                    continue
+                rows.append(
+                    {
+                        "ticker": ticker,
+                        "source_symbol": symbol,
+                        "trade_date": pd.Timestamp(index).date().isoformat(),
+                        "dividend": dividend,
+                        "stock_split": split,
+                    }
+                )
 
     if not rows:
         return pd.DataFrame(
-            columns=["ticker", "source_symbol", "trade_date", "dividend", "stock_split"]
+            columns=[
+                "ticker",
+                "source_symbol",
+                "trade_date",
+                "dividend",
+                "stock_split",
+            ]
         )
-    return pd.DataFrame(rows).sort_values(["ticker", "trade_date"]).reset_index(drop=True)
-
+    return (
+        pd.DataFrame(rows)
+        .sort_values(["ticker", "trade_date"])
+        .drop_duplicates(["ticker", "trade_date"])
+        .reset_index(drop=True)
+    )
 
 def vendor_corroboration(
     queue: pd.DataFrame,
