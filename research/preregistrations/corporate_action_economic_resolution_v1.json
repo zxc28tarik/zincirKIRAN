@@ -106,6 +106,22 @@
         "HTML and Excel are both official KAP detail channels; conflicts fail closed.",
         "Vendor evidence remains corroboration-only."
       ]
+    },
+    {
+      "amendment_id": "A3_OFFICIAL_TABLE_MATRIX_DISCOVERY",
+      "timing": "AFTER_A2_EXPORT_FAILURE_BEFORE_ANY_EVENT_RISK_RELEASE",
+      "performance_information_used": false,
+      "reason": [
+        "Official KAP detail pages visibly render economic tables even when taxonomy-value parsing returns zero fields.",
+        "A2 official Excel export produced no usable workbook captures and is not accepted as a reliable primary acquisition channel.",
+        "The raw KAP detail HTML itself is the authoritative source and preserves table row/cell structure."
+      ],
+      "rule": [
+        "Parse every non-empty table cell from already captured official HTML with event ID, table class, row index and cell index.",
+        "Preserve hidden taxonomy field names when present.",
+        "Do not map any row/cell to economic semantics in A3.",
+        "Risk release remains zero until action-specific field contracts are separately preregistered."
+      ]
     }
   ]
 }
