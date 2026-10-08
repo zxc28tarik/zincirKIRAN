@@ -1,0 +1,70 @@
+{
+  "activation_at": "2026-10-07T22:10:15+00:00",
+  "available_domains": [
+    "UNIVERSE",
+    "MARKET_PRICES",
+    "VOLUME_LIQUIDITY"
+  ],
+  "blocking_state": "REQUIRED_LIVE_DOMAINS_STILL_MISSING",
+  "captured_at": "2026-10-07T23:37:36.184902+00:00",
+  "contract": "FIRST_POST_ACTIVATION_LIVE_SNAPSHOT_GATE_AUDIT_V1",
+  "real_shadow_run_created": false,
+  "shadow_execution_ready": false,
+  "track_results": {
+    "EW5_COMPOSITE": {
+      "decision": "FACTOR_UNAVAILABLE",
+      "eligible_snapshot_ids": [
+        "live-market-prices-v1",
+        "live-universe-v1"
+      ],
+      "manifest_sha256": "e438bef29b0f9480268fe4be16b97d046dbe77d5d89a8059a3413ed4341f7d55",
+      "reasons": [
+        "UNAVAILABLE_DOMAIN:CORPORATE_ACTIONS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:FINANCIALS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:PUBLICATION_REVISIONS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:SECTOR_ROUTES:NO_LIVE_SNAPSHOT"
+      ]
+    },
+    "FIXED_RIDGE_5F": {
+      "decision": "FACTOR_UNAVAILABLE",
+      "eligible_snapshot_ids": [
+        "live-market-prices-v1",
+        "live-universe-v1"
+      ],
+      "manifest_sha256": "e438bef29b0f9480268fe4be16b97d046dbe77d5d89a8059a3413ed4341f7d55",
+      "reasons": [
+        "UNAVAILABLE_DOMAIN:CORPORATE_ACTIONS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:FINANCIALS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:PUBLICATION_REVISIONS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:SECTOR_ROUTES:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:TRAINED_MODEL_STATE:NO_LIVE_SNAPSHOT"
+      ]
+    },
+    "HIGH_52W_PROXIMITY": {
+      "decision": "FACTOR_UNAVAILABLE",
+      "eligible_snapshot_ids": [
+        "live-market-prices-v1",
+        "live-universe-v1"
+      ],
+      "manifest_sha256": "e438bef29b0f9480268fe4be16b97d046dbe77d5d89a8059a3413ed4341f7d55",
+      "reasons": [
+        "UNAVAILABLE_DOMAIN:CORPORATE_ACTIONS:NO_LIVE_SNAPSHOT"
+      ]
+    },
+    "TRAIN_ONLY_EVIDENCE_WEIGHTED_5F": {
+      "decision": "FACTOR_UNAVAILABLE",
+      "eligible_snapshot_ids": [
+        "live-market-prices-v1",
+        "live-universe-v1"
+      ],
+      "manifest_sha256": "e438bef29b0f9480268fe4be16b97d046dbe77d5d89a8059a3413ed4341f7d55",
+      "reasons": [
+        "UNAVAILABLE_DOMAIN:CORPORATE_ACTIONS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:FINANCIALS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:PUBLICATION_REVISIONS:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:SECTOR_ROUTES:NO_LIVE_SNAPSHOT",
+        "UNAVAILABLE_DOMAIN:TRAIN_EVIDENCE_STATE:NO_LIVE_SNAPSHOT"
+      ]
+    }
+  }
+}
