@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "BORUSAN YATIRIM VE PAZARLAMA A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9d4a0485019d675743011122",
+    "disclosureIndex": 1585800,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1415f4d9b0141603cd3904103",
+    "period": "HZ",
+    "publishDate": "2026.04.07 12:48:44",
+    "relatedDisclosureOid": "4028328c9cc9d177019cd967baa57b55",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BRYAT",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1585800",
+  "fields": [],
+  "raw_gzip_sha256": "afd1532bb217005ec7103008996d76863c77cec82cd067a17c9cc95b4b5e9940",
+  "raw_sha256": "7119d595c06ef690db51c6d10018c410c3ef08cfbfb5f9f06d0602c9d09f6b18",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1585800"
+}

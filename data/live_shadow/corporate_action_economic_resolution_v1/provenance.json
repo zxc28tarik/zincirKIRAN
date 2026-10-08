@@ -111,16 +111,16 @@
       "nonempty_value_count": 6
     },
     {
-      "event_count": 5,
+      "event_count": 6,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_AnnouncementContentSection",
       "nonempty_value_count": 0
     },
     {
-      "event_count": 5,
+      "event_count": 6,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_CorrectionAnnouncementFlag",
-      "nonempty_value_count": 5
+      "nonempty_value_count": 6
     },
     {
       "event_count": 2,
@@ -129,22 +129,22 @@
       "nonempty_value_count": 2
     },
     {
-      "event_count": 3,
+      "event_count": 4,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel",
-      "nonempty_value_count": 3
+      "nonempty_value_count": 4
     },
     {
-      "event_count": 5,
+      "event_count": 6,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_ExplanationSection",
       "nonempty_value_count": 0
     },
     {
-      "event_count": 5,
+      "event_count": 6,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_ExplanationTextBlock",
-      "nonempty_value_count": 5
+      "nonempty_value_count": 6
     },
     {
       "event_count": 1,
@@ -159,28 +159,31 @@
       "nonempty_value_count": 0
     },
     {
-      "event_count": 3,
+      "event_count": 4,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
       "nonempty_value_count": 0
     },
     {
-      "event_count": 5,
+      "event_count": 6,
       "event_type": "RIGHTS_ISSUE_DISCLOSURE",
       "field_name": "oda_UpdateAnnouncementFlag",
-      "nonempty_value_count": 5
+      "nonempty_value_count": 6
     }
   ],
   "initial_resolution": {
-    "UNRESOLVED_OFFICIAL_DETAIL_INSUFFICIENT": 72,
-    "UNRESOLVED_OFFICIAL_DETAIL_MISSING": 300,
-    "VENDOR_CORROBORATED_ONLY": 28
+    "UNRESOLVED_OFFICIAL_DETAIL_INSUFFICIENT": 106,
+    "UNRESOLVED_OFFICIAL_DETAIL_MISSING": 200,
+    "VENDOR_CORROBORATED_ONLY": 94
   },
+  "last_repair_at": "2026-10-08T17:00:14.621540+00:00",
   "next_required_work": "LOCK_ACTION_TYPE_SPECIFIC_OFFICIAL_FIELD_CONTRACTS_FROM_CAPTURED_TAXONOMY",
   "official_detail": {
-    "captured": 100,
-    "failed": 300,
-    "field_records": 99
+    "captured": 200,
+    "failed": 200,
+    "field_records": 106,
+    "new_official_html": 100,
+    "reused_frozen_html": 100
   },
   "production_ready": false,
   "queue": {
@@ -189,6 +192,7 @@
     "unique_events": 400
   },
   "real_shadow_run_created": false,
+  "resumable_capture": true,
   "risk_released": 0,
   "score_values_computed": false,
   "vendor_corroboration": {

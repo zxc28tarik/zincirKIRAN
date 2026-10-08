@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "EREĞLİ DEMİR VE ÇELİK FABRİKALARI T.A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019d3ed513ba0766",
+    "disclosureIndex": 1578858,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e95dc90140ede4c12a0133",
+    "period": "HZ",
+    "publishDate": "2026.03.30 18:12:02",
+    "relatedDisclosureOid": "4028328c9cc9d175019d2b24c51c2429",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "EREGL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1578858",
+  "fields": [],
+  "raw_gzip_sha256": "0d2e675e133c408c6212eafd7cb3d22e2edeae1bd94e359dc8693e314f07e83b",
+  "raw_sha256": "4ccb313b16edefaf3e7da9cea07c8ff12f76d7fd9a7ad601fca6f1daec480cb7",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1578858"
+}

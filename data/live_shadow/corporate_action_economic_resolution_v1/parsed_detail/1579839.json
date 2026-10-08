@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "KORDSA TEKNİK TEKSTİL A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019d41a43d9b2bd4",
+    "disclosureIndex": 1579839,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f30606a700ec",
+    "period": "HZ",
+    "publishDate": "2026.03.31 05:14:06",
+    "relatedDisclosureOid": "4028328d9c81f588019ca023c82f0975",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KORDS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1579839",
+  "fields": [],
+  "raw_gzip_sha256": "1389d69f1fdb121822c35a0408b553035b9bbf5c5a7274580492acd17d13ce6b",
+  "raw_sha256": "b4171d04d34c1a5156d2d3fde803763c45e9d93af0fc7cd6284d68c7ae16cd03",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1579839"
+}

@@ -24,24 +24,15 @@
     "title": "İhraç Belgesi",
     "year": null
   },
-  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
   "event_id": "1529740",
   "fields": [
     {
-      "field_name": "oda_IssueDocumentAbstract",
+      "field_name": "oda_AnnouncementContentSection",
       "titles_tr": [
-        "İhraç Belgesi"
+        "Bildirim İçeriği"
       ],
       "values_tr": []
-    },
-    {
-      "field_name": "oda_UpdateAnnouncementFlag",
-      "titles_tr": [
-        "Yapılan Açıklama Güncelleme mi?"
-      ],
-      "values_tr": [
-        "Hayır (No)"
-      ]
     },
     {
       "field_name": "oda_CorrectionAnnouncementFlag",
@@ -62,13 +53,6 @@
       ]
     },
     {
-      "field_name": "oda_AnnouncementContentSection",
-      "titles_tr": [
-        "Bildirim İçeriği"
-      ],
-      "values_tr": []
-    },
-    {
       "field_name": "oda_ExplanationSection",
       "titles_tr": [
         "Açıklamalar"
@@ -80,6 +64,22 @@
       "titles_tr": [],
       "values_tr": [
         "Şirketimizin 235.294.118,00-TL çıkarılmış sermayesinin, 1.000.000.000-TL'lik kayıtlı sermaye tavanı içerisinde %325,0 oranında iç kaynaklardan bedelsiz olarak 764.705.882-TL artışla 1.000.000.000-TL'ye yükseltilmesine; Vergi Usul Kanunu'na göre hazırlanan finansal raporlara göre 721.938.628,74-TL tutarındaki kısmının Sermaye Düzeltmesi Olumlu Farkları hesabından, 42.767.253,26-TL tutarındaki kısmının Hisse Senetleri İhraç Primleri hesabından karşılanmasına yönelik Sermaye Piyasası Kurulu'na yapmış olduğu başvurusu Kurul tarafından onaylanmış, 18.12.2025 tarih ve 2025/63 sayılı SPK bülteninde yayımlanmıştır. SPK onaylı \"Borsa İhraç Belgesi\" ve Esas Sözleşmemizin \"Sermaye \" başlıklı 6. Maddesinin SPK tarafından onaylanmış yeni şekli ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgisine saygılarımızla sunarız."
+      ]
+    },
+    {
+      "field_name": "oda_IssueDocumentAbstract",
+      "titles_tr": [
+        "İhraç Belgesi"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
       ]
     }
   ],

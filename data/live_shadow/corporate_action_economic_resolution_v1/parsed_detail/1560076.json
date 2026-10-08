@@ -24,24 +24,22 @@
     "title": "Esas Sözleşme Tadili",
     "year": null
   },
-  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
   "event_id": "1560076",
   "fields": [
+    {
+      "field_name": "oda_AnnouncementContentSection",
+      "titles_tr": [
+        "Bildirim İçeriği"
+      ],
+      "values_tr": []
+    },
     {
       "field_name": "oda_ChangeInArticlesOfAssociationAbstract",
       "titles_tr": [
         "Esas Sözleşme Tadili"
       ],
       "values_tr": []
-    },
-    {
-      "field_name": "oda_UpdateAnnouncementFlag",
-      "titles_tr": [
-        "Yapılan Açıklama Güncelleme mi?"
-      ],
-      "values_tr": [
-        "Hayır (No)"
-      ]
     },
     {
       "field_name": "oda_CorrectionAnnouncementFlag",
@@ -71,13 +69,6 @@
       ]
     },
     {
-      "field_name": "oda_AnnouncementContentSection",
-      "titles_tr": [
-        "Bildirim İçeriği"
-      ],
-      "values_tr": []
-    },
-    {
       "field_name": "oda_ExplanationSection",
       "titles_tr": [
         "Açıklamalar"
@@ -89,6 +80,15 @@
       "titles_tr": [],
       "values_tr": [
         "Şirket Yönetim Kurulu 19 Şubat 2026 tarihinde aldığı kararda, 600.000.000 TL olan Şirket ödenmiş sermayesinin, tamamı iç kaynaklardan karşılanmak üzere 600.000.000 TL artırılarak 1.2000.000.000 TL'ye çıkarılmasına ve bedelsiz pay dağıtılmasına ilişkin olarak; Sermaye Piyasası Kurulu ve Ticaret Bakanlığı'ndan gerekli izinlerin alınmasını takiben, iç kaynaklardan sermaye artırımı amacıyla Şirket ana sözleşmesinin \"Sermaye ve Payların Devri\" başlıklı 6. maddesinin ekli tadil tasarısı çerçevesinde değiştirilmesi ve söz konusu tadil tasarısının tescil ve ilanı için gerekli başvuruların yapılmasına karar vermiştir. İşbu açıklamamızın İngilizce çevirisinde herhangi bir farklılık olması durumunda Türkçe açıklama esas kabul edilecektir."
+      ]
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
       ]
     }
   ],

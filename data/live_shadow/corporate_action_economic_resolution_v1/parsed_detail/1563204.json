@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 6,
+    "companyTitle": "LYDİA YEŞİL ENERJİ KAYNAKLARI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9c81f417019ca04e88250f2b",
+    "disclosureIndex": 1563204,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a241a25fcb0141a7c3f3302405",
+    "period": "HZ",
+    "publishDate": "2026.02.27 22:14:25",
+    "relatedDisclosureOid": null,
+    "relatedStocks": "BTCIM, LYDHO",
+    "senderType": "IGS",
+    "stockCode": "LYDYE",
+    "summary": null,
+    "title": "Birleşme İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1563204",
+  "fields": [],
+  "raw_gzip_sha256": "31d80b9c844ee8e1f9743d063637de084f4150cb0afb622539bfb980957faedc",
+  "raw_sha256": "e792c6ce0aafee12f1353e94fc7e68a9d925f413ac1932325617f86c0041a1bb",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1563204"
+}

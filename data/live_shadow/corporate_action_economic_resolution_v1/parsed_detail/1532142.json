@@ -24,24 +24,15 @@
     "title": "İzahname (SPK Tarafından Onaylanan)",
     "year": null
   },
-  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
   "event_id": "1532142",
   "fields": [
     {
-      "field_name": "oda_ProspectusAbstract",
+      "field_name": "oda_AnnouncementContentSection",
       "titles_tr": [
-        "İzahname"
+        "Bildirim İçeriği"
       ],
       "values_tr": []
-    },
-    {
-      "field_name": "oda_UpdateAnnouncementFlag",
-      "titles_tr": [
-        "Yapılan Açıklama Güncelleme mi?"
-      ],
-      "values_tr": [
-        "Hayır (No)"
-      ]
     },
     {
       "field_name": "oda_CorrectionAnnouncementFlag",
@@ -62,13 +53,6 @@
       ]
     },
     {
-      "field_name": "oda_AnnouncementContentSection",
-      "titles_tr": [
-        "Bildirim İçeriği"
-      ],
-      "values_tr": []
-    },
-    {
       "field_name": "oda_ExplanationSection",
       "titles_tr": [
         "Açıklamalar"
@@ -80,6 +64,22 @@
       "titles_tr": [],
       "values_tr": [
         "Şirketimizin 26.11.2025 tarihli Yönetim Kurulu kararına istinaden 1.250.000.000 TL olan çıkarılmış sermayesinin, 5.000.000.000 TL (%400,00) nakit karşılığı (bedelli) olmak üzere, 6.250.000.000 TL'ye artırılması nedeniyle çıkaracağı toplam 5.000.000.000 TL nominal değerli payların ihracına ilişkin hazırlanan ve Sermaye Piyasası Kurulu'nun 30.12.2025 tarih ve 68/2447 sayılı toplantısında onaylanan izahname ekte yer almaktadır. Yatırımcılarımıza saygıyla duyurulur."
+      ]
+    },
+    {
+      "field_name": "oda_ProspectusAbstract",
+      "titles_tr": [
+        "İzahname"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
       ]
     }
   ],

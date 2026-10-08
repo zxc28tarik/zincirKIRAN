@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "GÜR-SEL TURİZM TAŞIMACILIK VE SERVİS TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9d4a0485019d4e125e891856",
+    "disclosureIndex": 1582812,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "8acae2c47d3bee50017f2c2fc65150e6",
+    "period": "HZ",
+    "publishDate": "2026.04.02 15:38:01",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "GRSEL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1582812",
+  "fields": [],
+  "raw_gzip_sha256": "17631656b329d3f757b03e7797da815b2739c0eb0b0442838742b9ad16263e16",
+  "raw_sha256": "281fad203f26cabed5fc290cce03750b97199a74f7a8c62195bb8f2e239a3537",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1582812"
+}

@@ -24,24 +24,15 @@
     "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
     "year": null
   },
-  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
   "event_id": "1520268",
   "fields": [
     {
-      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "field_name": "oda_AnnouncementContentSection",
       "titles_tr": [
-        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+        "Bildirim İçeriği"
       ],
       "values_tr": []
-    },
-    {
-      "field_name": "oda_UpdateAnnouncementFlag",
-      "titles_tr": [
-        "Yapılan Açıklama Güncelleme mi?"
-      ],
-      "values_tr": [
-        "Hayır (No)"
-      ]
     },
     {
       "field_name": "oda_CorrectionAnnouncementFlag",
@@ -62,13 +53,6 @@
       ]
     },
     {
-      "field_name": "oda_AnnouncementContentSection",
-      "titles_tr": [
-        "Bildirim İçeriği"
-      ],
-      "values_tr": []
-    },
-    {
       "field_name": "oda_ExplanationSection",
       "titles_tr": [
         "Açıklamalar"
@@ -80,6 +64,22 @@
       "titles_tr": [],
       "values_tr": [
         "Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33. maddesi uyarınca hazırlanan ve Şirketimizin 26.11.2025 tarihli 2025/280 no'lu Yönetim Kurulu Kararı ile onaylanan bedelli sermaye artırımından elde edilecek fonun kullanımına ilişkin rapor ekte yer almaktadır. Yatırımcılarımızın bilgilerine sunarız."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
       ]
     }
   ],

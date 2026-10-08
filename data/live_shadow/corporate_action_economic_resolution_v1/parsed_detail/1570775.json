@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "AYGAZ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019cdd943270799f",
+    "disclosureIndex": 1570775,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee03bd6000e0",
+    "period": "HZ",
+    "publishDate": "2026.03.11 18:52:54",
+    "relatedDisclosureOid": "4028328d9c4c12c8019c579227a07096",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "AYGAZ",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1570775",
+  "fields": [],
+  "raw_gzip_sha256": "73883d42e0c5a233a2c51a58ebaf5d0f625f8779b424b8d0242d486be043f4a3",
+  "raw_sha256": "007faa73d7647067ad3eed15f1c9a5f270ece11c7cd1f4c2137c8ec3bf7f9787",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1570775"
+}

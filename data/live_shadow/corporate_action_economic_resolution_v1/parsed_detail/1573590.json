@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "DOĞAN ŞİRKETLER GRUBU HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019cfc495aec4054",
+    "disclosureIndex": 1573590,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a141462df201414ff732983087",
+    "period": "HZ",
+    "publishDate": "2026.03.17 18:11:59",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "DOHOL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1573590",
+  "fields": [],
+  "raw_gzip_sha256": "af8c12c7614d6bf5bbdde41e72b402045214f12ac34f910126ffa7cfec0fbfcd",
+  "raw_sha256": "d6b545c278105384da5343d464b91a852d50bbe60dea22a53696ae15c30fa96c",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1573590"
+}

@@ -24,24 +24,15 @@
     "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
     "year": null
   },
-  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
   "event_id": "1511588",
   "fields": [
     {
-      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "field_name": "oda_AnnouncementContentSection",
       "titles_tr": [
-        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+        "Bildirim İçeriği"
       ],
       "values_tr": []
-    },
-    {
-      "field_name": "oda_UpdateAnnouncementFlag",
-      "titles_tr": [
-        "Yapılan Açıklama Güncelleme mi?"
-      ],
-      "values_tr": [
-        "Hayır (No)"
-      ]
     },
     {
       "field_name": "oda_CorrectionAnnouncementFlag",
@@ -62,13 +53,6 @@
       ]
     },
     {
-      "field_name": "oda_AnnouncementContentSection",
-      "titles_tr": [
-        "Bildirim İçeriği"
-      ],
-      "values_tr": []
-    },
-    {
       "field_name": "oda_ExplanationSection",
       "titles_tr": [
         "Açıklamalar"
@@ -80,6 +64,22 @@
       "titles_tr": [],
       "values_tr": [
         "Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'ne ait Sermaye Piyasası Kanunu'nun VII-128.1 Sayılı Pay Tebliği'nin 33. Maddesi uyarınca, Denetimden Sorumlu Komite tarafından hazırlanan \"Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor\" ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
       ]
     }
   ],

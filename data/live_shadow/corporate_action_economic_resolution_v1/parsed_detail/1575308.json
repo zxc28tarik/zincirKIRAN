@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ANADOLU HAYAT EMEKLİLİK A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019d2101171d6401",
+    "disclosureIndex": 1575308,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ed40cb930098",
+    "period": "HZ",
+    "publishDate": "2026.03.24 21:38:13",
+    "relatedDisclosureOid": "4028328d9c81f589019c9da9ff0f4d84",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ANHYT",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1575308",
+  "fields": [],
+  "raw_gzip_sha256": "51d48599de542830165da9b4cf97bf22e5f271af5f5772f1fc189bd7d7616163",
+  "raw_sha256": "bdcbe122de794c425afe1a56a9de2f453188400f411d4025e33bb35792ac9a79",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1575308"
+}

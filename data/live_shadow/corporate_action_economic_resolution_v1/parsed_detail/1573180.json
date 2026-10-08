@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ALARKO HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32b019cf73fa0c317e3",
+    "disclosureIndex": 1573180,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a241462fd80141500c738e36be",
+    "period": "HZ",
+    "publishDate": "2026.03.16 18:27:42",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ALARK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1573180",
+  "fields": [],
+  "raw_gzip_sha256": "ff76045f4ee95953704b7cc8d20ae566b3112812a03663f893f7314027a7e030",
+  "raw_sha256": "1648f7ea4b2bfe2a4dc0c238a01421ff6bc2e6be082c4b20913fa29a8c05b011",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1573180"
+}

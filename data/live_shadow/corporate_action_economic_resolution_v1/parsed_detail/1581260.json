@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "OYAK ÇİMENTO FABRİKALARI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019d4525e529354e",
+    "disclosureIndex": 1581260,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f32377aa016c",
+    "period": "HZ",
+    "publishDate": "2026.03.31 21:31:32",
+    "relatedDisclosureOid": "4028328d9c81f589019cc3d163ca1a51",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "OYAKC",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1581260",
+  "fields": [],
+  "raw_gzip_sha256": "3d3bf72cb888a13374976b43eafa0b43f930f8db3b4efd83abcbcf09f623738b",
+  "raw_sha256": "0ede5070d3a3f6882eceef1be48f76282acd21d9ec576ed3da292c146ae3f5e0",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1581260"
+}

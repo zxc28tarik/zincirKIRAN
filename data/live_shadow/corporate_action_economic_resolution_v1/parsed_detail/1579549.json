@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "İŞ YATIRIM MENKUL DEĞERLER A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019d401fbfbb100a",
+    "disclosureIndex": 1579549,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f275530140f277aa100008",
+    "period": "HZ",
+    "publishDate": "2026.03.30 22:08:09",
+    "relatedDisclosureOid": "4028328c9c81f417019cbfbc219c6e09",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ISMEN, IYM",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1579549",
+  "fields": [],
+  "raw_gzip_sha256": "de06495ad0f8316503778b96886ee1a7335cf04b188a394584c3cb97bf982caf",
+  "raw_sha256": "dd2235100c423cc17158810c39e9a45182427737e4bfe62ebdcb00625962a4a2",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1579549"
+}

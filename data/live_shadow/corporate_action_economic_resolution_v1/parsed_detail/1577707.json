@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRKİYE ŞİŞE VE CAM FABRİKALARI A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019d2fe266de0086",
+    "disclosureIndex": 1577707,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed710140f385d5690102",
+    "period": "HZ",
+    "publishDate": "2026.03.27 18:23:46",
+    "relatedDisclosureOid": "4028328d9c81f589019cbdb57c000a33",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "SISE",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1577707",
+  "fields": [],
+  "raw_gzip_sha256": "597496325499d0552b62ba5ffcd4ec0ff21722592792bcf154578010e7165c2f",
+  "raw_sha256": "b19b1a94451dbc5efbad42272666e0fddc1ebab70407c7c34e2fbabbf66c0b1e",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577707"
+}

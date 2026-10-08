@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ANADOLU ANONİM TÜRK SİGORTA ŞİRKETİ",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f589019c9ae851dd3f92",
+    "disclosureIndex": 1562305,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95bea0140ed21b5c10078",
+    "period": "HZ",
+    "publishDate": "2026.02.26 22:32:55",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ANSGR",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1562305",
+  "fields": [],
+  "raw_gzip_sha256": "1fd4c694103db107cf46bac26bf200424ecd22ca03b37ac43836f3a2e28a7575",
+  "raw_sha256": "5b4dc50ca8f88fdbcb81755d0ccdcda48717da042bcc2dd7312fe5b40d4db349",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1562305"
+}

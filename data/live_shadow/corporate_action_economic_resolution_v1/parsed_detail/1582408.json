@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "SASA POLYESTER SANAYİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019d499db0d5075d",
+    "disclosureIndex": 1582408,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240ee866c0140f20abd9500cc",
+    "period": "HZ",
+    "publishDate": "2026.04.01 18:17:20",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "SASA",
+    "summary": null,
+    "title": "Sermaye Artırımı - Azaltımı İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1582408",
+  "fields": [],
+  "raw_gzip_sha256": "f24435a4518c03aab1dde97901a19e2780a82282c71aee42c19b2beb7ca5e919",
+  "raw_sha256": "9513897591b98288db7eb7b905857311862a253fcd1bdc12e7fcd463e46140fe",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1582408"
+}

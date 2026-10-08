@@ -1,100 +1,107 @@
 event_id,field_name,titles_tr,values_tr
-1507412,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1507412,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1507412,oda_AnnouncementContentSection,Bildirim İçeriği,
 1507412,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1507412,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,26.09.2025
-1507412,oda_AnnouncementContentSection,Bildirim İçeriği,
 1507412,oda_ExplanationSection,Açıklamalar,
 1507412,oda_ExplanationTextBlock,,Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33.maddesi kapsamında hazırlanan ve 26.09.2025 tarih ve 2025/25 sayılı Yönetim Kurulu ile kabul edilen Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Rapor'un ana ortağımız tarafından verilen sermaye avansının kullanıldığı dikkate alınarak güncellenmiş versiyonunu ekte bulabilirsiniz.
-1507966,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1507966,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1507412,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1507412,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1507966,oda_AnnouncementContentSection,Bildirim İçeriği,
 1507966,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1507966,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,22.05.2025
-1507966,oda_AnnouncementContentSection,Bildirim İçeriği,
 1507966,oda_ExplanationSection,Açıklamalar,
 1507966,oda_ExplanationTextBlock,,"Sermaye Piyasası Kurulu'nun 22.06.2013 tarihli (VII-128.1) ""Pay Tebliği""nin ""Bedelli sermaye artırımından elde edilen fonların kullanımına ilişkin yapılacak açıklamalar"" başlıklı 33. maddesi gereğince hazırlanan rapor, ekte yer almaktadır. Yatırımcılarımızın bilgilerine sunarız."
-1510036,oda_ProspectusDraftAbstract,İzahname (SPK Onayına Sunulan),
-1510036,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1507966,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1507966,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1510036,oda_AnnouncementContentSection,Bildirim İçeriği,
 1510036,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1510036,oda_DateOfThePreviousNotificationAboutTheSameSubject,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1510036,oda_AnnouncementContentSection,Bildirim İçeriği,
 1510036,oda_ExplanationSection,Açıklamalar,
 1510036,oda_ExplanationTextBlock,,"Şirketimizin 15.000.000.000 TL tutarındaki kayıtlı sermaye tavanı içinde 2.000.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak suretiyle %100 oranında, 2.000.000.000 TL tutarında artırılarak 4.000.000.000 TL'ye çıkarılmasına ve bedelli sermaye artırımı ile eşanlı olarak çıkarılmış sermayenin tamamı iç kaynaklardan karşılanmak suretiyle %50 oranında 1.000.000.000 TL tutarında artırılarak toplam 5.000.000.000 TL'ye çıkarılmasına ilişkin 24.10.2025 tarihli Yönetim Kurulu Kararı çerçevesinde 31.10.2025 tarihinde Sermaye Piyasası Kurulu'na sunulan taslak izahname ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgilerine sunarız."
-1510037,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1510037,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1510036,oda_ProspectusDraftAbstract,İzahname (SPK Onayına Sunulan),
+1510036,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1510037,oda_AnnouncementContentSection,Bildirim İçeriği,
 1510037,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1510037,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1510037,oda_AnnouncementContentSection,Bildirim İçeriği,
 1510037,oda_ExplanationSection,Açıklamalar,
 1510037,oda_ExplanationTextBlock,,"Şirketimizin 15.000.000.000 TL tutarındaki kayıtlı sermaye tavanı içinde 2.000.000.000 TL olan çıkarılmış sermayesinin tamamı nakden ve karşılanmak suretiyle %100 oranında, 2.000.000.000 TL tutarında artırılarak 4.000.000.000 TL'ye çıkarılmasına ve bedelli sermaye artırımı ile eşanlı olarak çıkarılmış sermayenin tamamı iç kaynaklardan karşılanmak suretiyle %50 oranında 1.000.000.000 TL tutarında artırılarak 5.000.000.000 TL'ye çıkarılması sebebiyle nakit olarak artırılacak kısımdan elde edilecek fonun kullanımına ilişkin olarak, Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33 üncü maddesi gereğince hazırlanmış olan ""Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerine İlişkin Rapor"" ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgilerine sunarız."
-1511588,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1511588,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1510037,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1510037,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1511588,oda_AnnouncementContentSection,Bildirim İçeriği,
 1511588,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1511588,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1511588,oda_AnnouncementContentSection,Bildirim İçeriği,
 1511588,oda_ExplanationSection,Açıklamalar,
 1511588,oda_ExplanationTextBlock,,"Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'ne ait Sermaye Piyasası Kanunu'nun VII-128.1 Sayılı Pay Tebliği'nin 33. Maddesi uyarınca, Denetimden Sorumlu Komite tarafından hazırlanan ""Halka Arzdan Elde Edilen Fonun Kullanım Yerlerine İlişkin Rapor"" ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
-1516522,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1516522,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1511588,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1511588,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1516522,oda_AnnouncementContentSection,Bildirim İçeriği,
 1516522,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1516522,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,12.09.2025
-1516522,oda_AnnouncementContentSection,Bildirim İçeriği,
 1516522,oda_ExplanationSection,Açıklamalar,
 1516522,oda_ExplanationTextBlock,,"Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33. maddesi uyarınca hazırlanan bedelli sermaye artırımından elde edilecek fonun kullanım yerlerine ilişkin revize rapor, ekte yer almaktadır."
-1516676,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1516676,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1516522,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1516522,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1516676,oda_AnnouncementContentSection,Bildirim İçeriği,
 1516676,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1516676,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1516676,oda_AnnouncementContentSection,Bildirim İçeriği,
 1516676,oda_ExplanationSection,Açıklamalar,
 1516676,oda_ExplanationTextBlock,,"Şirketimizin halka arzının sonucunda elde edilen fonun kullanımına ilişkin olarak, VII-128.1 sayılı Pay Tebliği'nin 33'üncü maddesi uyarınca hazırlanan rapor ekte sunulmuştur. Kamuoyunun bilgisine sunarız. Saygılarımızla, İşbu açıklamamızın İngilizce çevirisi ekte yer almakta olup, açıklama metinlerinde herhangi bir farklılık olması durumunda, Türkçe açıklama esas kabul edilecektir."
-1520268,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1520268,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1516676,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1516676,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1520268,oda_AnnouncementContentSection,Bildirim İçeriği,
 1520268,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1520268,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1520268,oda_AnnouncementContentSection,Bildirim İçeriği,
 1520268,oda_ExplanationSection,Açıklamalar,
 1520268,oda_ExplanationTextBlock,,Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33. maddesi uyarınca hazırlanan ve Şirketimizin 26.11.2025 tarihli 2025/280 no'lu Yönetim Kurulu Kararı ile onaylanan bedelli sermaye artırımından elde edilecek fonun kullanımına ilişkin rapor ekte yer almaktadır. Yatırımcılarımızın bilgilerine sunarız.
-1520922,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1520922,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1520268,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1520268,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1520922,oda_AnnouncementContentSection,Bildirim İçeriği,
 1520922,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1520922,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,24.10.2025
-1520922,oda_AnnouncementContentSection,Bildirim İçeriği,
 1520922,oda_ExplanationSection,Açıklamalar,
 1520922,oda_ExplanationTextBlock,,"Sermaye Piyasası Kurulu'nun 22.06.2013 tarihli (VII-128.1) ""Pay Tebliği""nin ""Bedelli sermaye artırımından elde edilen fonların kullanımına ilişkin yapılacak açıklamalar"" başlıklı 33. maddesi gereğince hazırlanan ""Sermaye Artırımından Elde Edilecek Fonun Kullanımına İlişkin Rapor"" ekte yer almaktadır. Yatırımcılarımızın bilgilerine sunarız."
-1526422,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
-1526422,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1520922,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1520922,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)
+1526422,oda_AnnouncementContentSection,Bildirim İçeriği,
 1526422,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1526422,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1526422,oda_AnnouncementContentSection,Bildirim İçeriği,
 1526422,oda_ExplanationSection,Açıklamalar,
 1526422,oda_ExplanationTextBlock,,"Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'nin 12.500.000.000 TL olarak belirlenen kayıtlı sermaye tavanı içerisinde, 1.400.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak üzere %170 oranında 2.380.000.000 TL artırılarak 3.780.000.000 TL'ye çıkarılması kapsamında; Sermaye Piyasası Kurulu'nun (""Kurul"") 22.06.2013 tarihli Pay Tebliği'nin (VII.128-1) ""Bedelli sermaye artırımından elde edilen fonların kullanımına ilişkin yapılacak açıklamalar"" başlıklı 33'üncü maddesi gereğince hazırlanan ve Şirketimiz Yönetim Kurulu'nun 12.12.2025 tarihli kararı ile onaylanan ""Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Yönetim Kurulu Raporu"" ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
-1526424,oda_ProspectusDraftAbstract,İzahname (SPK Onayına Sunulan),
-1526424,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1526422,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1526422,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1526424,oda_AnnouncementContentSection,Bildirim İçeriği,
 1526424,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1526424,oda_DateOfThePreviousNotificationAboutTheSameSubject,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1526424,oda_AnnouncementContentSection,Bildirim İçeriği,
 1526424,oda_ExplanationSection,Açıklamalar,
 1526424,oda_ExplanationTextBlock,,"Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'nin 12.500.000.000 TL olarak belirlenen kayıtlı sermaye tavanı içerisinde, 1.400.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak üzere %170 oranında 2.380.000.000 TL artırılarak 3.780.000.000 TL'ye çıkarılması nedeniyle artırılacak 2.380.000.000 TL nominal değerli paylarının ihraç ve halka arzına ilişkin hazırlanan izahnamenin onaylanması amacıyla bugün (14.12.2025 tarihinde) Sermaye Piyasası Kurulu'na başvuru yapılmış olup, onaya sunulan izahname ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
-1529740,oda_IssueDocumentAbstract,İhraç Belgesi,
-1529740,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1526424,oda_ProspectusDraftAbstract,İzahname (SPK Onayına Sunulan),
+1526424,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1529740,oda_AnnouncementContentSection,Bildirim İçeriği,
 1529740,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1529740,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1529740,oda_AnnouncementContentSection,Bildirim İçeriği,
 1529740,oda_ExplanationSection,Açıklamalar,
 1529740,oda_ExplanationTextBlock,,"Şirketimizin 235.294.118,00-TL çıkarılmış sermayesinin, 1.000.000.000-TL'lik kayıtlı sermaye tavanı içerisinde %325,0 oranında iç kaynaklardan bedelsiz olarak 764.705.882-TL artışla 1.000.000.000-TL'ye yükseltilmesine; Vergi Usul Kanunu'na göre hazırlanan finansal raporlara göre 721.938.628,74-TL tutarındaki kısmının Sermaye Düzeltmesi Olumlu Farkları hesabından, 42.767.253,26-TL tutarındaki kısmının Hisse Senetleri İhraç Primleri hesabından karşılanmasına yönelik Sermaye Piyasası Kurulu'na yapmış olduğu başvurusu Kurul tarafından onaylanmış, 18.12.2025 tarih ve 2025/63 sayılı SPK bülteninde yayımlanmıştır. SPK onaylı ""Borsa İhraç Belgesi"" ve Esas Sözleşmemizin ""Sermaye "" başlıklı 6. Maddesinin SPK tarafından onaylanmış yeni şekli ekte yer almaktadır. Kamuoyunun ve yatırımcılarımızın bilgisine saygılarımızla sunarız."
-1532142,oda_ProspectusAbstract,İzahname,
-1532142,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1529740,oda_IssueDocumentAbstract,İhraç Belgesi,
+1529740,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1532142,oda_AnnouncementContentSection,Bildirim İçeriği,
 1532142,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1532142,oda_DateOfThePreviousNotificationAboutTheSameSubject,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
-1532142,oda_AnnouncementContentSection,Bildirim İçeriği,
 1532142,oda_ExplanationSection,Açıklamalar,
 1532142,oda_ExplanationTextBlock,,"Şirketimizin 26.11.2025 tarihli Yönetim Kurulu kararına istinaden 1.250.000.000 TL olan çıkarılmış sermayesinin, 5.000.000.000 TL (%400,00) nakit karşılığı (bedelli) olmak üzere, 6.250.000.000 TL'ye artırılması nedeniyle çıkaracağı toplam 5.000.000.000 TL nominal değerli payların ihracına ilişkin hazırlanan ve Sermaye Piyasası Kurulu'nun 30.12.2025 tarih ve 68/2447 sayılı toplantısında onaylanan izahname ekte yer almaktadır. Yatırımcılarımıza saygıyla duyurulur."
+1532142,oda_ProspectusAbstract,İzahname,
+1532142,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1560076,oda_AnnouncementContentSection,Bildirim İçeriği,
 1560076,oda_ChangeInArticlesOfAssociationAbstract,Esas Sözleşme Tadili,
-1560076,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
 1560076,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
 1560076,oda_DateOfThePreviousNotificationAboutTheSameSubject,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,-
 1560076,oda_DelayedAnnouncementFlag,Yapılan Açıklama Ertelenmiş Bir Açıklama mı?,Hayır (No)
-1560076,oda_AnnouncementContentSection,Bildirim İçeriği,
 1560076,oda_ExplanationSection,Açıklamalar,
 1560076,oda_ExplanationTextBlock,,"Şirket Yönetim Kurulu 19 Şubat 2026 tarihinde aldığı kararda, 600.000.000 TL olan Şirket ödenmiş sermayesinin, tamamı iç kaynaklardan karşılanmak üzere 600.000.000 TL artırılarak 1.2000.000.000 TL'ye çıkarılmasına ve bedelsiz pay dağıtılmasına ilişkin olarak; Sermaye Piyasası Kurulu ve Ticaret Bakanlığı'ndan gerekli izinlerin alınmasını takiben, iç kaynaklardan sermaye artırımı amacıyla Şirket ana sözleşmesinin ""Sermaye ve Payların Devri"" başlıklı 6. maddesinin ekli tadil tasarısı çerçevesinde değiştirilmesi ve söz konusu tadil tasarısının tescil ve ilanı için gerekli başvuruların yapılmasına karar vermiştir. İşbu açıklamamızın İngilizce çevirisinde herhangi bir farklılık olması durumunda Türkçe açıklama esas kabul edilecektir."
+1560076,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Hayır (No)
+1575126,oda_AnnouncementContentSection,Bildirim İçeriği,
+1575126,oda_CorrectionAnnouncementFlag,Yapılan Açıklama Düzeltme mi?,Hayır (No)
+1575126,oda_DateOfThePreviousNotificationAboutTheSameSubject|http://www.xbrl.org/2003/role/terseLabel,Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi,13.11.2025
+1575126,oda_ExplanationSection,Açıklamalar,
+1575126,oda_ExplanationTextBlock,,Sermaye Piyasası Kurulu'nun VII-128.1 sayılı Pay Tebliği'nin 33. maddesi uyarınca Sermaye Artırımından Elde Edilen Fonun Kullanım Yerlerine İlişkin Denetimden Sorumlu Komite Raporu ekte yer almaktadır.
+1575126,oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract,Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor,
+1575126,oda_UpdateAnnouncementFlag,Yapılan Açıklama Güncelleme mi?,Evet (Yes)

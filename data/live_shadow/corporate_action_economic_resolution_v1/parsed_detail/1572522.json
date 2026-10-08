@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRK TELEKOMÜNİKASYON A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d175019ce617ede60e49",
+    "disclosureIndex": 1572522,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a241e538ab0141ea9c96912c8b",
+    "period": "HZ",
+    "publishDate": "2026.03.13 18:15:19",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TTKOM",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1572522",
+  "fields": [],
+  "raw_gzip_sha256": "88ccfc863906a83d8f0bebc01aee8fefc265d4479f152cdf19b8ee13c1488e97",
+  "raw_sha256": "df38c597410f2ba6befa3892a41dc047a22057e8a2519263b348736ac2ba3be7",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1572522"
+}

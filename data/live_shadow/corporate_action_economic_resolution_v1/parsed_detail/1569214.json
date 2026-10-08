@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "TÜRK TRAKTÖR VE ZİRAAT MAKİNELERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019cd414a737088f",
+    "disclosureIndex": 1569214,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed720140f3790d6a01ad",
+    "period": "HZ",
+    "publishDate": "2026.03.09 22:39:47",
+    "relatedDisclosureOid": "4028328c9b82727b019c43b43de67cdb",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "TTRAK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1569214",
+  "fields": [],
+  "raw_gzip_sha256": "ae1b1f6e8470cc9ffdd1ce5a6f6124f8136642107a2572b6e961f29ddbc89a7a",
+  "raw_sha256": "dee42bc4f3cf39bda57f2fc6ff77739da8585b693d7860cdcc00d656b60c6afb",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1569214"
+}

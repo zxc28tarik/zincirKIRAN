@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 4,
+    "companyTitle": "BORUSAN BİRLEŞİK BORU FABRİKALARI SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d175019d3060889400ed",
+    "disclosureIndex": 1577806,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed7201412ac9ca5d06e6",
+    "period": "HZ",
+    "publishDate": "2026.03.27 20:51:17",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BRSAN",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1577806",
+  "fields": [],
+  "raw_gzip_sha256": "8f0d66146fdfee360a13070693835cf0aa0aad21ab99d0f5222e9771bb741012",
+  "raw_sha256": "92f628642e34f4c5596af11b1ae5f9cc25c2a6b57ee4c084e7751ce5eb13f114",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1577806"
+}

@@ -24,24 +24,15 @@
     "title": "Sermaye Artırımından Elde Edilecek - Edilen Fonun Kullanımına İlişkin Rapor",
     "year": null
   },
-  "captured_at": "2026-10-08T16:43:20.697460+00:00",
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
   "event_id": "1526422",
   "fields": [
     {
-      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "field_name": "oda_AnnouncementContentSection",
       "titles_tr": [
-        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+        "Bildirim İçeriği"
       ],
       "values_tr": []
-    },
-    {
-      "field_name": "oda_UpdateAnnouncementFlag",
-      "titles_tr": [
-        "Yapılan Açıklama Güncelleme mi?"
-      ],
-      "values_tr": [
-        "Hayır (No)"
-      ]
     },
     {
       "field_name": "oda_CorrectionAnnouncementFlag",
@@ -62,13 +53,6 @@
       ]
     },
     {
-      "field_name": "oda_AnnouncementContentSection",
-      "titles_tr": [
-        "Bildirim İçeriği"
-      ],
-      "values_tr": []
-    },
-    {
       "field_name": "oda_ExplanationSection",
       "titles_tr": [
         "Açıklamalar"
@@ -80,6 +64,22 @@
       "titles_tr": [],
       "values_tr": [
         "Şirketimiz CVK Maden İşletmeleri San. ve Tic. A.Ş.'nin 12.500.000.000 TL olarak belirlenen kayıtlı sermaye tavanı içerisinde, 1.400.000.000 TL olan çıkarılmış sermayesinin tamamı nakden karşılanmak üzere %170 oranında 2.380.000.000 TL artırılarak 3.780.000.000 TL'ye çıkarılması kapsamında; Sermaye Piyasası Kurulu'nun (\"Kurul\") 22.06.2013 tarihli Pay Tebliği'nin (VII.128-1) \"Bedelli sermaye artırımından elde edilen fonların kullanımına ilişkin yapılacak açıklamalar\" başlıklı 33'üncü maddesi gereğince hazırlanan ve Şirketimiz Yönetim Kurulu'nun 12.12.2025 tarihli kararı ile onaylanan \"Bedelli Sermaye Artırımından Elde Edilecek Fonun Kullanım Yerlerine İlişkin Yönetim Kurulu Raporu\" ekte yer almaktadır. Kamuoyuna duyurulur. Saygılarımızla."
+      ]
+    },
+    {
+      "field_name": "oda_ReportAboutTheUseOfTheFundObtainedOrWillBeObtainedFromCapitalIncreaseAbstract",
+      "titles_tr": [
+        "Sermaye Artırımından Elde Edilecek / Edilen Fonun Kullanımına İlişkin Rapor"
+      ],
+      "values_tr": []
+    },
+    {
+      "field_name": "oda_UpdateAnnouncementFlag",
+      "titles_tr": [
+        "Yapılan Açıklama Güncelleme mi?"
+      ],
+      "values_tr": [
+        "Hayır (No)"
       ]
     }
   ],

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ARÇELİK A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019cf77ff1ff37b5",
+    "disclosureIndex": 1573219,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e95dc90140ed55b43900cf",
+    "period": "HZ",
+    "publishDate": "2026.03.16 19:36:25",
+    "relatedDisclosureOid": "4028328d9c4c12ca019c723d6e0f75d6",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ARCLK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1573219",
+  "fields": [],
+  "raw_gzip_sha256": "cb1d74307339b1404cfb9fcb435564136b62124c9a277f82589449ec700487b7",
+  "raw_sha256": "553feb45149036851cba6b9c73d0c898fdb887e51d016781b9b402d4738b1c38",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1573219"
+}

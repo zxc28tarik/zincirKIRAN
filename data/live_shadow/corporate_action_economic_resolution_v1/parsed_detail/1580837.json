@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 0,
+    "companyTitle": "MLP SAĞLIK HİZMETLERİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019d433ff85b2538",
+    "disclosureIndex": 1580837,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1462cc5dd01465c9550782baa",
+    "period": "HZ",
+    "publishDate": "2026.03.31 18:14:51",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "MPARK",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1580837",
+  "fields": [],
+  "raw_gzip_sha256": "ee2e7e0fe00138810106dd3e5360741c47a3803fe6e5f8412b7b580fdb2cbb76",
+  "raw_sha256": "a8bb84eb1a00133f9a8a042549e9a571055817db4f55b82c3325aaac4dd164d6",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1580837"
+}

@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "HACI ÖMER SABANCI HOLDİNG A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d4415318c1891",
+    "disclosureIndex": 1580562,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240ee37a90140ee50087e000b",
+    "period": "HZ",
+    "publishDate": "2026.03.31 16:30:22",
+    "relatedDisclosureOid": "4028328d9c81f588019cb9723f520735",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "SAHOL",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1580562",
+  "fields": [],
+  "raw_gzip_sha256": "fa0fb554c1c73bd5f5c2266be06a307d6c172503b2f86a519cf02ed123c4a6aa",
+  "raw_sha256": "df7efa080fe2bb14af7ea8280ec3fc7344e277fcda947fc20d67e31a943ff9ea",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1580562"
+}

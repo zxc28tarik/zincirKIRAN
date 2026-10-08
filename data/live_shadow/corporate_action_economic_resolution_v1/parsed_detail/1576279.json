@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "DOĞUŞ OTOMOTİV SERVİS VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d2a0778451076",
+    "disclosureIndex": 1576279,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a240e8d16e0140e951bf04007b",
+    "period": "HZ",
+    "publishDate": "2026.03.26 15:27:36",
+    "relatedDisclosureOid": "4028328c9c81f416019c98dbeb675e7a",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "DOAS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1576279",
+  "fields": [],
+  "raw_gzip_sha256": "c156df11a10b2d3b946a2387b9234bd3aede18f2fb1ffca7a5041e7776d168ad",
+  "raw_sha256": "d87c9638ebe14502612885ce011684f8ea98ac8e73133a68dfc9f939ced95e63",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1576279"
+}

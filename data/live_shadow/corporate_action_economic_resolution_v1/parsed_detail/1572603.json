@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "KARDEMİR KARABÜK DEMİR ÇELİK SANAYİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9cc9d32c019ce7fc964d0491",
+    "disclosureIndex": 1572603,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140f2ed7201412ace3ada0707",
+    "period": "HZ",
+    "publishDate": "2026.03.13 19:21:17",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "KRDMA, KRDMB, KRDMD",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1572603",
+  "fields": [],
+  "raw_gzip_sha256": "da1516a14580c26b766b84cec952c0a3a4863718c436dc8fff2cbb43b2a62111",
+  "raw_sha256": "e6fe526f2247a2696d618a4e6f987df2af883f89dd53478d5a31e22006915993",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1572603"
+}

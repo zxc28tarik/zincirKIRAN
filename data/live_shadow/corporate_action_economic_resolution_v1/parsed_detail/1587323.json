@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "BİM BİRLEŞİK MAĞAZALAR A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9d4a0485019d691b8a445b4a",
+    "disclosureIndex": 1587323,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "Y",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a140e95be70140ee1b7b030119",
+    "period": "HZ",
+    "publishDate": "2026.04.07 22:12:31",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "BIMAS",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1587323",
+  "fields": [],
+  "raw_gzip_sha256": "d84c6601e2df6dacd08f875a0d8bee0f2e3f9ceae3f6016d4a39ef62649c429b",
+  "raw_sha256": "f1531822241fab2797334f999ab467224658f0b0cf6d32c15acf0929b9928b18",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1587323"
+}

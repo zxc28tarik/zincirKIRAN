@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 2,
+    "companyTitle": "ENERJİSA ENERJİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328d9c81f588019caf317723246e",
+    "disclosureIndex": 1564412,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a1422d98690142bceaa31957cf",
+    "period": "HZ",
+    "publishDate": "2026.03.02 21:41:17",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "ENJSA",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1564412",
+  "fields": [],
+  "raw_gzip_sha256": "2322ca9b444932b2f92b325c8fec44631399378e92714b63949239a884738b07",
+  "raw_sha256": "eff7d00d2654bf911ffaa8c3192483397a4419a856db4321a89dfa964fb80b41",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1564412"
+}

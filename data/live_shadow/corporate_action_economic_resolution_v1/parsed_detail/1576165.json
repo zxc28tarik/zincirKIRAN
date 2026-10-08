@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "EGE ENDÜSTRİ VE TİCARET A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d176019d29cb99225a9b",
+    "disclosureIndex": 1576165,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "1DE05DAA8254073AE0530A4A622A2EBD",
+    "period": "HZ",
+    "publishDate": "2026.03.26 14:00:05",
+    "relatedDisclosureOid": "4028328d9c81f589019c9eb0b9086675",
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "EGEEN",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1576165",
+  "fields": [],
+  "raw_gzip_sha256": "1a5c5c14a7a515eb39bf43f9032da0cb279e5a2cd0c87c1b5019b7ad61876ebd",
+  "raw_sha256": "2339501e1071d65bed997f069aea3474e0c1b97b6dca1300d2f64f9ed5b07c0e",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1576165"
+}

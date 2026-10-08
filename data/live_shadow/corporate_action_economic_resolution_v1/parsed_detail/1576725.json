@@ -1,0 +1,33 @@
+{
+  "basic": {
+    "attachmentCount": 1,
+    "companyTitle": "EGE GÜBRE SANAYİİ A.Ş.",
+    "disclosureCategory": "STT",
+    "disclosureClass": "ODA",
+    "disclosureId": "4028328c9cc9d177019d2ab2890a36bc",
+    "disclosureIndex": 1576725,
+    "disclosureType": "CA",
+    "donem": null,
+    "fundType": null,
+    "hasMultiLanguageSupport": "N",
+    "isBlocked": false,
+    "isChanged": null,
+    "isLate": false,
+    "mkkMemberOid": "4028e4a2422d9a78014304d729e3673d",
+    "period": "HZ",
+    "publishDate": "2026.03.26 18:46:45",
+    "relatedDisclosureOid": null,
+    "relatedStocks": null,
+    "senderType": "IGS",
+    "stockCode": "EGGUB",
+    "summary": null,
+    "title": "Kar Payı Dağıtım İşlemlerine İlişkin Bildirim",
+    "year": null
+  },
+  "captured_at": "2026-10-08T16:55:27.161410+00:00",
+  "event_id": "1576725",
+  "fields": [],
+  "raw_gzip_sha256": "e5d3200bf3c0c83678b5513df54471931390e2ede451368384bee038f0d74183",
+  "raw_sha256": "525ee6e9a0c9835b667e36a720ec51f107d88c2713179338b5ff30c1499b06ce",
+  "source_url": "https://www.kap.org.tr/tr/Bildirim/1576725"
+}
