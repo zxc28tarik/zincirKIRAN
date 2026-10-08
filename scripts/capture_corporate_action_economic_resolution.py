@@ -398,7 +398,11 @@ def capture_excel_details(
     return capture, cell_records
 
 
-def capture_details(\n    queue: pd.DataFrame,\n    *,\n    fetch_missing: bool = False,\n) -> tuple[pd.DataFrame, list[dict]]:
+def capture_details(
+    queue: pd.DataFrame,
+    *,
+    fetch_missing: bool = False,
+) -> tuple[pd.DataFrame, list[dict]]:
     detail_dir = OUT / "kap_detail"
     parsed_dir = OUT / "parsed_detail"
     detail_dir.mkdir(parents=True, exist_ok=True)
